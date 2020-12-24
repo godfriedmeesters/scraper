@@ -1,0 +1,22 @@
+{
+    "de": {
+        "url": "https://www.expedia.de",
+        "Nur Hinflug": "Nur Hinflug",
+        "Abflughafen": "Abflughafen",
+        "Wo starten Sie?": "Wo starten Sie?",
+        "Zielflughafen": "Zielflughafen",
+        "Wohin soll es gehen?": "Wohin soll es gehen?",
+        "Hinflug am": "Hinflug am",
+        "Suchen": "Suchen"
+    },
+    "fr": {
+        "url": "https://www.expedia.fr",
+        "Nur Hinflug": "Aller simple",
+        "Abflughafen": "Origine",
+        "Wo starten Sie?": "D'où partez-vous",
+        "Zielflughafen": "Destination",
+        "Wohin soll es gehen?": "Où allez-vous",
+        "Hinflug am": "Date de départ",
+        "Suchen": "Rechercher"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "platformName": "Android",
+    "buildToolsVersion": "28.0.3",
+    "deviceName": "emulator-5554",
+    "app":  "C:\\projects\\diffscraper\\scraper\\opodo\\opodo.apk",
+    "autoGrantPermissions": "true",
+    "appPackage": "com.opodo.reisen",
+    "appActivity": "com.odigeo.app.android.home.HomeContainerView"
+}

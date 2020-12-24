@@ -1,0 +1,14 @@
+{
+    "de": {
+        "url": "https://www.opodo.de",
+        "Nur Hinflug": "Nur Hinflug",
+        "Flug suchen ": "Flug suchen ",
+        "VERSTANDEN": "VERSTANDEN"
+    },
+    "fr": {
+        "url": "https://www.opodo.fr",
+        "Nur Hinflug": "Aller simple",
+        "Flug suchen ": "Rechercher des vols ",
+        "VERSTANDEN": "COMPRIS"
+    }
+}

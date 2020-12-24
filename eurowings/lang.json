@@ -1,0 +1,19 @@
+{
+    "de": {
+        "url": "https://www.eurowings.com/de.html",
+        "Allen zustimmen ": "Allen zustimmen ",
+        "Abflughafen": "Abflughafen",
+        "Zielflughafen": "Zielflughafen",
+        "Suchen": "Suchen",
+        "Hinflug": "Hinflug"
+
+    },
+    "fr": {
+        "url": "https://www.eurowings.com/fr.html",
+        "Allen zustimmen ": "Tout sélectionner ",
+        "Abflughafen": "Aéroport de départ",
+        "Zielflughafen": "Aéroport d'arrivée",
+        "Hinflug": "Vol aller",
+        "Suchen":"Rechercher un vol"
+    }
+}
