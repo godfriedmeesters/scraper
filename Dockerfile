@@ -14,11 +14,8 @@ RUN npm install -g typescript
 RUN npm install -g ts-node
 RUN apk add bash nano
 
-RUN apk add filebeat --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
-
 COPY . .
 
 WORKDIR /usr/src/app
 
 CMD [ "ts-node", "scraper.ts" ]
-
