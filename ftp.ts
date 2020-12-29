@@ -23,7 +23,9 @@ export async function uploadScreenshotsToFTP() {
             ]
         });
 
-        logger.info("Compressed screenshots ");
+        for (var file of files) {
+            logger.info(`Compressed screenshot from ${JSON.stringify(file.sourcePath)}  into ${JSON.stringify(file.destinationPath)} `);
+        }
 
         logger.info("Removing uncompressed screenshots ...");
         fs.readdirSync('./screenshots/').forEach(async screenshotFile => {
@@ -40,7 +42,7 @@ export async function uploadScreenshotsToFTP() {
         var c = new Client();
         c.on('ready', function () {
             for (const f of uploadFiles) {
-                logger.info("Uploading file " + f.path + " to " + f.fileName);
+                logger.info("Uploading file " + f.path + " to https://scraperbox.be/screenshots/" + f.fileName);
 
                 c.put(f.path, f.fileName, function (err) {
                     if (err) throw err;
@@ -48,8 +50,6 @@ export async function uploadScreenshotsToFTP() {
                     fs.unlinkSync(f.path);
                     c.end();
                 });
-
-
             }
         });
         c.connect({

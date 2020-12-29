@@ -1,0 +1,21 @@
+{
+    "scrapers": [
+        {
+            "params": [],
+            "scraperClass": "AirFranceWebScraper"
+        },
+        {
+            "params": [
+                {
+                    "useRealDevice": "true"
+                }
+            ],
+            "scraperClass": "AirFranceAppScraper"
+        }
+    ],
+    "inputData": {
+        "origin": "BRU",
+        "destination": "AMS",
+        "departureDate": "2020-10-17"
+    }
+}

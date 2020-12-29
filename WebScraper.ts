@@ -73,21 +73,23 @@ class WebScraper {
             this.translator.changeLanguage("fr");
         }
 
-
-
         logger.info("starting web client with locale " + locale);
 
-        this.browser = await puppeteer.launch({
-            headless: false,
-            args: ['--start-maximized', `--lang=${locale}`, '--no-sandbox',   "--headless",
-            "--disable-gpu",
-            "--disable-dev-shm-usage",]
-        });
-
-        // this.browser = await pptr.launch({
-        //     headless: false,
-        //     executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
-        // });
+        if (process.env.IN_DEV) {
+            this.browser = await puppeteer.launch({
+                headless: false,
+                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+                args: ['--start-maximized', `--lang=${locale}`]
+            });
+        }
+        else {
+            this.browser = await puppeteer.launch({
+                headless: false,
+                args: ['--start-maximized', `--lang=${locale}`, '--no-sandbox', "--headless",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",]
+            });
+        }
 
         this.page = await this.browser.newPage();
         await this.page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
@@ -111,6 +113,7 @@ class WebScraper {
 
     async takeScreenShot(className) {
         var imageName = className + "-" + Date.now() + '.png';
+        logger.info("Took screenshot with filename " + imageName);
         var imagePath = path.join(__dirname, 'screenshots', imageName);
 
         await fullPageScreenshot(this.page, { path: imagePath });
@@ -118,11 +121,14 @@ class WebScraper {
         return "https://scraperbox.be/screenshots/" + imageName;
     }
 
-
-
     async transferScreenshotsToFtp() {
+        await this.sleep(1000);
         logger.info("Sending screenshots to FTP");
         uploadScreenshotsToFTP();
+    }
+
+    async sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     async clickOptionalElementByXpath(xpath) {

@@ -75,8 +75,10 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         await this.clickElementByText(this.translator.translate('Suchen'));
         await this.page.waitFor(10000);
 
-        await this.page.waitForXPath("//input[@data-test-id='stopFilter_stops-0']");
-        await this.clickElementByXpath("//input[@data-test-id='stopFilter_stops-0']");
+        await this.page.waitForXPath("//input[@data-test-id='stopFilter_stops-0' or @data-test-id='stops-0' ]");
+        await this.clickElementByXpath("//input[@data-test-id='stopFilter_stops-0' or @data-test-id='stops-0' ]");
+
+
         await this.page.waitFor(5000);
 
         var screenshot = await this.takeScreenShot(this.constructor.name);
