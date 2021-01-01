@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Apache",
+    "value": "Xm1XWA-AAABdrgU0s4-7e-RhKTgg",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1695806212.498525,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "cluster",
+    "value": "5",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1609408912.498586,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "kayak",
+    "value": "VeG3dwDOB4m94aOKrREJ",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1704014145.389595,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "NSC_q5-tqbslmf",
+    "value": "ffffffff0989bd1c45525d5f4f58455e445a4a422a59",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1609407411.861382,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "__gads",
+    "value": "ID=c37302b5dbfe6edb:T=1609406143:S=ALNI_MZumf7PWSFiDtTG1OlNnYteoxd9tQ",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1643102143,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.1758244908.1609406148",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1617182148,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1609406148000.0.09364252291439068",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1638267348,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.2.1714541350.1609406148",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1672478211,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.2.686733402.1609406148",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1609492611,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "cookieConsentString",
+    "value": "BO_R-OIO_R-OIAAAAAlxB0-AAAAcV___________________________________________________________________________wA",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1624958148.470909,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "DATA_CONSENT",
+    "value": "true",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1624958148.470972,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "g_state",
+    "value": "{\"i_p\":1609413351360,\"i_l\":1}",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1624958151,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "G_ENABLED_IDPS",
+    "value": "google",
+    "domain": ".www.kayak.fr",
+    "path": "/",
+    "expires": 253402257600,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "email-bypass-gatedsignin",
+    "value": "true",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "kmkid",
+    "value": "A6OSlcDVwB8KXHoEA4qqzrQ",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1704014176.674803,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "p1.med.ssid",
+    "value": "s-55632RgofhJ3hDD7ix6Iu-0X_G5YXHCHynr8kp85ICr4S9AbDYRdaddUA63m6fV",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "p1.med.stoken",
+    "value": "jBmZt_CTvQLu3O7XyYLbzdGZIFU.Q1iJkJi8bVNLhkTi24Mj_8oeSOg",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1624958178.400928,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "p1.med.sid",
+    "value": "R-5rF72Kt4NXdb1wKx0pPgP-8c4Pl0fyJvNhKffVShTqJt2SlZGO4yWq_tmN86qml",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "p1.med.token",
+    "value": "cpHW$0r_8oXl1GJEOd5mnN",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1624958178.400982,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "no-fd-cache",
+    "value": "1",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1624958211.861166,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "kayak.mc",
+    "value": "ATF9UdhPV1iiCni1ZXnneDaL-dePUVb9Cj1GnfNEXuvRTchEBtxzU-l1aC3HDSfour6Q-nnqP_p5-pzGwQgIXQSxH7TZ4qREveHfn0gkslG31FwuCpyQsYDUxww-dofQVlHLI_1rdAYTmPCQ9-dwGAPLAfWGlmLpayVDdo5InpS2Ua_dvMsLzvYLNRwT9Ilavoyuq6YpxrbNvXuGxdkV50FLqG4UMCSslcD-Qa21GEJxEtwK5FoSrVF-CmJI6kG7nRy6-Z-omFolndOVk8fD-W4SZXp--_RNxXCJloUCzVmd_7sImPNDFxyMmiYFNeV8vEF5PTcuv-BEzC0cO_Lf30Xp4H3rMGA_oteohCU3VQ4v",
+    "domain": "www.kayak.fr",
+    "path": "/",
+    "expires": 1704014179.028435,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "_gat_UA-42209185-8",
+    "value": "1",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1609406271,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gat_UA-42209185-41",
+    "value": "1",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1609406271,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gat_UA-42209185-42",
+    "value": "1",
+    "domain": ".kayak.fr",
+    "path": "/",
+    "expires": 1609406271,
+    "httpOnly": false,
+    "secure": false
+  }
+]

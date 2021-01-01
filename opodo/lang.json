@@ -1,12 +1,14 @@
 {
     "de": {
         "url": "https://www.opodo.de",
+        "cookieFile": "www.opodo.de.cookies.json",
         "Nur Hinflug": "Nur Hinflug",
         "Flug suchen ": "Flug suchen ",
         "VERSTANDEN": "VERSTANDEN"
     },
     "fr": {
         "url": "https://www.opodo.fr",
+        "cookieFile": "./opodo/www.opodo.fr.cookies.json",
         "Nur Hinflug": "Aller simple",
         "Flug suchen ": "Rechercher des vols ",
         "VERSTANDEN": "COMPRIS"

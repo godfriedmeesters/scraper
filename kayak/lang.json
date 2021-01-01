@@ -1,6 +1,7 @@
 {
     "de": {
         "url": "https://www.kayak.de/flights",
+        "cookieFile": "./kayak/www.kayak.de.cookies.json",
         "Akzeptieren": "Akzeptieren",
         "Nur Hinflug": "Nur Hinflug",
         "Abflughafen": "Abflughafen",
@@ -14,9 +15,9 @@
     },
     "fr": {
         "url": "https://www.kayak.fr/flights",
+        "cookieFile": "./kayak/www.kayak.fr.cookies.json",
         "Akzeptieren": "Accepter",
         "Nur Hinflug": "Aller simple",
-
         "Abflughafen": "Origine",
         "Wo starten Sie?": "D'où partez-vous",
         "Zielflughafen": "Destination",

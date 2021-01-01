@@ -1,0 +1,328 @@
+[
+  {
+    "name": "tpid",
+    "value": "v.1,20",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1610405469.257968,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "currency",
+    "value": "EUR",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1767085469.258029,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "HMS",
+    "value": "522a853c-771d-48d9-8693-a4c9fddc1a8f",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1609407270.221196,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "MC1",
+    "value": "GUID=54f7d1c809df45dc80dc1acd53000397",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1767085276.446862,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "DUAID",
+    "value": "54f7d1c8-09df-45dc-80dc-1acd53000397",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1767085276.446894,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ak_bmsc",
+    "value": "2C69AAD69677D276A2614DF24FD1CC050211C4442C1A00005893ED5FAFA71722~plqXRAaWTkWvSbWemmd41wXiuhZtVNbqrawDxFAAZIXsaDYpuu8ILHcnVG+IVOy2GNbPxjY9pT9R7A+fGaLvn7I5czo4rsrrIM0vK4bY77YS5U6UMfbBW9GRqNuoH5ef1FxpY1XL2ot0G5kHU/mcLkY/yN3NP/RWXrGt7LUQOk9wN7DI2f1podHMyKwW3nPtLmNxYsrZzRyaC5fyvgrZqw0eu4Fff7CJKEssaiYyLpisg=",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1609412476.446952,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "CRQS",
+    "value": "t|20`s|20`l|fr_FR`c|EUR",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1704013469.258062,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "xdid",
+    "value": "c250ddbe-1535-41b8-a588-ad6d071c63b1|1609404771|expedia.de",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1643595279.119749,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "aspp",
+    "value": "v.1,0|||||||||||||",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1767085288,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "rlt_marketing_code_cookie",
+    "value": "",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 4102358400,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "OIP",
+    "value": "gdpr|1",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1704013302.798678,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "linfo",
+    "value": "v.4,Godfried|0|0|255|1|0||||||||1036|0|0||0|0|0|-1|-1",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1767085470.221064,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "pwa_csrf",
+    "value": "f9ed969a-a545-4b53-a062-3be12b9dc061|3tZoe6LDdsw57tjDluZVO-Jhx1o5r0b2cHD6DLhDjB-H7LK1xLfkf7TOX2Jpw1CqcHq0kdM37xS9w-bAc0ZOCQ",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1640941463.556956,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "s_ppn",
+    "value": "Homepage",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1609407269,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.2.924385153.1609405311",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1672477470,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.2.2071397141.1609405311",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1609491870,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__gads",
+    "value": "ID=1e63bb4a317b7cfc:T=1609405308:S=ALNI_MYU4HqcQHp3vcmOqiGue7kj1U1low",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1643101308,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "lastConsentChange",
+    "value": "1609405312788",
+    "domain": "www.expedia.fr",
+    "path": "/",
+    "expires": 1643101312.788248,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "iEAPID",
+    "value": "0",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "s_ips",
+    "value": "722",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "s_tp",
+    "value": "3376",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "s_ppv",
+    "value": "Homepage%2C21%2C21%2C722%2C1%2C4",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "CRQSS",
+    "value": "e|0",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "CONSENTMGR",
+    "value": "ts:1609405469717%7Cconsent:true",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1617177869,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "utag_main",
+    "value": "v_id:0176b807a882000110dc75b5243d03072001706a00978$_sn:1$_ss:0$_st:1609407269726$ses_id:1609405278343%3Bexp-session$_pn:4%3Bexp-session",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1640941469,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "qualtrics_sample",
+    "value": "true",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "qualtrics_SI_sample",
+    "value": "true",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "AMCVS_C00802BE5330A8350A490D4C%40AdobeOrg",
+    "value": "1",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "AMCV_C00802BE5330A8350A490D4C%40AdobeOrg",
+    "value": "1585540135%7CMCIDTS%7C18628%7CMCMID%7C79931453021772716734242491474518647718%7CMCAAMLH-1610010269%7C6%7CMCAAMB-1610010269%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1609412669s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C4.4.0%7CMCCIDH%7C1055650402",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1672477469,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "s_cc",
+    "value": "true",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "JSESSIONID",
+    "value": "972D935D1BABE4E32B5489F62260002A",
+    "domain": "www.expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "user",
+    "value": "v.8,0,EX011056DE9BI$18p0100077V9$22$15$3D4$22$15$3D4$22$15$3D4$140001000$3C31!90$FB$8D$115$3E$FB$A0$28!i02!70",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "minfo",
+    "value": "v.5,EX01748C7BE54$89$0A$38$D4$BD$32x$10$90E$93$94O$D8$C5$FF.$80$B9$E4z$D8$C2$95$FD$3D$94$25$2A$87$BA$CB$11$94$A5$DE$FCX$E9$85$C0$B2$A1$1A$A9$33$1A$E2r$8Cz$11$F9$99$A2$CC$0C$9B$D5$D3$DCA$DE$D6$AC$A0$BF$C1$91$BB$D7$91$AA$0E$BC$D3$1D$B2$24$0B$BA$E2$2E$3E$C7$D2r$B4y$C6$CF$3A$33$D1J$DFX$CB$D9$8E$3A$A0$1A$A8$F9$3F$1A$90$C1$D4f$81$13$24mn$C4$F8$9A$97$5B$CD$E3$86$9CF$27k$F9c",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1617181470.112977,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "accttype",
+    "value": "v.2,3,1,EX01D85649174$89$0A$38$C9$BD$32a$0D$90E$9B$92O$DA$C3$FF.$80$B6$E4z$D1$C2$90$FD$11$94",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1617181470.11303,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "cesc",
+    "value": "%7B%22marketingClick%22%3A%5B%22false%22%2C1609405466503%5D%2C%22hitNumber%22%3A%5B%227%22%2C1609405466503%5D%2C%22visitNumber%22%3A%5B%221%22%2C1609405272589%5D%2C%22cidVisit%22%3A%5B%22Brand.DTI%22%2C1609405466503%5D%2C%22entryPage%22%3A%5B%22Homepage%22%2C1609405466503%5D%2C%22cid%22%3A%5B%22Brand.DTI%22%2C1609405272589%5D%7D",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1767085470.130835,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_gat_gtag_UA_35711341_2",
+    "value": "1",
+    "domain": ".expedia.fr",
+    "path": "/",
+    "expires": 1609405530,
+    "httpOnly": false,
+    "secure": false
+  }
+]

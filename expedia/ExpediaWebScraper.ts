@@ -1,17 +1,13 @@
-
 import { WebScraper } from "../WebScraper";
-import date from 'date-and-time';
 const de = require('date-and-time/locale/de');
 import { IScraper } from "../IScraper";
 import { FlightOffer } from "../types";
 import { logger } from "../logger";
 const fs = require('fs');
-var convertTime = require('convert-time');
 var path = require('path');
 
 export class ExpediaWebScraper extends WebScraper implements IScraper {
-
-    constructor() { super(path.join(__dirname, "lang.json")); }
+    constructor() { super( path.join(__dirname, "lang.json")); }
 
     async scrapeUntilSearch(inputData: any) {
 
@@ -19,8 +15,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         const depDate = new Date(departureDate);
         const origin = inputData.origin;
         const destination = inputData.destination;
-        date.locale("de");
-
         await this.page.goto(this.translator.translate("url"));
 
         await this.clickElementByXpath("//a[@aria-controls='wizard-flight-pwa']");

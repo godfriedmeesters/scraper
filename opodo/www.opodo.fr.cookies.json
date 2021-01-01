@@ -1,0 +1,368 @@
+[
+  {
+    "name": "HOME1JSESSIONID",
+    "value": "sMTAuMi4xNjAuMTcyOjM2MjI0~WouMVGHyfQI+MSbVuxgNyWkX.53cf3f5f6e4e",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "locale",
+    "value": "fr_FR",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1611998976.963378,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "tduid",
+    "value": "-",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1611998976.963435,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "userDevice",
+    "value": "360a2534-fd20-42bb-ba68-ef82b6452d3e",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1924766976.963464,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "TestTokenSpace",
+    "value": "20#55895445199-6#54360-12#34724179566-5#46-22#49587689440-19#88156672735-13#40016984271-18#74176754897-7#114032-8#5240593905-2#556809671-15#33370257162-16#47109104810-10#21849283490-1#838-17#70807229666-9#35833302553-3#38373-21#59779176067-14#79506156885-11#32383933950-4#53986|31-12-2020.10:29",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1611998976.963493,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "viI",
+    "value": "eJztVV1vFFUYnsOe9/RBqjRIDMgFa4Zgmzqz8/1BL5SUAoaWJbS1RmJw250tC9udOrv9QAkIajRygZEL0F5IIgkkkIBiDDGECJpwgTEEEhCMkviBRjRpUKMJF3jWVigG+AXOxcx7znmf533OOzPnMRlrYIUkLlejcl5bFw9EWpRLFll64OuHWaZYzkej+vrKOCtcW3p26yOMKSy7Krsku3bp2VtBGIbvK7MZ21pfz8rx2mUnJu71TewdBrEKohuiB2INxHMQeYh+8I/APwY/Dn4S/BT4afAvQDGoAhoBbQJtAb0Ceg18DPxd8PfA94EfAD8EfgTidYjtEG9C7ITYBTEGsQfCgwggWiAeh2iFWAbRDtoO2gHaCdoNGgPtAe2FmAsxD2I+xAKIRyGaITLg58DPg18Cvwz+LfgV8J/Bx8H/AP8L/Dr4DVAKVIdUFakxpA4h9Rl4HqkvwRXQp6BToM9BZ0DnQBdAX4Eug74D/QT6BTQO+h30J6gR1AzKgByQD2oBPQFlL5TTYMfAzmBajJQP/jToOugGRApiOsQMiAaI2aAZoAbQg6A5oHmg+aCF4I3gLeDrwWPwBHwY/EWIEsQgRBViBEIOX4J4GbQfdAB0GHQEdBR0HPQJqBMky60BrQXlQf2gDeBbwLeBy1fwBvgO8LfAdynKTHby4tXdW+vYj9wyVNcNQtdxXDMMNU91HdszNNNSbce3HNMPXc/TXNXxNMtSndANfC8IHUemhGoQmHLVt3zb1UxbdQzD9MLAsXxTMwPVl2jPd50g9DVfNU3HsC0tUF3LMdzQDg1Xs2RtLzBCrwZwVdu2fcNyfdOzNNNTHd80QtNwAlMWM1TLDJzQCmwnlEM1sAPN9FXfCAzfskJPigxV2w0kh6Rwbc1W7cD2bc0yVTf0/VBqMTxfMx1VbsnwpPAgkKpN1bZkYmjbclZzVNcOA2+TLfVYmmVYhm4ai6zwfsbO/9+qO7WKqWwBe/vSqyeu6h98uH3bhWcXsrahJB6MMh25fFL8fg67Mv51/Vx28FeFKomi9cUDepwv9kexPlysFOWJ1V8sR/pQJUpy/VG5qnfLaHEtWhFtVCYuNk0RzygYKSZRKapU2pX78tFwsS/q2jgYVZWF7ZIzM8GZmVjIR9WorxonmSU381raFRFXJhCN90BkO5fmBoqljZOY6XHlqSipFOXZqsxqX58bzmVKuXJ/prOaFMv9MmHm0L96J3BVpfke7N23J0t8w038ZJ3nlc1KanRQ2ZwoC6Y063Yi/dbGJnukzFKU0UR5oCZRr0nU28pDA1MXB6sKWrMdq7q72lZL8oV3J5/ag6kMNWl1VaWu58mVS7I9nVWFm4ZuSK6mu3P9Z8d3oBOty1dnO9qqSr20K0N3rMDQg4D9xjriF4qlUi7j6ka6sUe6WDxSSa/sSteKtqTlhOe0pEc9pym9eHCwFPVEvSuK1Yxr+7rtpRtXLO/qaH8sXSpuiNLLor4NcVO6dV0ivTEztUy6M1fIJcVJFJP/c85ybUcr5C35iVu9vVpvzgu0qBBYvZ7jWnn7BxY68lAIa+YaHD32zcWD++ghtn9/HcuekW4qnbSt+2yayWchqfnqyMiIHg/G+VgvXGtiLDUx/XDzZFi4lvrHetnAzazbIH8DyUX7dg==",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408814.289937,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "TS01cc6943",
+    "value": "015135c860e374b60aa3d9773c166e95f3c1db43a91897c1d4b9a59840e45b3c89fec054a8d61e6e98538e780959193e4b3360ce2f",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "TS019a3112",
+    "value": "015135c860e374b60aa3d9773c166e95f3c1db43a91897c1d4b9a59840e45b3c89fec054a8d61e6e98538e780959193e4b3360ce2f",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "device",
+    "value": "desktop",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1640942970.795621,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "AKA_A2",
+    "value": "A",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1609410570.795649,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.2.1870469297.1609406971",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1643102980.924476,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.2.1628297459.1609406971",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1609493371,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "ens_abcSplit",
+    "value": "groupb",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1704014971,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "mktTrack_v2",
+    "value": "utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1611998971.80422,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "BIGipServerODIGEO-MARKETING-CHANNEL-SERVICE-HTTP",
+    "value": "!7pWJ+JRHeY3vnFG5B0bFvTIOnhh8zXp3f/XBwS8TsGxIa3oawtVp5M8PN07Ifvq51iZEucMlQQ2XyPc=",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408771.804263,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "mktTrack",
+    "value": "utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1611998993.23633,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_iris_sid",
+    "value": "67cbe7a6-7fc7-41d2-86af-35b9b2264152",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408792,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_iris_uid",
+    "value": "b4693fff-c559-4245-bcea-2058f6f055b2",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1672478992,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "G_ENABLED_IDPS",
+    "value": "google",
+    "domain": ".www.opodo.fr",
+    "path": "/",
+    "expires": 253402257600,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "tCdebugLib",
+    "value": "1",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1611999014,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gaActiveSession",
+    "value": "1",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408814,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "OF1JSESSIONID",
+    "value": "sMTAuMi4xNjAuMTU3OjIwMjg5~KNx+zC6J-tS9jUih9Oun8x1y.467c67cd041c",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "didomi_token",
+    "value": "eyJ1c2VyX2lkIjoiMTc2YjgyMTktMjZlYi02ZGQ5LThhYWQtMGRmODI0ZDgxNGIzIiwiY3JlYXRlZCI6IjIwMjAtMTItMzFUMDk6Mjk6MzguMjg0WiIsInVwZGF0ZWQiOiIyMDIwLTEyLTMxVDA5OjI5OjM4LjI4NFoiLCJ2ZW5kb3JzIjp7ImVuYWJsZWQiOlsiYW1hem9uIiwiZ29vZ2xlIiwiYzpjcmF6eS1lZ2ciLCJjOmNlZGV4aXMtcmFkYXIiLCJjOmJsdWVrYWktYUVjRnhGNFUiLCJjOmtlbnNob28teWdoN2JyNjQiLCJjOmlncmFhbC1KaFdWd0t0VCIsImM6YXBwZHluYW1pYy1WMmp5dzNQVCIsImM6emFub3gtQmM0akM5cXciLCJjOnNhcG8tUVdQV2JNOFUiLCJjOnBsZWJpY29tLXp5N1BBUVUyIiwiYzpiaW5nLWFkcyIsImM6YWR1cC13dEY2ZDRMTiIsImM6cGludGVyZXN0IiwiYzpleGVsYXRlIiwiYzpob3RqYXIiLCJjOmJveGV2ZXIiLCJjOmFmZmlsaWF0ZS13aW5kb3ciLCJjOnNxdWFkYXRhLWVhc3lkbXAiLCJjOnVzYWJpbGxhIiwiYzpmYWNlYm9va2EtR0N6RVlRUUciLCJjOnRyYWRlZG91YmwtSjlqRmVUMzciLCJjOnF1YWx0cmljcy1oOExUWGdiSiJdfSwicHVycG9zZXMiOnsiZW5hYmxlZCI6WyJnZW9fbWFya2V0aW5nX3N0dWRpZXMiLCJnZW9fYWRzIiwiZ2VvbG9jYXRpb25fZGF0YSIsImRldmljZV9jaGFyYWN0ZXJpc3RpY3MiXX0sInZlbmRvcnNfbGkiOnsiZW5hYmxlZCI6WyJnb29nbGUiXX0sInZlcnNpb24iOjIsImFjIjoiQkFtQUNCQWsuQkFtQUNCQWsifQ==",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1640942978,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "euconsent-v2",
+    "value": "CO_SAQXO_SAQXAHABBENBECsAP_AAE_AAAAAG-wCQAIAA5ACaAFsAL4BJwDTgLzAb6BecAMAHIAXwF5gAAAA.f_gACfgAAAAA",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1640942978,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "didomi_cookies",
+    "value": "essential,analytics,marketing,social",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1640942978,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gat",
+    "value": "1",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1609407038,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetsid",
+    "value": "b428dac04b4a11ebb424450e3bc19e74",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1609493378,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetvid",
+    "value": "b4297b604b4a11eb9725ef3314a41114",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1610810978,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__gads",
+    "value": "ID=e10718f0df0bd634:T=1609406975:S=ALNI_MYo8VHmsshAQArC4XHHW68EqxgIkA",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1643102975,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1609406984070.610372813",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1617182984,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "BIGipServerODIGEO-HTML5-HTTP",
+    "value": "!y0sp4gZE6NxFoI25B0bFvTIOnhh8zV1rQkrIOeDQDMEZdbY/vfNlVank4591yUpzx5OuuVmhkQc8uRQ=",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408793.236539,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "BIGipServerODIGEO-URI-SPLIT-HTTP",
+    "value": "!w30rLEUCCL0nuMC5B0bFvTIOnhh8zarnzbC9+whHi0PyvTToGL+E/1+Q37Q1QlPDaoRtILGVMqoT0rA=",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408801.834397,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "BIGipServerODIGEO-ANALYTICS-CLIENT-IDENTIFICATION-HTTP",
+    "value": "!XqSuYM5S4coWdiq5B0bFvTIOnhh8zRwN32EicY/Fa41nJmPtl9JDcArqWq4+p/1T28M/P+k+O8XZArk=",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408803.924563,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "sso_token",
+    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzUxMiJ9.eyJuYmYiOjE2MDk0MDcwMTAsImV4cCI6MTYxOTc3NTAxMCwiZXhwX3Nlc3Npb24iOjE2MDk0MTA2MTAsImlhdCI6MTYwOTQwNzAxMCwiYnJhbmQiOiJPUCIsImVtYWlsIjoiZ29kZnJpZWQuc2NyYXBlckBnbWFpbC5jb20ifQ.ARjxzw-Z6edEOz0riq6rQTzmkp4y9awAZ71kEEvidmuRtoV3YKKEO1kmB2aJPkG7YRMbJ61nNzkJMd_HG26rpG3LAAggOPe-Sac1J-I8UOXVWCZPFiqAP3zYS7aEfWZL78uoeiW3xEuEfrkOwYr9tTW0e-Ik7Sl29_rV6k0ZNkP-Fs7B",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609410614.290156,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "sso_remember_me",
+    "value": "godfried.scraper%40gmail.com%3Bgodfried.scraper%3Bfalse%3Bmail",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1611999014.290203,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "ua_dimension31",
+    "value": "non-subscriber",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1611999014.290239,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "HOME1",
+    "value": "!audRjI6HdIh7ak65B0bFvTIOnhh8zWd2GPMAnJu4rG9msL3EZ9jx99mAHpNs6t3DRJR47bYAS4BS3d8=",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": 1609408814.29028,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "TS01cc6943030",
+    "value": "01f6141d11999feb78da024ebd6e15e76c1fe3934192325489c415263820f116787e832e81607b0622ff7dd0bad5763c8b860a9c98",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "TS7b7d2a5a027",
+    "value": "0890b26ffeab200043a13abfec9f85d5923e7bc4451e2d73720d135d70e5498316b9a2b70efceed508316fc7711130009edc77dc8375302842c4f247675128972544b61a245164cd091ede9d04d1dea7aa47deaaaad72b0f53f5ff46832cf483",
+    "domain": "www.opodo.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "tc_cj_v2",
+    "value": "B%29*%29%20CZZZB%7E%24-%20%7D/CZZZKPJSNJQJKNMONZZZ%5Dfc%5De777%5Ecl_%5Dny%5B%5D%5D_mmZZZZZZKPJSNJQJKNMPJZZZ%5D",
+    "domain": ".opodo.fr",
+    "path": "/",
+    "expires": 1640943014,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]

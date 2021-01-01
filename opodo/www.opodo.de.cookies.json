@@ -1,0 +1,397 @@
+[
+  {
+    "name": "device",
+    "value": "desktop",
+    "domain": "www.opodo.de",
+    "path": "/travel",
+    "expires": 1640942903.006119,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "HOME1JSESSIONID",
+    "value": "sMTAuMi4xNjAuMTcyOjc4NTM=~mgUN5mdZFsyPkFuhPeTxLiZY.f6d11740f894",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "locale",
+    "value": "de_DE",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1611998780.039914,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "tduid",
+    "value": "-",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1611998780.040028,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "userDevice",
+    "value": "d31ef76a-d5fb-40ab-8dc0-3b61a04d70ea",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1924766780.040113,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "TestTokenSpace",
+    "value": "20#55892103276-6#213773-12#34724179566-5#3192-22#49587659513-19#49587745800-13#17546346147-18#74176754897-7#21827-8#51015552850-2#556809671-15#33370257162-16#49815207057-10#5881435754-1#3758-17#113137310117-9#35833302553-3#67775-21#60145951196-14#79506206585-11#22375899247-4#85745|31-12-2020.10:26",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1611998780.040233,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "viI",
+    "value": "eJztle+LVFUYx+9pzjn7NbcUk9B84cSVbZft3rnn/r5uULK7aeyuI+6uK0nY7N6769XZudPMrLOWaIuBoC+MfGFkkJCUpJQkhBRkv0TISklISaKfZmTFgkVFL+pMs+ka6V/QvLhz7jnP9/N8n+fCeQQhs8lwKSlUokKorUtGIy3KlRabuu/ph0kmLoTRuL6+PEnCCx3HJ+4kRCHZFdmO7NqO41cXQRC8qswlZKKxkRSStUvfrj8bW8gzBDwLvgp8Nfga8LXgQ+AjoK+Bvg56DPQd0BOgJ0E/AkvAymBVsM1gW8GeANsOuhf0OdDnQV8APQj6MugR8O3gO8GfBN8Nvgd8L/g+cAvcB28Dvxe8HXwpeBfYTrBdYLvB9oA9C7YPbD/4fPAF4AvBF4HfBd4KngE9A/oJ6HnQz0G/Ar0I+j3oJOgvoL+B/gGmgKXAGpCqILUXqVeQeg80ROocqDx6F+wE2Adgp8HOgJ0FOw/2BdjXYBfBfgCbBPsZ7FewZrBWsAyYBeaBtYHdB2U/lJMgb4Ccwk0JUh7oajCZ9E/wFPgM8Jngs8Dngs0Emw12G9g8sAVgC8GaQJtB7wFdD5qAlkCroI+B58GL4GXwKrh8fRx8G9gBsINgh8GOgB0FexPsGFgv2ADYGrCHwUKwdWAbQLeCbgOVn2AH6C7Qp0D3KMossuPD756eaCCXqGmojuMHpjAs03M1VzWF5XmWJkzVsj3TFl7guK7mqJYITM00VTtwfM91AkfIoKD+6tmObxiasFThObZr2a6wPU34qif1rtzyA0/zJNo3Pc1XHWEIx3FM3zE0U6Z3fSNwPaEJmcWyPMN0POGamnAl3ReOaXiGI3HSqe8L23IkUBOq5Tm+JjxVCEtatiRTeFqgWo4vIZLhWJqlup7nOZopVNcQds20CFxN2KqsynBNw3V8RxNCNc0aLQhMadtWfUcWtNmShmTFhmnowlhsurcQ8un/7bpeu4hKFpFzF39/65J++NTlibMPNZHOsVJSjDI9ubAUfzOPfDv5WeN8cuhHhZVLijaUjOpJGI9Eib4xLsfy5hqJC5E+Vo5KuZGoUNH75WpJbdUVbVLqP3KTwh9UUI1LUT4ql7uVm8NoYzwU9W0qRhWlqVsyM3Vmpn4QRpVoqJKUMh1X4tq6FZ6U64rmGyiyvffnRuP8pinNjKS8KiqVY3nHKnO61+c25jL5XGEk01spxYURGTBr7B+/dV1Fab0Bvf/aYKmffUU/lecRZYuSGi8qW0rKomnNuhakXy1sqkfKHEUZLym31izqNYt6Z2FsdPphsaKgPduzor+vc6WEN10fPr0H0wk1aw0VpWHggeUd2YHeikKFoRuS1XJ91r8q/g8cb1+2MtvTWVEa5dgydNv0Dd33yWXSkzwa5/O5jKMb6eYBOc2Sajm9vC9dS9qWlhuu3ZYed+2W9JJiMR8NRINdcSXjWJ5uuenmrmV9Pd13p/Pxhii9NBrakLSk29eV5IzMTE+T7s0N50rxlIqEloiGPTenhc7woGYbuUHND4cMzRp0Rc6wQ8+IviSBLS+GoDZk/aM/HXv/0IvsdvLSgQaSPS2nqpyonf0fp4n8D6PafK1Wq3pSTELZmQsthKTq23e0Ti3DC6m/RzAZvRJ1jeQv+Lr8sA==",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408706.410654,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "TS0123df60",
+    "value": "015135c86014af13f2ac4f79f88f3bfc4ace1a83358bb611dbbbd75a71cfa759407b05caf6200e98ba08dac415d25c7bd825e2f672",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "TS016779fa",
+    "value": "015135c86014af13f2ac4f79f88f3bfc4ace1a83358bb611dbbbd75a71cfa759407b05caf6200e98ba08dac415d25c7bd825e2f672",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "device",
+    "value": "desktop",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1640942902.573365,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "AKA_A2",
+    "value": "A",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1609410375.881685,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.2.73056293.1609406776",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1643102783.494463,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.2.1711316844.1609406776",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1609493176,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "ens_abcSplit",
+    "value": "groupc",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1704014776,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "BIGipServerODIGEO-URI-SPLIT-HTTP",
+    "value": "!x7nrTnUmJFkDUH3zQEltOfxZJrTkx8RXZA42VKE397bNdXFWKQAYZ8J0+G3DFMdOW2Y8078+kUXaErM=",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408577.479906,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "_iris_sid",
+    "value": "5b44447b-8ccf-4deb-96fd-789511f9244c",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408705,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_iris_uid",
+    "value": "2139b2a9-6595-4f8b-8817-609b915ddf52",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1672478905,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "tCdebugLib",
+    "value": "1",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1611998906,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "OF1JSESSIONID",
+    "value": "sMTAuMi4xNjAuNjg6MzMwNTQ=~2XG0fwTbG7GNOFOXxXbaKZRm.5fddf39e9ce7",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "HOME1",
+    "value": "!kXapK8wjNYQWIpzzQEltOfxZJrTkxynZ6/XS653IIkVV5QI8/JRrpGWWusuxAjaIwG5EWaed0MrDW14=",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408580.272161,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "G_ENABLED_IDPS",
+    "value": "google",
+    "domain": ".www.opodo.de",
+    "path": "/",
+    "expires": 253402257600,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gaActiveSession",
+    "value": "1",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408706,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "euconsent-v2",
+    "value": "CO_R_x8O_R_x8AHABBENBECsAP_AAE_AAAAAG-wCQAIAA5ACaAFsAL4BJwDTgLzAb6BecAMAHIAXwF5gAAAA.f_gACfgAAAAA",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1640942783,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "didomi_token",
+    "value": "eyJ1c2VyX2lkIjoiMTc2YjgxZTktNmVmMy02ZjFhLTlhM2ItMDYxODQ5MjAxYjFjIiwiY3JlYXRlZCI6IjIwMjAtMTItMzFUMDk6MjY6MjMuNTUxWiIsInVwZGF0ZWQiOiIyMDIwLTEyLTMxVDA5OjI2OjIzLjU1MVoiLCJ2ZW5kb3JzIjp7ImVuYWJsZWQiOlsiYW1hem9uIiwiZ29vZ2xlIiwiYzpjcmF6eS1lZ2ciLCJjOmNlZGV4aXMtcmFkYXIiLCJjOmJsdWVrYWktYUVjRnhGNFUiLCJjOmtlbnNob28teWdoN2JyNjQiLCJjOmlncmFhbC1KaFdWd0t0VCIsImM6YXBwZHluYW1pYy1WMmp5dzNQVCIsImM6emFub3gtQmM0akM5cXciLCJjOnNhcG8tUVdQV2JNOFUiLCJjOnBsZWJpY29tLXp5N1BBUVUyIiwiYzpiaW5nLWFkcyIsImM6YWR1cC13dEY2ZDRMTiIsImM6cGludGVyZXN0IiwiYzpleGVsYXRlIiwiYzpob3RqYXIiLCJjOmJveGV2ZXIiLCJjOmFmZmlsaWF0ZS13aW5kb3ciLCJjOnNxdWFkYXRhLWVhc3lkbXAiLCJjOnVzYWJpbGxhIiwiYzpmYWNlYm9va2EtR0N6RVlRUUciLCJjOnRyYWRlZG91YmwtSjlqRmVUMzciLCJjOnF1YWx0cmljcy1oOExUWGdiSiJdfSwicHVycG9zZXMiOnsiZW5hYmxlZCI6WyJnZW9fbWFya2V0aW5nX3N0dWRpZXMiLCJnZW9fYWRzIiwiZ2VvbG9jYXRpb25fZGF0YSIsImRldmljZV9jaGFyYWN0ZXJpc3RpY3MiXX0sInZlbmRvcnNfbGkiOnsiZW5hYmxlZCI6WyJnb29nbGUiXX0sInZlcnNpb24iOjIsImFjIjoiQkFtQUNCQWsuQkFtQUNCQWsifQ==",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1640942783,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "didomi_cookies",
+    "value": "essential,analytics,marketing,social",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1640942783,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_pin_unauth",
+    "value": "dWlkPU1UVmxZek5rWXpNdE1URmxOUzAwT0RabUxUazBaVEF0TTJWaFpEVmlaRGcwTVRBMQ",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1640942907,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__gads",
+    "value": "ID=744d0ed3345008b1:T=1609406781:S=ALNI_MZRB_wvTY_z-sZzKYoyJsY-CCacNA",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1643102781,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1609406790933.355633757",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1617182907,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gat",
+    "value": "1",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1609406924,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "mktportal",
+    "value": "T",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1611998896.479602,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "sso_remember_me",
+    "value": "godfried.scraper%40gmail.com%3Bgodfried.scraper%3Bfalse",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1611998891.799,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "mktTrack_v2",
+    "value": "utmcsr=sg|utmccn=t|utmcmd=crm|utmctr=registrant_confirmation",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1611998903.840846,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "BIGipServerODIGEO-MARKETING-CHANNEL-SERVICE-HTTP",
+    "value": "!twN6KjJaE6QEmefzQEltOfxZJrTkxzpq3kTczA0PbzMmJa0XDkVpEoQ1SBZT0L6L4XX5A+g0etVXW38=",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408692.778384,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "mktTrack",
+    "value": "utmcsr=sg|utmccn=t|utmcmd=crm|utmctr=registrant_confirmation",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1611998905.903427,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_iris_utm",
+    "value": "{\"utm_source\":\"sg\",\"utm_medium\":\"crm\",\"utm_term\":\"registrant_confirmation\",\"utm_campaign\":\"t\"}",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609493294,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "RT",
+    "value": "\"z=1&dm=www.opodo.de&si=1f5c06e6-e970-4c8a-9033-6306ef690531&ss=kjcn8qr8&sl=2&tt=5sj&obo=1&rl=1\"",
+    "domain": ".www.opodo.de",
+    "path": "/",
+    "expires": 1610011703,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "BIGipServerODIGEO-HTML5-HTTP",
+    "value": "!3VerCP0G5HxN7ebzQEltOfxZJrTkx6Hw6VYYe/qzO0MbiMAGowAHC+gFr61d32IJ6OFzJr+TPER7Gx0=",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408706.169706,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "tc_cj_v2",
+    "value": "%7D-%28ZZZ.%22ZZZKPJSNJPSJPLNSZZZ%5Dfc%5De",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1640942906,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "BIGipServerODIGEO-ANALYTICS-CLIENT-IDENTIFICATION-HTTP",
+    "value": "!J7JXLPGFlhcRU6bzQEltOfxZJrTkx/GaxZO63t9QfsO7IUpqb/aK9QQl6CVXngr5QEhNKusgMA2YbJo=",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": 1609408706.494566,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "TS72f23e24027",
+    "value": "0890b26ffeab200024de24c7d3fcca09cc6a855a651ca357bb1596ea92a05e20ea91718cca76f35e0873aab278113000419cf2287e854144a6f7cc4bea11e85d3cfc3ff624610d33e3578eb952dc8fb85e6faf7d2aaf6b017f5e244b9199d5a7",
+    "domain": "www.opodo.de",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetsid",
+    "value": "5332d5c04b4a11ebb23c6d86f9ad2435",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1609493306,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetvid",
+    "value": "533371604b4a11eb9358f1888cfb80b2",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1610810906,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "lotame_domain_check",
+    "value": "opodo.de",
+    "domain": ".opodo.de",
+    "path": "/",
+    "expires": 1609406916,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]

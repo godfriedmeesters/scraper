@@ -4,13 +4,15 @@
         "Hin- und Rückflug": "Hin- und Rückflug",
         "Nur Hinflug": "Nur Hinflug",
         "Abflugdatum": "Abflugdatum",
-        " Flüge suchen ": " Flüge suchen "
+        " Flüge suchen ": " Flüge suchen ",
+        "cookieFile": "./airfrance/wwws.airfrance.de.cookies.json"
     },
     "fr": {
         "url": "https://wwws.airfrance.fr",
         "Hin- und Rückflug": "Aller-retour",
         "Nur Hinflug": "Aller simple",
         "Abflugdatum": "Date de départ",
-        " Flüge suchen ": " Rechercher les vols "
+        " Flüge suchen ": " Rechercher les vols ",
+        "cookieFile": "./airfrance/wwws.airfrance.fr.cookies.json"
     }
 }

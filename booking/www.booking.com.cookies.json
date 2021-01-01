@@ -1,0 +1,230 @@
+[
+  {
+    "name": "_pxhd",
+    "value": "41134ef38f0ab0367d7ac48cec2db0e60657c4aef5fe08d8b51a4085cd05fe87%3A5d89cd61-4b49-11eb-ba6c-3b1792670ee6",
+    "domain": "www.booking.com",
+    "path": "/",
+    "expires": 1640942412.231246,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "cors_js",
+    "value": "1",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1640942409,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "BJS",
+    "value": "-",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1609492911.219456,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "_pxvid",
+    "value": "5d89cd61-4b49-11eb-ba6c-3b1792670ee6",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1640942410,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_pxff_cc",
+    "value": "U2FtZVNpdGU9TGF4Ow==",
+    "domain": "www.booking.com",
+    "path": "/",
+    "expires": 1609406571,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "OptanonAlertBoxClosed",
+    "value": "2020-12-31T09:20:12.142Z",
+    "domain": ".www.booking.com",
+    "path": "/",
+    "expires": 1640942477,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.2.834186851.1609406412",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1672478511,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.2.1213042992.1609406412",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1609492911,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.467475961.1609406412",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1617182412,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "bkng_prue",
+    "value": "1",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetsid",
+    "value": "62c14dd04b4911eba8c391c29a0f21f8",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1609492812,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetvid",
+    "value": "62c1eca04b4911eb8b1f5d2fa8bb61ea",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1610810412,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_scid",
+    "value": "d995afc6-1467-43e1-b0f9-474eafafcdde",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1643593110,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_pin_unauth",
+    "value": "dWlkPU1UVmxZek5rWXpNdE1URmxOUzAwT0RabUxUazBaVEF0TTJWaFpEVmlaRGcwTVRBMQ",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1640942413,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "g_state",
+    "value": "{\"i_p\":1609413614925,\"i_l\":1}",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1624958414,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "wl252-gotit",
+    "value": "true",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1640942444,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "bkng_sso_session",
+    "value": "eyJib29raW5nX2dsb2JhbCI6W3sibG9naW5faGludCI6Img1OHh3WTA0anpqZHRLYk9zTDM5QWd5WWhzRHJrYmZvYitIWFpiUUxEOHMifV19",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1767086483.599017,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "bkng_sso_ses",
+    "value": "eyJib29raW5nX2dsb2JhbCI6W3siaCI6Img1OHh3WTA0anpqZHRLYk9zTDM5QWd5WWhzRHJrYmZvYitIWFpiUUxEOHMifV19",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1767086483.599115,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "has_preloaded",
+    "value": "1",
+    "domain": "www.booking.com",
+    "path": "/",
+    "expires": 1609492885,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gat",
+    "value": "1",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1609406547,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "OptanonConsent",
+    "value": "isIABGlobal=false&datestamp=Thu+Dec+31+2020+10%3A21%3A50+GMT%2B0100+(Central+European+Standard+Time)&version=6.10.0&hosts=&consentId=1725e748-2e1e-48ab-9f0d-09619c0c3b40&interactionCount=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0004%3A0&geolocation=BE%3BBRU&AwaitingReconsent=false",
+    "domain": ".www.booking.com",
+    "path": "/",
+    "expires": 1624958510,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_px3",
+    "value": "8c3be86b3545a90af3e5bb483a39500a94b87b49af0b20b3960d58fe573bcf47:R0DOMKJN+2P3SPvTxdNrkr3k8UZcENF2bMO/GLmeTGhjo+8HPZgI6JKApMdwFLdKC3UryHeS1PkRdEO2yHdOVw==:1000:gXRrCrtP3ZMjXCIcS3asOfE3JwfkqbXYZyZ9/iDiA+NPQ+Or5xdOD0lSgv1Tjzsc4ocLullJydJFELGxU05UplNUyebTdzQFLT5D3tg5Za9/kyfTkxnDZ03OdAr7tWVoHZUHWcO5RoUsBUacIq5fPwdRampzwniMX/HY6snuEkM=",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1609406843,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "lastSeen",
+    "value": "1609406513954",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "bkng",
+    "value": "11UmFuZG9tSVYkc2RlIyh9Yaa29%2F3xUOLbScfP4DIYRQVOSDsAyZR1R6A5HnVtyX%2BHiZvlDiJGvqQSjyyWGI4sKVr6fMMgGfDiQxJsMC4JqE9rMOtI4dmTuYVmZJb2OY7%2BEKBJKzFXMb%2B00OO12OktQkO%2Fd30gGBfpkru6EEE99JPg0VKLZvqAtr07Ruj%2FqPVdQONIiYWkvBwxVQ%2FOembiz6Vw4avyyw5opgxJsmBj156mN3K6M8BTNg%3D%3D",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1767086516.301798,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "_pxde",
+    "value": "c018cfed2496b14c1551815944ba52201fe56e160d9e0265b83dc33f22c13914:eyJ0aW1lc3RhbXAiOjE2MDk0MDY1MTI3MjUsImZfa2IiOjAsImlwY19pZCI6W119",
+    "domain": ".booking.com",
+    "path": "/",
+    "expires": 1609406846,
+    "httpOnly": false,
+    "secure": false
+  }
+]

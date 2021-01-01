@@ -1,6 +1,7 @@
 {
     "de": {
         "url": "https://www.booking.com/index.de.html",
+        "cookieFile": "./booking/www.booking.com.cookies.json",
         "Allen zustimmen ": "Allen zustimmen ",
         "Abflughafen": "Abflughafen",
         "Zielflughafen": "Zielflughafen",
@@ -10,6 +11,7 @@
     },
     "fr": {
         "url": "https://www.booking.com/index.fr.html",
+        "cookieFile": "./booking/www.booking.com.cookies.json",
         "Allen zustimmen ": "Tout sélectionner ",
         "Abflughafen": "Aéroport de départ",
         "Zielflughafen": "Aéroport d'arrivée",

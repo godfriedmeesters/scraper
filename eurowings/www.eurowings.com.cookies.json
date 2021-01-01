@@ -1,0 +1,321 @@
+[
+  {
+    "name": "lb_c",
+    "value": "!QXC5eHptDw0jBeOnOudtjiAzooBI1pOPhBfPjEr3drtSdBMl3hoy40lq00GWSJptNbAlNDN9cVnzAt8=",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "ew_cookieconsent_optin_a",
+    "value": "true",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1640943130,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ew_cookieconsent_optin_b",
+    "value": "true",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1640943130,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "s_ecid",
+    "value": "MCMID%7C58624169457490840672935792427203000941",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1672504930.092393,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "at_check",
+    "value": "true",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "AMCVS_0F7E5B5B54E6D1360A4C98A2%40AdobeOrg",
+    "value": "1",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "et_uk",
+    "value": "a28d20629c484b0e8e4dedd31aa6ee88",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1624984926,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "et_gk",
+    "value": "5833f34ecec84541a4cc3773c6704f16|01.03.2021 09:32:09",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1617208926,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_hjTLDTest",
+    "value": "1",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_hjid",
+    "value": "5f4f8715-20a9-4f74-b74c-0a9dec7a49ba",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1640943133,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "s_cc",
+    "value": "true",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "bm_sz",
+    "value": "0CFC791C05EF9FB604DDF2AA8411B5AB~YAAQD6QFF6ZrIKV2AQAAvL5tuQrrNd5m4hxX99EKzZFph8BsFlTrqmP6q0UmF/Zps1NvKrW4f2+UWSrQVBdf5ts/shGhYrU4AX51WQxJs4qUSzIypXFt3OMsl9m4UVDMUbsf2x9sS2S6lqEAjN7/WrFxGhNFqdp1CoACFg7jjkqs9XP8YDE5WnM+07qVG2liXnZx",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1609443150.400717,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "ew_cookieconsent",
+    "value": "%7B%22c1%22%3A1%2C%22c2%22%3A1%2C%22c3%22%3A0%2C%22ts%22%3A1609432857522%7D",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1640968857,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "REALPERSON_SESSION",
+    "value": "il3qh8ep65212vapo7556l5vb87g63da4dmcaa7b",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "aam_did",
+    "value": "58611773785747618422932528676135060156",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1612024930,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "EurowingsApi",
+    "value": "d0z1hbhgnqocgvkqrjtdjbqs",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "lb_s",
+    "value": "!Adc8hrVP0ic9irynOudtjiAzooBI1mAZPyvuwUMZxyvXi4Wu6wPgJNhzK/BoDms+J14C5g0Dau6Y3Uo=",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "bm_mi",
+    "value": "FAA5AEA0A062FD650E2E3B3083A7D08A~litwjT6/L1BW3Wm+Z/17leacqN1zA7bF76yvHys8jI9/ZJxCrH0HsrFCTcEfcWT9rd9zmlUhf1vXF8RkRFE/oRe4TXn9dj9+GQtx3qLPIPk+UvwoRyi7AYUs1Wpd6w1DA9o9dEGSz5/q+SldljWuZc4qhIv4+dNDU6HwFQ9R2VJtZzd7pNYdfJYfaEiqFx2BTTGd1KzOwf0ZsAlbcGouZqk+ugxJvVzfpl9eubtA+yl8S4Z/hC6GuwR64KkJ2O/tOuPjkvm/9yyZQkEVQ0WD8QoDYB7rGt1xlS8m837dgXKuSpHDC2WhaqpQp8QhZHml",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1609435948.688204,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "aa_start_time",
+    "value": "1609432876089",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "ak_bmsc",
+    "value": "9DE99128587BF74A64850409F59560651705A40F7E75000009EFED5F3268EE08~plWjWNN27EjFl8ntCdvHnLm35Hvpt5EYKc9IVrkRchMTTncr1kv8DiH/Gyk9fnTtgxvoE1XDnWoYcmM0v1Oams961ZrrACmfWT+jvPCETj4NAHO7NTrKVuS5MRXyCPR7c1Noz2g3yh3qinGwGHSRN3FEosaBJ790eC1vP8qUzogjs4l1vXIQDU46O9B4HnPQAINg9AfAILPLQQzZ4idR4ki/m+KceNzjKCQRieOPfULvMCidiUAH9ZJrywaH2OSXeR",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1609435949.303479,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.1809478659.1609432876",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1617208926,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_hjIncludedInPageviewSample",
+    "value": "1",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": 1609433046,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_hjAbsoluteSessionInProgress",
+    "value": "0",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1609434757,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "aa_start_time_boomerang",
+    "value": "1609432913229",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "ew_x",
+    "value": "23kglxlky2fam2rmdsrk2uqa",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "Eurowings.com",
+    "value": "23kglxlky2fam2rmdsrk2uqa",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ew_s",
+    "value": "8tQmiemxQiyamRzHk6fgUT6r5bE=-IN+31tDXPXNOjbf9JxOeYuejPEU=",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ew_a",
+    "value": "b01oRDg2WTFvSms9fHpGeUpkZFBnMmsrdTlEeTFrS1R6MUlHeVh1cDhXL2drWFd2M09yUDdHUy9XNWw1TXFPK202STBNdkN5LzRZejMybTB5d0hzR1V3MUZlZFNzazZJNG56RGFLY2Jsc3RxL1VKZ0gxcC9Rb0dMazJhL1dqd3FObkxxUjBjcG94enNKS0w2dXRleno3ODdmNUMvSjkwWDd1UT09",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ew_uc",
+    "value": "%7B%22userContextId%22%3A%22MTQyNjIxZjktNzM4Ni00ZGFiLTk3MTgtNWY2YzAxOGQ4ZGJi%22%2C%22userTlcList%22%3A%5B%5D%2C%22nearbyTLCs%22%3A%5B%5D%2C%22memorizedSearches%22%3A%5B%5D%2C%22watchedFlights%22%3A%5B%5D%2C%22userInfo%22%3A%7B%22businessCustomer%22%3Afalse%2C%22travelAgency%22%3Afalse%2C%22miceCustomer%22%3Afalse%2C%22privateCustomer%22%3Atrue%2C%22boomerangmember%22%3Atrue%2C%22loggedIn%22%3Atrue%2C%22registeredForNewsletter%22%3Afalse%2C%22userName%22%3A%22godfried.scraper%40gmail.com%22%2C%22gender%22%3A%22MR%22%2C%22firstname%22%3A%22godfried%22%2C%22lastname%22%3A%22ginder%22%2C%22joinDate%22%3A%222020-12-31%22%2C%22email_enc%22%3A%22t0aDQRW1BKXdSfFjHrNi9J7zh8377gombauuXeDlTZE%3D%22%2C%22user_salt%22%3A%22KecuooA6OhyjhnkigODiqv7tbeE7HnIeywbD1dLUOTQ%3D%22%2C%22boomerangnumber%22%3A%228620408704%22%2C%22customerid_enc%22%3A%22SZOaWgDLjmynJdNE%252fJatSkPk8uvTFrMD3GTs2XLHx9A%253d%22%7D%2C%22storedSearchesCount%22%3A0%7D",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "s_sq",
+    "value": "%5B%5BB%5D%5D",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_abck",
+    "value": "47D209788C5B88EF36001F47D0CA543A~0~YAAQD6QFF/Y9IaV2AQAAI2+tuQU7C6852nd3fO5hSBIda0EhPK3B6rF9//4auOoSMws2Jlj+NFaGDLUp7QlcQAknXrmW3a7d1tLVIqa1be9nC0rbjqe5c0/Oi16XGa2CpX04cF1kKMhkxLK/dABUSCXhcDMDfKWbBU/iyaLAMpQb8ThhNiCtzcvvIQJLjm01QAlpH+vZovGQ1cIpHTk1DELG3PxHQKx9WrPSaK/VnLmkt2RVHG0yVAUlBsbjv72FJIFO581Rwwn2EGBfzn4Gz9gFmz/CGqFM/g8i8qF4jCE94FfU2LQzpntVaA+anCdsKEckNobkHmNla4SxyyPMPeKC5vI0V2i2BA==~-1~-1~-1",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1640968924.060655,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "aa_prevPage",
+    "value": "Mydashboard",
+    "domain": "www.eurowings.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "bm_sv",
+    "value": "56329DEAE65DC380628393D9A6277B71~3fvy4nM0S/V6CS0ljTGxJLUUbY77G89eBQvp8eMgRNm9OATuH/ol1Rm0E6J+V1jMIgpCpEdvbgbdd8ejXe9AT9/9AIAv0Mmg/z8rlXrjCUMljYT4ajEtvqF804bKqXSMr4YcYGDB1vKjsg6PD3gGCxHMhYgFKDWxsFcNlJBGdQM=",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1609436217.919951,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "mbox",
+    "value": "PC#1d3f904ae5e94b9a9ff8c99cdb2089bc.37_0#1672677727|session#b9d795b06e3f4d8d8ba619444617b5f0#1609434735",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1672677727,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "AMCV_0F7E5B5B54E6D1360A4C98A2%40AdobeOrg",
+    "value": "-637568504%7CMCIDTS%7C18628%7CMCMID%7C58624169457490840672935792427203000941%7CMCAID%7CNONE%7CMCOPTOUT-1609440126s%7CNONE%7CvVersion%7C5.1.1%7CMCAAMLH-1610037726%7C6%7CMCAAMB-1610037726%7Cj8Odv6LonN4r3an7LhD3WZrU1bUpAkFkkiY1ncBR96t2PTI%7CMCCIDH%7C722500771",
+    "domain": ".eurowings.com",
+    "path": "/",
+    "expires": 1672504926,
+    "httpOnly": false,
+    "secure": false
+  }
+]

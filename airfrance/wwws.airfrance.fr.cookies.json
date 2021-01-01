@@ -1,0 +1,279 @@
+[
+  {
+    "name": "AFKL_VISITOR_ID",
+    "value": "7912311380688246",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "bm_sz",
+    "value": "166C5C8B67875777B5C65E4E91AFA13C~YAAQBtYSAja+DHF2AQAAwh8QuArkrFjbn/CJAHvz82WD1XzGO/yfGso8GrJdHMYsrY4IAwspUI/plef6w+ANDEseC/489cGrJpIRdtUprHB8ApK4sQ+P3SDeI4EKMJn1WL5RwNd+nN1UeWL7P+qKBG1yFlMMtEtjsozEG0AF1fM0z+4pmzXSpLsmB+8UNA/oIxU=",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609420236.771365,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "_csrf",
+    "value": "XhpNULmgzB8UWBPk5dT4pJ0O",
+    "domain": "wwws.airfrance.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "secure_aviato_id",
+    "value": "s%3Abb44d28c-c55c-4a73-a4aa-9de85d5c2444.CdIjwlngB1p%2F%2FPG2A2Kz2ftbbrl1vwFrBxSphRqZKks",
+    "domain": "wwws.airfrance.fr",
+    "path": "/",
+    "expires": 1609420247.607944,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "klm_tracking_id",
+    "value": "35605628_94.109.87.88",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "bm_mi",
+    "value": "4DF2D90ABA284C0C555E156AA3A6C1FF~gmdG5aDLUWhPH91AyDFO/4O4pNX7Yfbdg/7ZAkkgvCYHv3pUwEhFU4+lDoZSI9Go9/3j9VKrp2bBrx7+ieDwfWThqMrz1YnFnKqvHhJMcXrVrBP5sjdq8h3jG7BdL7S5cqi9dCcPh2wNpp02oPyNSXtzQbvKdUEfePf1nWKTPe3PltD9JiyEGBwgZN55krJo0OjiNws8oNI8ms1m6p5gQ5odzLqXsRSwqsjKL4MsoT4T109pFsyoNDKw8ivogfN29nyIyno1gn/XaddrbI8rKA==",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609413037.327669,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "ak_bmsc",
+    "value": "14B70ABB15AC3FDC161A42C05A1D1E440212D606ED7B00008995ED5FA48CF12C~plzc/iqdk8RGNQger6DfK6OED+fELNke9ldV6KMR4xrlWoWblz/Z9BZzHYJ2wejeJgzB6mnOdWJOpcNLjVXj6WN9V3EWxRJzKHIHaLETT27NvlAFdU+kY27qXytlJqGWRkBTzcT7P7Ivgbpt/HWflESXYXs+SCPDM5PvI3ID7sy/WyNWhIuQ/VIqE7zneDD1hSCtiIKm0+KnFhVxBN45J/vA2EAIegjKn4zw7yq1P8yd4p11l8QU91xO6VJS3rTGGO",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609413036.983751,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "_abck",
+    "value": "2BD7EA4BBDE59480B71D53FA82A46A85~0~YAAQTsURAnGCIXF2AQAAqC0QuAWK7F4kiz2Fu+vV3pdWbpcWecJBkkO3PGRYZrYv1SXSMbl+ovrFDRpgRAifBZxEvzG+LnBzBtRhGgCq1lhBl1Ji8oRwRRedeY/ayL7rSkkplOIu6mcCLSivlcd8gvx+c9QpDt4DnmUxBvVi0J/q/oBBWf7nHLMmumzA9Wb6IekBkiCSDU9oRkaYObrNka77dZsV6/qVSrKu+Rr5zRVGFuI3Rwwy4mkD91YUCsGgd/MSnghgHUwMkWFbXzYn27e301abVkrkuhvbo9fj7lMPFmQoqjr5xw68KLKfuug0gr3+pAHY1SuKBMC/Gie7w/nkmXN//bZr~-1~-1~-1",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1640941840.321534,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "optimizelyEndUserId",
+    "value": "oeu1609405842157r0.023876107943381797",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1624957852,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_svtri",
+    "value": "2f1b3f97-ac3b-4891-a37b-d1fe1dcde218",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1672477854,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.2.1735582154.1609405842",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1672477853,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.2.1090629709.1609405842",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609492253,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "wzuid",
+    "value": "f763cb885fed9593",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1640941853,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "__troRUID",
+    "value": "b4d271da-cb4f-432d-9809-1a1f59422adb",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1643533843,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.1514215483.1609405843",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1617181853,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1609405843268.1715173009",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1617181854,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "__troSYNC",
+    "value": "1",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609492243,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "XSRF-TOKEN",
+    "value": "cTk9mYBX-GFrqJ96A9rdAMDPMsS-ZVRuKPsY",
+    "domain": "wwws.airfrance.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "bm_sv",
+    "value": "19B9D2FF9EDEC52F1719965E3ABF9945~/M332uNqyzuNg0Bv58Ao2oi4G198aFfp8/4m/JzRit5B/QWO4xoauyvLNJqGWgFTjUmJqTkcV7zimdEfJicILc1URzCIDlF/SFSXSFnrZW2ba7mYeZyWWNQ4WUxJSW/DyGVrT3f6WFtP0jFSMJ4fAol5vDuEBPqTbkZchtOBrW4=",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609413037.252503,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "_svs",
+    "value": "%7B%22p%22%3A%7B%227%22%3A1609405842269%2C%2212%22%3A1609405842244%2C%222003%22%3A1609405852500%2C%223002%22%3A1609405842252%2C%224242%22%3A1609405842234%2C%227010%22%3A1609405842271%7D%2C%22m%22%3A%7B%22adblocktest%22%3A%7B%22adblocktest%22%3A1611997842236%7D%7D%7D",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1672477852,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "TCGI_BW",
+    "value": "VdehzB9o2dyAIglAS3SNr18iWD5sdm5Q==gwCSqoVpuK",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1624957852,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_svlet",
+    "value": "1609405852525",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetsid",
+    "value": "0f4a05604b4811eb97a87567a11eecd7",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609492253,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_uetvid",
+    "value": "0f4a41204b4811ebbb71ef5c22a2f05f",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1610809853,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__trossion",
+    "value": "1609405843_1800_1__b4d271da-cb4f-432d-9809-1a1f59422adb%3A1609405843_1609405853_2_",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1643533853,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "esvuvars",
+    "value": "exuid=yAIglAS3SNr18iWD5sdm5Q%3D%3D",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1640941853,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "esvvvars",
+    "value": "",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609409453,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "ESVSS",
+    "value": "5f5dc542",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1609409453,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "ESVTRK",
+    "value": "f763cb885fed9593||0e1db8215fed959d",
+    "domain": ".airfrance.fr",
+    "path": "/",
+    "expires": 1640941853,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "QSI_AFKLM_PageCount",
+    "value": "2",
+    "domain": "wwws.airfrance.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  }
+]

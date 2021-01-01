@@ -1,6 +1,7 @@
 {
     "de": {
         "url": "https://www.expedia.de",
+        "cookieFile": "./expedia/www.expedia.de.cookies.json",
         "Nur Hinflug": "Nur Hinflug",
         "Abflughafen": "Abflughafen",
         "Wo starten Sie?": "Wo starten Sie?",
@@ -11,6 +12,7 @@
     },
     "fr": {
         "url": "https://www.expedia.fr",
+        "cookieFile":  "./expedia/www.expedia.fr.cookies.json",
         "Nur Hinflug": "Aller simple",
         "Abflughafen": "Origine",
         "Wo starten Sie?": "D'où partez-vous",

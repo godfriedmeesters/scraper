@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 var path = require('path');
+const yn = require('yn');
 var fs = require('fs');
 const puppeteer = require('puppeteer-extra');
 const pluginStealth = require('puppeteer-extra-plugin-stealth');
@@ -21,6 +22,7 @@ class WebScraper {
     language: string = null;
     translator = null;
     dateformat = "";
+    cookies = [];
 
     constructor(langFilePath: string = null) {
         puppeteer.use(pluginStealth());
@@ -54,20 +56,27 @@ class WebScraper {
 
         var obj = JSON.parse(fs.readFileSync(langFilePath));
 
-
         Translator.registerDefaultLanguage("de", obj.de);
         Translator.registerLanguage("fr", obj.fr);
         this.translator = Translator;
+
+        // if (cookiesFilePath != null) {
+        //     const cookiesString = fs.readFileSync(cookiesFilePath);
+        //     const cookies = JSON.parse(cookiesString);
+
+        //     for(var cookie of cookies)
+        //     {
+        //       cookie.expires =-1;
+        //     }
+        // }
     }
 
-
-
-    async startClient(language?: string) {
+    async startClient(params) {
         let locale = '--lang=de-DE,de';
 
         this.language = "de";
 
-        if (language && language == "fr") {
+        if ("language" in params && params.language == "fr") {
             locale = '--lang=fr-FR,fr';
             this.language = "fr";
             this.translator.changeLanguage("fr");
@@ -78,7 +87,7 @@ class WebScraper {
         if (process.env.IN_DEV) {
             this.browser = await puppeteer.launch({
                 headless: false,
-                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
                 args: ['--start-maximized', `--lang=${locale}`]
             });
         }
@@ -92,6 +101,14 @@ class WebScraper {
         }
 
         this.page = await this.browser.newPage();
+
+        if ( "useCookies" in params && yn(params.useCookies)) {
+            const cookiesString = fs.readFileSync(this.translator.translate("cookieFile"));
+            const cookies = JSON.parse(cookiesString);
+
+            await this.page.setCookie(...cookies);
+        }
+
         await this.page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
 
         await this.page.setViewport({ width: 1920, height: 1080 });
@@ -101,15 +118,12 @@ class WebScraper {
         });
 
         await this.page.setDefaultNavigationTimeout(process.env.DEFAULT_PUPPETEER_TIMEOUT);
-        //await this.page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
-
     }
 
     async stopClient() {
         logger.info('Stopping web client');
         await this.browser.close();
     }
-
 
     async takeScreenShot(className) {
         var imageName = className + "-" + Date.now() + '.png';
