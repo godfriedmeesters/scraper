@@ -65,13 +65,8 @@ class AppScraper {
     async startClient() {
         logger.info('Starting APP client');
 
-        let host = "host.docker.internal";
-        if (process.env.IN_DEV) {
-            host = "127.0.0.1"
-        }
-
         const appiumOpts = {
-            host: host,
+            host: process.env.APPIUM_HOST,
             path: '/wd/hub',
             port: 4723,
             capabilities: JSON.parse(this.desiredCapabilities),
