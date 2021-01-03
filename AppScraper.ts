@@ -66,7 +66,7 @@ class AppScraper {
         logger.info('Starting APP client');
 
         const appiumOpts = {
-            host: process.env.APPIUM_HOST,
+            hostname: process.env.APPIUM_HOST,
             path: '/wd/hub',
             port: 4723,
             capabilities: JSON.parse(this.desiredCapabilities),
