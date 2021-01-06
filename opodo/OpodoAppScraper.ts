@@ -9,14 +9,13 @@ import {logger} from '../logger';
 export class OpodoAppScraper extends AppScraper implements IScraper {
 
   constructor() {
-    const apkPath = path.join(__dirname, "opodo.apk");
+    const apkPath =  "c:\\apk\\opodo.apk";
 
     super(JSON.stringify({
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",
       "app": apkPath,
-      //"app": "C:\\projects\\diffscraper\\scraper\\opodo\\opodo.apk",
       "autoGrantPermissions": "true",
       "appPackage": "com.opodo.reisen",
       "appActivity": "com.odigeo.app.android.home.HomeContainerView"

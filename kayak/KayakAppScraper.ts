@@ -13,7 +13,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",
-      "app": "C:\\projects\\diffscraper\\scraper\\kayak\\kayak_apkpure.com.apk",
+      "app": "C:\\apk\\kayak_apkpure.com.apk",
       "autoGrantPermissions": "true",
       "locale": "DE",
       "language": "de"

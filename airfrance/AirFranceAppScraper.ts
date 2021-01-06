@@ -14,7 +14,7 @@ var fs = require('fs');
 
 export class AirFranceAppScraper extends AppScraper implements IScraper {
   constructor() {
-    const apkPath = path.join(__dirname, "AirFrance_v5.1.0_apkpure.com.apk");
+    const apkPath = path.join("c:\\apk\\AirFrance_v5.1.0_apkpure.com.apk");
 
     super(JSON.stringify({
       "platformName": "Android",

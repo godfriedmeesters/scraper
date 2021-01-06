@@ -16,13 +16,12 @@ import { logger } from "../logger";
 export class ExpediaAppScraper extends AppScraper implements IScraper {
 
   constructor() {
-    const apkPath = path.join(__dirname, "Expedia_v20.49.0_apkpure.com.apk");
+    const apkPath = "c:\\apk\\Expedia_v20.49.0_apkpure.com.apk";
     date.locale("de");
     super(JSON.stringify({
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",
-      //"app": "C:\\projects\\scraper\\services\\scraper\\expedia\\Expedia_v20.49.0_apkpure.com.apk",
       "app":  apkPath,
       "autoGrantPermissions": "true",
       "language": "de",
