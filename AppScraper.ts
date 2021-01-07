@@ -17,6 +17,7 @@ class AppScraper {
 
     constructor(desiredCapabilities: any) {
         this.desiredCapabilities = desiredCapabilities;
+        this.desiredCapabilities.deviceName = process.env.DEVICE_NAME;
 
         this.monthNames = [
             'January',
