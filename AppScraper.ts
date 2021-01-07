@@ -17,7 +17,7 @@ class AppScraper {
 
     constructor(desiredCapabilities: any) {
         this.desiredCapabilities = desiredCapabilities;
-        this.desiredCapabilities.deviceName = process.env.DEVICE_NAME;
+
 
         this.monthNames = [
             'January',
@@ -66,11 +66,14 @@ class AppScraper {
     async startClient() {
         logger.info('Starting APP client');
 
+        const jsonDesiredCaps = JSON.parse(this.desiredCapabilities);
+        jsonDesiredCaps.deviceName = process.env.DEVICE_NAME;
+
         const appiumOpts = {
             hostname: process.env.APPIUM_HOST,
             path: '/wd/hub',
             port: 4723,
-            capabilities: JSON.parse(this.desiredCapabilities),
+            capabilities: jsonDesiredCaps,
             logLevel: "warn"
         };
 
