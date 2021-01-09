@@ -94,7 +94,9 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     await this.clickLink("Suchen");
     await this.sleep(5000);
 
+    await this.clickLink("Alle Filter");
     await this.clickLink("Direktflug");
+    await this.clickLink("Fertig");
     await this.sleep(2000);
 
     // var screenshot = await this.takeScreenShot();
