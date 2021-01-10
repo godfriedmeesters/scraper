@@ -47,7 +47,7 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         }
 
 
-        logger.info("Looking for date " + dt);
+        //logger.info("Looking for date " + dt);
 
         var dateInPage: boolean = await this.isXpathInPage(dt);
 
@@ -79,7 +79,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         const depTimes = await this.getTextArrayFromXpath("//span[@data-test-id='departure-time']"); //18:20 Uhr–19:15 Uhr
 
-        const arrTimes = await this.getTextArrayFromXpath("//span[@data-test-id='arrival-time']"); //18:20 Uhr–19:15 Uhr
 
         const prices = await this.getTextArrayFromXpath("//span[@data-test-id='listing-price-dollars']");//147 €Nur Hinflug, pro Reisendem
         const operatedBy = await this.getTextArrayFromXpath("//span[@data-test-id='airline-name']");
@@ -89,12 +88,12 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         for (var i = 0; i < prices.length; i++) {
             var flightOffer = new FlightOffer();
             if (this.language == "de") {
-                flightOffer.departureTime = depTimes[i].replace("Uhr", "").trim();
-                flightOffer.arrivalTime = arrTimes[i].replace("Uhr", "").trim();
+                flightOffer.departureTime = depTimes[i].split("–")[0].replace("Uhr", "").trim();
+                flightOffer.arrivalTime = depTimes[i].split("–")[1].replace("Uhr", "").trim();
             }
             else if (this.language == "fr") {
-                flightOffer.departureTime = depTimes[i].replace("h", ":").replace(" ", "").trim();
-                flightOffer.arrivalTime = arrTimes[i].replace("h", ":").replace(" ", "").trim();
+                flightOffer.departureTime = depTimes[i].split("–")[0].replace("h", ":").replace(" ", "").trim();
+                flightOffer.arrivalTime = depTimes[i].split("–")[1].replace("h", ":").replace(" ", "").trim();
             }
 
 
