@@ -82,7 +82,7 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         //const prices = await this.getTextArrayFromXpath("//span[@data-test-id='listing-price-dollars']");//147 €Nur Hinflug, pro Reisendem
         const prices = await this.getElementsTextByCss("span.uitk-lockup-price");
-        const operatedBy = await this.getTextArrayFromXpath("//span[@data-test-id='airline-name']");
+        const operatedBy = await this.getTextArrayFromXpath("//div[@data-test-id='flight-operated']");
 
         var flightOffers = [];
 
