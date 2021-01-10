@@ -77,7 +77,7 @@ async function processScraperJob(job, done) {
         if (!JSON.parse(job.data.params.useTestData || false)) {
             logger.info(`${job.data.scraperClass}:Entering input data...`)
             await scraper.scrapeUntilSearch(job.data.inputData);
-            logger.info(`${job.data.scraperClass}:Launching search...`)
+            logger.info(`${job.data.scraperClass}:Clicking search button...`)
             offers = await scraper.scrapeFromSearch(job.data.inputData);
             await scraper.transferScreenshotsToFtp();
         }
