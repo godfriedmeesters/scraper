@@ -100,7 +100,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
             flightOffer.origin = inputData.origin;
             flightOffer.destination = inputData.destination;
-            //logger.info("Found price " + prices[i]);
             flightOffer.price = prices[i].trim().replace('€', '').trim();
             flightOffer.airline = operatedBy[i].trim();
             flightOffer.screenshot = screenshot;
