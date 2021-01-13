@@ -19,7 +19,7 @@ const webScraperCommands = new Queue('webScraperCommands', options);
 const finishedScrapeQueue = new Queue('finishedScrapes', options);
 const erroredScrapeQueue = new Queue('erroredScrapes', options);
 
-logger.info("Starting to wait for scraping jobs");
+logger.info("Starting to wait for scraping jobs V2");
 
 if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
     webScraperCommands.process((job, done) => {
