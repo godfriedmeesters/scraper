@@ -95,7 +95,7 @@ async function processScraperJob(job, done) {
         logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}`);
         await erroredScrapeQueue.add({
             ...job.data,
-            "errors": JSON.stringify(exception)
+            "errors": String(exception)
         });
     }
     finally {
