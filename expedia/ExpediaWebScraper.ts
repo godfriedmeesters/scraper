@@ -17,6 +17,7 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         const origin = inputData.origin;
         const destination = inputData.destination;
         await this.page.goto(this.translator.translate("url"));
+        await this.page.waitFor(3000);
 
         await this.clickElementByXpath("//a[@aria-controls='wizard-flight-pwa']");
 
