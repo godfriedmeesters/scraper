@@ -7,6 +7,7 @@ const fs = require('fs');
 var path = require('path');
 
 export class ExpediaWebScraper extends WebScraper implements IScraper {
+
     constructor() { super( path.join(__dirname, "lang.json")); }
 
     async scrapeUntilSearch(inputData: any) {
