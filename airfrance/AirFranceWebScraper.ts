@@ -20,7 +20,7 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
         await this.clickElementByCss('.cookiebar-agree-button-agree')
         await this.page.waitFor(2000);
 
-        const day = dateFormat(depDate, 'dd');
+        const day = dateFormat(depDate, 'd');
         const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
 
         const yearMonth = shortMonthNames[depDate.getMonth()].toUpperCase() + " " + depDate.getFullYear();
