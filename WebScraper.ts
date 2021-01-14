@@ -25,7 +25,7 @@ class WebScraper {
     cookies = [];
 
     constructor(langFilePath: string = null) {
-        puppeteer.use(pluginStealth());
+
 
         this.shortMonthNamesDe = [
             "Jan.",
@@ -66,6 +66,8 @@ class WebScraper {
 
         this.language = "de";
 
+        puppeteer.use(pluginStealth());
+
         if ("language" in params && params.language == "fr") {
             locale = '--lang=fr-FR,fr';
             this.language = "fr";
@@ -94,31 +96,11 @@ class WebScraper {
 
         ///
 
-
-        await this.page.setRequestInterception(true);
-
-        this.page.on('request', request => {
-            request_client({
-                uri: request.url(),
-                resolveWithFullResponse: true,
-            }).then(response => {
-                const request_url = request.url();
-                const statusCode = parseInt(response.statusCode);
-
-                if (statusCode < 400)
-                    logger.info(`Requested url ${request_url}; got response status code ${statusCode}`);
-                else
-                    logger.error(`Requested url ${request_url}; got response status code ${statusCode}`);
-
-
-
-
-                request.continue();
-            }).catch(error => {
-                console.error(error);
-                request.abort();
-            });
-        });
+        this.page.on('response', (response) => {
+            if (parseInt(response.status()) >= 400) {
+                logger.error("Getting page " + response.request().url() + " resulted in status code " + response.status());
+            }
+        })
 
 
         ///
