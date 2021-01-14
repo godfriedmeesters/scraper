@@ -59,8 +59,6 @@ class WebScraper {
         Translator.registerDefaultLanguage("de", obj.de);
         Translator.registerLanguage("fr", obj.fr);
         this.translator = Translator;
-
-
     }
 
     async startClient(params) {

@@ -2,7 +2,6 @@ import { WebScraper } from "../WebScraper";
 const de = require('date-and-time/locale/de');
 import { IScraper } from "../IScraper";
 import { FlightOffer } from "../types";
-import { logger } from "../logger";
 const fs = require('fs');
 var path = require('path');
 
@@ -51,8 +50,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         }
 
 
-        //logger.info("Looking for date " + dt);
-
         var dateInPage: boolean = await this.isXpathInPage(dt);
 
         while (!dateInPage) {
@@ -74,7 +71,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitForXPath("//input[@data-test-id='stopFilter_stops-0' or @data-test-id='stops-0' ]");
         await this.clickElementByXpath("//input[@data-test-id='stopFilter_stops-0' or @data-test-id='stops-0' ]");
-
 
         await this.page.waitFor(5000);
 
