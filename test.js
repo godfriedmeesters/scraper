@@ -1,39 +1,46 @@
+'use strict';
+
 const puppeteer = require('puppeteer');
-var path = require('path');
-const { join } = require('path');
-const fs = require('fs').promises;
-
-const profilePath = path.join(__dirname, 'Profile1');
-
-//const profilePath = "./Profile1";
+const request_client = require('request-promise-native');
+const puppeteer = require('puppeteer-extra');
+const pluginStealth = require('puppeteer-extra-plugin-stealth');
 
 (async () => {
-  console.log(profilePath);
-  const browser = await puppeteer.launch({
-    headless: false, args: [
-      // `--user-data-dir=${profilePath}`
-      //'--profile-directory=Profile 1'
-    ]
-  });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  const cookiesString = await fs.readFile('./www.expedia.fr.cookies.json');
-  const cookies = JSON.parse(cookiesString);
+  const result = [];
 
-  for(var cookie of cookies)
-  {
-    cookie.expires =-1;
-    console.log(cookie.expires);
-  }
+  await page.setRequestInterception(true);
 
-  await page.setCookie(...cookies);
+  page.on('request', request => {
+    request_client({
+      uri: request.url(),
+      resolveWithFullResponse: true,
+    }).then(response => {
+      const status = response.statusCode;
+      const request_url = request.url();
+      const request_headers = request.headers();
+      const request_post_data = request.postData();
+      const response_headers = response.headers;
+      const response_size = response_headers['content-length'];
+      const response_body = response.body;
 
-  for(var cookie in page.cookies())
-  {
-console.log(cookie);
-  }
+      result.push({
+        request_url,
+        status
+      });
 
+      console.log(result);
+      request.continue();
+    }).catch(error => {
+      console.error(error);
+      request.abort();
+    });
+  });
 
-  await page.goto("http://www.expedia.fr");
-  await page.waitFor(5000)
-  //await browser.close();
+  await page.goto('https://google.com/', {
+    waitUntil: 'networkidle0',
+  });
+
+  await browser.close();
 })();

@@ -22,6 +22,7 @@
     "puppeteer-extra": "^2.1.3",
     "puppeteer-extra-plugin-stealth": "2.6.5",
     "puppeteer-full-page-screenshot": "^1.0.5",
+    "request-promise-native": "^1.0.9",
     "simple-translator": "^0.2.5",
     "underscore": "1.11.0",
     "webdriverio": "^5.11.2",

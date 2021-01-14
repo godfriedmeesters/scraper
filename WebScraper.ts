@@ -7,8 +7,8 @@ const puppeteer = require('puppeteer-extra');
 const pluginStealth = require('puppeteer-extra-plugin-stealth');
 import fullPageScreenshot from "puppeteer-full-page-screenshot";
 import Translator from "simple-translator";
+const request_client = require('request-promise-native');
 
-//const pptr = require('puppeteer-core');
 
 import { uploadScreenshotsToFTP } from "./ftp";
 import { logger } from './logger';
@@ -60,15 +60,7 @@ class WebScraper {
         Translator.registerLanguage("fr", obj.fr);
         this.translator = Translator;
 
-        // if (cookiesFilePath != null) {
-        //     const cookiesString = fs.readFileSync(cookiesFilePath);
-        //     const cookies = JSON.parse(cookiesString);
 
-        //     for(var cookie of cookies)
-        //     {
-        //       cookie.expires =-1;
-        //     }
-        // }
     }
 
     async startClient(params) {
@@ -102,7 +94,38 @@ class WebScraper {
 
         this.page = await this.browser.newPage();
 
-        if ( "useCookies" in params && yn(params.useCookies)) {
+        ///
+
+
+        await this.page.setRequestInterception(true);
+
+        this.page.on('request', request => {
+            request_client({
+                uri: request.url(),
+                resolveWithFullResponse: true,
+            }).then(response => {
+                const request_url = request.url();
+                const statusCode = parseInt(response.statusCode);
+
+                if (statusCode < 400)
+                    logger.info(`Requested url ${request_url}; got response status code ${statusCode}`);
+                else
+                    logger.error(`Requested url ${request_url}; got response status code ${statusCode}`);
+
+
+
+
+                request.continue();
+            }).catch(error => {
+                console.error(error);
+                request.abort();
+            });
+        });
+
+
+        ///
+
+        if ("useCookies" in params && yn(params.useCookies)) {
             const cookiesString = fs.readFileSync(this.translator.translate("cookieFile"));
             const cookies = JSON.parse(cookiesString);
 

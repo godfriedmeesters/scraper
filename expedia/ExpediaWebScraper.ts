@@ -17,6 +17,8 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         const origin = inputData.origin;
         const destination = inputData.destination;
         await this.page.goto(this.translator.translate("url"));
+
+
         await this.page.waitFor(3000);
 
         await this.clickElementByXpath("//a[@aria-controls='wizard-flight-pwa']");
@@ -59,7 +61,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
             dateInPage = await this.isXpathInPage(dt);
         }
         await this.clickElementByXpath(dt);
-        //await this.page.waitFor(500);
 
         await this.clickElementByXpath("//button[@data-stid='apply-date-picker']");
 
@@ -82,7 +83,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         const depTimes = await this.getTextArrayFromXpath("//span[@data-test-id='departure-time']"); //18:20 Uhr–19:15 Uhr
 
 
-        //const prices = await this.getTextArrayFromXpath("//span[@data-test-id='listing-price-dollars']");//147 €Nur Hinflug, pro Reisendem
         const prices = await this.getElementsTextByCss("span.uitk-lockup-price");
         const operatedBy = await this.getTextArrayFromXpath("//div[@data-test-id='flight-operated']");
 
