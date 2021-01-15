@@ -253,6 +253,7 @@ class WebScraper {
         return this.clickElementByXpath("//*[text() = '" + text + "']");
     }
 
+
     async clickOptionalElementByText(text: string) {
         await this.clickOptionalElementByXpath("//*[text() = '" + text + "']");
     }

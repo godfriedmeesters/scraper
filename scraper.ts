@@ -61,15 +61,9 @@ async function processScraperJob(job, done) {
 
     logger.info(`Procesing job ${JSON.stringify(job)}`);
     try {
-        if ("language" in job.data.params) {
-            logger.info("Starting job with params " + JSON.stringify(job.data.params));
-            await scraper.startClient(job.data.params);
-        }
-        else {
-            logger.info("Starting job in default language");
-            await scraper.startClient(job.data.params);
-        }
 
+        logger.info("Starting job with params " + JSON.stringify(job.data.params));
+        await scraper.startClient(job.data.params);
 
         let offers: any = [{ 'price': '444' }, { 'price': '555' }];
 

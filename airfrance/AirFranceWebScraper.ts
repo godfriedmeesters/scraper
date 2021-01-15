@@ -53,7 +53,23 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitForNavigation();
 
+        await this.page.waitFor(5000);
+
+        await this.page.evaluate(_ => {
+            window.scrollBy(0, 200);
+          });
+
+        await this.page.focus('.bw-chip-filter__toggle');
+
+        await this.clickElementByTextContains(this.translator.translate("Stopps")); // Stopps
         await this.page.waitFor(500);
+        await this.clickElementByXpath("//label[@for='mat-radio-14-input']")
+        await this.page.waitFor(500);
+        await this.clickElementByXpath(`//button[contains(@aria-label,"${this.translator.translate("anzeigen")}") and @color="primary"]`);
+       // await this.clickElementByTextContains(this.translator.translate("anzeigen"));  //anzeigen
+
+       // await this.page.waitFor(1000);
+
         await this.page.waitForSelector('.bw-itinerary-row__header', { visible: true });
         var offerNodes = await this.page.$$(".bw-itinerary-row__header");
 
