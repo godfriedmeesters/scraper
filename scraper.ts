@@ -15,6 +15,7 @@ const options = {
 const emulatedDeviceScraperCommands = new Queue('emulatedDeviceScraperCommands', options);
 const realDeviceScraperCommands = new Queue('realDeviceScraperCommands', options);
 const webScraperCommands = new Queue('webScraperCommands', options);
+var fs = require('fs');
 
 const finishedScrapeQueue = new Queue('finishedScrapes', options);
 const erroredScrapeQueue = new Queue('erroredScrapes', options);
@@ -25,6 +26,23 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
     webScraperCommands.process((job, done) => {
         logger.info(`Got new scraper job on web browser queue: ${job.data.scraperClass} with params:  ${JSON.stringify(job.data.params)} and input data
     ${JSON.stringify(job.data.inputData)} `);
+
+
+        const inputData = JSON.parse(
+            fs.readFileSync("proxies.json")
+        );
+
+        const proxies = inputData.proxies;
+
+        var use_proxy = Math.random() < 0.4;
+
+        const proxy_index = Math.floor(Math.random() * proxies.length);
+
+        if (use_proxy) {
+            job.data.params.proxy = proxies[proxy_index];
+            logger.info("Selected proxy " + proxies[proxy_index]);
+        }
+
 
         (async () => {
             await processScraperJob(job, done);

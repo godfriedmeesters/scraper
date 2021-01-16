@@ -68,27 +68,36 @@ class WebScraper {
 
         puppeteer.use(pluginStealth());
 
+        var options = [];
+
         if ("language" in params && params.language == "fr") {
             locale = '--lang=fr-FR,fr';
+            options.push(locale);
             this.language = "fr";
             this.translator.changeLanguage("fr");
         }
 
-        logger.info("starting web client with locale " + locale);
+        if ("proxy" in params) {
+            options.push(`--proxy-server=${params.proxy}`);
+        }
+
+
+        logger.info("starting web client with options " + options);
+
 
         if (process.env.IN_DEV) {
             this.browser = await puppeteer.launch({
                 headless: false,
                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                args: ['--start-maximized', `--lang=${locale}`]
+                args: ['--start-maximized', ...options]
             });
         }
         else {
             this.browser = await puppeteer.launch({
                 headless: false,
-                args: ['--start-maximized', `--lang=${locale}`, '--no-sandbox', "--headless",
+                args: ['--start-maximized', '--no-sandbox', "--headless",
                     "--disable-gpu",
-                    "--disable-dev-shm-usage",]
+                    "--disable-dev-shm-usage", ...options]
             });
         }
 
