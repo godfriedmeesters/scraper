@@ -59,7 +59,8 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
             window.scrollBy(0, 200);
           });
 
-        await this.page.focus('.bw-chip-filter__toggle');
+       // await this.page.focus('.bw-chip-filter__toggle');
+       await this.page.waitFor(1000);
 
         await this.clickElementByTextContains(this.translator.translate("Stopps")); // Stopps
         await this.page.waitFor(500);
