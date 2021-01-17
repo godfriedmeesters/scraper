@@ -102,6 +102,8 @@ async function processScraperJob(job, done) {
 
         await finishedScrapeQueue.add(finishedJob);
 
+        done();
+
     }
     catch (exception) {
         logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}`);
@@ -109,9 +111,13 @@ async function processScraperJob(job, done) {
             ...job.data,
             "errors": String(exception)
         });
+
+
+        done(new Error(String(exception)));
+
     }
     finally {
-        done();
+
         await scraper.stopClient();
     }
 
