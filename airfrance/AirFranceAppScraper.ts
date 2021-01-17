@@ -42,7 +42,7 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
     const departureDay = depDate.getDate();
 
 
-    await this.clickLink("App ohne Anmeldung nutzen >");
+    await this.clickOptionalLink("App ohne Anmeldung nutzen >");
 
     await this.clickLink("Kaufen");
 
@@ -107,19 +107,24 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
     var origins = await this.getElementsByResourceId('com.airfrance.android.dinamoprd:id/flight_card_outbound_iata_code');
     var destinations = await this.getElementsByResourceId('com.airfrance.android.dinamoprd:id/flight_card_inbound_iata_code');
     var prices = await this.getElementsByResourceId('com.airfrance.android.dinamoprd:id/flight_card_price');
+    var transfers = await this.getElementsByResourceId('com.airfrance.android.dinamoprd:id/flight_card_transfer_text');
 
 
     var flightOffers = [];
     for (var i = 0; i < departureTimes.length; i++) {
-      var flightOffer = new FlightOffer();
-      flightOffer.departureTime = await departureTimes[i].getText();
-      flightOffer.arrivalTime = await arrivalTimes[i].getText();
-      flightOffer.flightNumber = await flightNumbers[i].getText();
-      flightOffer.origin = await origins[i].getText();
-      flightOffer.destination = await destinations[i].getText();
-      flightOffer.price = await prices[i].getText().replace("EUR","").trim();
-      flightOffer.screenshot =screenshot;
-      flightOffers.push(flightOffer);
+      const transferText = await transfers[i].getText();
+      if (transferText == "Direktflug") {
+        var flightOffer = new FlightOffer();
+        flightOffer.departureTime = await departureTimes[i].getText();
+        flightOffer.arrivalTime = await arrivalTimes[i].getText();
+        flightOffer.flightNumber = await flightNumbers[i].getText();
+        flightOffer.origin = await origins[i].getText();
+        flightOffer.destination = await destinations[i].getText();
+        flightOffer.price = await prices[i].getText();
+        flightOffer.price = flightOffer.price.replace("EUR", "").trim()
+        flightOffer.screenshot = screenshot;
+        flightOffers.push(flightOffer);
+      }
     }
 
     return flightOffers;
