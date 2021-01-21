@@ -499,3 +499,7 @@
 {"@timestamp":"2021-01-17T20:22:26.842Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options ","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-01-17T20:23:05.865Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename AirFranceWebScraper-1610914985865.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-01-17T20:23:08.758Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-17T21:30:36.785Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-17T21:31:18.668Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename AirFranceWebScraper-1610919078668.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-17T21:31:21.238Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-17T23:06:24.821Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options ","ecs":{"version":"1.5.0"}}

@@ -1,15 +1,17 @@
-var fs = require('fs');
+const puppeteer = require('puppeteer');
 
-const inputData = JSON.parse(
-  fs.readFileSync("proxies.json")
-);
+(async () => {
+  const browser = await puppeteer.launch({
+                headless: false,
+                executablePath: "/usr/bin/google-chrome-stable",
+                args: ['--no-xshm',
+                '--disable-dev-shm-usage',
+                '--single-process',
+                '--window-size=1920,1080', '--start-maximized']
+            });
+  const page = await browser.newPage();
+  await page.goto('https://google.com');
+  const title  = await page.title();
 
-const proxies = inputData.proxies;
-
-var use_proxy = Math.random() < 0.4;
-
-
-const proxy_index = Math.floor(Math.random()* proxies.length ) ;
-
-console.log(use_proxy);
-console.log(proxies[proxy_index]);
+  await browser.close();
+})();

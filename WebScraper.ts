@@ -82,7 +82,7 @@ class WebScraper {
         }
 
 
-        logger.info("starting web client with options " + options);
+        logger.info("starting web client with options {" + options + "}");
 
 
         if (process.env.IN_DEV) {
@@ -95,9 +95,11 @@ class WebScraper {
         else {
             this.browser = await puppeteer.launch({
                 headless: false,
-                args: ['--start-maximized', '--no-sandbox', "--headless",
-                    "--disable-gpu",
-                    "--disable-dev-shm-usage", ...options]
+                executablePath: "/usr/bin/google-chrome-stable",
+                args: ['--no-xshm',
+                '--disable-dev-shm-usage',
+                '--no-first-run',
+                '--window-size=1920,1080', '--start-maximized', ...options]
             });
         }
 
