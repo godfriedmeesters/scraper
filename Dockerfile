@@ -38,8 +38,8 @@ RUN npm install
 RUN npm install -g typescript
 RUN npm install -g ts-node
 
-RUN mkdir screenshots
-RUN mkdir compressedScreenshots
+RUN mkdir /usr/src/app/screenshots && chown -v -R apps:apps /usr/src/app/screenshots
+RUN mkdir /usr/src/app/compressedScreenshots && chown -v -R apps:apps  /usr/src/app/compressedScreenshots
 
 COPY . .
 
