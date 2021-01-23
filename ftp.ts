@@ -11,7 +11,7 @@ import { logger } from "./logger";
 
 export async function uploadScreenshotsToFTP() {
 
-    logger.info(`Uploading screenshots to ftp...`);
+    logger.info(`Going to upload screenshots to ftp...`);
     try {
         logger.info("Compressing screenshots...");
         const files = await imagemin(['screenshots/*.*'], {
