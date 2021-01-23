@@ -21,7 +21,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         await this.page.waitFor(1000);
         await this.clickOptionalElementByCss('#didomi-notice-agree-button');
         await this.page.waitFor(1000);
-        await this.clickElementByXpath(`//span[contains(text(), '${this.translator.translate( "Nur Hinflug")}')]`);
+        await this.clickElementByXpath(`//div[contains(text(), '${this.translator.translate( "Nur Hinflug")}')]`);
         await this.page.waitFor(2000);
 
         await this.clickElementByCss(".od-directflights-selectable-label");
