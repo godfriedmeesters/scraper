@@ -503,3 +503,25 @@
 {"@timestamp":"2021-01-17T21:31:18.668Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename AirFranceWebScraper-1610919078668.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-01-17T21:31:21.238Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-01-17T23:06:24.821Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T19:01:57.550Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T19:02:29.728Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T19:13:18.224Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T19:13:50.077Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:03:02.543Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:03:35.537Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:04:12.626Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:04:42.979Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:12:01.652Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:12:34.286Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:12:53.293Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:13:24.211Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:18:33.915Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:19:04.975Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view April 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:19:40.010Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:19:56.268Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1611519596268.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:19:56.303Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:22:42.172Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:23:14.053Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view April 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:23:46.978Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:24:04.323Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1611519844323.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-24T20:24:05.000Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

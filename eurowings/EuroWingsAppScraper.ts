@@ -45,27 +45,28 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
 
     await this.sleep(5000);
 
-    await this.clickLink("Book flights");
+    await this.clickLink("Flüge buchen");
 
-    await this.clickLink("One way");
+    await this.clickLink("Nur Hinflug");
 
-    await this.clickLink("Departure airport");
+    await this.clickLink("Abflughafen");
 
-    const enterDepartureAirport = await this.getElement("Enter Airport");
+    const enterDepartureAirport = await this.getElement("Flughafen eingeben");
 
-    await enterDepartureAirport.setValue(`${origin.substring(0, 3)}`);
-
-    await this.clickElementByResource('com.germanwings.android:id/flyUpEntryText');
-
-    await this.clickLink("Arrival airport");
-
-    const enterArrivalAirport = await this.getElement("Enter Airport");
-
-    await enterArrivalAirport.setValue(`${destination.substring(0, 3)}`);
+    await enterDepartureAirport.setValue(`${origin}`);
 
     await this.clickElementByResource('com.germanwings.android:id/flyUpEntryText');
 
-    await this.clickLink("Departure flight date");
+    await this.clickLink("Zielflughafen");
+
+    const enterArrivalAirport = await this.getElement("Flughafen eingeben");
+
+    await enterArrivalAirport.setValue(`${destination}`);
+    await this.sleep(500);
+
+    await this.clickElementByResource('com.germanwings.android:id/flyUpEntryText');
+
+    await this.clickLink("Hinflugdatum");
 
     await this.scrollIntoView(departureMonth + ' ' + departureYear);
     await this.scrollDownUntilNotVisible(departureMonth + ' ' + departureYear);
@@ -83,7 +84,7 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
       departureDay +
       '"]/following-sibling::android.widget.TextView[2]');
 
-    await this.clickLink('Search');
+    await this.clickLink('Suchen');
 
     await this.sleep(5000);
 
