@@ -1,7 +1,7 @@
 {
     "de": {
         "url": "https://www.opodo.de",
-        "cookieFile": "www.opodo.de.cookies.json",
+        "cookieFile": "./opodo/www.opodo.de.cookies.json",
         "Nur Hinflug": "Nur Hinflug",
         "Flug suchen ": "Flug suchen ",
         "VERSTANDEN": "VERSTANDEN"

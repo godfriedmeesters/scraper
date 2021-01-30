@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-01-22 10:14:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-01-15 15:05:27
+ * @ Modified time: 2021-01-28 12:24:06
  * @ Description: CLI for local testing, jobs are not sent to queue but processed locally
  */
 
@@ -82,7 +82,7 @@ async function processScraperJob(job) {
     console.log(exception);
   }
   finally {
-    await scraper.stopClient();
+    //await scraper.stopClient();
   }
 
 }

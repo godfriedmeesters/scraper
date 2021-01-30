@@ -1,3 +1,13 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-22 22:33:05
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-01-28 11:55:36
+ * @ Description:
+ */
+
+// TODO: save cookies in DB
+
 require('dotenv').config();
 
 var path = require('path');
@@ -7,7 +17,6 @@ const puppeteer = require('puppeteer-extra');
 const pluginStealth = require('puppeteer-extra-plugin-stealth');
 import fullPageScreenshot from "puppeteer-full-page-screenshot";
 import Translator from "simple-translator";
-const request_client = require('request-promise-native');
 
 
 import { uploadScreenshotsToFTP } from "./ftp";
@@ -66,7 +75,7 @@ class WebScraper {
 
         this.language = "de";
 
-        puppeteer.use(pluginStealth());
+        //puppeteer.use(pluginStealth());
 
         var options = [];
 
@@ -86,6 +95,7 @@ class WebScraper {
 
 
         if (process.env.IN_DEV) {
+            logger.info("using Windows Chrome browser");
             this.browser = await puppeteer.launch({
                 headless: false,
                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
@@ -105,8 +115,6 @@ class WebScraper {
 
         this.page = await this.browser.newPage();
 
-        ///
-
         this.page.on('response', (response) => {
             if (parseInt(response.status()) >= 400) {
                 logger.error("Getting page " + response.request().url() + " resulted in status code " + response.status());
@@ -114,7 +122,6 @@ class WebScraper {
         })
 
 
-        ///
 
         if ("useCookies" in params && yn(params.useCookies)) {
             const cookiesString = fs.readFileSync(this.translator.translate("cookieFile"));

@@ -331,6 +331,7 @@ class AppScraper {
     }
 
     async getElementByXpath(xpath) {
+        this.sleep(500);
         return this.appiumClient.$(xpath
         );
     }
