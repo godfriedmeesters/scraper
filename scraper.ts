@@ -4,6 +4,8 @@ import { logger } from './logger';
 import scraperClasses from './index';
 const yn = require('yn');
 
+const os = require('os');
+
 const options = {
     redis: {
         host: process.env.DB_HOST,
@@ -95,7 +97,9 @@ async function processScraperJob(job, done) {
         }
 
         const stopTime = new Date();
-        const finishedJob = { ...job.data, "items": offers, startTime, stopTime };
+
+        const hostName = os.hostname();
+        const finishedJob = { ...job.data, "items": offers, startTime, stopTime, hostName };
 
         logger.debug(JSON.stringify(offers));
         logger.info(`Finished scraper job`);
