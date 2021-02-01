@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-01-28 14:40:36
+ * @ Modified time: 2021-02-01 22:52:50
  * @ Description:
  */
 
@@ -85,49 +85,120 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
     }
 
-
     async scrapeFromSearch(inputData) {
+
+        var flightOffers = [];
+
+        await this.page.setRequestInterception(true);
+
+
+
+        this.page.on('request', async (request) => {
+            request.continue();
+        });
+
+        this.page.on('response', async response => {
+            if (response.url().includes("graphql")) {
+
+                if (response.status() == 200) {
+
+                    const text = await response.text();
+                    if (text.includes("itineraries")) {
+                        logger.info("graphql found");
+                        //fs.writeFileSync('opodoData.txt', text);
+                        const json = JSON.parse(text);
+
+                        flightOffers = this.getFlightsGraphSQL(json);
+                    }
+                }
+            }
+            else if (response.url().includes("data")) {
+                if (response.status() == 200) {
+                    const text = await response.text();
+                    if (text.includes("segItems")) {
+                        logger.info("data found");
+
+                        const json = JSON.parse(text);
+
+                        flightOffers = this.getFlightsData(json);
+                    }
+                }
+            }
+
+        });
+
         await this.clickElementByText("Flug suchen");
         await this.page.waitFor(5000);
 
         await this.clickOptionalElementByText("UNDERSTOOD");
-        await this.page.waitFor(15000);
+        await this.page.waitFor(5000);
 
-         //take screenshot
-         var screenshotPath = await this.takeScreenShot("OpodoWebScraper");
+        const url = await this.page.url();
 
-        const depArrTimes = await this.getTextArrayFromXpath("//div[@data-testid='itinerary']//*[contains(text(),':')]");
-        const depArrLocations = await this.getTextArrayFromXpath("//div[@data-testid='itinerary']//*[contains(text(),'(')]");
-        const prices = await this.getTextArrayFromXpath("//div[@data-testid='itinerary']//span[contains(text(), '€') and contains(text(),',')]");
-        const airlines = await this.getElementsByXpath("//div[@data-testid='itinerary']//img");
+        var screenshotPath = await this.takeScreenShot("OpodoWebScraper");
 
-
-
-
-        var flightOffers = [];
-
-         logger.info("Got " + prices.length +  " prices");
-         logger.info("Got " + depArrLocations.length +  " depArrLocations");
-         logger.info("Got " + depArrTimes.length +  " depArrTimes");
-         logger.info("Got " + airlines.length +  "  airlines");
-
-
-        const url = this.page.url();
-        for (var i = 0, j = 0; i < prices.length; i++, j += 2) {
-            var flightOffer = new FlightOffer();
-            flightOffer.screenshot = screenshotPath;
-            flightOffer.departureTime = depArrTimes[j].trim();
-            flightOffer.arrivalTime = depArrTimes[j + 1].trim();
-            flightOffer.airline = "teest"; //await airlines[i].getAttribute("alt");
-            flightOffer.origin = depArrLocations[j].match(/\(([^)]+)\)/)[1].trim();
-            flightOffer.destination = depArrLocations[j + 1].match(/\(([^)]+)\)/)[1].trim();
-            flightOffer.price = prices[i].trim().replace("€", "");
+        for (const flightOffer of flightOffers) {
             flightOffer.url = url;
-            flightOffers.push(flightOffer);
+            flightOffer.screenshot = screenshotPath;
         }
 
         return flightOffers;
+    }
 
+
+    getFlightsData(json) {
+
+        const flightOffers = [];
+
+        for (const item of json.items) {
+
+            for (const segItem of item.itineraryGroupsList[0].segItems) {
+                const flightOffer = new FlightOffer();
+
+                flightOffer.price = item.priceWithoutDiscounts.replace(/(<([^>]+)>)/gi, "").replace("&euro;", '').trim();
+                flightOffer.origin = segItem.departureInfo.iata;
+                flightOffer.destination = segItem.arrivalInfo.iata;
+                flightOffer.departureTime = segItem.departureInfo.time;
+                flightOffer.arrivalTime = segItem.arrivalInfo.time;
+                flightOffer.airline = item.itineraryGroupsList[0].carrierName;
+
+                if (item.itineraryGroupsList.length == 1) {
+                    flightOffers.push(flightOffer);
+                }
+            }
+        }
+
+        return flightOffers;
+    }
+
+    getFlightsGraphSQL(json) {
+
+        const flightOffers = [];
+
+        for (const itin of json.data.search.itineraries) {
+            const flightOffer = new FlightOffer();
+            flightOffer.price = itin.fees[0].price.amount;
+
+            const section = itin.legs[0].segments[0].sections[0];
+            const depDate = new Date(section.departureDate);
+
+            flightOffer.departureTime = depDate.getHours() + ":" + depDate.getMinutes();
+            const arrDate = new Date(section.arrivalDate);
+
+            flightOffer.arrivalTime = arrDate.getHours() + ":" + arrDate.getMinutes();;
+            flightOffer.origin = section.departure.iata;
+            flightOffer.destination = section.destination.iata;
+            flightOffer.airline = section.carrier.name;
+
+
+            if (itin.legs[0].segments[0].sections.length == 1) {
+                flightOffers.push(flightOffer);
+            }
+
+
+        }
+
+        return flightOffers;
     }
 }
 

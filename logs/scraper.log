@@ -881,3 +881,72 @@
 {"@timestamp":"2021-01-30T21:37:16.183Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-01-30T21:37:18.779Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-01-30T21:37:20.839Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:58:45.124Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:58:45.130Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:59:25.717Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:59:26.244Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:59:28.827Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:59:31.428Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:59:34.026Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T21:59:36.103Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:00:28.842Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612130428842.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:15:08.459Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:15:08.462Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:18:45.914Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:18:45.917Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:18:45.918Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:19:25.507Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:19:26.034Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:19:28.616Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:19:31.214Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:19:33.812Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:19:35.864Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-01-31T22:20:28.579Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612131628579.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:10:53.098Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:10:53.102Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:10:53.102Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:11:33.367Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:11:33.894Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:11:36.490Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:11:39.059Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:11:41.110Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:12:33.865Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612213953865.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:17:20.390Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:17:20.394Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:17:20.396Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:18:05.093Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:18:05.625Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:18:08.224Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:18:10.821Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:18:12.870Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:18:55.557Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612214335557.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:27:51.294Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:27:51.298Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:27:51.299Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:28:26.988Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:28:27.520Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:28:30.098Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:28:32.696Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:28:34.781Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:29:17.496Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612214957496.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:33:18.234Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:33:18.251Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:33:18.255Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:34:01.912Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:34:02.440Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:34:05.023Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:34:07.635Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:34:09.683Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:34:52.424Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612215292424.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:38:41.572Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:38:41.574Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:38:41.575Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:22.022Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:22.554Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:25.146Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:27.724Z","log":{"level":"info","logger":"winston"},"message":"clicking next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:29.782Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:36.479Z","log":{"level":"info","logger":"winston"},"message":"data found","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:39.076Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://ad2.adfarm1.adition.com/banner?sid=4235967%26gdpr%3D%24%7BGDPR%7D%26gdpr_consent%3D%24%7BGDPR_CONSENT_39%7D%26kid=4008358&bid=12191181&wpt=C&ts=1612215576 resulted in status code 404","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:39:39.662Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://rtb-csync.smartadserver.com/redir/?partnerid=79&partneruserid=k-UqdenGpFjlWMA9RipOIRNdLrZKErIwSLc5kdSw resulted in status code 503","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-01T21:40:12.536Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1612215612536.png","ecs":{"version":"1.5.0"}}

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-01-28 11:55:36
+ * @ Modified time: 2021-01-31 23:18:36
  * @ Description:
  */
 
@@ -32,6 +32,7 @@ class WebScraper {
     translator = null;
     dateformat = "";
     cookies = [];
+    useStealth = true;
 
     constructor(langFilePath: string = null) {
 
@@ -65,6 +66,9 @@ class WebScraper {
 
         var obj = JSON.parse(fs.readFileSync(langFilePath));
 
+        if (langFilePath.includes("opodo"))
+            this.useStealth = false;
+
         Translator.registerDefaultLanguage("de", obj.de);
         Translator.registerLanguage("fr", obj.fr);
         this.translator = Translator;
@@ -75,7 +79,15 @@ class WebScraper {
 
         this.language = "de";
 
-        //puppeteer.use(pluginStealth());
+        if(this.useStealth)
+        {
+            logger.info("Using stealth");
+            puppeteer.use(pluginStealth());
+        }
+        else
+        {
+            logger.info("Not using stealth");
+        }
 
         var options = [];
 
@@ -107,9 +119,9 @@ class WebScraper {
                 headless: false,
                 executablePath: "/usr/bin/google-chrome-stable",
                 args: ['--no-xshm',
-                '--disable-dev-shm-usage',
-                '--no-first-run',
-                '--window-size=1920,1080', '--start-maximized', ...options]
+                    '--disable-dev-shm-usage',
+                    '--no-first-run',
+                    '--window-size=1920,1080', '--start-maximized', ...options]
             });
         }
 
