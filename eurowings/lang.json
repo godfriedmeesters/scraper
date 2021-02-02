@@ -2,7 +2,7 @@
     "de": {
         "cookieFile": "./eurowings/www.eurowings.com.cookies.json",
         "url": "https://www.eurowings.com/de.html",
-        "Allen zustimmen ": "Allen zustimmen ",
+        "Allen zustimmen": "Allen zustimmen",
         "Abflughafen": "Abflughafen",
         "Zielflughafen": "Zielflughafen",
         "Suchen": "Suchen",
@@ -12,9 +12,9 @@
     "fr": {
         "cookieFile": "./eurowings/www.eurowings.com.cookies.json",
         "url": "https://www.eurowings.com/fr.html",
-        "Allen zustimmen ": "Tout sélectionner ",
-        "Abflughafen": "Aéroport de départ",
-        "Zielflughafen": "Aéroport d'arrivée",
+        "Allen zustimmen": "Tout",
+        "Abflughafen": "de d",
+        "Zielflughafen": "arriv",
         "Hinflug": "Vol aller",
         "Suchen":"Rechercher un vol"
     }

@@ -24,7 +24,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
         await this.page.goto(this.translator.translate("url"));
 
-        await this.clickOptionalElementByText(this.translator.translate('Allen zustimmen '));
+await this.clickElementByCss(".cookie-consent--cta-accept");
 
         await this.page.waitFor(2000);
 
@@ -38,7 +38,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitFor(2000);
 
-        const originElement = await this.getElementByXpath(`//input[@aria-label="${this.translator.translate("Abflughafen")}"]`);
+        const originElement = await this.getElementByXpath(`//input[contains(@aria-label,"${this.translator.translate("Abflughafen")}")]`);
         await originElement.focus();
 
         await originElement.type(origin);
@@ -47,7 +47,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
         await this.tapEnter();
         await this.page.waitFor(1000);
 
-        const destinationElement = await this.getElementByXpath(`//input[@aria-label="${this.translator.translate("Zielflughafen")}"]`);
+        const destinationElement = await this.getElementByXpath(`//input[contains(@aria-label,"${this.translator.translate("Zielflughafen")}")]`);
         await destinationElement.focus();
 
         await destinationElement.type(destination);
@@ -55,10 +55,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
         await this.page.waitFor(3000);
         await this.tapEnter();
 
-        if(this.language == "fr")
-        {   logger.info("Clicking one way");
-            await this.clickElementByText("Vol aller uniquement");
-        }
+
         await this.page.waitFor(1000);
         const dateElement = await this.getElementByXpath(`//input[@aria-label="${this.translator.translate("Hinflug")}"]`);
         await dateElement.type(dateFormat(new Date(departureDate), this.language == "de" ? "dd.mm.yy" : "dd/mm/yy"));
