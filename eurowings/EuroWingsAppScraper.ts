@@ -10,12 +10,12 @@ var path = require('path');
 export class EuroWingsAppScraper extends AppScraper implements IScraper {
 
   constructor() {
-    const apkPath =  "c:\\apk\\Eurowings.v4.3.3_apkpure.com.apk";
+
     super(JSON.stringify({
       "platformName": "Android",
       "platformVersion:": "6.0",
       "deviceName": "my device",
-      "app": apkPath,
+      "app": "c:\\apk\\Eurowings.v4.3.3_apkpure.com.apk",
       "autoGrantPermissions": "true",
       "appPackage": "com.germanwings.android",
       "deviceApiLevel": "23",

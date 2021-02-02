@@ -13,7 +13,6 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
     constructor() { super(path.join(__dirname, "lang.json")); }
 
-    // scrape web part 1: until "clicking" the search button
     async scrapeUntilSearch(inputData: any) {
         date.locale(this.language);
         const departureDate = inputData.checkinDate;
@@ -34,7 +33,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         const d = new Date(departureDate);
 
-        const strDate = date.format(d, "DD MMMM YYYY");
+        const strDate = date.format(d, "D MMMM YYYY");
 
         logger.info("looking for date " + strDate);
 
@@ -51,7 +50,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         await this.clickElementByXpath("//span[@aria-label='" + strDate + "']");
         d.setDate(d.getDate() + 1);
-        const strNextDate = date.format(d, "DD MMMM YYYY");
+        const strNextDate = date.format(d, "D MMMM YYYY");
 
         await this.clickElementByXpath("//span[@aria-label='" + strNextDate + "']");
 
