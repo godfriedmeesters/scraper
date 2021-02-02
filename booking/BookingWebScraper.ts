@@ -37,7 +37,6 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         logger.info("looking for date " + strDate);
 
-
         const xp = "//span[@aria-label='" + strDate + "']";
 
         var dateInPage: boolean = await this.isXpathInPage(xp);

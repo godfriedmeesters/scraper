@@ -3,14 +3,20 @@
         "url": "https://www.opodo.de",
         "cookieFile": "./opodo/www.opodo.de.cookies.json",
         "Nur Hinflug": "Nur Hinflug",
-        "Flug suchen ": "Flug suchen ",
-        "VERSTANDEN": "VERSTANDEN"
+        "Flug suchen": "Flug suchen",
+        "VERSTANDEN": "VERSTANDEN",
+        "Von?": "Von?",
+        "Nach?": "Nach?",
+        "Hinflug": "Hinflug"
     },
     "fr": {
         "url": "https://www.opodo.fr",
         "cookieFile": "./opodo/www.opodo.fr.cookies.json",
         "Nur Hinflug": "Aller simple",
-        "Flug suchen ": "Rechercher des vols ",
-        "VERSTANDEN": "COMPRIS"
+        "Flug suchen": "Rechercher les vols",
+        "VERSTANDEN": "COMPRIS",
+        "Von?": "partez-vous ?",
+        "Nach?": "allez-vous ?",
+        "Hinflug": "Départ le"
     }
 }

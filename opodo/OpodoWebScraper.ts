@@ -2,11 +2,11 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-01 22:52:50
+ * @ Modified time: 2021-02-02 20:32:11
  * @ Description:
  */
 
-//TODO only disable stealth for opodo
+
 import { WebScraper } from "../WebScraper";
 import { IScraper } from "../IScraper";
 import { FlightOffer } from "../types";
@@ -19,7 +19,6 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
     constructor() { super(path.join(__dirname, "lang.json")); }
 
     async scrapeUntilSearch(inputData: any) {
-
         const departureDate = new Date(inputData.departureDate);
         const origin = inputData.origin;
         const destination = inputData.destination;
@@ -37,7 +36,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         //input[@placeholder='Nach?']
         // //input[@placeholder='Hinflug']
         await this.page.waitFor(1000);
-        const from = await this.getElementByXpath("//input[@placeholder='Von?']");
+        const from = await this.getElementByXpath(`//input[contains(@placeholder,"${this.translator.translate("Von?")}")]`);
 
         await this.page.waitFor(500);
         await from.type(origin, { delay: 50 });
@@ -46,7 +45,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitFor(3000);
 
-        const to = await this.getElementByXpath("//input[@placeholder='Nach?']");
+        const to = await this.getElementByXpath(`//input[contains(@placeholder,"${this.translator.translate("Nach?")}")]`);
         await to.type(destination, { delay: 50 });
         await this.page.waitFor(3000)
         await this.tapEnter();
@@ -54,17 +53,16 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         let isStrMonthFound = false;
 
-        const dp = await this.getElementByXpath("//input[@placeholder='Hinflug']");
+        const dp = await this.getElementByXpath(`//input[@placeholder='${this.translator.translate("Hinflug")}']`);
 
         await this.page.waitFor(3000);
 
-
-
         const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
 
-        const strLookForMonth = shortMonthNames[departureDate.getMonth()].replace(".", "");
+        const strLookForMonth = this.language == "fr" ? shortMonthNames[departureDate.getMonth()].replace(".", "").toLowerCase() :
+            shortMonthNames[departureDate.getMonth()].replace(".", "");
 
-        logger.info("Scrolling to the right month...");
+        logger.info("Scrolling to the right month " + strLookForMonth + " ... ");
         while (!isStrMonthFound) {
             const strMonths = await this.getElementsTextByCss(".odf-calendar-title");
 
@@ -127,7 +125,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         });
 
-        await this.clickElementByText("Flug suchen");
+        await this.clickElementByText(this.translator.translate("Flug suchen"));
         await this.page.waitFor(5000);
 
         await this.clickOptionalElementByText("UNDERSTOOD");
