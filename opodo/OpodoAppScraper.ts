@@ -9,16 +9,12 @@ import {logger} from '../logger';
 export class OpodoAppScraper extends AppScraper implements IScraper {
 
   constructor() {
-    const apkPath =  "c:\\apk\\opodo.apk";
 
     super(JSON.stringify({
       "platformName": "Android",
-      "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",
-      "app": apkPath,
-      "autoGrantPermissions": "true",
-      "appPackage": "com.opodo.reisen",
-      "appActivity": "com.odigeo.app.android.home.HomeContainerView"
+      "app":  "c:\\apk\\opodo.apk",
+      "autoGrantPermissions": "true"
     }
     ));
   }
@@ -31,26 +27,30 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
     const depDate = new Date(departureDate);
 
     const departureDay = depDate.getDate();
-    const departureMonth = this.monthNames[depDate.getMonth()];
+    const departureMonth = this.monaten [depDate.getMonth()];
     const departureYear = depDate.getFullYear();
 
-    await this.clickLink("Choose your destination");
-    await this.clickLink("One way");
+    await this.clickLink("FERTIG");
 
-    await this.clickLink("Origin");
+    await this.clickLink("Flüge");
+    await this.clickLink("NUR HINFLUG");
+
+    await this.clickLink("Abflug");
 
     const flyingFrom = await this.getElementByResourceId("com.opodo.reisen:id/search_src_text")
 
     await flyingFrom.setValue(`${origin.substring(0, 4)}`);
     await this.clickElementByResource("com.opodo.reisen:id/txtCityName");
 
-    await this.clickLink("Destination");
+    await this.clickLink("Ziel");
 
     const flyingTo = await this.getElementByResourceId("com.opodo.reisen:id/search_src_text")
     await flyingTo.setValue(`${destination.substring(0, 4)}`);
     await this.clickElementByResource("com.opodo.reisen:id/txtCityName");
 
-    await this.clickLink("Departure date");
+    await this.clickLink("Nur Direktflüge");
+
+    await this.clickLink("Hinflugdatum");
 
     await this.scrollIntoView(departureMonth + ' ' + departureYear);
 
@@ -64,18 +64,18 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
     await departureDateChoice.click();
 
-    await this.clickLink("Continue");
+    await this.clickLink("WEITER");
 
   }
 
   // scrape Android app part 2: starting from  "clicking" the search button
   async scrapeFromSearch(inputData) {
 
-    await this.clickLink("Search flights");
+    await this.clickLink("FLÜGE SUCHEN");
 
-    await this.scrollDownUntilNotVisible('The smart choice!', 300);
+    //await this.scrollDownUntilNotVisible('The smart choice!', 300);
 
-    await this.scrollIntoView("Departure");
+    //await this.scrollIntoView("Departure");
 
     /*******************************************/
     var rect = await this.appiumClient.getWindowRect();

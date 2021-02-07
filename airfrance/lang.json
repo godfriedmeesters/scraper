@@ -5,7 +5,8 @@
         "Nur Hinflug": "Nur Hinflug",
         "Abflugdatum": "Abflugdatum",
         " Flüge suchen ": " Flüge suchen ",
-        "cookieFile": "./airfrance/wwws.airfrance.de.cookies.json",
+        "authCookieFile": "./airfrance/wwws.airfrance.de.cookies.json",
+        "recycledCookieFile": "./recycledCookies/airfrance.de.json",
         "Stopps": "Stopps",
         "Nonstop": "Nonstop",
         "anzeigen": "anzeigen"
@@ -16,7 +17,8 @@
         "Nur Hinflug": "Aller simple",
         "Abflugdatum": "Date de départ",
         " Flüge suchen ": " Rechercher les vols ",
-        "cookieFile": "./airfrance/wwws.airfrance.fr.cookies.json",
+        "authCookieFile": "./airfrance/wwws.airfrance.fr.cookies.json",
+        "recycledCookieFile": "./recycledCookies/airfrance.fr.json",
         "Stopps": "Correspondances",
         "Nonstop": "Direct",
         "anzeigen": "Afficher"

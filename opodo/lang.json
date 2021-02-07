@@ -1,7 +1,8 @@
 {
     "de": {
         "url": "https://www.opodo.de",
-        "cookieFile": "./opodo/www.opodo.de.cookies.json",
+        "authCookieFile": "./opodo/www.opodo.de.cookies.json",
+        "recycledCookieFile": "./recycledCookies/opodo.de.json",
         "Nur Hinflug": "Nur Hinflug",
         "Flug suchen": "Flug suchen",
         "VERSTANDEN": "VERSTANDEN",
@@ -11,7 +12,8 @@
     },
     "fr": {
         "url": "https://www.opodo.fr",
-        "cookieFile": "./opodo/www.opodo.fr.cookies.json",
+        "authCookieFile": "./opodo/www.opodo.fr.cookies.json",
+        "recycledCookieFile": "./recycledCookies/opodo.fr.json",
         "Nur Hinflug": "Aller simple",
         "Flug suchen": "Rechercher les vols",
         "VERSTANDEN": "COMPRIS",

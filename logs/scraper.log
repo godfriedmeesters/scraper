@@ -1132,3 +1132,372 @@
 {"@timestamp":"2021-02-02T22:21:24.471Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-02T22:21:25.321Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-02T22:22:08.242Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612304528242.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T12:44:37.672Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T12:44:37.936Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T12:44:37.938Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T12:44:40.097Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T12:45:23.338Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612529123338.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:21:23.416Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:21:23.643Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:21:23.645Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:21:25.649Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:28:51.417Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:28:51.431Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:28:51.441Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:28:52.473Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:44:41.956Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:44:41.972Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:44:41.994Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:44:44.046Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:45:30.998Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612536330998.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:58:33.752Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:58:33.793Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:58:33.809Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:58:34.834Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T14:59:21.007Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612537161007.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:11:06.857Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:11:06.872Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:11:06.892Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:11:07.766Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:14:59.761Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:14:59.783Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:14:59.795Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:15:00.722Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:15:00.755Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:15:46.246Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612538146246.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:24:13.210Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:24:13.283Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:24:13.307Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:24:14.751Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:24:14.799Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:24:58.968Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612538698968.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:44:32.667Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:44:32.689Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:44:32.706Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:44:33.817Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:44:33.863Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:45:19.554Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612539919554.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:56:32.916Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:56:32.935Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:56:32.962Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:56:33.926Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:56:33.957Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T15:57:18.369Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612540638369.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:45:16.719Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:45:16.827Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:45:16.828Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:45:18.277Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:45:18.291Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:46:03.086Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612561563086.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:51:14.289Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:51:14.303Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:51:14.315Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:51:15.030Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:51:15.058Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:51:58.670Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612561918670.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:52:01.042Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:52:01.047Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to []","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:55:57.727Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:55:57.741Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:55:57.748Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:55:58.522Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:55:58.556Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:56:40.026Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612562200026.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:56:42.504Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:56:42.523Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to []","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:59:14.191Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:59:14.204Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:59:14.204Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:59:15.000Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:59:15.017Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T21:59:54.509Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://www.eurowings.com/de/buchen/fluege/flugsuche/flug-buchen/select.booking.json resulted in status code 428","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:00:22.430Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:00:22.434Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/eurowings.de.json","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:03:19.109Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:03:19.126Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:03:19.132Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:03:19.870Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:03:20.672Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:01.998Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:02.001Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/eurowings.de.json","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:41.076Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:41.090Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:41.097Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:41.822Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:04:42.892Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:04.896Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:04.910Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:04.917Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:05.813Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:06.599Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:53.055Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612564313055.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:55.494Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:31:55.937Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/eurowings.de.json","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:32:53.199Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:32:53.217Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:32:53.228Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:32:54.058Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:32:54.090Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/fr.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:33:35.815Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612564415815.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:33:38.083Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:33:38.483Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/eurowings.fr.json","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:42:58.326Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:42:58.339Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:42:58.353Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:42:59.203Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/fr.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:43:38.752Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:43:38.766Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:43:38.774Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:43:39.484Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:44:00.518Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:44:00.543Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:44:00.545Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:44:01.275Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/fr.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:44:41.859Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612565081859.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:44:44.168Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:45:39.455Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:45:39.467Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:45:39.491Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:45:40.371Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:45:52.156Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:17.143Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565177143.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:27.610Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:30.238Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:30.241Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565190241.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:38.832Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:41.454Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:41.456Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565201456.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:50.116Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:52.721Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:46:52.723Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565212723.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:01.381Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:03.978Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:03.981Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565223981.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:09.558Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:09.585Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:09.588Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/booking.de.json","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:50.438Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:50.452Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:50.463Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:47:59.454Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:24.438Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565304438.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:33.985Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:36.603Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:36.606Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565316606.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:44.919Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:47.535Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:47.537Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565327537.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:55.818Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:58.416Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:48:58.418Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565338418.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:49:06.691Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:49:09.295Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:49:09.298Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612565349298.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:49:14.996Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:49:15.233Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:56:48.319Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:56:48.332Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:56:48.344Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:56:49.042Z","log":{"level":"info","logger":"winston"},"message":"Using authentication cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-05T22:56:57.910Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:33:44.957Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:34:17.655Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:34:49.431Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:35:08.993Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:36:49.124Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:37:19.302Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view May 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:37:45.341Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:38:05.139Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:38:46.610Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:39:17.062Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view May 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:40:58.607Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:41:29.905Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view May 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:48:37.623Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:49:10.734Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:49:35.960Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T09:49:55.037Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:23:23.988Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:24:02.871Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:24:38.292Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:25:00.443Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:25:17.858Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:25:53.334Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:26:25.870Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:26:47.352Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:49:28.782Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:50:05.477Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:50:39.032Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T11:51:01.159Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:17:07.079Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:17:44.067Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:18:12.210Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:18:36.061Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:33:06.961Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:33:36.581Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:41:29.347Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:42:01.265Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:42:31.187Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:42:49.754Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1612640569754.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T19:42:50.222Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:04:17.756Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:04:49.530Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:05:20.589Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:05:39.164Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1612641939164.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:05:39.639Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:07:57.031Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:08:39.309Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:17:26.782Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T20:18:02.697Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:34:12.215Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:34:26.106Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:36:38.053Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:36:54.370Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:39:26.978Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:39:44.124Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:41:08.125Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:41:25.653Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:48:50.306Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:49:23.362Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:49:38.306Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:49:46.543Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:55:22.283Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:55:55.595Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:10.727Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:20.322Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612648580322.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:20.941Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:21.168Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:22.956Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612648582956.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:23.507Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:23.773Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:28.140Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612648588140.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:28.615Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:28.761Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:28.918Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:30.530Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612648590529.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:31.046Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:32.499Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612648592499.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:33.014Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:33.233Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:34.694Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612648594694.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:35.192Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:35.398Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:56:35.461Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T21:58:59.313Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:00:17.030Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:00:25.007Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:01:19.121Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:02:04.979Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:02:43.151Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:02:43.153Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:03:09.310Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:03:14.696Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot AirFranceAppScraper-1612648994696.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:03:16.233Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:11:15.849Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:12:11.760Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:13:10.232Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:40:44.836Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:41:33.609Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:42:32.329Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:48:57.542Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:49:45.350Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:49:49.943Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:51:01.892Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:51:49.634Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T22:52:52.271Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T23:01:21.834Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T23:02:09.816Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-06T23:03:01.334Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:08:50.390Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:10:11.369Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:10:32.195Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612692632195.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:11:48.712Z","log":{"level":"info","logger":"winston"},"message":"Found 0 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:11:48.718Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:40:21.350Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:11.144Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:33.910Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694493910.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:34.535Z","log":{"level":"info","logger":"winston"},"message":"Found 2 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:34.627Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:34.711Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:35.878Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694495878.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:36.567Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:36.659Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:36.738Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:36.847Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:37.970Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694497970.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:38.605Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:38.686Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:38.768Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:38.847Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:39.920Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694499920.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:40.568Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:40.665Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:40.764Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:40.862Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:41:40.870Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:42:56.804Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:43:44.628Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:05.255Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694645255.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:05.857Z","log":{"level":"info","logger":"winston"},"message":"Found 2 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:05.960Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:06.041Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:07.207Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694647207.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:07.908Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:07.990Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:08.066Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:08.150Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:09.234Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694649234.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:09.824Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:09.900Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:09.976Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:10.052Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:11.163Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1612694651163.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:11.761Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:11.833Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:11.903Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:11.973Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:44:11.979Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:46:23.850Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T10:47:51.464Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:14:32.006Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:15.759Z","log":{"level":"info","logger":"winston"},"message":"Mai","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:17.809Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:21.346Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:24.926Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:28.452Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:31.997Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:33.099Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:15:51.270Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:10.935Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1612696570935.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:12.399Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:12.575Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:12.749Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:12.927Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:14.839Z","log":{"level":"info","logger":"winston"},"message":"skipping flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:15.002Z","log":{"level":"info","logger":"winston"},"message":"skipping flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:15.171Z","log":{"level":"info","logger":"winston"},"message":"skipping flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:15.336Z","log":{"level":"info","logger":"winston"},"message":"skipping flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:16:15.339Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:20:22.564Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:20:56.791Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:12.137Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:22.998Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612696882998.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:23.583Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:23.772Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:25.434Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612696885434.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:25.944Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:26.158Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:27.803Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612696887803.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:28.299Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:28.493Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:28.648Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:33.319Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612696893319.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:33.864Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:33.993Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:34.137Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:35.678Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612696895678.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:36.274Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:36.519Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:38.022Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot OpodoAppScraper-1612696898022.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:38.550Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:38.744Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-07T11:21:38.805Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

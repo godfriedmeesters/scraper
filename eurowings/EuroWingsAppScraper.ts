@@ -1,9 +1,8 @@
 import { AppScraper } from "../AppScraper";
 import { IScraper } from "../IScraper";
-import dateFormat from 'dateformat';
-import { FlightOffer, OfferList } from "../types";
+import { FlightOffer } from "../types";
 var convertTime = require('convert-time');
-var path = require('path');
+
 
 
 
@@ -40,7 +39,7 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
     const destination = inputData.destination;
 
     const depDate = new Date(departureDate);
-    const departureMonth = this.monthNames[depDate.getMonth()];
+    const departureMonth = this.monaten[depDate.getMonth()];
     const departureYear = depDate.getFullYear();
 
     await this.sleep(5000);
@@ -91,6 +90,12 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
     //optional accept cookie
     try {
 
+      await this.appiumClient.touchAction([
+        {action: 'press', x: 668, y: 863},
+        {action: 'moveTo', x: 670, y: 624},
+        'release'
+      ]);
+
       await this.clickElementByXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.Button");
     }
     catch (ex) { }
@@ -98,18 +103,15 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
 
     await this.sleep(5000);
 
-    const depTime = await this.getAttrTextByXpath("//android.view.View[@bounds='[120,828][522,903]']"
-      , 'text');
+    const depTime = await this.getElementTextByXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[1]");
+
+    const arrTime = await this.getElementTextByXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[3]");
+
+   const price = await this.getElementTextByXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View[2]");
 
 
-    const arrTime = await this.getAttrTextByXpath("//android.view.View[@bounds='[522,828][924,903]']", 'text');
-    // // const arrTxt = await arr.getAttribute('content-desc');
+    const flNr = await this.getElementTextByXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View/android.view.View[3]/android.view.View[1]/android.view.View[1]");
 
-    const price = await this.getAttrTextByXpath("//android.view.View[@bounds='[924,828][1320,903]']", 'text');
-    // // const priceTxt = await price.getAttribute('content-desc');
-
-    const flNr = await this.getAttrTextByXpath("//android.view.View[@bounds='[120,966][522,1023]']", 'text');
-    // // const flNrTxt = await flNr.getAttribute('content-desc');
     var screenshot = await this.takeScreenShot(this.constructor.name);
 
     var flightOffers = [];
@@ -119,7 +121,7 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
     flightOffer.flightNumber = flNr;
     flightOffer.origin = inputData.origin;
     flightOffer.destination = inputData.destination;
-    flightOffer.price = price;
+    flightOffer.price = price.replace("EUR","").trim();
     flightOffer.screenshot = screenshot;
     flightOffers.push(flightOffer);
 

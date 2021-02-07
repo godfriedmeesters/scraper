@@ -16,13 +16,13 @@ import { logger } from "../logger";
 export class ExpediaAppScraper extends AppScraper implements IScraper {
 
   constructor() {
-    const apkPath = "c:\\apk\\Expedia_v20.49.0_apkpure.com.apk";
+
     date.locale("de");
     super(JSON.stringify({
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",
-      "app":  apkPath,
+      "app":  "c:\\apk\\Expedia_v20.49.0_apkpure.com.apk",
       "autoGrantPermissions": "true",
       "language": "de",
       "locale": "DE",
@@ -66,7 +66,6 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     await flyingFrom.setValue(origin);
     await this.clickElementByResource("com.expedia.bookings:id/title_textview");
 
-    //await this.clickLink("Zielort");
 
     const flyingTo = await this.getElementByResourceId("com.expedia.bookings:id/search_src_text");
 
@@ -85,7 +84,8 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     }
 
     this.appiumClient.setImplicitTimeout(parseInt(process.env.DEFAULT_APPIUM_TIMEOUT));
-    await this.clickElementByXpath("//android.view.View[contains(@content-desc,'" + departureDay + "' )]");
+
+    await this.clickElementByXpath(`(//android.view.View[contains(@content-desc,'${departureDay}.' )])[1]`);
     await this.clickLink("FERTIG");
   }
 
@@ -94,12 +94,10 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     await this.clickLink("Suchen");
     await this.sleep(5000);
 
-    await this.clickLink("Alle Filter");
-    await this.clickLink("Direktflug");
+    await this.clickElementByXpath('//android.widget.FrameLayout[@content-desc="Schaltfläche Sortieren und filtern"]');
+    await this.clickElementByXpath('//android.view.ViewGroup[contains(@content-desc,"Direktflug")]');
     await this.clickLink("Fertig");
     await this.sleep(2000);
-
-    // var screenshot = await this.takeScreenShot();
 
     var rect = await this.appiumClient.getWindowRect();
 
@@ -115,9 +113,9 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
       var screenshot = await this.takeScreenShot(this.constructor.name);
       var oldFlightOffersOnScreen = flightOffersOnScreen.slice();
       flightOffersOnScreen = [];
-      var prices = await this.getElementsByResourceId('com.expedia.bookings:id/price_in_variant_text_view');
-      var timeLines = await this.getElementsByResourceId('com.expedia.bookings:id/flight_time_detail_text_view');
-      var airLines = await this.getElementsByResourceId('com.expedia.bookings:id/airline_text_view');
+      var prices = await this.getElementsByResourceId('com.expedia.bookings:id/price');
+      var timeLines = await this.getElementsByResourceId('com.expedia.bookings:id/flight_time');
+      var airLines = await this.getElementsByResourceId('com.expedia.bookings:id/airline_name');
 
       logger.info("Found " + prices.length + " lines ");
 
@@ -128,9 +126,9 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
         flightOffer.price = pr.replace("€", "").trim();
 
         const tl = await timeLines[i].getText();
-        flightOffer.departureTime = tl.split("–")[0];
+        flightOffer.departureTime = tl.split("–")[0].replace("Uhr","").trim();
 
-        flightOffer.arrivalTime = tl.split("–")[1];
+        flightOffer.arrivalTime = tl.split("–")[1].replace("Uhr","").trim();
 
         flightOffer.origin = inputData.origin;
         flightOffer.destination = inputData.destination;

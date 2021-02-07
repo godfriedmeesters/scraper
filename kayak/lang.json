@@ -1,7 +1,8 @@
 {
     "de": {
         "url": "https://www.kayak.de/flights",
-        "cookieFile": "./kayak/www.kayak.de.cookies.json",
+        "authCookieFile": "./kayak/www.kayak.de.cookies.json",
+        "recycledCookieFile": "./recycledCookies/kayak.de.json",
         "Akzeptieren": "Akzeptieren",
         "Nur Hinflug": "Nur Hinflug",
         "Abflughafen": "Abflughafen",
@@ -15,7 +16,8 @@
     },
     "fr": {
         "url": "https://www.kayak.fr/flights",
-        "cookieFile": "./kayak/www.kayak.fr.cookies.json",
+        "authCookieFile": "./kayak/www.kayak.fr.cookies.json",
+        "recycledCookieFile": "./recycledCookies/kayak.fr.json",
         "Akzeptieren": "Accepter",
         "Nur Hinflug": "Aller simple",
         "Abflughafen": "Origine",

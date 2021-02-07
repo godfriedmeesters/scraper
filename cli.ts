@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-01-22 10:14:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-01-28 12:24:06
+ * @ Modified time: 2021-02-05 22:50:59
  * @ Description: CLI for local testing, jobs are not sent to queue but processed locally
  */
 
@@ -30,11 +30,17 @@ yargs(hideBin(process.argv))
         default: "de",
         description: 'Language for browser: de or fr'
       })
-      .option('useCookies', {
-        alias: 'useCookies',
+      .option('useAuthCookies', {
+        alias: 'useAuthCookies',
         type: 'boolean',
         default: false,
-        description: 'Load Chrome profile with cookies'
+        description: 'Use login cookies'
+      })
+      .option('recycleCookies', {
+        alias: 'recycleCookies',
+        type: 'boolean',
+        default: false,
+        description: 'Re-use cookies between scrapes'
       })
 
   }, (argv) => {
@@ -46,7 +52,7 @@ yargs(hideBin(process.argv))
     const job = {
       "jobCreationTime": new Date(),
       scraperClass: argv.scraperClass, inputData,
-      params: { "useCookies": argv.useCookies, 'language': argv.language }
+      params: { "useAuthCookies": argv.useAuthCookies, 'language': argv.language , 'recycleCookies': argv.recycleCookies}
     };
 
     console.log(`Executing new job ${JSON.stringify(job)}`);
@@ -66,14 +72,10 @@ async function processScraperJob(job) {
 
     await scraper.startClient(job.params);
 
-
-    let offers: any = [{ 'price': '444' }, { 'price': '555' }];
-
-
     console.log(`${job.scraperClass}:Entering input data...`)
     await scraper.scrapeUntilSearch(job.inputData);
     console.log(`${job.scraperClass}:Clicking search button...`)
-    offers = await scraper.scrapeFromSearch(job.inputData);
+    const offers = await scraper.scrapeFromSearch(job.inputData);
 
     console.log(JSON.stringify(offers));
     console.log(`Finished scraper job`);
@@ -82,7 +84,7 @@ async function processScraperJob(job) {
     console.log(exception);
   }
   finally {
-    //await scraper.stopClient();
+    await scraper.stopClient(job.params);
   }
 
 }

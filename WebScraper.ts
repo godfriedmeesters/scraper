@@ -2,11 +2,9 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-02 22:38:08
+ * @ Modified time: 2021-02-05 23:19:37
  * @ Description:
  */
-
-// TODO: save cookies in DB
 
 require('dotenv').config();
 
@@ -17,7 +15,6 @@ const puppeteer = require('puppeteer-extra');
 const pluginStealth = require('puppeteer-extra-plugin-stealth');
 import fullPageScreenshot from "puppeteer-full-page-screenshot";
 import Translator from "simple-translator";
-
 
 import { uploadScreenshotsToFTP } from "./ftp";
 import { logger } from './logger';
@@ -35,7 +32,6 @@ class WebScraper {
     useStealth = true;
 
     constructor(langFilePath: string = null) {
-
 
         this.shortMonthNamesDe = [
             "Jan.",
@@ -79,13 +75,11 @@ class WebScraper {
 
         this.language = "de";
 
-        if(this.useStealth)
-        {
+        if (this.useStealth) {
             logger.info("Using stealth");
             puppeteer.use(pluginStealth());
         }
-        else
-        {
+        else {
             logger.info("Not using stealth");
         }
 
@@ -102,9 +96,7 @@ class WebScraper {
             options.push(`--proxy-server=${params.proxy}`);
         }
 
-
         logger.info("starting web client with options {" + options + "}");
-
 
         if (process.env.IN_DEV) {
             logger.info("using Windows Chrome browser");
@@ -133,12 +125,18 @@ class WebScraper {
             }
         })
 
-
-
-        if ("useCookies" in params && yn(params.useCookies)) {
-            const cookiesString = fs.readFileSync(this.translator.translate("cookieFile"));
+        if ("useAuthCookies" in params && yn(params.useAuthCookies)) {
+            logger.info("Using authentication cookies...");
+            const cookiesString = fs.readFileSync(this.translator.translate("authCookieFile"));
             const cookies = JSON.parse(cookiesString);
+            await this.page.setCookie(...cookies);
+        }
 
+
+        if ("recycleCookies" in params && yn(params.recycleCookies)) {
+            logger.info("Recycling cookies...");
+            const cookiesString = fs.readFileSync(this.translator.translate("recycledCookieFile"));
+            const cookies = JSON.parse(cookiesString);
             await this.page.setCookie(...cookies);
         }
 
@@ -153,8 +151,17 @@ class WebScraper {
         await this.page.setDefaultNavigationTimeout(process.env.DEFAULT_PUPPETEER_TIMEOUT);
     }
 
-    async stopClient() {
+    async stopClient(params) {
         logger.info('Stopping web client');
+
+
+        if ("recycleCookies" in params && yn(params.recycleCookies)) {
+            const cookies = await this.page.cookies();
+            const filePath = this.translator.translate("recycledCookieFile");
+            logger.info(`Saving cookies to ${filePath}`);
+            await fs.writeFile(filePath, JSON.stringify(cookies, null, 2), () => {});
+        }
+
         await this.browser.close();
     }
 
@@ -370,7 +377,7 @@ class WebScraper {
     async getElementTextByXpath(xpath: string) {
         const elements = await this.getElementsByXpath(xpath);
         const text = await this.page.evaluate(el => {
-            // get text content from scraped price 
+            // get text content from scraped price
             return el.textContent;
         }, elements[0]);
         return text;

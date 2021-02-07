@@ -35,6 +35,10 @@ export class KayakAppScraper extends AppScraper implements IScraper {
     await this.clickOptionalLinkByResourceId(
       "com.kayak.android:id/okButton");
 
+
+    await this.clickOptionalLink("Später");
+
+
     await this.clickOptionalLinkByResourceId("com.kayak.android:id/skip");
     await this.clickOptionalLinkByResourceId("com.kayak.android:id/skip");
 

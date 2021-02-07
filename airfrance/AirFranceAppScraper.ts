@@ -44,6 +44,9 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
 
     await this.clickOptionalLink("App ohne Anmeldung nutzen >");
 
+    await this.clickOptionalLink("Später");
+
+
     await this.clickLink("Kaufen");
 
     await this.sleep(1000);

@@ -24,7 +24,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
         await this.page.goto(this.translator.translate("url"));
 
-await this.clickElementByCss(".cookie-consent--cta-accept");
+        await this.clickOptionalElementByCss(".cookie-consent--cta-accept");
 
         await this.page.waitFor(2000);
 

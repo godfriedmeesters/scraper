@@ -1,3 +1,12 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-22 22:33:06
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-02-06 22:38:12
+ * @ Description:
+ */
+
+
 var path = require('path');
 import { logger } from './logger';
 
@@ -5,12 +14,10 @@ import { uploadScreenshotsToFTP } from "./ftp";
 require('dotenv').config();
 
 const wdio = require('webdriverio');
-require('dotenv').config();
 
 class AppScraper {
     scrapeOnlyWeb: boolean;
     logger: any;
-    monthNames: string[];
     monaten: string[];
     appiumClient: any;
     desiredCapabilities: any;
@@ -19,20 +26,6 @@ class AppScraper {
         this.desiredCapabilities = desiredCapabilities;
 
 
-        this.monthNames = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December',
-        ];
 
         this.monaten = [
             "Jan.",
@@ -223,188 +216,184 @@ class AppScraper {
     }
 
 
-    async scrollDownUntilVisible(text) {
 
-        var rect = await this.appiumClient.getWindowRect();
+async scrollDownUntilVisible(text) {
+    var rect = await this.appiumClient.getWindowRect();
+    var rectX = rect.width / 2;
+    var rectY = rect.height / 1.1;
+
+    let textVisible = false;
+    this.appiumClient.setImplicitTimeout(2000);
+    while (!textVisible) {
+        const elem = await this.appiumClient.$(
+            this._('text("' + text + '")')
+        );
+
+        let loc = null;
+
+        if (elem.elementId == null) {
+            textVisible = false;
+            logger.debug('element  not found, continuing scroll');
 
 
-
-        var rectX = rect.width / 2;
-        var rectY = rect.height / 1.1;
-
-
-
-        let textVisible = false;
-        this.appiumClient.setImplicitTimeout(2000);
-        while (!textVisible) {
-            const elem = await this.appiumClient.$(
-                this._('text("' + text + '")')
-            );
-
-            let loc = null;
-
-            if (elem.elementId == null) {
-                textVisible = false;
-                logger.debug('element  not found, continuing scroll');
-                //loc = await elem.getLocation();
-
-            } else {
-                textVisible = true;
-                break;
-            }
-            await this.appiumClient.touchAction([
-                { action: 'press', x: rectX, y: rectY * 0.6 },
-                { action: 'wait', ms: 500 },
-                { action: 'moveTo', x: rectX, y: rectY * 0.4 },
-                'release',
-            ]);
+        } else {
+            textVisible = true;
+            break;
         }
-
-        this.appiumClient.setImplicitTimeout(parseInt(process.env.DEFAULT_APPIUM_TIMEOUT));
-
-    }
-
-    async scrollUpUntilTextVisible(text) {
-
-        var rect = await this.appiumClient.getWindowRect();
-
-        var rectX = rect.width / 2;
-        var rectY = rect.height / 1.1;
-
-        let textVisible = false;
-        this.appiumClient.setImplicitTimeout(2000);
-        while (!textVisible) {
-            const elem = await this.appiumClient.$(
-                this._('text("' + text + '")')
-            );
-
-            let loc = null;
-
-            if (elem.elementId == null) {
-                textVisible = false;
-                logger.debug('element  not found, continuing scroll');
-                //loc = await elem.getLocation();
-
-            } else {
-                textVisible = true;
-                break;
-            }
-            await this.appiumClient.touchAction([
-                { action: 'press', x: rectX, y: rectY * 0.4 },
-                { action: 'wait', ms: 500 },
-                { action: 'moveTo', x: rectX, y: rectY * 0.6 },
-                'release',
-            ]);
-        }
-
-        this.appiumClient.setImplicitTimeout(parseInt(process.env.DEFAULT_APPIUM_TIMEOUT));
-
-    }
-
-
-    async getElement(elementText: string) {
-        return this.appiumClient.$(
-            this._('text("' + elementText + '")')
-        );
-    }
-
-    async appClickElementByResource(resourceId) {
-        const element = await this.appiumClient.$(
-            'android=new UiSelector().resourceId("' + resourceId + '")'
-        );
-
-        return element.click();
-    }
-
-    async appClickElementByXpath(xpath: string) {
-        const element = await this.appiumClient.$(xpath
-        );
-
-        return element.click();
-    }
-
-    async getElementTextByXpath(xpath) {
-        const element = await this.appiumClient.$(xpath
-        );
-
-        return element.getText();
-    }
-
-    async getElementByXpath(xpath) {
-        this.sleep(500);
-        return this.appiumClient.$(xpath
-        );
-    }
-
-    async getAttrTextByXpath(xpath, attr) {
-        const elem = await this.appiumClient.$(xpath
-        );
-        const att = await elem.getAttribute(attr);
-        return att.trim();
-    }
-
-    async appScrollDownUntilVisible(text: string) {
-        logger.info("scrolling down until " + text + " not visible");
-        let textVisible = false;
-        this.appiumClient.setImplicitTimeout(2000);
-        while (!textVisible) {
-            const elem = await this.appiumClient.$(
-                this._('text("' + text + '")')
-            );
-
-
-            let loc = null;
-
-            if (elem.elementId == null) {
-                textVisible = false;
-                logger.debug('element  found, stopping scroll');
-                break;
-            } else {
-                loc = await elem.getLocation();
-            }
-
-            await this.appiumClient.touchAction([
-                { action: 'press', x: loc.x, y: loc.y },
-                { action: 'wait', ms: 200 },
-                { action: 'moveTo', x: loc.x, y: loc.y - 100 },
-                'release',
-            ]);
-        }
-
-    }
-
-    async clickCoordinates(x, y) {
         await this.appiumClient.touchAction([
-            { action: 'tap', x, y }
+            { action: 'press', x: rectX, y: rectY * 0.6 },
+            { action: 'wait', ms: 500 },
+            { action: 'moveTo', x: rectX, y: rectY * 0.4 },
+            'release',
         ]);
     }
 
-    async scrollDownUntilNotVisible(text, offset = 100) {
-        let textVisible = true;
-        this.appiumClient.setImplicitTimeout(2000);
-        while (textVisible) {
-            const elem = await this.appiumClient.$(
-                this._('text("' + text + '")')
-            );
+    this.appiumClient.setImplicitTimeout(parseInt(process.env.DEFAULT_APPIUM_TIMEOUT));
 
-            let loc = null;
+}
 
-            if (elem.elementId == null) {
-                textVisible = false;
-                logger.debug('text not found, stopping scroll');
-                break;
-            } else {
-                loc = await elem.getLocation();
-            }
 
-            await this.appiumClient.touchAction([
-                { action: 'press', x: loc.x, y: loc.y },
-                { action: 'wait', ms: 500 },
-                { action: 'moveTo', x: loc.x, y: loc.y - offset },
-                'release',
-            ]);
+async scrollUpUntilTextVisible(text) {
+
+    var rect = await this.appiumClient.getWindowRect();
+
+    var rectX = rect.width / 2;
+    var rectY = rect.height / 1.1;
+
+    let textVisible = false;
+    this.appiumClient.setImplicitTimeout(2000);
+    while (!textVisible) {
+        const elem = await this.appiumClient.$(
+            this._('text("' + text + '")')
+        );
+
+        let loc = null;
+
+        if (elem.elementId == null) {
+            textVisible = false;
+            logger.debug('element  not found, continuing scroll');
+            //loc = await elem.getLocation();
+
+        } else {
+            textVisible = true;
+            break;
         }
+        await this.appiumClient.touchAction([
+            { action: 'press', x: rectX, y: rectY * 0.4 },
+            { action: 'wait', ms: 500 },
+            { action: 'moveTo', x: rectX, y: rectY * 0.6 },
+            'release',
+        ]);
     }
+
+    this.appiumClient.setImplicitTimeout(parseInt(process.env.DEFAULT_APPIUM_TIMEOUT));
+
+}
+
+
+async getElement(elementText: string) {
+    return this.appiumClient.$(
+        this._('text("' + elementText + '")')
+    );
+}
+
+async appClickElementByResource(resourceId) {
+    const element = await this.appiumClient.$(
+        'android=new UiSelector().resourceId("' + resourceId + '")'
+    );
+
+    return element.click();
+}
+
+async appClickElementByXpath(xpath: string) {
+    const element = await this.appiumClient.$(xpath
+    );
+
+    return element.click();
+}
+
+async getElementTextByXpath(xpath) {
+    const element = await this.appiumClient.$(xpath
+    );
+
+    return element.getText();
+}
+
+async getElementByXpath(xpath) {
+    this.sleep(500);
+    return this.appiumClient.$(xpath
+    );
+}
+
+async getAttrTextByXpath(xpath, attr) {
+    const elem = await this.appiumClient.$(xpath
+    );
+    const att = await elem.getAttribute(attr);
+    return att.trim();
+}
+
+async appScrollDownUntilVisible(text: string) {
+    logger.info("scrolling down until " + text + " not visible");
+    let textVisible = false;
+    this.appiumClient.setImplicitTimeout(2000);
+    while (!textVisible) {
+        const elem = await this.appiumClient.$(
+            this._('text("' + text + '")')
+        );
+
+
+        let loc = null;
+
+        if (elem.elementId == null) {
+            textVisible = false;
+            logger.debug('element  found, stopping scroll');
+            break;
+        } else {
+            loc = await elem.getLocation();
+        }
+
+        await this.appiumClient.touchAction([
+            { action: 'press', x: loc.x, y: loc.y },
+            { action: 'wait', ms: 200 },
+            { action: 'moveTo', x: loc.x, y: loc.y - 100 },
+            'release',
+        ]);
+    }
+
+}
+
+async clickCoordinates(x, y) {
+    await this.appiumClient.touchAction([
+        { action: 'tap', x, y }
+    ]);
+}
+
+async scrollDownUntilNotVisible(text, offset = 100) {
+    let textVisible = true;
+    this.appiumClient.setImplicitTimeout(2000);
+    while (textVisible) {
+        const elem = await this.appiumClient.$(
+            this._('text("' + text + '")')
+        );
+
+        let loc = null;
+
+        if (elem.elementId == null) {
+            textVisible = false;
+            logger.debug('text not found, stopping scroll');
+            break;
+        } else {
+            loc = await elem.getLocation();
+        }
+
+        await this.appiumClient.touchAction([
+            { action: 'press', x: loc.x, y: loc.y },
+            { action: 'wait', ms: 500 },
+            { action: 'moveTo', x: loc.x, y: loc.y - offset },
+            'release',
+        ]);
+    }
+}
 }
 
 export { AppScraper }

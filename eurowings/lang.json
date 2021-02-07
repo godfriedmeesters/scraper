@@ -1,16 +1,18 @@
 {
     "de": {
-        "cookieFile": "./eurowings/www.eurowings.com.cookies.json",
+        "authCookieFile": "./eurowings/www.eurowings.com.cookies.json",
         "url": "https://www.eurowings.com/de.html",
         "Allen zustimmen": "Allen zustimmen",
         "Abflughafen": "Abflughafen",
         "Zielflughafen": "Zielflughafen",
         "Suchen": "Suchen",
-        "Hinflug": "Hinflug"
+        "Hinflug": "Hinflug",
+        "recycledCookieFile": "./recycledCookies/eurowings.de.json"
 
     },
     "fr": {
-        "cookieFile": "./eurowings/www.eurowings.com.cookies.json",
+        "authCookieFile": "./eurowings/www.eurowings.com.cookies.json",
+        "recycledCookieFile": "./recycledCookies/eurowings.fr.json",
         "url": "https://www.eurowings.com/fr.html",
         "Allen zustimmen": "Tout",
         "Abflughafen": "de d",

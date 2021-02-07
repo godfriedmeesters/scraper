@@ -116,15 +116,11 @@ async function processScraperJob(job, done) {
             "errors": String(exception)
         });
 
-
         done(new Error(String(exception)));
-
     }
     finally {
-
-        await scraper.stopClient();
+        await scraper.stopClient(job.data.params);
     }
-
 }
 
 process.on("SIGINT", function () {
