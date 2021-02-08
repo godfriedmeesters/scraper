@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-02 20:32:11
+ * @ Modified time: 2021-02-08 17:13:59
  * @ Description:
  */
 
@@ -73,7 +73,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
                 }
             }
 
-            logger.info('clicking next');
+            logger.info(`looking for ${strLookForMonth}, clicking next month`);
             await this.clickElementByXpath("//span[@glyph='arrow-right']");
 
             await this.page.waitFor(1000);

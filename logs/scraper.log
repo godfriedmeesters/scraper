@@ -1501,3 +1501,12 @@
 {"@timestamp":"2021-02-07T11:21:38.550Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-07T11:21:38.744Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-07T11:21:38.805Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:06:54.652Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:06:54.655Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:06:54.657Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:07:34.223Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month mai ... ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:07:34.742Z","log":{"level":"info","logger":"winston"},"message":"clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:07:37.312Z","log":{"level":"info","logger":"winston"},"message":"clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:07:39.893Z","log":{"level":"info","logger":"winston"},"message":"clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:07:41.954Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T16:07:50.936Z","log":{"level":"info","logger":"winston"},"message":"data found","ecs":{"version":"1.5.0"}}
