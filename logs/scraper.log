@@ -1510,3 +1510,29 @@
 {"@timestamp":"2021-02-08T16:07:39.893Z","log":{"level":"info","logger":"winston"},"message":"clicking next month","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-08T16:07:41.954Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-08T16:07:50.936Z","log":{"level":"info","logger":"winston"},"message":"data found","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:04:40.363Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:04:40.368Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:04:40.369Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:04:41.017Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:04:43.005Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:05:18.638Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:05:18.821Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:05:18.822Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:05:19.913Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:05:19.959Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:06:53.204Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:06:53.218Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:06:53.230Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:06:53.945Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies from ./recycledCookies/eurowings.de.json ...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:06:53.974Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:07:37.719Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612814857719.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:07:40.406Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:07:40.886Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/eurowings.de.json","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:09:21.402Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:09:21.412Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:09:21.414Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:09:22.101Z","log":{"level":"info","logger":"winston"},"message":"Recycling cookies from ./recycledCookies/eurowings.de.json ...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:09:22.137Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:10:05.942Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename EuroWingsWebScraper-1612815005942.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:10:08.512Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-08T20:10:08.989Z","log":{"level":"info","logger":"winston"},"message":"Saving cookies to ./recycledCookies/eurowings.de.json","ecs":{"version":"1.5.0"}}

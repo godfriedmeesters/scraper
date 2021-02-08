@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-05 23:19:37
+ * @ Modified time: 2021-02-08 21:06:38
  * @ Description:
  */
 
@@ -134,10 +134,12 @@ class WebScraper {
 
 
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
-            logger.info("Recycling cookies...");
-            const cookiesString = fs.readFileSync(this.translator.translate("recycledCookieFile"));
-            const cookies = JSON.parse(cookiesString);
-            await this.page.setCookie(...cookies);
+            if (fs.existsSync(this.translator.translate("recycledCookieFile"))) {
+                logger.info(`Recycling cookies from ${this.translator.translate("recycledCookieFile")} ...`);
+                const cookiesString = fs.readFileSync(this.translator.translate("recycledCookieFile"));
+                const cookies = JSON.parse(cookiesString);
+                await this.page.setCookie(...cookies);
+            }
         }
 
         await this.page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
@@ -158,8 +160,10 @@ class WebScraper {
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
             const cookies = await this.page.cookies();
             const filePath = this.translator.translate("recycledCookieFile");
+
+
             logger.info(`Saving cookies to ${filePath}`);
-            await fs.writeFile(filePath, JSON.stringify(cookies, null, 2), () => {});
+            await fs.writeFile(filePath, JSON.stringify(cookies, null, 2), () => { });
         }
 
         await this.browser.close();
