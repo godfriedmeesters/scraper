@@ -18,7 +18,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
         await this.page.goto(this.translator.translate("url"));
 
-        await this.clickElementByXpath(`//button[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
+        await this.clickOptionalElementByXpath(`//button[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
 
         await this.clickElementByXpath("//div[contains(@id, 'switch')]");
 

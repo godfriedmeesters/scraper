@@ -17,7 +17,7 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
         await this.page.goto(this.translator.translate("url"));
 
         await this.page.waitFor(2000);
-        await this.clickElementByCss('.cookiebar-agree-button-agree')
+        await this.clickOptionalElementByCss('.cookiebar-agree-button-agree')
         await this.page.waitFor(2000);
 
         const day = dateFormat(depDate, 'd');

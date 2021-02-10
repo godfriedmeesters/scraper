@@ -1,8 +1,11 @@
 require('dotenv').config();
 var Queue = require('bull');
 import { logger } from './logger';
+import { sleep } from './util';
 import scraperClasses from './index';
 const yn = require('yn');
+const redis = require("redis");
+import Timer from 'timer-node';
 
 const os = require('os');
 
@@ -13,6 +16,7 @@ const options = {
         password: process.env.DB_PASS,
     },
 }
+
 
 const emulatedDeviceScraperCommands = new Queue('emulatedDeviceScraperCommands', options);
 const realDeviceScraperCommands = new Queue('realDeviceScraperCommands', options);
@@ -75,6 +79,8 @@ if (yn(process.env.PULL_EMULATOR_QUEUE)) {
 }
 
 async function processScraperJob(job, done) {
+
+    //TODO: wait max 5 min
     let scraperClass = scraperClasses.find(scraper => scraper.name === job.data.scraperClass);
 
     const scraper = new scraperClass();
@@ -85,15 +91,53 @@ async function processScraperJob(job, done) {
         logger.info("Starting job with params " + JSON.stringify(job.data.params));
         await scraper.startClient(job.data.params);
 
-        let offers: any = [{ 'price': '444' }, { 'price': '555' }];
+        let offers: any;
 
         const startTime = new Date();
-        if (!JSON.parse(job.data.params.useTestData || false)) {
-            logger.info(`${job.data.scraperClass}:Entering input data...`)
-            await scraper.scrapeUntilSearch(job.data.inputData);
-            logger.info(`${job.data.scraperClass}:Clicking search button...`)
-            offers = await scraper.scrapeFromSearch(job.data.inputData);
-            await scraper.transferScreenshotsToFtp();
+        logger.info(`${job.data.scraperClass}:Entering input data...`)
+        await scraper.scrapeUntilSearch(job.data.inputData);
+
+
+        if ("commparisonRunId" in job.data && "comparisonSize" in job.data) {
+            // synchronize with other scraper machines
+            logger.info(`Synchronzing with ${ job.data.comparisonSize} other scrapers in comparisonRunId ${job.data.commparisonRunId}`);
+
+            const redisClient = redis.createClient({
+                "host": process.env.REDIS_HOST,
+                "password": process.env.REDIS_PASS
+            });
+
+            redisClient.on("error", function (error) {
+                console.error(error);
+            });
+
+            logger.info("Incrementing counter for " + job.data.comparisonRunId);
+            redisClient.incr(job.data.comparisonRunId);
+
+
+            var synchronizationPeriodSeconds = 0;
+
+            while (true) {
+                redisClient.get(job.data.comparisonRunId, function (err, reply) {
+                    if (reply >= job.data.comparisonSize)
+                        logger.info(`Reply ${reply} ==  ${job.data.comparisonSize}, going to click on the search button...`);
+                    else
+                        logger.info(`Reply ${reply} <>  ${job.data.comparisonSize}`);
+                });
+                await sleep(1000);
+
+                synchronizationPeriodSeconds++;
+
+                if (synchronizationPeriodSeconds >= parseInt(process.env.SYNCHRONIZATION_SECONDS))
+                    break;
+            }
+
+            redisClient.quit();
+            // synchronized
+        }
+        else
+        {
+            logger.info("Not using synchronization.");
         }
 
         const stopTime = new Date();
@@ -140,3 +184,5 @@ process.on("SIGINT", function () {
         logger.info("Queue closed, exiting from CLI"); process.exit();
     })();
 });
+
+

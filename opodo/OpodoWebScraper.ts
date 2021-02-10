@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-08 17:13:59
+ * @ Modified time: 2021-02-09 16:59:11
  * @ Description:
  */
 
@@ -32,9 +32,6 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         await this.clickElementByXpath("//label[@for='direct-flight-switcher']");
 
-        // //input[@placeholder='Von?']
-        //input[@placeholder='Nach?']
-        // //input[@placeholder='Hinflug']
         await this.page.waitFor(1000);
         const from = await this.getElementByXpath(`//input[contains(@placeholder,"${this.translator.translate("Von?")}")]`);
 
