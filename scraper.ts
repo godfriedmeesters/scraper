@@ -107,7 +107,7 @@ async function processScraperJob(job, done) {
         else
            logger.info("scrapUntilSearch finished on time (< 300 seconds)");
 
-        if ("commparisonRunId" in job.data && "comparisonSize" in job.data) {
+        if ("comparisonRunId" in job.data && "comparisonSize" in job.data) {
             // synchronize with other scraper machines
             logger.info(`Synchronzing with ${job.data.comparisonSize} other scrapers in comparisonRunId ${job.data.commparisonRunId}`);
 
@@ -151,13 +151,12 @@ async function processScraperJob(job, done) {
             logger.info("Not using synchronization.");
         }
 
-
         logger.info(`${job.data.scraperClass}:Clicking search button...`)
         timeoutResult = await Promise.race([timeoutPromise, scraper.scrapeFromSearch(job.data.inputData)]);
         if (timeoutResult == "timeout")
             logger.error("Timeout for scrapeFromSearch after 300 seconds");
         else
-           logger.info(" scrapeFromSearch finished on time (< 300 seconds)");
+           logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< 300 seconds)`);
 
         const stopTime = new Date();
 

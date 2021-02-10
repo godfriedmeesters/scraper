@@ -18,21 +18,35 @@
 // //});
 // client.quit();
 
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+// function sleep(ms) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, ms);
+//   });
+// }
 
-(async () => {
-  const timeoutPromise = new Promise((resolve, reject) => {
-    setTimeout(resolve, 1500, 'timeout');
-  });
+// (async () => {
+//   const timeoutPromise = new Promise((resolve, reject) => {
+//     setTimeout(resolve, 1500, 'timeout');
+//   });
 
-  const result = await Promise.race([timeoutPromise, sleep(1000)]);
-  if(result == "timeout")
-    console.log("timeout");
-  else
-    console.log("no timeout");
+//   const result = await Promise.race([timeoutPromise, sleep(1000)]);
+//   if(result == "timeout")
+//     console.log("timeout");
+//   else
+//     console.log("no timeout");
 
-})();
+// })();
+
+
+const test = {"id":"1144","name":"__default__","data":{"comparisonRunId":774,"comparisonSize":2,"comparisonId":71,"params":{"language":"fr"},"scraperClass":"ExpediaWebScraper","inputData":{"origin":"BRU","destination":"AMS","departureDate":"2021-05-02"}},"opts":{"attempts":1,"delay":0,"timestamp":1612996452857},"progress":0,"delay":0,"timestamp":1612996452857,"attemptsMade":0,"stacktrace":[],"returnvalue":null,"finishedOn":null,"processedOn":1612996452761};
+
+const t = test.data;
+
+if ("commparisonRunId" in t )
+  console.log("ok");
+
+  const hero = {
+    name: 'Batman'
+  };
+
+  console.log(hero.hasOwnProperty('name'));     // => true
