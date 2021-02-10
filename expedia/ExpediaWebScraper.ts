@@ -7,7 +7,7 @@ var path = require('path');
 
 export class ExpediaWebScraper extends WebScraper implements IScraper {
 
-    constructor() { super( path.join(__dirname, "lang.json")); }
+    constructor() { super(path.join(__dirname, "lang.json")); }
 
     async scrapeUntilSearch(inputData: any) {
 
@@ -17,20 +17,20 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         const destination = inputData.destination;
         await this.page.goto(this.translator.translate("url"));
 
-
         await this.page.waitFor(3000);
 
         await this.clickElementByXpath("//a[@aria-controls='wizard-flight-pwa']");
 
         await this.clickElementByText(this.translator.translate("Nur Hinflug"));
-        await this.clickElementByText(this.translator.translate('Abflughafen'));
+        await this.clickElementByXpath(`//span[text() = '${this.translator.translate('Abflughafen')}']`);
 
         var elem = await this.getElementByXpath(`//input[contains(@placeholder,"${this.translator.translate('Wo starten Sie?')}")]`);
         await elem.type(origin);
 
         await this.clickElementByXpath("//button[@data-stid='location-field-leg1-origin-result-item-button']");
 
-        await this.clickElementByText(this.translator.translate('Zielflughafen'));
+        await this.clickElementByXpath(`//span[text() = '${this.translator.translate('Zielflughafen')}']`);
+
 
         var elem = await this.getElementByXpath(`//input[contains(@placeholder,"${this.translator.translate('Wohin soll es gehen?')}")]`);
         await elem.type(destination);
@@ -43,10 +43,10 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
 
-        let dt = "//button[@aria-label='" + departureDay + ". " + shortMonthNames[depDate.getMonth()] + " " + depDate.getFullYear() + "']";
+        let dt = "//button[@aria-label='" + departureDay + ". " + shortMonthNames[depDate.getMonth()] + " " + depDate.getFullYear() + ".']";
 
         if (this.language == "fr") {
-            dt = "//button[@aria-label='" + departureDay + " " + shortMonthNames[depDate.getMonth()].toLowerCase() + " " + depDate.getFullYear() + "']";
+            dt = "//button[@aria-label='" + departureDay + " " + shortMonthNames[depDate.getMonth()].toLowerCase() + " " + depDate.getFullYear() + ".']";
         }
 
 
