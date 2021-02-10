@@ -10,7 +10,7 @@ client.on("error", function(error) {
   console.error(error);
 });
 
-//client.set("41", "56");
+client.set("41", 56);
 //client.incr("41", redis.print);
 //client.get("41", function(err, reply) {
   // reply is null when the key is missing
@@ -18,9 +18,3 @@ client.on("error", function(error) {
 //});
 client.quit();
 
-const timer = new Timer('test-timer');
-
-timer.start();
-console.log(timer.isRunning());
-console.log(timer.milliseconds());
-timer.stop();

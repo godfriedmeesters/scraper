@@ -1548,3 +1548,22 @@
 {"@timestamp":"2021-02-10T14:04:13.217Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-10T14:04:13.221Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-10T14:04:47.693Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:11.925Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:11.940Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:11.941Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:20.444Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:45.399Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612969605399.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:55.703Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:58.354Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:06:58.355Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612969618355.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:07.223Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:09.827Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:09.829Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612969629829.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:21.723Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:24.367Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:24.368Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612969644368.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:36.945Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:39.572Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:39.573Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1612969659573.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:47.126Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-10T15:07:48.136Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
