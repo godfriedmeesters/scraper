@@ -108,7 +108,7 @@ async function processScraperJob(job, done) {
 
         if ("comparisonRunId" in job.data && "comparisonSize" in job.data) {
             // synchronize with other scraper machines
-            logger.info(`Synchronzing with ${job.data.comparisonSize} other scrapers in comparisonRunId ${job.data.commparisonRunId}`);
+            logger.info(`Synchronizing with ${job.data.comparisonSize} other scrapers in comparisonRunId ${job.data.comparisonRunId}`);
 
             const redisClient = redis.createClient({
                 "host": process.env.DB_HOST,
@@ -119,7 +119,7 @@ async function processScraperJob(job, done) {
                 console.error(error);
             });
 
-            logger.info("Incrementing counter for " + job.data.comparisonRunId);
+            logger.info("Incrementing counter for comparisonRunId " + job.data.comparisonRunId);
             redisClient.incr(parseInt(job.data.comparisonRunId));
 
             var synchronizationPeriodSeconds = 0;

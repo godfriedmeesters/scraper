@@ -1789,3 +1789,45 @@
 {"@timestamp":"2021-02-11T13:01:18.966Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-11T13:01:25.069Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename ExpediaWebScraper-1613048485069.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-11T13:01:28.952Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:11.826Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:11.841Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:11.848Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:18.901Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:20.035Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller simple']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:21.109Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Origine']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:22.175Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"D'où partez-vous\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:22.770Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:23.842Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Destination']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:24.882Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Où allez-vous\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:25.459Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:26.525Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Date de départ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:27.573Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[@aria-label='1 mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:28.141Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[@aria-label='1 mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:28.679Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[@aria-label='1 mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:28.690Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@aria-label='1 mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:29.733Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:31.791Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Rechercher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:42.845Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:48.947Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename ExpediaWebScraper-1613050848947.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:40:52.680Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:11.202Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:11.213Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:11.214Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:18.864Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:20.036Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:21.105Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:22.149Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wo starten Sie?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:22.750Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:23.830Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:24.881Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wohin soll es gehen?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:25.466Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:26.543Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:27.598Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[@aria-label='1. Mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:28.167Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[@aria-label='1. Mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:28.715Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[@aria-label='1. Mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:28.726Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@aria-label='1. Mai 2021.']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:29.779Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:31.837Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:42.895Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:49.016Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename ExpediaWebScraper-1613050909016.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-11T13:41:52.965Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
