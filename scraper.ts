@@ -17,7 +17,6 @@ const options = {
     },
 }
 
-
 const emulatedDeviceScraperCommands = new Queue('emulatedDeviceScraperCommands', options);
 const realDeviceScraperCommands = new Queue('realDeviceScraperCommands', options);
 const webScraperCommands = new Queue('webScraperCommands', options);
@@ -105,7 +104,7 @@ async function processScraperJob(job, done) {
         if (timeoutResult == "timeout")
             logger.error("Timeout for scrapeUntilSearch after 300 seconds");
         else
-           logger.info("scrapUntilSearch finished on time (< 300 seconds)");
+            logger.info("scrapUntilSearch finished on time (< 300 seconds)");
 
         if ("comparisonRunId" in job.data && "comparisonSize" in job.data) {
             // synchronize with other scraper machines
@@ -124,13 +123,18 @@ async function processScraperJob(job, done) {
             redisClient.incr(parseInt(job.data.comparisonRunId));
 
             var synchronizationPeriodSeconds = 0;
+            var stop = false;
 
-            while (true) {
+            logger.info(`Synchronizing, wait for a maxium of ${process.env.SYNCHRONIZATION_SECONDS}`);
+            while (!stop) {
                 redisClient.get(parseInt(job.data.comparisonRunId), function (err, reply) {
-                    if (reply >= job.data.comparisonSize)
-                        logger.info(`Reply ${reply} ==  ${job.data.comparisonSize}, going to click on the search button...`);
-                    else
-                        logger.info(`Reply ${reply} <>  ${job.data.comparisonSize}`);
+                    if (reply >= job.data.comparisonSize) {
+                        logger.info(` nr of scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
+                        stop = true;
+                    }
+                    else {
+                        logger.info(` nr of scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                    }
                 });
 
 
@@ -138,7 +142,7 @@ async function processScraperJob(job, done) {
 
                 synchronizationPeriodSeconds++;
 
-                logger.info(`${job.data.scraperClass}: Syncronized for ${synchronizationPeriodSeconds} seconds` );
+                logger.info(`${job.data.scraperClass}: Syncronized for ${synchronizationPeriodSeconds} seconds`);
 
                 if (synchronizationPeriodSeconds >= parseInt(process.env.SYNCHRONIZATION_SECONDS))
                     break;
@@ -156,7 +160,7 @@ async function processScraperJob(job, done) {
         if (timeoutResult == "timeout")
             logger.error("Timeout for scrapeFromSearch after 300 seconds");
         else
-           logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< 300 seconds)`);
+            logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< 300 seconds)`);
 
         const stopTime = new Date();
 
