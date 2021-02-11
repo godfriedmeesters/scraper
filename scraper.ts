@@ -5,7 +5,7 @@ import { sleep } from './util';
 import scraperClasses from './index';
 const yn = require('yn');
 const redis = require("redis");
-import Timer from 'timer-node';
+
 
 const os = require('os');
 
@@ -112,8 +112,8 @@ async function processScraperJob(job, done) {
             logger.info(`Synchronzing with ${job.data.comparisonSize} other scrapers in comparisonRunId ${job.data.commparisonRunId}`);
 
             const redisClient = redis.createClient({
-                "host": process.env.REDIS_HOST,
-                "password": process.env.REDIS_PASS
+                "host": process.env.DB_HOST,
+                "password": process.env.DB_PASS
             });
 
             redisClient.on("error", function (error) {
@@ -138,7 +138,7 @@ async function processScraperJob(job, done) {
 
                 synchronizationPeriodSeconds++;
 
-                logger.info(`${job.data.scraperClass}: Syncronized for ${synchronizationPeriodSeconds}` );
+                logger.info(`${job.data.scraperClass}: Syncronized for ${synchronizationPeriodSeconds} seconds` );
 
                 if (synchronizationPeriodSeconds >= parseInt(process.env.SYNCHRONIZATION_SECONDS))
                     break;
