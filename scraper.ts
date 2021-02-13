@@ -1,3 +1,13 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-17 15:18:28
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-02-13 23:57:46
+ * @ Description:
+ */
+
+
+
 require('dotenv').config();
 var Queue = require('bull');
 import { logger } from './logger';
@@ -25,13 +35,12 @@ var fs = require('fs');
 const finishedScrapeQueue = new Queue('finishedScrapes', options);
 const erroredScrapeQueue = new Queue('erroredScrapes', options);
 
-logger.info("Starting to wait for scraping jobs V2");
+logger.info("Starting to wait for scraping jobs");
 
 if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
     webScraperCommands.process((job, done) => {
         logger.info(`Got new scraper job on web browser queue: ${job.data.scraperClass} with params:  ${JSON.stringify(job.data.params)} and input data
     ${JSON.stringify(job.data.inputData)} `);
-
 
         const inputData = JSON.parse(
             fs.readFileSync("proxies.json")
@@ -47,7 +56,6 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
             job.data.params.proxy = proxies[proxy_index];
             logger.info("Selected proxy " + proxies[proxy_index]);
         }
-
 
         (async () => {
             await processScraperJob(job, done);
@@ -78,8 +86,6 @@ if (yn(process.env.PULL_EMULATOR_QUEUE)) {
 }
 
 async function processScraperJob(job, done) {
-
-    //TODO: wait max 5 min
     let scraperClass = scraperClasses.find(scraper => scraper.name === job.data.scraperClass);
 
     const scraper = new scraperClass();
@@ -97,18 +103,21 @@ async function processScraperJob(job, done) {
         logger.info(`${job.data.scraperClass}:Entering input data...`)
 
         const timeoutPromise = new Promise((resolve, reject) => {
-            setTimeout(resolve, 1000 * 300, 'timeout');   //timeout of 300 seconds
+            setTimeout(resolve, 1000 * 300, 'timeout');   //wait maxium 300 seconds for scraping job to finish
         });
 
-        var timeoutResult = await Promise.race([timeoutPromise, scraper.scrapeUntilSearch(job.data.inputData)]);
-        if (timeoutResult == "timeout")
-            logger.error("Timeout for scrapeUntilSearch after 300 seconds");
+        var raceResult = await Promise.race([timeoutPromise, scraper.scrapeUntilSearch(job.data.inputData)]);
+        if (raceResult == "timeout") {
+            const errorMessage = `${job.data.scraperClass}:  scrapeUntilSearch Timeout`;
+            logger.error(errorMessage);
+            throw new Error(errorMessage);
+        }
         else
             logger.info("scrapUntilSearch finished on time (< 300 seconds)");
 
         if ("comparisonRunId" in job.data && "comparisonSize" in job.data) {
             // synchronize with other scraper machines
-            logger.info(`Synchronizing with ${job.data.comparisonSize} other scrapers in comparisonRunId ${job.data.comparisonRunId}`);
+            logger.info(`Synchronizing with ${job.data.comparisonSize} other scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
 
             const redisClient = redis.createClient({
                 "host": process.env.DB_HOST,
@@ -125,7 +134,7 @@ async function processScraperJob(job, done) {
             var synchronizationPeriodSeconds = 0;
             var stop = false;
 
-            logger.info(`Synchronizing, wait for a maxium of ${process.env.SYNCHRONIZATION_SECONDS}`);
+            logger.info(`Synchronizing, waiting for a maxium of ${process.env.SYNCHRONIZATION_SECONDS} seconds`);
             while (!stop) {
                 redisClient.get(parseInt(job.data.comparisonRunId), function (err, reply) {
                     if (reply >= job.data.comparisonSize) {
@@ -156,11 +165,17 @@ async function processScraperJob(job, done) {
         }
 
         logger.info(`${job.data.scraperClass}:Clicking search button...`)
-        timeoutResult = await Promise.race([timeoutPromise, scraper.scrapeFromSearch(job.data.inputData)]);
-        if (timeoutResult == "timeout")
+        raceResult = await Promise.race([timeoutPromise, scraper.scrapeFromSearch(job.data.inputData)]);
+        if (raceResult == "timeout") {
             logger.error("Timeout for scrapeFromSearch after 300 seconds");
-        else
+            const errorMessage = `${job.data.scraperClass}:  scrapeFromSearch Timeout`;
+            logger.error(errorMessage);
+            throw new Error(errorMessage);
+        }
+        else {
             logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< 300 seconds)`);
+            offers = raceResult;
+        }
 
         const stopTime = new Date();
 

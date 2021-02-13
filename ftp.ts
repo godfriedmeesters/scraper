@@ -1,3 +1,12 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-25 14:52:17
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-02-12 15:45:48
+ * @ Description:
+ */
+
+
 var Client = require('ftp');
 const fs = require('fs')
 var path = require('path');
@@ -6,8 +15,6 @@ require('dotenv').config();
 const imagemin = require('imagemin');
 const imageminPngquant = require('imagemin-pngquant');
 import { logger } from "./logger";
-
-//uploadScreenshotsToFTP();
 
 export async function uploadScreenshotsToFTP() {
 

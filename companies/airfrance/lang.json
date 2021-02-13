@@ -1,0 +1,26 @@
+{
+    "de": {
+        "url": "https://wwws.airfrance.de",
+        "Hin- und Rückflug": "Hin- und Rückflug",
+        "Nur Hinflug": "Nur Hinflug",
+        "Abflugdatum": "Abflugdatum",
+        " Flüge suchen ": " Flüge suchen ",
+        "authCookieFile": "./companies/airfrance/wwws.airfrance.de.cookies.json",
+        "recycledCookieFile": "../recycledCookies/airfrance.de.json",
+        "Stopps": "Stopps",
+        "Nonstop": "Nonstop",
+        "anzeigen": "anzeigen"
+    },
+    "fr": {
+        "url": "https://wwws.airfrance.fr",
+        "Hin- und Rückflug": "Aller-retour",
+        "Nur Hinflug": "Aller simple",
+        "Abflugdatum": "Date de départ",
+        " Flüge suchen ": " Rechercher les vols ",
+        "authCookieFile": "./companies/airfrance/wwws.airfrance.fr.cookies.json",
+        "recycledCookieFile": "../recycledCookies/airfrance.fr.json",
+        "Stopps": "Correspondances",
+        "Nonstop": "Direct",
+        "anzeigen": "Afficher"
+    }
+}
