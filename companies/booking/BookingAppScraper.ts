@@ -1,6 +1,6 @@
 import { AppScraper } from "../../AppScraper";
 import { IScraper } from "../../IScraper";
-import { HotelOffer, OfferList } from "../../types";
+import { HotelOffer} from "../../types";
 var path = require('path');
 
 import { logger } from "../../logger";
