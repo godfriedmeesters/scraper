@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-12 15:13:47
+ * @ Modified time: 2021-02-16 22:17:39
  * @ Description:
  */
 
@@ -25,8 +25,16 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         const destination = inputData.destination;
 
         await this.page.goto(this.translator.translate("url"));
+        await this.page.waitFor(5000);
 
-        await this.clickOptionalElementByXpath(`//button[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
+        await this.clickOptionalElementByCss(`//button[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
+
+        await this.clickOptionalElementByCss('#onetrust-accept-btn-handler');
+
+        await this.clickOptionalElementByCss('.awaitBsvt-accept');
+        await this.page.waitFor(2000);
+
+
 
         await this.clickElementByXpath("//div[contains(@id, 'switch')]");
 
@@ -72,10 +80,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
     async scrapeFromSearch(inputData) {
         await this.clickElementByXpath(`//button[contains(@title, '${this.translator.translate("Flüge suchen")}')]`);
 
-
         await this.page.waitFor(15000);
-
-
 
         await this.tapEnter();
 
@@ -112,11 +117,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
             }
         }
 
-
-
         var offerNodes = await this.page.$$(".resultInner");
-
-
         //take screenshot
         var screenshot = await this.takeScreenShot(this.constructor.name);
 
@@ -130,10 +131,10 @@ export class KayakWebScraper extends WebScraper implements IScraper {
                 const origDest = await this.getTextsFromElementByCss(".bottom-airport",
                     offerNode);
 
-                flightOffer.origin = origDest[0];
+                flightOffer.origin = origDest[0].split("\n")[0];
 
-                flightOffer.destination = origDest[1];
-                const al = await this.getTextFromElementByCss(".section.times .bottom", offerNode);
+                flightOffer.destination = origDest[1].split("\n")[0];
+                const al = await this.getTextFromElementByCss(".codeshares-airline-names", offerNode);
 
                 flightOffer.airline = al.trim();
 

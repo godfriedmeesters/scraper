@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-10 23:09:46
+ * @ Modified time: 2021-02-16 15:47:19
  * @ Description:
  */
 
@@ -384,7 +384,6 @@ class WebScraper {
     async getElementTextByXpath(xpath: string) {
         const elements = await this.getElementsByXpath(xpath);
         const text = await this.page.evaluate(el => {
-            // get text content from scraped price
             return el.textContent;
         }, elements[0]);
         return text;
@@ -395,7 +394,6 @@ class WebScraper {
         var attrs = [];
         for (var element of elements) {
             const text = await this.page.evaluate((el, attr) => {
-                // get text content from scraped price
                 return el.getAttribute(attr);
             }, element, attr);
 
@@ -409,7 +407,6 @@ class WebScraper {
         const element = await this.getElementByCss(css);
 
         const text = await this.page.evaluate((el, attr) => {
-            // get text content from scraped price
             return el.getAttribute(attr);
         }, element, attr);
 

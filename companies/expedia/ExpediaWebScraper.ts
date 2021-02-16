@@ -43,10 +43,10 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
 
-        let dt = "//button[@aria-label='" + departureDay + ". " + shortMonthNames[depDate.getMonth()] + " " + depDate.getFullYear() + ".']";
+        let dt = "//button[contains(@aria-label,'" + departureDay + ". " + shortMonthNames[depDate.getMonth()] + " " + depDate.getFullYear() + "')]";
 
         if (this.language == "fr") {
-            dt = "//button[@aria-label='" + departureDay + " " + shortMonthNames[depDate.getMonth()].toLowerCase() + " " + depDate.getFullYear() + ".']";
+            dt = "//button[contains(@aria-label,'" + departureDay + " " + shortMonthNames[depDate.getMonth()].toLowerCase() + " " + depDate.getFullYear() + "')]";
         }
 
         var dateInPage: boolean = await this.isXpathInPage(dt);
@@ -76,7 +76,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         const depTimes = await this.getTextArrayFromXpath("//span[@data-test-id='departure-time']"); //18:20 Uhr–19:15 Uhr
 
-
         const prices = await this.getElementsTextByCss("span.uitk-lockup-price");
         const operatedBy = await this.getTextArrayFromXpath("//div[@data-test-id='flight-operated']");
 
@@ -85,12 +84,12 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         for (var i = 0; i < prices.length; i++) {
             var flightOffer = new FlightOffer();
             if (this.language == "de") {
-                flightOffer.departureTime = depTimes[i].split("-")[0].replace("Uhr", "").trim();
-                flightOffer.arrivalTime = depTimes[i].split("-")[1].replace("Uhr", "").trim();
+                flightOffer.departureTime = depTimes[i].split(/[–-]+/)[0].replace("Uhr", "").trim();
+                flightOffer.arrivalTime = depTimes[i].split(/[–-]+/)[1].replace("Uhr", "").trim();
             }
             else if (this.language == "fr") {
-                flightOffer.departureTime = depTimes[i].split("-")[0].replace("h", ":").replace(" ", "").trim();
-                flightOffer.arrivalTime = depTimes[i].split("-")[1].replace("h", ":").replace(" ", "").trim();
+                flightOffer.departureTime = depTimes[i].split(/[–-]+/)[0].replace("h", ":").replace(" ", "").trim();
+                flightOffer.arrivalTime = depTimes[i].split(/[–-]+/)[1].replace("h", ":").replace(" ", "").trim();
             }
 
 
