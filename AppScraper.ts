@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-18 16:58:41
+ * @ Modified time: 2021-02-18 18:01:46
  * @ Description:
  */
 
@@ -69,10 +69,9 @@ class AppScraper {
         };
 
         this.appiumClient = await wdio.remote(appiumOpts);
-        //this.appiumClient.setImplicitTimeout(process.env.DEFAULT_APPIUM_TIMEOUT);
 
         //Amsterdam
-        this.appiumClient.setGeoLocation({ latitude: "52.3667", longitude: "4.8945", altitude: "94.23" }); // Must be a driver that implements LocationContext
+       // this.appiumClient.setGeoLocation({ latitude: "52.3667", longitude: "4.8945", altitude: "94.23" }); // Must be a driver that implements LocationContext
 
         try { await this.appiumClient.unlock(); } catch (ex) { }
 

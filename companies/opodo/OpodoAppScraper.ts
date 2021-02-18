@@ -62,14 +62,14 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
     await departureDateChoice.click();
 
-    await this.clickLink("WEITER");
+    await this.clickLink("Weiter");
 
   }
 
   // scrape Android app part 2: starting from  "clicking" the search button
   async scrapeFromSearch(inputData) {
 
-    await this.clickLink("FLÜGE SUCHEN");
+    await this.clickLink("Flüge suchen");
 
 
     var rect = await this.appiumClient.getWindowRect();
@@ -83,11 +83,18 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
     var flightOffers = [];
 
     var initPrices = await this.getElementsByResourceId('com.opodo.reisen:id/flights_price');
+    var initAirLines = await this.getElementsByResourceId('com.opodo.reisen:id/airline_name');
+
 
     var lastPriceOffScreenText = await initPrices[0].getText();
+    var lastAirLineOffScreenText = await initPrices[0].getText();
 
     var bounds = await initPrices[0].getAttribute("bounds");
     var lastPriceOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
+
+
+    bounds = await initAirLines[0].getAttribute("bounds");
+    var lastAirLineOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
 
 
     while (true) {
@@ -109,6 +116,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         var bounds = await departureTimes[i].getAttribute("bounds");
         const departureY = parseInt(bounds.match(/\d+/g)[1]);
 
+        ////////////////////SELECT CORRECT PRICE////////////////////////////
         if (prices.length == 0) {
           flightOffer.price = lastPriceOffScreenText;
         }
@@ -136,6 +144,42 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
             }
           }
         }
+        /////////////////////////////////////////////////
+
+
+
+
+         ////////////////////SELECT CORRECT AIRLINE////////////////////////////
+         if (airLines.length == 0) {
+          flightOffer.airline = lastAirLineOffScreenText;
+        }
+        else if (airLines.length == 1) {
+          bounds = await airLines[0].getAttribute("bounds");
+          const airLineY = parseInt(bounds.match(/\d+/g)[1]);
+          if (departureY < airLineY) {
+            flightOffer.airline = lastAirLineOffScreenText;
+          }
+          else {
+            flightOffer.airline = await airLines[0].getText();
+          }
+        }
+        else if (airLines.length > 1) {
+          if (departureY > lastAirLineOffScreenY) {
+            flightOffer.airline = lastAirLineOffScreenText;
+          }
+
+          for (var j = 0; j < airLines.length; j++) {
+            bounds = await airLines[j].getAttribute("bounds");
+            const airlineY = parseInt(bounds.match(/\d+/g)[1]);
+
+            if (departureY > airlineY) {
+              flightOffer.airline = await airLines[j].getText();
+            }
+          }
+        }
+        /////////////////////////////////////////////////
+
+
 
         const deptT = await departureTimes[i].getText();
         flightOffer.departureTime = deptT;

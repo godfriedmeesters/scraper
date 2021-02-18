@@ -2280,3 +2280,8 @@
 {"@timestamp":"2021-02-18T13:17:27.800Z","log":{"level":"info","logger":"winston"},"message":"data found","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-18T13:17:58.422Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1613654278422.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-18T13:18:03.351Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-18T16:40:10.735Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-18T16:40:35.865Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-18T16:41:15.731Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-18T16:42:24.430Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-18T16:42:51.913Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
