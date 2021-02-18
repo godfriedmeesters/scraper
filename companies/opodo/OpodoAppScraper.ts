@@ -11,7 +11,6 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
   constructor() {
     super(JSON.stringify({
       "platformName": "Android",
-      "deviceName": "emulator-5554",
       "app": "c:\\apk\\opodo.apk",
       "autoGrantPermissions": "true"
     }
