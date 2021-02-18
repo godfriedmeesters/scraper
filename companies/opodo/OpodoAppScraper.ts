@@ -29,10 +29,10 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
     const departureMonth = this.monaten[depDate.getMonth()];
     const departureYear = depDate.getFullYear();
 
-    await this.clickLink("FERTIG");
+    await this.clickLink("Fertig");
 
     await this.clickLink("Flüge");
-    await this.clickLink("NUR HINFLUG");
+    await this.clickLink("Nur Hinflug");
 
     await this.clickLink("Abflug");
 
