@@ -215,6 +215,13 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         lastPriceOffScreenText = await prices[prices.length - 1].getText();
       }
 
+      if (airLines.length > 0) {
+        var bounds = await airLines[airLines.length - 1].getAttribute("bounds");
+        const newLastAirLineOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
+        lastAirLineOffScreenY = newLastAirLineOffScreenY;
+        lastAirLineOffScreenText = await airLines[airLines.length - 1].getText();
+      }
+
       if (_.isEqual(oldFlightOffersOnScreen, flightOffersOnScreen)) {
         break;
       }
