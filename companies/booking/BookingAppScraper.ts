@@ -23,15 +23,10 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     super(JSON.stringify({
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
-      "deviceName": "emulator-5554",
       "app": apkPath,
-      //"app": "C:\\projects\\diffscraper\\scraper\\opodo\\opodo.apk",
       "autoGrantPermissions": "true",
       "locale": "DE",
       "language": "de",
-      //'fullReset': "true"
-      // "appPackage": "com.opodo.reisen",
-      // "appActivity": "com.odigeo.app.android.home.HomeContainerView"
     }
     ));
 
