@@ -2398,3 +2398,25 @@
 {"@timestamp":"2021-02-20T19:44:09.467Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-20T19:44:09.475Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-20T19:44:10.571Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:16.604Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:16.623Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:16.637Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:24.191Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:24.192Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:24.715Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:25.264Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:25.777Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:26.333Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:26.347Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:27.439Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:41.702Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:41.716Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:41.722Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:49.343Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:49.344Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:49.875Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:50.438Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:50.942Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:51.491Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:51.502Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T20:38:52.592Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 mai 2021']","ecs":{"version":"1.5.0"}}

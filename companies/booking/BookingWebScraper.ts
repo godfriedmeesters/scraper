@@ -19,6 +19,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         const destination = inputData.location;
 
+        logger.info("Navigating to " + this.translator.translate("url"));
         await this.page.goto(this.translator.translate("url"));
 
         await this.page.waitFor(2000);

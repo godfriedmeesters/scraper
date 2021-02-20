@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-20 20:11:57
+ * @ Modified time: 2021-02-20 22:20:34
  * @ Description:
  */
 
@@ -91,6 +91,8 @@ class WebScraper {
             this.language = "fr";
             this.translator.changeLanguage("fr");
         }
+
+        logger.info("Using language " + this.language);
 
         if ("proxy" in params) {
             options.push(`--proxy-server=${params.proxy}`);
