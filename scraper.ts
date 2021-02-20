@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-16 15:57:43
+ * @ Modified time: 2021-02-20 11:34:11
  * @ Description:
  */
 
@@ -191,7 +191,12 @@ async function processScraperJob(job, done) {
 
     }
     catch (exception) {
+        exception.screenshotAtError = scraper.takeScreenShot(job.data.scraperClass);
+
         logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}`);
+
+
+
         await erroredScrapeQueue.add({
             ...job.data,
             "errors": String(exception)
