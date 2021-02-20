@@ -39,11 +39,12 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
 
 
-        const xp = "//span[@aria-label='" + ( this.language == "fr" ? strDate.toLowerCase(): strDate)  + "']";
+        const xp = "//span[@aria-label='" + (this.language == "fr" ? strDate.toLowerCase() : strDate) + "']";
 
         var dateInPage: boolean = await this.isXpathInPage(xp);
 
         while (!dateInPage) {
+            logger.info("Navigating to next month in calendar");
             await this.clickElementByCss('.bui-calendar__control--next');
 
             dateInPage = await this.isXpathInPage(xp);

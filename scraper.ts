@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-20 19:30:27
+ * @ Modified time: 2021-02-20 21:06:00
  * @ Description:
  */
 
@@ -195,9 +195,12 @@ async function processScraperJob(job, done) {
 
     }
     catch (exception) {
-        logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}`);
+        const screenshot = await scraper.takeScreenShot(job.data.scraperClass);
 
-        exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
+        exception.screenshotAtError = 'https://scraperbox.be/screenshots/' + screenshot;
+
+        logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}, screenshot after error available at
+        ${exception.screenshotAtError }`);
 
         await erroredScrapeQueue.add({
             ...job.data,
@@ -207,6 +210,7 @@ async function processScraperJob(job, done) {
         done(new Error(String(exception)));
     }
     finally {
+        await scraper.transferScreenshotsToFtp();
         await scraper.stopClient(job.data.params);
     }
 }
