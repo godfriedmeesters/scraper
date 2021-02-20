@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-20 22:20:34
+ * @ Modified time: 2021-02-20 22:54:28
  * @ Description:
  */
 
@@ -321,6 +321,7 @@ class WebScraper {
     }
 
     async getElementsTextByCss(css) {
+        logger.info(`Getting elements by CSS ${css}`);
         var elements = await this.getElementsByCss(css);
         var texts = [];
 
