@@ -3,7 +3,6 @@ import dateFormat from 'dateformat';
 import { IScraper } from "../../IScraper";
 import { FlightOffer } from "../../types";
 import { logger } from "../../logger";
-var convertTime = require('convert-time');
 var path = require('path');
 
 export class EuroWingsWebScraper extends WebScraper implements IScraper {
@@ -92,11 +91,11 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
         var flightOffers = [];
         for (var i = 0; i < prices.length; i++) {
             var flightOffer = new FlightOffer();
-            flightOffer.departureTime = convertTime(flightTimes[0]);
-            flightOffer.arrivalTime = convertTime(flightTimes[1]);
+            flightOffer.departureTime =flightTimes[0];
+            flightOffer.arrivalTime = flightTimes[1];
             flightOffer.flightNumber = fNumber;
             flightOffer.origin = locations[0].match(/\(([^)]+)\)/)[1];
-            flightOffer.destination = locations[1].match(/\(([^)]+)\)/)[1];;
+            flightOffer.destination = locations[1].match(/\(([^)]+)\)/)[1];
             flightOffer.price = prices[i].trim().replace('€', '');;
             flightOffer.type = types[i].split(' ')[0];
             flightOffer.screenshot = screenshotPath;
