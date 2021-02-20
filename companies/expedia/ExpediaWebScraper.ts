@@ -2,6 +2,7 @@ import { WebScraper } from "../../WebScraper";
 const de = require('date-and-time/locale/de');
 import { IScraper } from "../../IScraper";
 import { FlightOffer } from "../../types";
+import { logger } from "../../logger";
 const fs = require('fs');
 var path = require('path');
 
@@ -52,6 +53,7 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         var dateInPage: boolean = await this.isXpathInPage(dt);
 
         while (!dateInPage) {
+logger.info("Moving to next month...");
             const butt = await this.page.$$('.uitk-button-paging');
             await butt[1].click();
             dateInPage = await this.isXpathInPage(dt);
@@ -91,7 +93,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
                 flightOffer.departureTime = depTimes[i].split(/[–-]+/)[0].replace("h", ":").replace(" ", "").trim();
                 flightOffer.arrivalTime = depTimes[i].split(/[–-]+/)[1].replace("h", ":").replace(" ", "").trim();
             }
-
 
             flightOffer.origin = inputData.origin;
             flightOffer.destination = inputData.destination;

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-20 17:50:47
+ * @ Modified time: 2021-02-20 19:30:27
  * @ Description:
  */
 
@@ -138,11 +138,11 @@ async function processScraperJob(job, done) {
             while (!stop) {
                 redisClient.get(parseInt(job.data.comparisonRunId), function (err, reply) {
                     if (reply >= job.data.comparisonSize) {
-                        logger.info(` Nr of Scraper Runs with scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
+                        logger.info(`Nr of Scraper Runs with scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                         stop = true;
                     }
                     else {
-                        logger.info(` Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                        logger.info(`Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                     }
                 });
 
@@ -153,8 +153,12 @@ async function processScraperJob(job, done) {
 
                 logger.info(`${job.data.scraperClass}: Syncronized for ${synchronizationPeriodSeconds} seconds`);
 
-                if (synchronizationPeriodSeconds >= parseInt(process.env.SYNCHRONIZATION_SECONDS))
+                if (synchronizationPeriodSeconds >= parseInt(process.env.SYNCHRONIZATION_SECONDS)) {
+
+                    logger.info(`${job.data.scraperClass}: Syncronized for maxium of ${process.env.SYNCHRONIZATION_SECONDS} seconds.`);
+
                     break;
+                }
             }
 
             redisClient.quit();

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-16 15:47:19
+ * @ Modified time: 2021-02-20 20:11:57
  * @ Description:
  */
 
@@ -156,11 +156,9 @@ class WebScraper {
     async stopClient(params) {
         logger.info('Stopping web client');
 
-
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
             const cookies = await this.page.cookies();
             const filePath = this.translator.translate("recycledCookieFile");
-
 
             logger.info(`Saving cookies to ${filePath}`);
             await fs.writeFile(filePath, JSON.stringify(cookies, null, 2), () => { });
@@ -361,7 +359,6 @@ class WebScraper {
 
     async clickOptionalElementByCss(css) {
         try {
-            const elem = await this.page.waitForSelector(css, { visible: true, timeout: 1000 });
 
             await this.page.waitFor(500);
             await this.page.click(css);
