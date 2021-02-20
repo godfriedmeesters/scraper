@@ -2338,3 +2338,31 @@
 {"@timestamp":"2021-02-19T20:02:55.987Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename BookingWebScraper-1613764975987.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-19T20:03:01.966Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-19T20:03:02.015Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:38:14.502Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:38:14.505Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:38:14.506Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:38:26.429Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(text(), 'Nur Hinflug')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:38:30.185Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='direct-flight-switcher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:38:32.261Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //inpt[contains(@placeholder,\"Von?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:39:02.944Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:35.768Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:35.771Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:35.771Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:44.232Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(text(), 'Nur Hinflug')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:48.193Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='direct-flight-switcher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:50.273Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Von?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:51:59.489Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Nach?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:07.449Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@placeholder='Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:10.983Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month Mai ... ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:11.511Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:11.512Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:14.097Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:14.098Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:16.668Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:16.669Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:18.731Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:18.733Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[@class='odf-calendar']//div[@class = 'odf-calendar-title' and contains(text(), 'Mai')]/following-sibling::div//div[contains(@class,'odf-calendar-day') and text() = '1']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:19.802Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Flug suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:52:26.847Z","log":{"level":"info","logger":"winston"},"message":"graphql found","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:53:01.460Z","log":{"level":"info","logger":"winston"},"message":"Took screenshot with filename OpodoWebScraper-1613839981460.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-20T16:53:06.958Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
