@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-18 18:01:46
+ * @ Modified time: 2021-02-21 10:37:26
  * @ Description:
  */
 
@@ -44,8 +44,7 @@ class AppScraper {
     }
 
     async takeScreenShot(className) {
-        //take screenshot
-        var imageName = className + "-" + Date.now() + '.png';
+        const imageName = `${className} - ${Date.now()} .png`;
         logger.info("Taking screenshot " + imageName);
         var imagePath = path.join(__dirname, 'screenshots', imageName);
 
