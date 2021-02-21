@@ -2420,3 +2420,17 @@
 {"@timestamp":"2021-02-20T20:38:51.491Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 mai 2021']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-20T20:38:51.502Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 mai 2021']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-20T20:38:52.592Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:45:17.579Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:45:40.929Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge buchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:45:43.604Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:45:44.433Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:45:47.425Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Zielflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:45:51.078Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:04.648Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:22.789Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge buchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:24.995Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:25.807Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:28.692Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:30.680Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Zielflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:33.654Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-02-21T18:49:36.757Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

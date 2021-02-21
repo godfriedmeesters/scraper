@@ -9,24 +9,8 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
 
     super(JSON.stringify({
       "platformName": "Android",
-      "platformVersion:": "6.0",
-      "deviceName": "my device",
       "app": "c:\\apk\\Eurowings.v4.3.3_apkpure.com.apk",
-      "autoGrantPermissions": "true",
-      "appPackage": "com.germanwings.android",
-      "deviceApiLevel": "23",
-      "deviceScreenSize": "1440x2560",
-      "deviceScreenDensity": "560",
-      "deviceModel": "Android SDK built for x86",
-      "deviceManufacturer": "unknown",
-      "pixelRatio": "3.5",
-      "statBarHeight": "84",
-      "viewportRect": {
-        "left": "0",
-        "top": "84",
-        "width": "1440",
-        "height": "2308"
-      }
+      "autoGrantPermissions": "true"
     }));
   }
 
