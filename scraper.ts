@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-22 23:30:52
+ * @ Modified time: 2021-02-22 23:32:19
  * @ Description:
  */
 
@@ -196,10 +196,9 @@ async function processScraperJob(job, done) {
     catch (exception) {
 
         if (job.data.scraperClass.includes("Web")) {
-            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
-
             logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}, screenshot after error available at
             ${exception.screenshotAtError}`);
+            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
         }
         else
             logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}`);
