@@ -2,10 +2,9 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-20 22:39:04
+ * @ Modified time: 2021-02-22 23:15:58
  * @ Description:
  */
-
 
 
 require('dotenv').config();
@@ -196,11 +195,12 @@ async function processScraperJob(job, done) {
     }
     catch (exception) {
 
+        logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}, screenshot after error available at
+        ${exception.screenshotAtError }`);
 
         exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
 
-        logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}, screenshot after error available at
-        ${exception.screenshotAtError }`);
+
 
         await erroredScrapeQueue.add({
             ...job.data,
