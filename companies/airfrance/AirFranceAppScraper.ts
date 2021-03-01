@@ -12,6 +12,7 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
     const apkPath = path.join("c:\\apk\\AirFrance_v5.1.0_apkpure.com.apk");
 
     super(JSON.stringify({
+      "adbExecTimeout": "100000",
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",

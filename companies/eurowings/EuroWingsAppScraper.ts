@@ -10,7 +10,8 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
     super(JSON.stringify({
       "platformName": "Android",
       "app": "c:\\apk\\Eurowings.v4.3.3_apkpure.com.apk",
-      "autoGrantPermissions": "true"
+      "autoGrantPermissions": "true",
+      "adbExecTimeout": "100000",
     }));
   }
 

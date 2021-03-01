@@ -27,6 +27,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
       "autoGrantPermissions": "true",
       "locale": "DE",
       "language": "de",
+      "adbExecTimeout": "100000",
     }
     ));
 

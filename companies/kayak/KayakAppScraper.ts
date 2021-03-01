@@ -10,6 +10,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
 
   constructor() {
     super(JSON.stringify({
+      "adbExecTimeout": "100000",
       "platformName": "Android",
       "buildToolsVersion": "28.0.3",
       "deviceName": "emulator-5554",
