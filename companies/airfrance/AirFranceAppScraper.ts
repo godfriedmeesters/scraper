@@ -83,14 +83,16 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
     const departureDate = data.departureDate;
     const depDate = new Date(departureDate);
     const departureDay = depDate.getDate();
-    let elem = await this.appiumClient.$(
-      this._('text("DATUM BESTÄTIGEN")')
-    );
+    //let elem = await this.appiumClient.$(
+   //   this._('text("DATUM BESTÄTIGEN")')
+    //);
 
-    await elem.click();
+    //await elem.click();
+
+await this.appClickElementByResource("com.airfrance.android.dinamoprd:id/calendar_footer_confirm_button");
 
 
-    elem = await this.appiumClient.$(
+    const elem = await this.appiumClient.$(
       '//android.widget.TextView[@text="' +
       departureDay +
       '"]/following-sibling::android.widget.TextView[1]'

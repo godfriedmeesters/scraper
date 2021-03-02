@@ -2464,3 +2464,25 @@
 {"@timestamp":"2021-03-02T08:44:49.722Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_price","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-02T08:44:49.817Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_transfer_text","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-02T08:44:50.148Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:03.248Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:17.130Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link App ohne Anmeldung nutzen >","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:18.308Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:20.415Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Kaufen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:24.673Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.LinearLayout[@content-desc=\"Nur Hinflug\"]/android.widget.TextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:24.945Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Von","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:28.811Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:31.213Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nach","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:34.318Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:38.143Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:38.145Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:53.083Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:53.085Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@text=\"1\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:58.541Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot AirFranceAppScraper-1614676678541.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:58.896Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_outbound_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:58.986Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_inbound_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:59.076Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_flight_number","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:59.168Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_outbound_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:59.276Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_inbound_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:59.369Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:59.463Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_transfer_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T09:17:59.754Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
