@@ -2486,3 +2486,33 @@
 {"@timestamp":"2021-03-02T09:17:59.369Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_price","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-02T09:17:59.463Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_transfer_text","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-02T09:17:59.754Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:40:55.189Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:12.700Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge buchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:14.922Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:15.726Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:18.277Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:20.233Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Zielflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:23.135Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:24.565Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Hinflugdatum","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:25.679Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:52.024Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:52.026Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@text=\"2\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:41:52.656Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:42:02.509Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.Button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:42:09.623Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1614681729623.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:42:10.029Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:42:53.655Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:09.604Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge buchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:11.992Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:12.826Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:16.055Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:18.048Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Zielflughafen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:20.968Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:21.898Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Hinflugdatum","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:23.562Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:49.308Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:49.311Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@text=\"2\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:49.832Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:43:59.709Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.Button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:44:06.313Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1614681846313.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T10:44:06.692Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

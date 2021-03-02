@@ -63,7 +63,7 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
 
     await this.clickElementByXpath('//android.widget.TextView[@text="' +
       departureDay +
-      '"]/following-sibling::android.widget.TextView[2]');
+      '"]');
 
     await this.clickLink('Suchen');
 
@@ -98,8 +98,8 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
 
     var flightOffers = [];
     var flightOffer = new FlightOffer();
-    flightOffer.departureTime = convertTime(depTime);
-    flightOffer.arrivalTime = convertTime(arrTime);
+    flightOffer.departureTime = depTime;
+    flightOffer.arrivalTime = arrTime;
     flightOffer.flightNumber = flNr;
     flightOffer.origin = inputData.origin;
     flightOffer.destination = inputData.destination;
