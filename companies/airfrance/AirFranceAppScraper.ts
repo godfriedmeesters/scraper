@@ -64,7 +64,9 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
 
     await this.clickElementByResource("com.airfrance.android.dinamoprd:id/airport_list_iata_code");
 
-    await this.clickLink("DATEN AUSWÄHLEN");
+    // await this.clickLink("DATEN AUSWÄHLEN");
+    await this.appClickElementByResource("com.airfrance.android.dinamoprd:id/button_confirm");
+
     const mY = date.format(depDate, "MMMM YYYY");
 
     logger.info("looking for " + mY);
