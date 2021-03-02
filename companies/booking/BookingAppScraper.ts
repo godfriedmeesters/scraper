@@ -18,12 +18,10 @@ export class BookingAppScraper extends AppScraper implements IScraper {
 
 
   constructor() {
-    const apkPath = "c:\\apk\\com.booking_25.2.apk";
 
     super(JSON.stringify({
       "platformName": "Android",
-      "buildToolsVersion": "28.0.3",
-      "app": apkPath,
+      "app": "c:\\apk\\com.booking_25.2.apk",
       "autoGrantPermissions": "true",
       "locale": "DE",
       "language": "de",
