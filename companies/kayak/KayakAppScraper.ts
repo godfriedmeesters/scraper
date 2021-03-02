@@ -12,8 +12,6 @@ export class KayakAppScraper extends AppScraper implements IScraper {
     super(JSON.stringify({
       "adbExecTimeout": "100000",
       "platformName": "Android",
-      "buildToolsVersion": "28.0.3",
-      "deviceName": "emulator-5554",
       "app": "C:\\apk\\kayak_apkpure.com.apk",
       "autoGrantPermissions": "true",
       "locale": "DE",
