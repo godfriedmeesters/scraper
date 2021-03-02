@@ -2434,3 +2434,33 @@
 {"@timestamp":"2021-02-21T18:49:30.680Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Zielflughafen","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-21T18:49:33.654Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.germanwings.android:id/flyUpEntryText","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-02-21T18:49:36.757Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:40:07.190Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:40:59.660Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link App ohne Anmeldung nutzen >","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:41:12.386Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:41:18.277Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Kaufen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:41:23.879Z","log":{"level":"info","logger":"winston"},"message":"Clicking link NUR HINFLUG","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:41:24.998Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Von","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:41:30.781Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:43:32.888Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:04.159Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link App ohne Anmeldung nutzen >","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:05.615Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:08.755Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Kaufen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:12.572Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.LinearLayout[@content-desc=\"Nur Hinflug\"]/android.widget.TextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:12.936Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Von","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:18.287Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:20.684Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nach","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:23.732Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:26.493Z","log":{"level":"info","logger":"winston"},"message":"Clicking link DATEN AUSWÄHLEN","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:27.787Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:27.788Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:43.436Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:43.437Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@text=\"1\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:48.585Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot AirFranceAppScraper-1614674688585.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.176Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_outbound_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.275Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_inbound_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.446Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_flight_number","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.543Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_outbound_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.633Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_inbound_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.722Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:49.817Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_transfer_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-02T08:44:50.148Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

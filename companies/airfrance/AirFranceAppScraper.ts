@@ -9,14 +9,11 @@ var path = require('path');
 
 export class AirFranceAppScraper extends AppScraper implements IScraper {
   constructor() {
-    const apkPath = path.join("c:\\apk\\AirFrance_v5.1.0_apkpure.com.apk");
 
     super(JSON.stringify({
       "adbExecTimeout": "100000",
       "platformName": "Android",
-      "buildToolsVersion": "28.0.3",
-      "deviceName": "emulator-5554",
-      "app": apkPath,
+      "app": "c:\\apk\\AirFrance_v5.1.0_apkpure.com.apk",
       "autoGrantPermissions": "true",
       "locale": "DE",
       "language": "de",
@@ -50,7 +47,7 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
 
     await this.appClickElementByResource("com.airfrance.android.dinamoprd:id/ebt0_card_title");
 
-    await this.clickLink("NUR HINFLUG");
+    await this.clickElementByXpath('//android.widget.LinearLayout[@content-desc="Nur Hinflug"]/android.widget.TextView');
 
     await this.clickLink("Von");
 
