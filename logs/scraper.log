@@ -2516,3 +2516,107 @@
 {"@timestamp":"2021-03-02T10:43:59.709Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.Button","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-02T10:44:06.313Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot EuroWingsAppScraper-1614681846313.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-02T10:44:06.692Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:30:51.806Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:31:15.963Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:31:20.184Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:31:22.165Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_final","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:31:26.291Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/uds_toolbar_navigation_icon","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:31:30.648Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Akzeptieren","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:31:36.959Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@content-desc=\"Flüge Schaltfläche\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:32:27.414Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:35:47.282Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:35:58.744Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:03.238Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:07.819Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_final","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:12.125Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/uds_toolbar_navigation_icon","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:16.425Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Akzeptieren","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:19.569Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@content-desc=\"Flüge Schaltfläche\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:20.828Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:22.967Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflugort","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:24.534Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.expedia.bookings:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:25.914Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.expedia.bookings:id/title_textview","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:28.088Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.expedia.bookings:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:29.454Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.expedia.bookings:id/title_textview","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:31.632Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:34.464Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.view.View[contains(@content-desc,'2.' )])[1]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:34.819Z","log":{"level":"info","logger":"winston"},"message":"Clicking link FERTIG","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:36.286Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:42.347Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.FrameLayout[@content-desc=\"Schaltfläche Sortieren und filtern\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:47.058Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.ViewGroup[contains(@content-desc,\"Direktflug\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:47.840Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Fertig","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:52.324Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614893812324.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:52.805Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:52.869Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:52.929Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:52.997Z","log":{"level":"info","logger":"winston"},"message":"Found 2 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:53.091Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:53.176Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:54.303Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614893814303.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:54.692Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:54.780Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:54.877Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:55.018Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:55.124Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:55.226Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:55.313Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:56.395Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614893816395.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:56.754Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:56.827Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:56.910Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:56.982Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:57.063Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:57.143Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:57.217Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T21:36:57.259Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:00.560Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:11.988Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:16.543Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:45.142Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/button_final","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:49.416Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.expedia.bookings:id/uds_toolbar_navigation_icon","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:53.733Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Akzeptieren","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:57.083Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@content-desc=\"Flüge Schaltfläche\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:08:58.324Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:00.423Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflugort","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:01.323Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.expedia.bookings:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:02.120Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.expedia.bookings:id/title_textview","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:04.095Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.expedia.bookings:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:05.470Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.expedia.bookings:id/title_textview","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:07.514Z","log":{"level":"info","logger":"winston"},"message":"Looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:10.302Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.view.View[contains(@content-desc,'2.' )])[1]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:11.138Z","log":{"level":"info","logger":"winston"},"message":"Clicking link FERTIG","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:11.995Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:18.047Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.FrameLayout[@content-desc=\"Schaltfläche Sortieren und filtern\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:18.366Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.ViewGroup[contains(@content-desc,\"Direktflug\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:19.672Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Fertig","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:23.662Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614895763662.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:24.083Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:24.161Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:24.230Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:24.297Z","log":{"level":"info","logger":"winston"},"message":"Found 2 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:24.373Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:24.459Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:25.566Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614895765566.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:25.927Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:26.049Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:26.162Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:26.257Z","log":{"level":"info","logger":"winston"},"message":"Found 4 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:26.338Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:26.419Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:26.497Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:27.581Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614895767581.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:27.928Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:28.020Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:28.104Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:28.190Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:28.571Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:28.694Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:28.775Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:29.830Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot ExpediaAppScraper-1614895769830.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.206Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.298Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/flight_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.380Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.expedia.bookings:id/airline_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.467Z","log":{"level":"info","logger":"winston"},"message":"Found 3 lines ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.546Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.622Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.688Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-04T22:09:30.714Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

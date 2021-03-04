@@ -18,7 +18,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     super(JSON.stringify({
       "adbExecTimeout": "100000",
       "platformName": "Android",
-      "app":  "c:\\apk\\Expedia_v20.49.0_apkpure.com.apk",
+      "app":  "c:\\apk\\Expedia_19.32.0_apkmirror.com.apk",
       "autoGrantPermissions": "true",
       "language": "de",
       "locale": "DE",
