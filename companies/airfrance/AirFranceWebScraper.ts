@@ -35,22 +35,22 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitForSelector('#station-list-0');
 
-        await this.page.click('#station-list-0');
-        await this.page.type('#station-list-0', origin, { delay: 100 });
+        await this.page.click('#mat-input-0');
+        await this.page.type('#mat-input-0', origin, { delay: 100 });
         await this.page.waitFor(1000);
         await this.tapEnter();
         await this.page.waitFor(1000);
 
-        await this.page.click('#station-list-1');
+        await this.page.click('#mat-input-1');
 
-        await this.page.type('#station-list-1', destination, { delay: 100 });
+        await this.page.type('#mat-input-1', destination, { delay: 100 });
         await this.page.waitFor(1000);
         await this.tapEnter();
 
     };
 
     async scrapeFromSearch(inputData) {
-        await this.clickElementByTextContains(this.translator.translate(" Flüge suchen "));
+        await this.clickElementByTextContains(this.translator.translate("Flüge suchen"));
 
         await this.page.waitForNavigation();
 

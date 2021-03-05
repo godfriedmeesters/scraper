@@ -53,7 +53,7 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         var dateInPage: boolean = await this.isXpathInPage(dt);
 
         while (!dateInPage) {
-logger.info("Moving to next month...");
+            logger.info("Moving to next month...");
             const butt = await this.page.$$('.uitk-button-paging');
             await butt[1].click();
             dateInPage = await this.isXpathInPage(dt);
