@@ -50,7 +50,7 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
     };
 
     async scrapeFromSearch(inputData) {
-        await this.clickElementByText(this.translator.translate(" Flüge suchen "));
+        await this.clickElementByTextContains(this.translator.translate(" Flüge suchen "));
 
         await this.page.waitForNavigation();
 
