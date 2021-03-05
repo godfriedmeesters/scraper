@@ -2663,3 +2663,27 @@
 {"@timestamp":"2021-03-05T10:20:23.705Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,\"anzeigen\") and @color=\"primary\"]","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-05T10:20:24.894Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename AirFranceWebScraper-1614939624894.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-05T10:20:27.468Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:46.096Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:46.109Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:46.117Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:46.119Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:53.267Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller-retour']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:54.369Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller simple']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:38:55.479Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Date de départ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:39:00.904Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = ' 1 ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:39:10.393Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Flüge suchen')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T11:39:40.922Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:41.074Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:41.089Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:41.098Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:41.100Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:49.010Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller-retour']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:50.125Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller simple']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:51.226Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Date de départ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:08:56.644Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = ' 1 ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:09:06.009Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Rechercher les vols')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:09:13.631Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Correspondances')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:09:15.406Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='mat-radio-14-input']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:09:17.011Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,\"Afficher\") and @color=\"primary\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:09:18.192Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename AirFranceWebScraper-1614949758192.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-05T13:09:20.812Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}

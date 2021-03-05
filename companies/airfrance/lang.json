@@ -16,7 +16,7 @@
         "Hin- und Rückflug": "Aller-retour",
         "Nur Hinflug": "Aller simple",
         "Abflugdatum": "Date de départ",
-        " Flüge suchen ": " Rechercher les vols ",
+        "Flüge suchen": "Rechercher les vols",
         "authCookieFile": "./companies/airfrance/wwws.airfrance.fr.cookies.json",
         "recycledCookieFile": "../recycledCookies/airfrance.fr.json",
         "Stopps": "Correspondances",
