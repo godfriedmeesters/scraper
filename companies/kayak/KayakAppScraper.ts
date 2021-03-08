@@ -88,7 +88,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
 
     await this.clickElementByResource("com.kayak.android:id/applyButton");
 
-    var screenshotPath = await this.takeScreenShot(this.constructor.name);
+
 
     var rect = await this.appiumClient.getWindowRect();
 
@@ -99,6 +99,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
     var flightOffers = [];
 
     while (true) {
+      var screenshotPath = await this.takeScreenShot(this.constructor.name);
       var oldFlightOffersOnScreen = flightOffersOnScreen.slice();
       flightOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.kayak.android:id/price');

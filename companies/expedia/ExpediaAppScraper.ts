@@ -1,3 +1,12 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-27 16:00:25
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-03-08 23:41:26
+ * @ Description:
+ */
+
+
 import { AppScraper } from "../../AppScraper";
 import { IScraper } from "../../IScraper";
 import { FlightOffer} from "../../types";
@@ -18,7 +27,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     super(JSON.stringify({
       "adbExecTimeout": "100000",
       "platformName": "Android",
-      "app":  "c:\\apk\\Expedia_19.32.0_apkmirror.com.apk",
+      "app":  "c:\\apk\\Expedia_v20.49.0_apkpure.com.apk",
       "autoGrantPermissions": "true",
       "language": "de",
       "locale": "DE",
