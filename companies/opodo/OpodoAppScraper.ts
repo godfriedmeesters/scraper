@@ -29,12 +29,10 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
     const departureMonth = this.monaten[depDate.getMonth()];
     const departureYear = depDate.getFullYear();
 
-//    await this.clickLink("Fertig");
-await this.clickOptionalLinkByResourceId("com.opodo.reisen:id/menu_item_skip_walkthrough");
-
-
+    //    await this.clickLink("Fertig");
+    await this.clickOptionalLinkByResourceId("com.opodo.reisen:id/menu_item_skip_walkthrough");
     await this.clickLink("Flüge");
-    await this.clickLink("Nur Hinflug");
+    await this.clickElementByXpath("//android.support.v7.app.ActionBar.Tab[@content-desc='Nur Hinflug']/android.widget.TextView");
 
     await this.clickLink("Abflug");
 
@@ -65,14 +63,14 @@ await this.clickOptionalLinkByResourceId("com.opodo.reisen:id/menu_item_skip_wal
 
     await departureDateChoice.click();
 
-    await this.clickLink("Weiter");
+    await this.clickElementByResource("com.opodo.reisen:id/confirmation_button");
 
   }
 
   // scrape Android app part 2: starting from  "clicking" the search button
   async scrapeFromSearch(inputData) {
 
-    await this.clickLink("Flüge suchen");
+    await this.clickElementByResource("com.opodo.reisen:id/search");
 
 
     var rect = await this.appiumClient.getWindowRect();
@@ -101,7 +99,7 @@ await this.clickOptionalLinkByResourceId("com.opodo.reisen:id/menu_item_skip_wal
 
 
     while (true) {
-      console.log("last price offscreen = " + lastPriceOffScreenText)
+      logger.info("last price offscreen = " + lastPriceOffScreenText)
       var oldFlightOffersOnScreen = flightOffersOnScreen.slice();
       flightOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.opodo.reisen:id/flights_price');
@@ -152,8 +150,8 @@ await this.clickOptionalLinkByResourceId("com.opodo.reisen:id/menu_item_skip_wal
 
 
 
-         ////////////////////SELECT CORRECT AIRLINE////////////////////////////
-         if (airLines.length == 0) {
+        ////////////////////SELECT CORRECT AIRLINE////////////////////////////
+        if (airLines.length == 0) {
           flightOffer.airline = lastAirLineOffScreenText;
         }
         else if (airLines.length == 1) {

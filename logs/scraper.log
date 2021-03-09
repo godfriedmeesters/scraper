@@ -2731,3 +2731,41 @@
 {"@timestamp":"2021-03-05T19:45:43.505Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-05T19:45:43.583Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-05T19:45:43.588Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T22:57:43.955Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T22:58:28.800Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.opodo.reisen:id/menu_item_skip_walkthrough","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T22:58:33.265Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T22:59:01.400Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:06.396Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:18.773Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.opodo.reisen:id/menu_item_skip_walkthrough","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:25.609Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:28.632Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.support.v7.app.ActionBar.Tab[@content-desc='Nur Hinflug']/android.widget.TextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:29.184Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:31.208Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.opodo.reisen:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:31.992Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/txtCityName","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:35.563Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Ziel","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:37.029Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.opodo.reisen:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:37.756Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/txtCityName","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:40.077Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Direktflüge","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:40.779Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Hinflugdatum","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:42.409Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:00:59.294Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:01:00.196Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/confirmation_button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:01:02.844Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/confirmation_button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:01:08.063Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:08.117Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:22.103Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.opodo.reisen:id/menu_item_skip_walkthrough","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:28.006Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Flüge","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:29.577Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.support.v7.app.ActionBar.Tab[@content-desc='Nur Hinflug']/android.widget.TextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:29.947Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Abflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:32.044Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.opodo.reisen:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:32.772Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/txtCityName","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:35.018Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Ziel","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:36.426Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.opodo.reisen:id/search_src_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:37.151Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/txtCityName","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:39.429Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nur Direktflüge","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:40.139Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Hinflugdatum","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:41.438Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:57.943Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:08:58.956Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/confirmation_button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:09:01.186Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.opodo.reisen:id/confirmation_button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-09T23:09:06.438Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
