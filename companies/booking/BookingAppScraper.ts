@@ -31,11 +31,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     ));
 
     date.locale("de");  //set to nl or de
-    // var obj = JSON.parse(fs.readFileSync(path.join(__dirname, "lang.json"), 'utf8'));
-    // Translator.registerDefaultLanguage("nl", obj.Dutch);
-    // Translator.registerLanguage("de", obj.German);
 
-    // Translator.changeLanguage("nl");
   }
 
   async scrapeUntilSearch(inputData) {
@@ -45,17 +41,17 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     await this.sleep(3000);
     await this.clickOptionalLink(Translator.translate("Akzeptieren"));
     await this.sleep(3000);
-    await this.appiumClient.touchAction({ action: 'tap', x: 80, y: 250 });
+    await this.appiumClient.touchAction({ action: 'tap', x: 100, y: 170 });
 
     await this.sleep(3000);
-    await this.clickElementByXpath("//android.widget.ImageButton[@content-desc=\"Open\"]");
-    await this.scrollDownUntilVisible(Translator.translate("Einstellungen"));
-    await this.clickLink("Einstellungen");
-    await this.clickLink("Währung");
+    // await this.clickElementByXpath("//android.widget.ImageButton[@content-desc=\"Open\"]");
+    // await this.scrollDownUntilVisible(Translator.translate("Einstellungen"));
+    // await this.clickLink("Einstellungen");
+    // await this.clickLink("Währung");
 
-    await this.scrollUpUntilTextVisible("Euro (€)");
-    await this.clickLink("Euro (€)");
-    await this.appClickElementByXpath("//android.widget.ImageButton[@content-desc=\"" + "Nach oben" + "\"]");
+    // await this.scrollUpUntilTextVisible("Euro (€)");
+    // await this.clickLink("Euro (€)");
+    // await this.appClickElementByXpath("//android.widget.ImageButton[@content-desc=\"" + "Nach oben" + "\"]");
 
     await this.appClickElementByResource("com.booking:id/search_details_text");
 
