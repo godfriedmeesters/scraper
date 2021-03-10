@@ -26,6 +26,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
       "locale": "DE",
       "language": "de",
       "adbExecTimeout": "100000",
+      "appWaitActivity": "*"
     }
     ));
 

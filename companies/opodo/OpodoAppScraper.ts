@@ -13,7 +13,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
       "platformName": "Android",
       "app": "c:\\apk\\opodo.apk",
       "autoGrantPermissions": "true",
-      "adbExecTimeout": "100000"
+      "adbExecTimeout": "100000",
     }
     ));
   }
