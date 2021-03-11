@@ -111,10 +111,9 @@ export class KayakAppScraper extends AppScraper implements IScraper {
 
       for (var i = 0; i < prices.length && i < departureTimes.length && i < arrivalTimes.length && i < origins.length
         && i < destinations.length && i < airLines.length; i++) {
-        var b = await prices[i].getText();
         var flightOffer = new FlightOffer();
-        const pr = await prices[i].getText();
-        flightOffer.price = pr.replace("€", "").trim();
+        const price = await prices[i].getText();
+        flightOffer.price = price.replace("€", "").trim();
 
         const deptT = await departureTimes[i].getText();
         flightOffer.departureTime = convertTime(deptT.replace('p', 'pm').replace('a', 'am'));
@@ -122,16 +121,21 @@ export class KayakAppScraper extends AppScraper implements IScraper {
         flightOffer.arrivalTime = convertTime(arrT.replace('a', 'am').replace('p', 'pm'));
         flightOffer.origin = await origins[i].getText();
         flightOffer.destination = await destinations[i].getText();
-        flightOffer.screenshot = screenshotPath;
+        //flightOffer.screenshot = screenshotPath;
         const al = await airLines[i];
 
         flightOffer.airline = await al.getText();
 
         flightOffersOnScreen.push(flightOffer);
 
-        if (_.findWhere(flightOffers, flightOffer) == null) {
-          flightOffers.push(flightOffer);
+        /////////////////////////////////////////////////:
+        const screenShotFlightOffer = { ...flightOffer };
+        screenShotFlightOffer.screenshot = screenshotPath;
+
+        if (_.findWhere(flightOffers, screenShotFlightOffer) == null) {
+          flightOffers.push(screenShotFlightOffer);
           logger.info("adding new flight offer");
+          //logger.info(JSON.stringify(flightOffer));
         }
         else {
           logger.info("skipping flight offer");
