@@ -3552,3 +3552,23 @@
 {"@timestamp":"2021-03-11T18:26:04.859Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Zielflughafen\")]","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-11T18:26:10.563Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Hinflug\"]","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-11T18:26:50.400Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:52:59.010Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:52:59.026Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:52:59.027Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:52:59.028Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:52:59.831Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:53:14.274Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Abflughafen\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:53:20.045Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Zielflughafen\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:53:25.749Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Hinflug\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:53:37.687Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename EuroWingsWebScraper-1615492417687.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:53:39.910Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:54:44.694Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:54:44.708Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:54:44.709Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:54:44.710Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:54:45.444Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:54:59.394Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Abflughafen\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:55:05.163Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Zielflughafen\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:55:10.877Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Hinflug\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:55:22.849Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename EuroWingsWebScraper-1615492522849.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T19:55:24.901Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}

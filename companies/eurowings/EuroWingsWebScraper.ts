@@ -80,12 +80,11 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
                 if (response.status() == 200) {
 
                     const text = await response.text();
-                    if (text.includes("itineraries")) {
-                        logger.info("graphql found");
-                        const json = JSON.parse(text);
 
-                        flightOffers = this.getFlightsData(json);
-                    }
+                    const json = JSON.parse(text);
+
+                    flightOffers = this.getFlightsData(json);
+
                 }
             }
         });
@@ -97,64 +96,41 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
             await zoeken.click();
         }
 
+        await this.page.waitFor(5000);
 
+        const url = await this.page.url();
 
-        // await this.page.waitForNavigation();
+        var screenshotPath = await this.takeScreenShot("EuroWingsWebScraper");
 
-        // const types = await this.getElementsAttributeByXpath("//button[@class='m-ibe-flighttariff__select']", "aria-label");
-
-        // const prices = await this.getElementsTextByCss('.m-ibe-flighttariff__fare-price .a-price');
-
-        // const flightTimes = await this.getElementsTextByCss('.a-headline.a-headline--h4.t-spacing--0');
-        // const locations = await this.getElementsTextByCss('.m-ibe-flighttable__station');
-
-        // var fNumber = await this.getElementAttributeByCss(".m-ibe-flighttable__cta-info", "aria-label");
-        // fNumber = fNumber.replace(/{(.*?)}/, '').trim();
-
-        // var screenshotPath = await this.takeScreenShot(this.constructor.name);
-
-        // const url = this.page.url();
-        // var flightOffers = [];
-        // for (var i = 0; i < prices.length; i++) {
-        //     var flightOffer = new FlightOffer();
-        //     flightOffer.departureTime =flightTimes[0];
-        //     flightOffer.arrivalTime = flightTimes[1];
-        //     flightOffer.flightNumber = fNumber;
-        //     flightOffer.origin = locations[0].match(/\(([^)]+)\)/)[1];
-        //     flightOffer.destination = locations[1].match(/\(([^)]+)\)/)[1];
-        //     flightOffer.price = prices[i].trim().replace('€', '');;
-        //     flightOffer.type = types[i].split(' ')[0];
-        //     flightOffer.screenshot = screenshotPath;
-        //     flightOffer.url = url;
-        //     flightOffers.push(flightOffer);
-        // }
-
-        // return flightOffers;
-    }
-
-
-    getFlightsData(json) {
-
-        const flightOffers = [];
-
-        for (const item of json.items) {
-
-            for (const segItem of item.itineraryGroupsList[0].segItems) {
-                const flightOffer = new FlightOffer();
-
-                flightOffer.price = item.priceWithoutDiscounts.replace(/(<([^>]+)>)/gi, "").replace("&euro;", '').trim();
-                flightOffer.origin = segItem.departureInfo.iata;
-                flightOffer.destination = segItem.arrivalInfo.iata;
-                flightOffer.departureTime = segItem.departureInfo.time;
-                flightOffer.arrivalTime = segItem.arrivalInfo.time;
-                flightOffer.airline = item.itineraryGroupsList[0].carrierName;
-
-                if (item.itineraryGroupsList.length == 1) {
-                    flightOffers.push(flightOffer);
-                }
-            }
+        for (const flightOffer of flightOffers) {
+            flightOffer.url = url;
+            flightOffer.screenshot = screenshotPath;
         }
 
+        return flightOffers;
+    }
+
+    getFlightsData(json) {
+        const flightOffers = [];
+        const origin = json._payload._updates[0]._resultData.flights[0].route.origin;
+        const destination = json._payload._updates[0]._resultData.flights[0].route.destination;
+
+        const price = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].fares[0].farePrices[0].price.value;
+
+        const depTime = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].segments[0].departure.displayTime;
+        const arrTime = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].segments[0].arrival.displayTime;
+
+
+        const flightOffer = new FlightOffer();
+
+        flightOffer.price = price;
+        flightOffer.origin = origin;
+        flightOffer.destination = destination;
+        flightOffer.departureTime = depTime;
+        flightOffer.arrivalTime = arrTime;
+
+
+        flightOffers.push(flightOffer);
         return flightOffers;
     }
 }
