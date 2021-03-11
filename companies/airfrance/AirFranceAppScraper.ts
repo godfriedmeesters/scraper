@@ -34,10 +34,10 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
 
     const departureDay = depDate.getDate();
 
+    await this.clickOptionalLink("Später");
 
     await this.clickOptionalLink("App ohne Anmeldung nutzen >");
 
-    await this.clickOptionalLink("Später");
 
 
     await this.clickLink("Kaufen");

@@ -3216,3 +3216,50 @@
 {"@timestamp":"2021-03-10T23:26:34.940Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-10T23:26:35.164Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-10T23:26:35.273Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T16:58:18.683Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T16:58:32.802Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link App ohne Anmeldung nutzen >","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T16:58:33.675Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T16:58:36.894Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Kaufen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T16:59:27.848Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T16:59:52.926Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:00:06.744Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link App ohne Anmeldung nutzen >","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:00:07.764Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:00:08.495Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Kaufen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:00:24.872Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:01:46.985Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:00.843Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:03.447Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link App ohne Anmeldung nutzen >","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:05.086Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Kaufen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:08.641Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.LinearLayout[@content-desc=\"Nur Hinflug\"]/android.widget.TextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:08.979Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Von","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:12.982Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:15.386Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Nach","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:18.665Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.airfrance.android.dinamoprd:id/airport_list_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:22.913Z","log":{"level":"info","logger":"winston"},"message":"looking for Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:22.915Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:50.890Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:50.891Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.widget.TextView[@text=\"1\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:56.585Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot AirFranceAppScraper-1615482176584.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:57.110Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_outbound_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:57.278Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_inbound_time","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:57.470Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_flight_number","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:57.631Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_outbound_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:57.793Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_inbound_iata_code","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:57.989Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:58.216Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.airfrance.android.dinamoprd:id/flight_card_transfer_text","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:02:58.890Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:31.588Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:31.715Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:31.716Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:31.717Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:40.505Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hin- und Rückflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:41.645Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:42.746Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Abflugdatum']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:48.202Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = ' 1 ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:03:57.762Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Flüge suchen')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:04:03.898Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://www.linkedin.com/px/li_sync?redirect=https%3A%2F%2Fpx.ads.linkedin.com%2Fcollect%3Fpid%3D25453%26conversionId%3D253196%26fmt%3Dgif%26liSync%3Dtrue resulted in status code 429","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:04:05.429Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Stopps')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:04:07.139Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='mat-radio-14-input']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:04:09.016Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,\"anzeigen\") and @color=\"primary\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:04:10.232Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename AirFranceWebScraper-1615482250232.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-11T17:04:13.062Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
