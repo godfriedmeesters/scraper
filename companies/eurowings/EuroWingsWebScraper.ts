@@ -66,6 +66,30 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
     }
 
     async scrapeFromSearch(inputData) {
+
+        var flightOffers = [];
+        await this.page.setRequestInterception(true);
+
+        this.page.on('request', async (request) => {
+            request.continue();
+        });
+
+        this.page.on('response', async response => {
+            if (response.url().includes("select.booking.json")) {
+
+                if (response.status() == 200) {
+
+                    const text = await response.text();
+                    if (text.includes("itineraries")) {
+                        logger.info("graphql found");
+                        const json = JSON.parse(text);
+
+                        flightOffers = this.getFlightsData(json);
+                    }
+                }
+            }
+        });
+
         const [zoeken] = await this.page.$x(`//span[contains(., '${this.translator.translate("Suchen")}')]`);
 
         if (zoeken) {
@@ -73,34 +97,62 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
             await zoeken.click();
         }
 
-        await this.page.waitForNavigation();
 
-        const types = await this.getElementsAttributeByXpath("//button[@class='m-ibe-flighttariff__select']", "aria-label");
 
-        const prices = await this.getElementsTextByCss('.m-ibe-flighttariff__fare-price .a-price');
+        // await this.page.waitForNavigation();
 
-        const flightTimes = await this.getElementsTextByCss('.a-headline.a-headline--h4.t-spacing--0');
-        const locations = await this.getElementsTextByCss('.m-ibe-flighttable__station');
+        // const types = await this.getElementsAttributeByXpath("//button[@class='m-ibe-flighttariff__select']", "aria-label");
 
-        var fNumber = await this.getElementAttributeByCss(".m-ibe-flighttable__cta-info", "aria-label");
-        fNumber = fNumber.replace(/{(.*?)}/, '').trim();
+        // const prices = await this.getElementsTextByCss('.m-ibe-flighttariff__fare-price .a-price');
 
-        var screenshotPath = await this.takeScreenShot(this.constructor.name);
+        // const flightTimes = await this.getElementsTextByCss('.a-headline.a-headline--h4.t-spacing--0');
+        // const locations = await this.getElementsTextByCss('.m-ibe-flighttable__station');
 
-        const url = this.page.url();
-        var flightOffers = [];
-        for (var i = 0; i < prices.length; i++) {
-            var flightOffer = new FlightOffer();
-            flightOffer.departureTime =flightTimes[0];
-            flightOffer.arrivalTime = flightTimes[1];
-            flightOffer.flightNumber = fNumber;
-            flightOffer.origin = locations[0].match(/\(([^)]+)\)/)[1];
-            flightOffer.destination = locations[1].match(/\(([^)]+)\)/)[1];
-            flightOffer.price = prices[i].trim().replace('€', '');;
-            flightOffer.type = types[i].split(' ')[0];
-            flightOffer.screenshot = screenshotPath;
-            flightOffer.url = url;
-            flightOffers.push(flightOffer);
+        // var fNumber = await this.getElementAttributeByCss(".m-ibe-flighttable__cta-info", "aria-label");
+        // fNumber = fNumber.replace(/{(.*?)}/, '').trim();
+
+        // var screenshotPath = await this.takeScreenShot(this.constructor.name);
+
+        // const url = this.page.url();
+        // var flightOffers = [];
+        // for (var i = 0; i < prices.length; i++) {
+        //     var flightOffer = new FlightOffer();
+        //     flightOffer.departureTime =flightTimes[0];
+        //     flightOffer.arrivalTime = flightTimes[1];
+        //     flightOffer.flightNumber = fNumber;
+        //     flightOffer.origin = locations[0].match(/\(([^)]+)\)/)[1];
+        //     flightOffer.destination = locations[1].match(/\(([^)]+)\)/)[1];
+        //     flightOffer.price = prices[i].trim().replace('€', '');;
+        //     flightOffer.type = types[i].split(' ')[0];
+        //     flightOffer.screenshot = screenshotPath;
+        //     flightOffer.url = url;
+        //     flightOffers.push(flightOffer);
+        // }
+
+        // return flightOffers;
+    }
+
+
+    getFlightsData(json) {
+
+        const flightOffers = [];
+
+        for (const item of json.items) {
+
+            for (const segItem of item.itineraryGroupsList[0].segItems) {
+                const flightOffer = new FlightOffer();
+
+                flightOffer.price = item.priceWithoutDiscounts.replace(/(<([^>]+)>)/gi, "").replace("&euro;", '').trim();
+                flightOffer.origin = segItem.departureInfo.iata;
+                flightOffer.destination = segItem.arrivalInfo.iata;
+                flightOffer.departureTime = segItem.departureInfo.time;
+                flightOffer.arrivalTime = segItem.arrivalInfo.time;
+                flightOffer.airline = item.itineraryGroupsList[0].carrierName;
+
+                if (item.itineraryGroupsList.length == 1) {
+                    flightOffers.push(flightOffer);
+                }
+            }
         }
 
         return flightOffers;

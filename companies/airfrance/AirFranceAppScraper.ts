@@ -1,3 +1,13 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-27 16:00:26
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-03-11 18:15:39
+ * @ Description:
+ */
+
+
+
 import { AppScraper } from "../../AppScraper";
 import { IScraper } from "../../IScraper";
 

@@ -1,4 +1,14 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-27 16:00:27
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-03-11 18:16:23
+ * @ Description:
+ */
+
 import { AppScraper } from "../../AppScraper";
+
+
 import { IScraper } from "../../IScraper";
 import { FlightOffer } from "../../types";
 var convertTime = require('convert-time');

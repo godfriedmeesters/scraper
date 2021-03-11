@@ -1,3 +1,12 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-11-30 21:04:13
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-03-11 18:16:31
+ * @ Description:
+ */
+
+
 
 import { WebScraper } from "../../WebScraper";
 import { IScraper } from "../../IScraper";

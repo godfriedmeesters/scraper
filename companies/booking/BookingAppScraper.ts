@@ -1,3 +1,13 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2020-12-03 15:04:24
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-03-11 18:15:59
+ * @ Description:
+ */
+
+
+
 import { AppScraper } from "../../AppScraper";
 import { IScraper } from "../../IScraper";
 import { HotelOffer} from "../../types";
