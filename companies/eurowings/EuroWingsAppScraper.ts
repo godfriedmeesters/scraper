@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:27
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-11 18:16:23
+ * @ Modified time: 2021-03-12 08:57:31
  * @ Description:
  */
 
@@ -18,6 +18,7 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
   constructor() {
 
     super(JSON.stringify({
+      "newCommandTimeout": "360",
       "platformName": "Android",
       "app": "c:\\apk\\Eurowings.v4.3.3_apkpure.com.apk",
       "autoGrantPermissions": "true",

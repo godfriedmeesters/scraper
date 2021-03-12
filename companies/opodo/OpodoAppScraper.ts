@@ -10,6 +10,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
   constructor() {
     super(JSON.stringify({
+      "newCommandTimeout": "360",
       "platformName": "Android",
       "app": "c:\\apk\\opodo.apk",
       "autoGrantPermissions": "true",

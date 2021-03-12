@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-08 23:41:26
+ * @ Modified time: 2021-03-12 08:57:37
  * @ Description:
  */
 
@@ -25,6 +25,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
 
     date.locale("de");
     super(JSON.stringify({
+      "newCommandTimeout": "360",
       "adbExecTimeout": "100000",
       "platformName": "Android",
       "app":  "c:\\apk\\Expedia_v20.49.0_apkpure.com.apk",

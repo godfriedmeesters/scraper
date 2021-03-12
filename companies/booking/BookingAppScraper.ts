@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-11 18:15:59
+ * @ Modified time: 2021-03-12 08:57:22
  * @ Description:
  */
 
@@ -30,6 +30,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
   constructor() {
 
     super(JSON.stringify({
+      "newCommandTimeout": "360",
       "platformName": "Android",
       "app": "c:\\apk\\com.booking_25.2.apk",
       "autoGrantPermissions": "true",

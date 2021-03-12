@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-11 18:15:39
+ * @ Modified time: 2021-03-12 08:56:48
  * @ Description:
  */
 
@@ -21,6 +21,7 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
   constructor() {
 
     super(JSON.stringify({
+      "newCommandTimeout": "360",
       "adbExecTimeout": "100000",
       "platformName": "Android",
       "app": "c:\\apk\\AirFrance_v5.1.0_apkpure.com.apk",

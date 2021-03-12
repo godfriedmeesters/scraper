@@ -10,6 +10,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
 
   constructor() {
     super(JSON.stringify({
+      "newCommandTimeout": "360",
       "adbExecTimeout": "100000",
       "platformName": "Android",
       "app": "C:\\apk\\kayak_apkpure.com.apk",
