@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-21 19:28:54
+ * @ Modified time: 2021-03-17 13:12:27
  * @ Description:
  */
 
@@ -401,6 +401,8 @@ class AppScraper {
             ]);
         }
     }
+
+
 }
 
 export { AppScraper }

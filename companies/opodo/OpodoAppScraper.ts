@@ -181,8 +181,6 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         }
         /////////////////////////////////////////////////
 
-
-
         const deptT = await departureTimes[i].getText();
         flightOffer.departureTime = deptT;
         const arrT = await arrivalTimes[i].getText();
@@ -227,7 +225,6 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
       if (_.isEqual(oldFlightOffersOnScreen, flightOffersOnScreen)) {
         break;
       }
-
 
       await this.appiumClient.touchAction([
         { action: 'press', x: rectX, y: rectY },

@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@elastic/ecs-winston-format": "^0.2.0",
+    "appium": "^1.20.2",
+    "appium-chromedriver": "^4.27.0",
     "bull": "^3.20.0",
     "convert-time": "0.3.0",
     "date-and-time": "^0.14.1",

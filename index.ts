@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-12 15:22:09
+ * @ Modified time: 2021-03-17 15:39:41
  * @ Description:
  */
 
@@ -19,6 +19,7 @@ import { KayakWebScraper } from './companies/kayak/KayakWebScraper';
 import { KayakAppScraper } from './companies/kayak/KayakAppScraper';
 import { OpodoWebScraper } from './companies/opodo/OpodoWebScraper';
 import { OpodoAppScraper } from './companies/opodo/OpodoAppScraper';
+import { KayakAppBrowserScraper } from './companies/kayak/KayakAppBrowserScraper';
 
 //index of all scrapers
 export default [
@@ -33,5 +34,6 @@ export default [
   KayakWebScraper,
   KayakAppScraper,
   OpodoWebScraper,
-  OpodoAppScraper
+  OpodoAppScraper,
+  KayakAppBrowserScraper
 ];
