@@ -88,6 +88,7 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
 
         logger.info("found " + prices.length + " offers");
         logger.info("found " + airlines.length + " airlines");
+        var screenshot = await this.takeScreenShot(this.constructor.name);
 
         const flightOffers = [];
         for (var i = 0; i < prices.length; i++) {
@@ -101,8 +102,10 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
             offer.destination = await arrAirports[i].getText();
             offer.airline = await airlines[i].getText();
             offer.airline= offer.airline.replace('-', '').trim();
+            offer.screenshot = screenshot;
 
             flightOffers.push(offer);
+
 
         }
 

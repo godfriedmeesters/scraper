@@ -4760,3 +4760,8 @@
 {"@timestamp":"2021-03-17T15:40:58.246Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-17T15:40:58.248Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-17T15:40:59.987Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-17T21:29:35.461Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-17T21:29:58.432Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-17T21:29:58.434Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-17T21:29:58.435Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616016598435.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-17T21:30:00.787Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
