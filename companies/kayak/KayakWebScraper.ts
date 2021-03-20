@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-20 11:40:37
+ * @ Modified time: 2021-03-20 13:18:08
  * @ Description:
  */
 
@@ -16,6 +16,8 @@ var path = require('path');
 
 
 export class KayakWebScraper extends WebScraper implements IScraper {
+
+//TODO handle different cookie handlers
     constructor() { super(path.join(__dirname, "lang.json")); }
 
     // scrape web part 1: until "clicking" the search button
@@ -32,7 +34,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         await this.clickOptionalElementByCss('#onetrust-accept-btn-handler');
 
         await this.clickOptionalElementByCss('.awaitBsvt-accept');
-        await this.page.waitFor(2000);
+        await this.page.waitFor(5000);
 
 
 

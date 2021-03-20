@@ -2,10 +2,9 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-30 21:04:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-11 18:16:31
+ * @ Modified time: 2021-03-20 13:13:59
  * @ Description:
  */
-
 
 
 import { WebScraper } from "../../WebScraper";
@@ -70,13 +69,23 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
     // scrape web part 2: from "clicking" on search button
     async scrapeFromSearch(inputData) {
+
         await this.page.waitFor(5000);
         await this.clickElementByCss(".sb-searchbox__button");
 
-
         await this.page.waitFor(15000);
 
+        const offersSortedByBest = await this.extractOffers(inputData);
 
+        await this.clickElementByXpath('//a[@data-type="price"]');
+
+        const offersSortedByCheapest = await this.extractOffers(inputData);
+
+        return { 'sortedByBest': offersSortedByBest, 'sortedByCheapest': offersSortedByCheapest };
+
+    }
+
+    async extractOffers(inputData){
         let isNextDisabled = false;
         let isNextAvailable = true;
 
@@ -123,6 +132,11 @@ export class BookingWebScraper extends WebScraper implements IScraper {
         }
 
         return hotelOffers;
+
+
     }
+
+
+
 }
 

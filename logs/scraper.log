@@ -5464,3 +5464,56 @@
 {"@timestamp":"2021-03-20T11:45:14.773Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T11:45:15.074Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T11:45:15.086Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:39.242Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:39.256Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:39.257Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:39.258Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:40.031Z","log":{"level":"info","logger":"winston"},"message":"Navigating to https://www.booking.com/index.de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:52.363Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:52.364Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:52.898Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:53.445Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:53.455Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:17:54.530Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 Mai 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:16.234Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242696234.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:17.213Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://www.booking.com/c360/v1/track resulted in status code 500","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:23.910Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:25.617Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:26.683Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:29.333Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:29.335Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242709335.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:35.317Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:36.959Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:38.009Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:40.634Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:40.636Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242720636.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:46.582Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:48.243Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:49.318Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:51.956Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:51.958Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242731958.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:57.626Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:59.166Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:59.714Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:18:59.717Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@data-type=\"price\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:00.773Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242740773.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:06.878Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:08.364Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:09.433Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:12.041Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:12.043Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242752043.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:18.048Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:19.568Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:20.635Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:23.223Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:23.224Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242763224.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:24.163Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://www.booking.com/fl/exposed resulted in status code 500","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:28.966Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:30.534Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:31.602Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:34.197Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:34.199Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616242774199.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:39.594Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:41.100Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:41.659Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:19:41.702Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
