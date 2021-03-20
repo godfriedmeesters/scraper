@@ -5517,3 +5517,403 @@
 {"@timestamp":"2021-03-20T12:19:41.100Z","log":{"level":"info","logger":"winston"},"message":"Getting elements by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T12:19:41.659Z","log":{"level":"info","logger":"winston"},"message":"No more next button","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T12:19:41.702Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:40:28.845Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:40:47.599Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Akzeptieren","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:40:56.396Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.booking:id/disambiguation_search_edittext","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:00.087Z","log":{"level":"info","logger":"winston"},"message":"scroll down until @desc visible 01 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:25.592Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:26.968Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.View[@content-desc=\"01 Mai 2021\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:27.934Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.View[@content-desc=\"02 Mai 2021\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:28.322Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.booking:id/calendar_confirm","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:47.371Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:48.132Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:48.257Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:48.374Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244108374.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:49.288Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:50.491Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:51.251Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:51.349Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244111349.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:52.459Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:53.687Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:53.989Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:54.167Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244114167.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:55.191Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:56.383Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:56.820Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:56.941Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244116941.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:58.080Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:58.388Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:41:59.568Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:00.596Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:00.751Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244120751.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:02.258Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:02.520Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:03.656Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:04.603Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:04.740Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244124740.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:05.786Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:06.507Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:07.700Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:08.414Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:08.556Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244128556.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:10.023Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:10.509Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:11.677Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:12.460Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:12.596Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244132596.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:13.742Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:14.064Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:15.268Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:15.996Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:16.193Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244136193.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:17.303Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:17.623Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:18.780Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:19.571Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:19.675Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244139675.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:20.827Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:21.104Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:22.253Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:23.072Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:23.188Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244143188.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:24.305Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:24.709Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:25.859Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:26.939Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:27.077Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244147077.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:28.197Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:28.561Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:29.720Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:30.483Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:30.575Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244150575.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:31.753Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:32.135Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:33.297Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:34.075Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:34.167Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244154167.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:35.322Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:35.620Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:36.775Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:37.551Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:37.643Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244157643.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:38.758Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:39.024Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:40.180Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:40.970Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:41.078Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244161078.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:42.308Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:42.680Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:43.840Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:44.594Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:44.681Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244164681.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:45.763Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:46.019Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:47.179Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:47.945Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:48.061Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244168061.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:49.159Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:49.463Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:50.607Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:51.355Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:51.455Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244171455.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:52.405Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:52.693Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:53.852Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:54.653Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:54.790Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244174790.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:55.913Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:56.128Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:57.269Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:58.079Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:58.207Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244178207.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:59.315Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:42:59.680Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:00.898Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:02.144Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:02.259Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244182259.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:03.384Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:03.681Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:04.806Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:05.610Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:05.718Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244185718.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:06.784Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:07.513Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:08.634Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:09.510Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:09.838Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244189838.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:11.000Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:11.276Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:12.407Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:13.466Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:13.557Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244193557.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:14.748Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:15.089Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:16.259Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:16.725Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:16.842Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244196842.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:18.034Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:18.462Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:19.628Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:20.418Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:20.553Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244200553.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:21.661Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:21.918Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:23.054Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:23.783Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:23.892Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244203892.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:24.769Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:24.941Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:26.059Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:27.017Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:27.137Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244207137.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:28.176Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:28.371Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:29.517Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:30.092Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:30.175Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244210175.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:31.160Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:31.372Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:32.495Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:33.245Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:33.336Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244213336.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:34.429Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:34.764Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:35.933Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:36.694Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:36.823Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244216823.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:37.915Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:38.237Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:39.374Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:40.240Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:40.396Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244220396.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:41.509Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:41.855Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:43.051Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:43.538Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:43.655Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244223655.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:44.820Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:45.167Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:46.326Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:46.437Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:46.542Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244226542.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:47.599Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:47.882Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:48.963Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:49.071Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:49.175Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244229175.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:50.133Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:43:50.349Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:45:03.805Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.booking:id/sresults_sort","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:45:07.087Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Preis (aufsteigend)","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:45:57.989Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:46:58.954Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:17.051Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Akzeptieren","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:25.820Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.booking:id/disambiguation_search_edittext","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:29.539Z","log":{"level":"info","logger":"winston"},"message":"scroll down until @desc visible 01 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:31.702Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:33.017Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.View[@content-desc=\"01 Mai 2021\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:33.510Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.View[@content-desc=\"02 Mai 2021\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:34.452Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.booking:id/calendar_confirm","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:53.142Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:53.516Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:53.632Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:53.778Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244473778.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:54.745Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:55.942Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:56.719Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:56.819Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244476819.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:57.857Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:59.032Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:59.376Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:47:59.483Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244479483.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:00.432Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:01.625Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:02.339Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:02.491Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244482491.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:03.695Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:04.014Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:05.230Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:05.784Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:05.893Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244485893.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:07.013Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:07.310Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:08.539Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:09.545Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:09.850Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244489850.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:11.071Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:11.411Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:12.564Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:13.381Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:13.504Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244493504.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:14.600Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:14.947Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:16.175Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:17.042Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:17.196Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244497196.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:18.342Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:18.632Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:19.783Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:20.538Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:20.658Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244500658.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:21.863Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:22.267Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:23.485Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:23.954Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:24.054Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244504054.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:25.266Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:25.591Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:26.769Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:27.570Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:27.709Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244507709.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:28.928Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:29.378Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:30.537Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:31.076Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:31.225Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244511225.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:32.358Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:33.156Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:34.287Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:35.310Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:35.445Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244515445.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:36.546Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:36.905Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:37.281Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:38.441Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:39.214Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:39.323Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244519323.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:40.503Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:40.843Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:42.020Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:42.789Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:42.958Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244522958.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:44.110Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:44.447Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:45.648Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:46.461Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:46.553Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244526552.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:47.664Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:48.030Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:49.239Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:50.088Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:50.228Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244530228.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:51.353Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:51.641Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:52.837Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:53.305Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:53.434Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244533434.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:54.568Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:54.921Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:56.089Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:56.907Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:57.048Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244537048.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:58.239Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:58.646Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:48:59.816Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:00.407Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:00.582Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244540582.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:02.155Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:02.489Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:03.670Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:04.758Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:04.936Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244544936.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:06.058Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:06.429Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:07.600Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:08.417Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:08.551Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244548551.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:09.903Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:10.235Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:11.391Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:12.219Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:12.346Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244552346.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:13.473Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:13.819Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:14.982Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:15.679Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:15.868Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244555868.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:16.954Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:17.234Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:18.410Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:19.090Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:19.194Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244559194.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:20.364Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:20.690Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:21.882Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:22.641Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:22.780Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244562780.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:23.908Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:24.322Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:25.443Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:26.268Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:26.367Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244566367.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:27.478Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:27.770Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:28.967Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:29.900Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:30.039Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244570039.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:31.132Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:31.479Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:32.626Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:33.519Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:33.639Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244573639.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:34.603Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:34.879Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:36.052Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:36.809Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:36.937Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244576937.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:38.066Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:38.366Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:39.510Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:40.477Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:40.602Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244580602.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:41.640Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:41.982Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:43.157Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:43.625Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:43.788Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244583788.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:44.859Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:45.114Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:46.258Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:47.010Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:47.109Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244587109.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:48.249Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:48.594Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:49.716Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:50.599Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:50.749Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244590749.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:51.956Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:52.354Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:53.549Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:54.177Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:54.347Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244594347.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:55.388Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:55.607Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:56.802Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:57.577Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:57.675Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244597675.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:58.693Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:58.876Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:49:59.990Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:50:00.087Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:50:00.183Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244600183.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:50:01.166Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:50:01.381Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:50:53.342Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:12.116Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Akzeptieren","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:22.995Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.booking:id/disambiguation_search_edittext","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:26.673Z","log":{"level":"info","logger":"winston"},"message":"scroll down until @desc visible 01 Mai 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:29.215Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:30.820Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.View[@content-desc=\"01 Mai 2021\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:31.845Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath //android.view.View[@content-desc=\"02 Mai 2021\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:32.777Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.booking:id/calendar_confirm","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:49.928Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.booking:id/sresults_sort","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:52.263Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.CheckedTextView[6]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:53.460Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:54.393Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:54.484Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:54.679Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244714679.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:55.604Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:56.826Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/price_view_price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:57.655Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.booking:id/sr_property_card_header_property_name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:57.754Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot BookingAppScraper-1616244717754.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T12:51:58.827Z","log":{"level":"info","logger":"winston"},"message":"adding new hotel offer","ecs":{"version":"1.5.0"}}
