@@ -89,7 +89,20 @@ export class KayakAppScraper extends AppScraper implements IScraper {
 
     await this.clickElementByResource("com.kayak.android:id/applyButton");
 
+    const offersSortedByBest = await this.extractOffers();
 
+
+    const cheapest = await this.appiumClient.$("android=new UiScrollable(new UiSelector().scrollable(true))" +
+      ".scrollIntoView(new UiSelector().resourceIdMatches(\".*cheapest.*\"))");
+
+    await cheapest.click();
+
+    const offersSortedByCheapest = await this.extractOffers();
+
+    return { 'sortedByBest': offersSortedByBest, 'sortedByCheapest': offersSortedByCheapest };
+  }
+
+  async extractOffers() {
 
     var rect = await this.appiumClient.getWindowRect();
 
@@ -158,10 +171,6 @@ export class KayakAppScraper extends AppScraper implements IScraper {
     }
 
     return flightOffers;
-
   }
 
-  async sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
 }

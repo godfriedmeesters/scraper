@@ -4877,3 +4877,590 @@
 {"@timestamp":"2021-03-20T09:40:39.534Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T09:40:39.535Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616233239535.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T09:40:42.628Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:04:34.797Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:04:34.938Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:04:34.939Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:04:34.940Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:04:47.312Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:04:48.375Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //li[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:05:18.899Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:06:50.984Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:06:50.996Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:06:50.996Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:06:50.997Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:07:03.145Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:07:04.241Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:07:34.759Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:35.264Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:35.276Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:35.277Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:35.278Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:46.989Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:48.085Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:49.232Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@class, 'remove-selection')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:52.775Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'destination-airport')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:56.297Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'dateRangeInput-display')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:08:57.351Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //div[contains(@aria-label, 'Eingabe Abflugdatum')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:00.253Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@title, 'Flüge suchen')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:29.649Z","log":{"level":"info","logger":"winston"},"message":"reached max page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:29.655Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename KayakWebScraper-1616234969655.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:34.245Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[contains(text(),'Günstigste Option')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:40.322Z","log":{"level":"info","logger":"winston"},"message":"reached max page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:40.334Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename KayakWebScraper-1616234980334.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:09:44.915Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:11:22.232Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:11:22.245Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:11:22.245Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:11:22.246Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:11:33.967Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:11:35.040Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:05.567Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:43.144Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:43.158Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:43.159Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:43.160Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:55.010Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:12:56.076Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:13:26.606Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:13:54.061Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:13:54.073Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:13:54.074Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:13:54.075Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:05.742Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:06.849Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:07.995Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@class, 'remove-selection')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:11.571Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'destination-airport')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:15.111Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'dateRangeInput-display')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:16.168Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //div[contains(@aria-label, 'Eingabe Abflugdatum')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:19.068Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@title, 'Flüge suchen')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:48.456Z","log":{"level":"info","logger":"winston"},"message":"reached max page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:48.463Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename KayakWebScraper-1616235288463.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:52.961Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[contains(text(),'Günstigste Option')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:59.053Z","log":{"level":"info","logger":"winston"},"message":"reached max page","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:14:59.060Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename KayakWebScraper-1616235299060.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:15:02.993Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:34:52.772Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:06.286Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:10.284Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:11.176Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:12.615Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:13.470Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:14.558Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:15.957Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:20.344Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:21.817Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:25.405Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:27.373Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:27.375Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:29.447Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:32.798Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:36.017Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:39.298Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:42.477Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:35:43.735Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:55:43.303Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:55:55.534Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:55:59.254Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:00.097Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:02.029Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:02.909Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:03.947Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:05.332Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:09.343Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:10.950Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:15.330Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:18.042Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:18.043Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:20.111Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:23.367Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:26.996Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:30.252Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:33.780Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:35.089Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:56.510Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:56.511Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:56:57.421Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:12.647Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:17.976Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:18.280Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:20.388Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616237840388.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:20.949Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:21.418Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:21.656Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:21.884Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:22.133Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:22.414Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:23.045Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:23.373Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:24.133Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:24.416Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:24.735Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:25.101Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:26.208Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616237846208.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:26.687Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:26.949Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:27.173Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:27.387Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:27.590Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:27.829Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:28.393Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:28.735Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:29.137Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:29.431Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:29.723Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:30.121Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:31.169Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616237851169.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:31.657Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:31.869Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:32.076Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:32.289Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:32.489Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:32.721Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:33.260Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:33.617Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:33.946Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:34.278Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:34.507Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:34.772Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:34.773Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T10:57:40.289Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:02:52.026Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:04.431Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:08.133Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:09.130Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:10.582Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:11.477Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:12.478Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:13.825Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:17.792Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:19.281Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:23.630Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:24.561Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:24.563Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:26.699Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:29.861Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:33.117Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:36.218Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:39.359Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:03:40.592Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:01.389Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:01.391Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:02.253Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:17.136Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:18.124Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:18.503Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:21.107Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616238261107.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:21.672Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:22.049Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:22.274Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:22.492Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:22.709Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:22.944Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:23.482Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:23.782Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:24.130Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:24.447Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:24.839Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:25.181Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:26.292Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616238266292.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:26.790Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:27.023Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:27.224Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:27.425Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:27.609Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:27.841Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:28.336Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:28.604Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:28.962Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:29.325Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:29.651Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:29.942Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:30.989Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616238270989.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:31.479Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:31.676Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:31.881Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:32.121Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:32.371Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:32.635Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:33.188Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:33.497Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:33.817Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:34.171Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:34.472Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:34.723Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:37.148Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:04:42.413Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:21:57.846Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:11.017Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:14.789Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:15.687Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:17.183Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:18.072Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:19.080Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:20.476Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:23.527Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:25.938Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:30.344Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:31.258Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:31.260Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:33.445Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:36.522Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:39.768Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:43.324Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:46.499Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:22:47.676Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:07.992Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:07.993Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:08.847Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:24.187Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:25.137Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:26.090Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:28.215Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616239408215.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:28.772Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:29.277Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:29.605Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:29.862Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:30.095Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:30.315Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:30.802Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:31.114Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:31.882Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:32.197Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:32.529Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:32.877Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:34.015Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616239414015.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:34.507Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:34.717Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:35.040Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:35.262Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:35.485Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:35.692Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:36.298Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:36.719Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:37.002Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:37.301Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:37.556Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:37.926Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:38.978Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616239418978.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:39.462Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:39.719Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:39.928Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:40.137Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:40.381Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:40.644Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:41.138Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:41.492Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:41.754Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:42.112Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:42.370Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:42.599Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:45.173Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:23:50.743Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:28:49.494Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:02.700Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:06.411Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:07.290Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:08.791Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:09.659Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:10.751Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:12.167Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:16.119Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:17.651Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:22.097Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:23.630Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:23.631Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:25.790Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:28.992Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:32.188Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:35.362Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:38.662Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:29:40.459Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:01.301Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:01.303Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:02.770Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:17.560Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:24.900Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:25.256Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:27.354Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616239827354.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:27.904Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:28.311Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:28.569Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:28.784Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:29.097Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:29.461Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:30.035Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:30.332Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:30.623Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:30.916Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:31.169Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:31.506Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:32.628Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616239832628.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:33.124Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:33.324Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:33.551Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:33.773Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:33.979Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:34.278Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:34.910Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:35.246Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:35.602Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:35.984Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:36.309Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:36.671Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:37.724Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616239837724.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:38.210Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:38.456Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:38.652Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:38.860Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:39.090Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:39.341Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:39.921Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:40.176Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:40.510Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:40.873Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:41.186Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:41.959Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:41.961Z","log":{"level":"info","logger":"winston"},"message":"scrolling into view Günstigste Option","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:44.886Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:30:50.383Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:34:55.763Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:34:55.777Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:34:55.777Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:34:55.778Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:35:07.460Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[contains(@id, 'switch')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:35:08.515Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(@data-value, 'oneway')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:35:39.036Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:35.831Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:48.327Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:52.049Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:52.962Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:54.459Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:55.334Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:56.339Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:37:57.703Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:00.664Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:03.512Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:06.952Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:08.874Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:08.875Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:10.946Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:14.196Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:17.396Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:20.509Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:23.575Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:24.791Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:44.507Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:44.509Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:38:45.651Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:00.985Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:02.032Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:02.417Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:04.524Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240344524.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:05.107Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:05.517Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:05.793Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:06.025Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:06.291Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:06.584Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:07.155Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:07.456Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:07.816Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:08.202Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:08.531Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:08.914Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:10.044Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240350044.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:10.530Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:10.732Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:10.929Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:11.149Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:11.342Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:11.557Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:12.029Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:12.332Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:12.697Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:13.022Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:13.386Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:13.705Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:14.752Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240354752.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:15.246Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:15.447Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:15.681Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:15.895Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:16.130Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:16.351Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:16.828Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:17.163Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:17.441Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:17.701Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:18.014Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:18.320Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:18.437Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:39:53.756Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:06.213Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:09.957Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:10.827Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:12.283Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:13.167Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:14.189Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:15.663Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:19.596Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:21.129Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:25.473Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:27.030Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:27.032Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:29.161Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:32.404Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:35.541Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:38.687Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:42.297Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:40:43.642Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:03.780Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:03.782Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:04.625Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:19.704Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:20.704Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:21.052Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:23.522Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240483522.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:24.081Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:24.470Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:24.702Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:24.976Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:25.281Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:25.505Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:26.013Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:26.369Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:26.665Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:27.013Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:27.299Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:27.663Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:28.778Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240488778.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:29.268Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:29.482Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:29.689Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:29.916Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:30.138Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:30.423Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:31.475Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:31.803Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:32.142Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:32.483Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:32.810Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:33.176Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:34.225Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240494225.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:34.723Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:34.950Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:35.185Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:35.414Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:35.669Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:35.976Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:36.637Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:36.953Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:37.220Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:37.545Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:37.769Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:38.028Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:41:43.088Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:13.544Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:26.013Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/okButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:29.766Z","log":{"level":"info","logger":"winston"},"message":"Clicking optional link Später","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:30.677Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:32.143Z","log":{"level":"info","logger":"winston"},"message":"Clicking link by resource id com.kayak.android:id/skip","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:33.014Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/oneWayPicker","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:34.089Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:35.487Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:39.473Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:40.995Z","log":{"level":"info","logger":"winston"},"message":"get element by resource id com.kayak.android:id/smartySearchText","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:45.429Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/dates","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:46.972Z","log":{"level":"info","logger":"winston"},"message":"Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:46.973Z","log":{"level":"info","logger":"winston"},"message":"scroll down until text visible Juli","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:49.138Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:52.371Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:55.558Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:43:58.655Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:02.126Z","log":{"level":"debug","logger":"winston"},"message":"element  not found, continuing scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:03.431Z","log":{"level":"info","logger":"winston"},"message":"scrolled into view","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:24.254Z","log":{"level":"debug","logger":"winston"},"message":"text not found, stopping scroll","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:24.256Z","log":{"level":"info","logger":"winston"},"message":"Clicking link 1","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:25.088Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/doneTextView","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:39.118Z","log":{"level":"info","logger":"winston"},"message":"Clicking link Filter","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:40.100Z","log":{"level":"info","logger":"winston"},"message":"Clicking xpath (//android.widget.RadioButton)[3]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:40.515Z","log":{"level":"info","logger":"winston"},"message":"click element by resource id com.kayak.android:id/applyButton","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:42.598Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240682598.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:43.149Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:43.580Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:43.847Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:44.098Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:44.335Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:44.626Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:45.186Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:45.505Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:45.827Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:46.208Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:46.498Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:46.788Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:47.887Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240687887.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:48.374Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:48.569Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:48.782Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:49.017Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:49.218Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:49.439Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:49.922Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:50.263Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:50.547Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:50.825Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:51.176Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:51.501Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:52.548Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240692548.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:53.027Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:53.238Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:53.433Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:53.710Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:53.918Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:54.174Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:54.668Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:55.012Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:55.330Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:55.705Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:55.955Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:44:56.233Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:01.317Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240701317.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:01.831Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:02.312Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:02.764Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:02.995Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:03.204Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:03.422Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:03.923Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:04.187Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:04.437Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:04.715Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:05.021Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:05.261Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:06.348Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240706348.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:06.830Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:07.047Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:07.286Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:07.519Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:07.727Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:07.975Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:08.470Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:08.839Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:09.479Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:09.788Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:10.113Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:10.415Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:11.461Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppScraper-1616240711461.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:11.953Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:12.172Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/departureTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:12.383Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/arrivalTime","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:12.610Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/originCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:12.823Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/destinationCode","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:13.024Z","log":{"level":"info","logger":"winston"},"message":"get elements by resource id com.kayak.android:id/airline","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:13.549Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:13.879Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:14.173Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:14.451Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:14.773Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:15.074Z","log":{"level":"info","logger":"winston"},"message":"adding new flight offer","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T11:45:15.086Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

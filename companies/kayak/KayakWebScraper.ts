@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-16 22:17:39
+ * @ Modified time: 2021-03-20 11:40:37
  * @ Description:
  */
 
@@ -27,7 +27,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         await this.page.goto(this.translator.translate("url"));
         await this.page.waitFor(5000);
 
-        await this.clickOptionalElementByCss(`//button[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
+        await this.clickOptionalElementByCss(`//*[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
 
         await this.clickOptionalElementByCss('#onetrust-accept-btn-handler');
 
@@ -38,7 +38,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
         await this.clickElementByXpath("//div[contains(@id, 'switch')]");
 
-        await this.clickElementByXpath("//li[contains(@data-value, 'oneway')]");
+        await this.clickElementByXpath("//*[contains(@data-value, 'oneway')]");
 
         await this.clickElementByXpath("//button[contains(@class, 'remove-selection')]");
 
@@ -78,6 +78,9 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
     // scrape web part 2: from "clicking" on search button
     async scrapeFromSearch(inputData) {
+
+
+
         await this.clickElementByXpath(`//button[contains(@title, '${this.translator.translate("Flüge suchen")}')]`);
 
         await this.page.waitFor(15000);
@@ -89,8 +92,19 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         await this.clickOptionalElementByXpath('//input[@type="checkbox" and @name="2"]');
         await this.page.waitFor(2000);
 
-
         await this.tapEnter();
+
+        const offersSortedByBest = await this.extractOffers();
+
+        await this.clickElementByXpath(` //span[contains(text(),'${this.translator.translate("Günstigste Option")}')]`);
+
+        const offersSortedByCheapest = await this.extractOffers();
+
+        return { 'sortedByBest': offersSortedByBest, 'sortedByCheapest': offersSortedByCheapest };
+    }
+
+
+    async extractOffers() {
 
 
         // load all offers
@@ -101,11 +115,9 @@ export class KayakWebScraper extends WebScraper implements IScraper {
                 var moreButton = await this.page.waitForSelector('.moreButton', {
                     visible: true, timeout: 5000
                 });
-                ///
+
                 await this.page.focus('.moreButton');
 
-
-                ////
                 await moreButton.click();
                 console.log("more found");
                 this.page.waitFor(2000);
@@ -145,8 +157,8 @@ export class KayakWebScraper extends WebScraper implements IScraper {
                 return flightOffer;
             })
         );
-
         return flightOffers;
+
     }
 }
 
