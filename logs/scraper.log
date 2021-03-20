@@ -4765,3 +4765,115 @@
 {"@timestamp":"2021-03-17T21:29:58.434Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-17T21:29:58.435Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616016598435.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-17T21:30:00.787Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:10:31.946Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:10:57.019Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:19.982Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:40.273Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:40.274Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:40.276Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231500276.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:46.539Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:46.540Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:46.541Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231506541.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:11:50.210Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:20.280Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:44.994Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:44.995Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:44.996Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231684996.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:51.827Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:51.828Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:51.829Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231691829.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:14:55.146Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:15:13.619Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:15:47.767Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:15:47.768Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:15:47.769Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231747769.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:15:55.797Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:16:47.717Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:15.773Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:37.192Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:37.194Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:37.497Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:37.498Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:37.499Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231917499.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:39.709Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:43.282Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:43.624Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:43.625Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:43.626Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231923626.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:18:47.406Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:29.578Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:54.375Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:54.377Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:54.738Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:54.739Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:54.740Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616231994740.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:19:57.571Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:20:01.398Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:20:01.726Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:20:01.727Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:20:01.728Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232001728.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:20:04.986Z","log":{"level":"info","logger":"winston"},"message":"{}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:20:04.990Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:30.962Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:55.940Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:55.942Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:56.338Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:56.339Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:56.340Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232116340.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:21:59.380Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:22:03.230Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:22:03.714Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:22:03.715Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:22:03.716Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232123716.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:22:06.989Z","log":{"level":"info","logger":"winston"},"message":"{}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:22:06.992Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:03.877Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:29.766Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:29.768Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:30.199Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:30.201Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:30.202Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232270202.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:33.384Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:35.160Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:37.282Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:37.283Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:37.285Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232277285.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:40.552Z","log":{"level":"info","logger":"winston"},"ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:24:40.556Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:11.912Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:34.650Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:34.652Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:35.065Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:35.067Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:35.068Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232335068.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:37.360Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:40.653Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:41.073Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:41.074Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:41.075Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616232341075.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:44.333Z","log":{"level":"info","logger":"winston"},"ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:25:44.335Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:08.203Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:33.020Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:33.022Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:33.370Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:33.371Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:33.372Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616233113372.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:36.435Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:39.719Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:40.189Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:40.190Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:40.190Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616233120190.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:38:43.457Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:07.637Z","log":{"level":"info","logger":"winston"},"message":"Starting APP client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:32.512Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by best","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:32.514Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:32.846Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:32.847Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:32.848Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616233232848.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:35.741Z","log":{"level":"info","logger":"winston"},"message":"Getting offers sorted by cheapest","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:38.974Z","log":{"level":"info","logger":"winston"},"message":"Extracting offers...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:39.532Z","log":{"level":"info","logger":"winston"},"message":"found 8 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:39.534Z","log":{"level":"info","logger":"winston"},"message":"found 8 airlines","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:39.535Z","log":{"level":"info","logger":"winston"},"message":"Taking screenshot KayakAppBrowserScraper-1616233239535.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-20T09:40:42.628Z","log":{"level":"info","logger":"winston"},"message":"Stopping app client","ecs":{"version":"1.5.0"}}

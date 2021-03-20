@@ -26,17 +26,19 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
         const origin = inputData.origin;
         const destination = inputData.destination;
 
-        await this.appiumClient.url(`https://www.kayak.de/flights/${origin}-${destination}/${departureDate}?sort=bestflight_a`);
+        await this.appiumClient.url(`https://www.kayak.de/flights/${origin}-${destination}/${departureDate}?fs=stops=-1&sort=bestflight_a`);
 
-        var cookiesAccepted = false;
+
+        // accept cookies v1
+        var cookiesAccepted = true;
         try {
-            cookiesAccepted = true;
             const cookieOK = await this.appiumClient.$(".GDPRCookieConsent__button");
             await cookieOK.click();
-            cookiesAccepted = true;
-        } catch (ex) { }
+
+        } catch (ex) { cookiesAccepted = false }
 
 
+        //accept cookies v2
         if (!cookiesAccepted) {
             try {
                 const cookieOK2 = await this.appiumClient.$("#onetrust-accept-btn-handler");
@@ -45,36 +47,22 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
             catch (ex) { }
         }
 
-        var filtered = false;
-        try {
-            const filterButton = await this.appiumClient.$('//button[span[text()="Filter"]]');
-            await filterButton.click();
+        await this.sleep(5000);
 
 
-            const oneStop = await this.appiumClient.$('//span[text()="Nonstop"]');
-            await oneStop.click();
+        logger.info("Getting offers sorted by best");
+        const flightOffersSortedByBest = await this.extractOffers();
 
-            const doFilter = await this.appiumClient.$('button.FilterMenu__viewResultButton');
-            await doFilter.click();
-            filtered = true;
-        } catch (ex) { }
+        logger.info("Getting offers sorted by cheapest");
+        await this.appiumClient.url(`https://www.kayak.de/flights/${origin}-${destination}/${departureDate}?fs=stops=-1&sort=price_a`);
 
+        const flightOffersSortedByCheapest = await this.extractOffers();
+        return { 'sortedByBest': flightOffersSortedByBest, 'sortedByCheapest': flightOffersSortedByCheapest };
 
-        if (!filtered) {
-            try {
-                const filterButton = await this.appiumClient.$('#r9-checkboxGroup-1 > div > div:nth-child(2)');
-                await filterButton.click();
+    }
 
-
-                const oneStop = await this.appiumClient.$('//button/div/span[contains(text(),"Nonstop")]');
-                await oneStop.click();
-
-                const doFilter = await this.appiumClient.$('//button[contains(text(), "Fertig") and @ng-click ]');
-                await doFilter.click();
-            } catch (ex) { }
-        }
-
-
+    async extractOffers() {
+        logger.info("Extracting offers...");
         const depTimes = await this.appiumClient.$$('div.ResultLeg__depBlock > div.ResultLeg__time');
         const arrTimes = await this.appiumClient.$$(' div.ResultLeg__dstBlock > div.ResultLeg__time');
 
@@ -89,11 +77,13 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
         logger.info("found " + prices.length + " offers");
         logger.info("found " + airlines.length + " airlines");
         var screenshot = await this.takeScreenShot(this.constructor.name);
+        const offers = [];
 
-        const flightOffers = [];
+
         for (var i = 0; i < prices.length; i++) {
             const offer = new FlightOffer();
             offer.price = await prices[i].getText();
+            offer.price = offer.price.replace("€","").trim();
 
             offer.departureTime = await depTimes[i].getText();
             offer.arrivalTime = await arrTimes[i].getText();
@@ -101,15 +91,14 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
             offer.origin = await depAirports[i].getText();
             offer.destination = await arrAirports[i].getText();
             offer.airline = await airlines[i].getText();
-            offer.airline= offer.airline.replace('-', '').trim();
+            offer.airline = offer.airline.replace('-', '').trim();
             offer.screenshot = screenshot;
 
-            flightOffers.push(offer);
-
-
+            offers.push(offer);
         }
 
-        return flightOffers;
+
+        return offers;
 
     }
 
