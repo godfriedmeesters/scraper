@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-23 09:03:49
+ * @ Modified time: 2021-03-23 23:15:19
  * @ Description:
  */
 
@@ -101,18 +101,20 @@ async function processScraperJob(job, done) {
         const startTime = new Date();
         logger.info(`${job.data.scraperClass}:Entering input data...`)
 
-        const timeoutPromise = new Promise((resolve, reject) => {
-            setTimeout(resolve, 1000 * 300, 'timeout');   //wait maxium 300 seconds for scraping job to finish
+        const timeoutSecondsBeforeSearch = parseInt(process.env.TIMEOUT_SECONDS_BEFORE_SEARCH);
+
+        const timeoutPromiseBeforeSearch = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000 * timeoutSecondsBeforeSearch, 'timeout');   //wait maxium timeoutSeconds  for scraping job to finish
         });
 
-        var raceResult = await Promise.race([timeoutPromise, scraper.scrapeUntilSearch(job.data.inputData)]);
+        var raceResult = await Promise.race([timeoutPromiseBeforeSearch, scraper.scrapeUntilSearch(job.data.inputData)]);
         if (raceResult == "timeout") {
             const errorMessage = `${job.data.scraperClass}:  scrapeUntilSearch Timeout`;
             logger.error(errorMessage);
             throw new Error(errorMessage);
         }
         else
-            logger.info("scrapUntilSearch finished on time (< 300 seconds)");
+            logger.info(`scrapUntilSearch finished on time (< ${timeoutSecondsBeforeSearch} seconds)`);
 
         if ("comparisonRunId" in job.data && "comparisonSize" in job.data) {
             // synchronize with other scraper machines
@@ -124,7 +126,7 @@ async function processScraperJob(job, done) {
             });
 
             redisClient.on("error", function (error) {
-                console.error(error);
+                logger.error(error);
             });
 
             logger.info("Incrementing counter for comparisonRunId " + job.data.comparisonRunId);
@@ -146,7 +148,7 @@ async function processScraperJob(job, done) {
                 });
 
 
-                await sleep(1000);
+                await sleep(1000);  // wait one second
 
                 synchronizationPeriodSeconds++;
 
@@ -167,16 +169,22 @@ async function processScraperJob(job, done) {
             logger.info("Not using synchronization.");
         }
 
+
+        const timeoutSecondsAfterSearch = parseInt(process.env.TIMEOUT_SECONDS_BEFORE_SEARCH);
+
+        const timeoutPromiseAfterSearch = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000 * timeoutSecondsAfterSearch, 'timeout');
+        });
+
         logger.info(`${job.data.scraperClass}:Clicking search button...`)
-        raceResult = await Promise.race([timeoutPromise, scraper.scrapeFromSearch(job.data.inputData)]);
+        raceResult = await Promise.race([timeoutPromiseAfterSearch, scraper.scrapeFromSearch(job.data.inputData)]);
         if (raceResult == "timeout") {
-            logger.error("Timeout for scrapeFromSearch after 300 seconds");
-            const errorMessage = `${job.data.scraperClass}:  scrapeFromSearch Timeout`;
+            const errorMessage = `${job.data.scraperClass}:  scrapeFromSearch took longer than ${timeoutSecondsAfterSearch} seconds`;
             logger.error(errorMessage);
             throw new Error(errorMessage);
         }
         else {
-            logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< 300 seconds)`);
+            logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< ${timeoutSecondsAfterSearch} seconds)`);
             offers = raceResult;
         }
 
@@ -196,9 +204,10 @@ async function processScraperJob(job, done) {
     catch (exception) {
 
         try {
+            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             logger.error(`Error when scraping ${job.data.scraperClass}: ${exception}, screenshot after error available at
             ${exception.screenshotAtError}`);
-            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
+
         }
         catch (ex) {
             logger.error(`Exception when taking screenshot after error: ${ex}`)
