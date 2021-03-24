@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-21 11:59:42
+ * @ Modified time: 2021-03-24 22:20:24
  * @ Description:
  */
 
@@ -298,7 +298,7 @@ class WebScraper {
 
     async clickOptionalElementByText(text: string) {
 
-        await this.clickOptionalElementByXpath("//*[text() = '" + text + "']");
+        await this.clickOptionalElementByXpath("//*[contains(text(),'" + text + "')]");
     }
 
     async clickElementByTextContains(text: string) {

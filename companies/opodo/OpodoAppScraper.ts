@@ -198,6 +198,8 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
         if (_.findWhere(flightOffers, screenShotFlightOffer) == null) {
 
+          screenShotFlightOffer.price = screenShotFlightOffer.price.replace("€","").trim();
+
           flightOffers.push(screenShotFlightOffer);
 
           console.log(screenShotFlightOffer);

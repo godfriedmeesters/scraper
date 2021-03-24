@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-20 19:59:53
+ * @ Modified time: 2021-03-24 22:21:24
  * @ Description:
  */
 
@@ -30,7 +30,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         await this.page.waitFor(5000);
 
         await this.clickOptionalElementByCss(`//*[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
-        await this.clickOptionalElementByCss(`//*[contains(text(), '${this.translator.translate("Akzeptieren")}')]`);
+        await this.clickOptionalElementByText(this.translator.translate("Akzeptieren"));
 
 
         await this.clickOptionalElementByCss('#onetrust-accept-btn-handler');

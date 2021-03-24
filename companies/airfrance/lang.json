@@ -9,7 +9,8 @@
         "recycledCookieFile": "../recycledCookies/airfrance.de.json",
         "Stopps": "Stopps",
         "Nonstop": "Nonstop",
-        "anzeigen": "anzeigen"
+        "anzeigen": "anzeigen",
+        "Akzeptieren": "Akzeptieren"
     },
     "fr": {
         "url": "https://wwws.airfrance.fr",
@@ -21,6 +22,7 @@
         "recycledCookieFile": "../recycledCookies/airfrance.fr.json",
         "Stopps": "Correspondances",
         "Nonstop": "Direct",
-        "anzeigen": "Afficher"
+        "anzeigen": "Afficher",
+        "Akzeptieren": "Accepter"
     }
 }
