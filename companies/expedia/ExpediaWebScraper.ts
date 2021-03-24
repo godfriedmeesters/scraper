@@ -12,13 +12,17 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
     async scrapeUntilSearch(inputData: any) {
 
+
+
         const departureDate = inputData.departureDate;
         const depDate = new Date(departureDate);
         const origin = inputData.origin;
         const destination = inputData.destination;
         await this.page.goto(this.translator.translate("url"));
 
-        await this.page.waitFor(3000);
+        await this.page.waitFor(10000);
+
+        await this.clickOptionalElementByCss('.uitk-gdpr-banner-btn');
 
         await this.clickElementByXpath("//a[@aria-controls='wizard-flight-pwa']");
 

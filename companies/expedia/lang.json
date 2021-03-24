@@ -9,7 +9,8 @@
         "Zielflughafen": "Zielflughafen",
         "Wohin soll es gehen?": "Wohin soll es gehen?",
         "Hinflug am": "Hinflug am",
-        "Suchen": "Suchen"
+        "Suchen": "Suchen",
+        "Akzeptieren": "Akzeptieren"
     },
     "fr": {
         "url": "https://www.expedia.fr",
@@ -21,6 +22,7 @@
         "Zielflughafen": "Destination",
         "Wohin soll es gehen?": "Où allez-vous",
         "Hinflug am": "Date de départ",
-        "Suchen": "Rechercher"
+        "Suchen": "Rechercher",
+        "Akzeptieren": "Accepter"
     }
 }
