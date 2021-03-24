@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-12 20:12:03
+ * @ Modified time: 2021-03-24 20:46:09
  * @ Description:
  */
 
@@ -25,8 +25,9 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         await this.page.goto(this.translator.translate("url"));
         await this.page.waitFor(5000);
         await this.clickOptionalElementByCss('#didomi-notice-agree-button');
+
         await this.page.waitFor(1000);
-        await this.clickElementByXpath(`//div[contains(text(), '${this.translator.translate("Nur Hinflug")}')]`);
+        await this.clickElementByXpath(`//*[contains(text(), '${this.translator.translate("Nur Hinflug")}')]`);
         await this.page.waitFor(2000);
 
         await this.clickElementByXpath("//label[@for='direct-flight-switcher']");

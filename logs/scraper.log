@@ -5972,3 +5972,17 @@
 {"@timestamp":"2021-03-20T19:03:51.076Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T19:03:53.724Z","log":{"level":"info","logger":"winston"},"message":"Going to next page","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-20T19:03:53.726Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1616267033726.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:11:51.706Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:11:51.777Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:11:51.778Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:11:51.779Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:00.197Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hin- und Rückflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:01.305Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:02.412Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Abflugdatum']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:15.716Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:15.735Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:15.736Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:15.738Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:23.954Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller-retour']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:25.082Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller simple']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-24T20:12:26.181Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Date de départ']","ecs":{"version":"1.5.0"}}
