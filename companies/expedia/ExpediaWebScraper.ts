@@ -32,6 +32,7 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         var elem = await this.getElementByXpath(`//input[contains(@placeholder,"${this.translator.translate('Wo starten Sie?')}")]`);
         await elem.type(origin);
 
+        await this.sleep(1000);
         await this.clickElementByXpath("//button[@data-stid='location-field-leg1-origin-result-item-button']");
 
         await this.clickElementByXpath(`//span[text() = '${this.translator.translate('Zielflughafen')}']`);
@@ -41,6 +42,8 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         await elem.type(destination);
 
         await this.clickElementByXpath("//button[@data-stid='location-field-leg1-destination-result-item-button']");
+
+        await this.sleep(1000);
 
         await this.clickElementByText(this.translator.translate("Hinflug am"));
 
