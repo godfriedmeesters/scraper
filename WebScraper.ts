@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-24 22:22:40
+ * @ Modified time: 2021-03-26 08:49:21
  * @ Description:
  */
 
@@ -360,8 +360,7 @@ class WebScraper {
 
     async clickOptionalElementByCss(css) {
         try {
-
-            await this.page.waitFor(500);
+            await this.page.waitForSelector(css, {timeout: 5000, visible: true});
             await this.page.click(css);
         } catch (ex) { }
     }
