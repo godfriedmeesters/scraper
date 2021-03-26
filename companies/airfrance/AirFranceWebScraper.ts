@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-24 22:19:28
+ * @ Modified time: 2021-03-26 08:36:55
  * @ Description:
  */
 
@@ -25,10 +25,10 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
 
         await this.page.goto(this.translator.translate("url"));
 
-        await this.page.waitFor(2000);
+        await this.page.waitFor(10000);
         await this.clickOptionalElementByCss('.cookiebar-agree-button-agree');
-        await this.clickOptionalElementByText(this.translator.translate('Akzeptieren'));
-        await this.page.waitFor(5000);
+       // await this.clickOptionalElementByText(this.translator.translate('Akzeptieren'));
+        await this.page.waitFor(1000);
 
         const day = dateFormat(depDate, 'd');
         const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
