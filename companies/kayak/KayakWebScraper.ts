@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-24 22:21:24
+ * @ Modified time: 2021-03-26 08:44:26
  * @ Description:
  */
 
@@ -155,7 +155,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
                 flightOffer.airline = al.trim();
 
                 const price = await this.getTextFromElementByCss('.price-text', offerNode);
-                flightOffer.price = price.replace("€", "").trim();
+                flightOffer.price = price.trim();
                 flightOffer.screenshot = screenshot;
 
                 return flightOffer;

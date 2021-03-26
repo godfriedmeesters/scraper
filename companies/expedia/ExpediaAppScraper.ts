@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-12 08:57:37
+ * @ Modified time: 2021-03-26 08:43:36
  * @ Description:
  */
 
@@ -129,7 +129,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
         var flightOffer = new FlightOffer();
 
         const pr = await prices[i].getText();
-        flightOffer.price = pr.replace("€", "").trim();
+        flightOffer.price = pr.trim();
 
         const tl = await timeLines[i].getText();
         flightOffer.departureTime = tl.split("–")[0].replace("Uhr","").trim();

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-30 21:04:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-20 13:13:59
+ * @ Modified time: 2021-03-26 08:42:12
  * @ Description:
  */
 
@@ -102,7 +102,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
                 hotelOffer.screenshot = screenshotPath;
                 // hotelOffer.searchLocation = locationNames[i].trim().split('\n')[0].trim();
                 hotelOffer.checkinDate = inputData.checkinDate;
-                hotelOffer.price = hotelPrices[i].replace("€", "").trim();
+                hotelOffer.price = hotelPrices[i].trim();
                 hotelOffer.hotelName = hotelNames[i].trim();
                 hotelOffers.push(hotelOffer);
             }

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-26 08:36:55
+ * @ Modified time: 2021-03-26 08:41:33
  * @ Description:
  */
 
@@ -104,7 +104,7 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
                 flightOffer.destination = flightOffer.destination.match(/\(([^)]+)\)/)[1];
                 flightOffer.flightNumber = await this.getTextFromElementByCss('.bw-itinerary-operator-information__flight-number', offerNode);
                 flightOffer.price = await this.getTextFromElementByCss('bw-price', offerNode);
-                flightOffer.price = flightOffer.price.replace("EUR", "").trim();
+                flightOffer.price = flightOffer.price.trim();
                 flightOffer.screenshot = screenshot;
 
                 return flightOffer;

@@ -192,13 +192,11 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
         flightOffersOnScreen.push(flightOffer);
 
-        /////////////////////////////////////////////////:
+
         const screenShotFlightOffer = { ...flightOffer };
         screenShotFlightOffer.screenshot = screenshot;
 
         if (_.findWhere(flightOffers, screenShotFlightOffer) == null) {
-
-          screenShotFlightOffer.price = screenShotFlightOffer.price.replace("€","").trim();
 
           flightOffers.push(screenShotFlightOffer);
 
@@ -239,7 +237,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
     return flightOffers;
 
-    /**************************** */
+
 
   }
 

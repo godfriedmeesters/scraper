@@ -83,7 +83,7 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
         for (var i = 0; i < prices.length; i++) {
             const offer = new FlightOffer();
             offer.price = await prices[i].getText();
-            offer.price = offer.price.replace("€","").trim();
+            offer.price = offer.price.trim();
 
             offer.departureTime = await depTimes[i].getText();
             offer.arrivalTime = await arrTimes[i].getText();

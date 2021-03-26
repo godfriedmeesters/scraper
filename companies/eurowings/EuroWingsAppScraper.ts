@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:27
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-12 08:57:31
+ * @ Modified time: 2021-03-26 08:42:31
  * @ Description:
  */
 
@@ -114,7 +114,7 @@ export class EuroWingsAppScraper extends AppScraper implements IScraper {
     flightOffer.flightNumber = flNr;
     flightOffer.origin = inputData.origin;
     flightOffer.destination = inputData.destination;
-    flightOffer.price = price.replace("EUR","").trim();
+    flightOffer.price = price.trim();
     flightOffer.screenshot = screenshot;
     flightOffers.push(flightOffer);
 

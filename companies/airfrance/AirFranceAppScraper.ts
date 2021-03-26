@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-12 08:56:48
+ * @ Modified time: 2021-03-26 08:41:22
  * @ Description:
  */
 
@@ -132,7 +132,7 @@ await this.appClickElementByResource("com.airfrance.android.dinamoprd:id/calenda
         flightOffer.origin = await origins[i].getText();
         flightOffer.destination = await destinations[i].getText();
         flightOffer.price = await prices[i].getText();
-        flightOffer.price = flightOffer.price.replace("EUR", "").trim()
+        flightOffer.price = flightOffer.price.trim()
         flightOffer.screenshot = screenshot;
         flightOffers.push(flightOffer);
       }

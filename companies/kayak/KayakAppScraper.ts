@@ -127,7 +127,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
         && i < destinations.length && i < airLines.length; i++) {
         var flightOffer = new FlightOffer();
         const price = await prices[i].getText();
-        flightOffer.price = price.replace("€", "").trim();
+        flightOffer.price = price.trim();
 
         const deptT = await departureTimes[i].getText();
         flightOffer.departureTime = convertTime(deptT.replace('p', 'pm').replace('a', 'am'));
