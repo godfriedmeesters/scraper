@@ -42,7 +42,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitFor(3000);
         await this.tapEnter();
-        await this.page.waitFor(1000);
+        await this.page.waitFor(5000);
 
         const destinationElement = await this.getElementByXpath(`//input[contains(@aria-label,"${this.translator.translate("Zielflughafen")}")]`);
         await destinationElement.focus();
