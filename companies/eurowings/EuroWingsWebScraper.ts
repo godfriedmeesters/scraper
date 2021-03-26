@@ -112,25 +112,29 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
     getFlightsData(json) {
         const flightOffers = [];
-        const origin = json._payload._updates[0]._resultData.flights[0].route.origin;
-        const destination = json._payload._updates[0]._resultData.flights[0].route.destination;
+        console.log(JSON.stringify(json));
 
-        const price = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].fares[0].farePrices[0].price.value;
+        if ("_updates" in json._payload) {
+            const origin = json._payload._updates[0]._resultData.flights[0].route.origin;
+            const destination = json._payload._updates[0]._resultData.flights[0].route.destination;
 
-        const depTime = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].segments[0].departure.displayTime;
-        const arrTime = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].segments[0].arrival.displayTime;
+            const price = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].fares[0].farePrices[0].price.value;
 
-
-        const flightOffer = new FlightOffer();
-
-        flightOffer.price = price;
-        flightOffer.origin = origin;
-        flightOffer.destination = destination;
-        flightOffer.departureTime = depTime;
-        flightOffer.arrivalTime = arrTime;
+            const depTime = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].segments[0].departure.displayTime;
+            const arrTime = json._payload._updates[0]._resultData.flights[0].schedules[0].journeys[0].segments[0].arrival.displayTime;
 
 
-        flightOffers.push(flightOffer);
-        return flightOffers;
+            const flightOffer = new FlightOffer();
+
+            flightOffer.price = price;
+            flightOffer.origin = origin;
+            flightOffer.destination = destination;
+            flightOffer.departureTime = depTime;
+            flightOffer.arrivalTime = arrTime;
+
+
+            flightOffers.push(flightOffer);
+            return flightOffers;
+        }
     }
 }
