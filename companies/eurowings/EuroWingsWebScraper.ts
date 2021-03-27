@@ -112,7 +112,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
     getFlightsData(json) {
         const flightOffers = [];
-        console.log(JSON.stringify(json));
+
 
         if ("_updates" in json._payload) {
             const origin = json._payload._updates[0]._resultData.flights[0].route.origin;
