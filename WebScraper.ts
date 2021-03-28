@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-28 10:30:36
+ * @ Modified time: 2021-03-28 10:46:07
  * @ Description:
  */
 
@@ -281,6 +281,7 @@ class WebScraper {
     }
 
     async getTextArrayFromXpath(xpath) {
+        logger.info("Get Text Array from Xpath " + xpath);
         const xpath_expression = xpath;
         await this.page.waitForXPath(xpath_expression);
         const links = await this.page.$x(xpath_expression);
@@ -335,6 +336,7 @@ class WebScraper {
     }
 
     async getTextFromElementByCss(css: string, elem: any) {
+        logger.info(" getTextFromElementByCss: " + css);
         let element = await elem.$(css);
         return this.page.evaluate(el => el.textContent, element)
     }
@@ -369,6 +371,7 @@ class WebScraper {
     }
 
     async getElementTextByCss(css) {
+        logger.info("Get element text by css " + css);
         const elem = await this.getElementByCss(css);
         return this.page.evaluate(el => {
             return el.textContent;
@@ -404,6 +407,7 @@ class WebScraper {
     }
 
     async getElementAttributeByCss(css: string, attr: string) {
+        logger.info("getElementAttributeByCss " + css);
         const element = await this.getElementByCss(css);
 
         const text = await this.page.evaluate((el, attr) => {
