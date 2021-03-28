@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-28 11:25:00
+ * @ Modified time: 2021-03-28 20:15:54
  * @ Description:
  */
 
@@ -207,12 +207,13 @@ class WebScraper {
 
     async clickElementByXpath(xpath) {
         logger.info("Clicking element with xpath " + xpath);
-
+        await this.page.waitFor(500);
         await this.page.waitForXPath(xpath, { visible: true });
 
         const linkHandlers = await this.page.$x(xpath);
 
         if (linkHandlers.length > 0) {
+            await this.page.waitFor(500);
             return linkHandlers[0].click();
         } else {
             throw new Error("xpath not found");
@@ -221,6 +222,7 @@ class WebScraper {
 
     async getElementByXpath(xpath) {
         logger.info("Getting element with xpath " + xpath);
+        await this.page.waitFor(500);
         await this.page.waitForXPath(xpath);
 
         const linkHandlers = await this.page.$x(xpath);
@@ -279,7 +281,6 @@ class WebScraper {
     }
 
     async getTextArrayFromXpath(xpath) {
-        logger.info("Get Text Array from Xpath " + xpath);
         const xpath_expression = xpath;
         await this.page.waitForXPath(xpath_expression);
         const links = await this.page.$x(xpath_expression);
@@ -291,6 +292,8 @@ class WebScraper {
     }
 
     async clickElementByText(text: string) {
+        logger.info(`click element by text  ${text}`);
+        await this.page.waitFor(500);
         return this.clickElementByXpath("//*[text() = '" + text + "']");
     }
 
@@ -301,24 +304,27 @@ class WebScraper {
     }
 
     async clickElementByTextContains(text: string) {
+        logger.info(`click element by text contains ${text}`);
         return this.clickElementByXpath("//*[contains(text(), '" + text + "')]");
     }
 
 
     async getElementByCss(css) {
+        logger.info(`Get element by css ${css}`);
         await this.page.waitFor(500);
         await this.page.waitForSelector(css, { visible: true });
         return this.page.$(css);
     }
 
     async getElementsByCss(css) {
+        logger.info(`Get elements by css ${css}`);
         await this.page.waitFor(500);
         await this.page.waitForSelector(css, { visible: true });
         return this.page.$$(css);
     }
 
     async getElementsTextByCss(css) {
-        logger.info(`Getting elements by CSS ${css}`);
+        logger.info(`Getting elements' text by CSS ${css}`);
         var elements = await this.getElementsByCss(css);
         var texts = [];
 
@@ -334,12 +340,13 @@ class WebScraper {
     }
 
     async getTextFromElementByCss(css: string, elem: any) {
-        logger.info(" getTextFromElementByCss: " + css);
+        logger.info(`Get text from element by css ${css}`);
         let element = await elem.$(css);
         return this.page.evaluate(el => el.textContent, element)
     }
 
     async getTextsFromElementByCss(css: string, elem: any) {
+        logger.info(`Get texts from elements by css ${css}`);
         let elements = await elem.$$(css);
         var txts = [];
         for (var elem of elements) {
@@ -352,16 +359,15 @@ class WebScraper {
     }
 
     async clickElementByCss(css) {
-        logger.info("Clicking element by CSS " + css);
-        await this.page.waitForSelector(css, { timeout: 5000, visible: true });
+        logger.info(`Click element by css ${css}`);
+        const elem = await this.page.waitForSelector(css, { visible: true });
 
+        await this.page.waitFor(500);
         return this.page.click(css);
     }
 
     async clickOptionalElementByCss(css) {
-
-        logger.info("Clicking optional element by CSS " + css);
-
+        logger.info(`Click optional element by css ${css}`);
         try {
             await this.page.waitForSelector(css, { timeout: 5000, visible: true });
             await this.page.click(css);
@@ -369,7 +375,7 @@ class WebScraper {
     }
 
     async getElementTextByCss(css) {
-        logger.info("Get element text by css " + css);
+        logger.info(`get element text by css ${css}`);
         const elem = await this.getElementByCss(css);
         return this.page.evaluate(el => {
             return el.textContent;
@@ -377,12 +383,14 @@ class WebScraper {
     }
 
     async getElementsByXpath(xpath) {
+        logger.info(`get elements  by xpath ${xpath}`);
         await this.page.waitFor(1000);
         await this.page.waitForXPath(xpath);
         return this.page.$x(xpath);
     }
 
     async getElementTextByXpath(xpath: string) {
+        logger.info(`get elements text by xpath ${xpath}`);
         const elements = await this.getElementsByXpath(xpath);
         const text = await this.page.evaluate(el => {
             return el.textContent;
@@ -405,7 +413,6 @@ class WebScraper {
     }
 
     async getElementAttributeByCss(css: string, attr: string) {
-        logger.info("getElementAttributeByCss " + css);
         const element = await this.getElementByCss(css);
 
         const text = await this.page.evaluate((el, attr) => {
