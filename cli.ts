@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-01-22 10:14:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-05 22:50:59
+ * @ Modified time: 2021-03-28 23:13:40
  * @ Description: CLI for local testing, jobs are not sent to queue but processed locally
  */
 
@@ -52,7 +52,7 @@ yargs(hideBin(process.argv))
     const job = {
       "jobCreationTime": new Date(),
       scraperClass: argv.scraperClass, inputData,
-      params: { "useAuthCookies": argv.useAuthCookies, 'language': argv.language , 'recycleCookies': argv.recycleCookies}
+      params: { "useAuthCookies": argv.useAuthCookies, 'language': argv.language, 'recycleCookies': argv.recycleCookies }
     };
 
     console.log(`Executing new job ${JSON.stringify(job)}`);
@@ -76,6 +76,23 @@ async function processScraperJob(job) {
     await scraper.scrapeUntilSearch(job.inputData);
     console.log(`${job.scraperClass}:Clicking search button...`)
     const offers = await scraper.scrapeFromSearch(job.inputData);
+
+    // add index to every offer
+    console.log(offers);
+    if (!('sortedByBest' in offers && 'sortedByCheapest' in offers)) {
+      for (var i = 0; i < offers.length; i++) {
+        offers[i].index = i;
+      }
+    }
+    else {
+      for (var i = 0; i < offers.sortedByBest.length; i++) {
+        offers.sortedByBest[i].index = i;
+      }
+
+      for (var i = 0; i < offers.sortedByCheapest.length; i++) {
+        offers.sortedByCheapest[i].index = i;
+      }
+    }
 
     console.log(JSON.stringify(offers));
     console.log(`Finished scraper job`);

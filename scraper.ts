@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-25 23:43:59
+ * @ Modified time: 2021-03-28 23:24:14
  * @ Description:
  */
 
@@ -191,7 +191,29 @@ async function processScraperJob(job, done) {
         const stopTime = new Date();
 
         const hostName = os.hostname();
+
+
+        // add index to every offer
+        if (!('sortedByBest' in offers && 'sortedByCheapest' in offers)) {
+            for (var i = 0; i < offers.length; i++) {
+                offers[i].index = i;
+            }
+        }
+        else {
+            for (var i = 0; i < offers.sortedByBest.length; i++) {
+                offers.sortedByBest[i].index = i;
+            }
+
+            for (var i = 0; i < offers.sortedByCheapest.length; i++) {
+                offers.sortedByCheapest[i].index = i;
+            }
+        }
+
+
+
         const finishedJob = { ...job.data, "items": offers, startTime, stopTime, hostName };
+
+
 
         logger.debug(JSON.stringify(offers));
         logger.info(`Finished scraper job`);
