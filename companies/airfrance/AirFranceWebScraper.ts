@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-28 23:49:38
+ * @ Modified time: 2021-03-30 23:59:50
  * @ Description:
  */
 
@@ -26,6 +26,9 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
         await this.page.goto(this.translator.translate("url"));
 
         await this.clickOptionalElementByCss('.cookiebar-agree-button-agree');
+
+       // await this.clickOptionalElementByXpath('//*[contains(text(), '')]');
+
         await this.page.waitFor(1000);
 
         const day = dateFormat(depDate, 'd');
