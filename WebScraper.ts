@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-30 21:38:42
+ * @ Modified time: 2021-03-30 21:45:27
  * @ Description:
  */
 
@@ -189,7 +189,7 @@ class WebScraper {
 
     async clickOptionalElementByXpath(xpath) {
         try {
-            await this.page.waitFor(500);
+            await this.page.waitFor(1000);
 
             await this.page.waitForXPath(xpath, { visible: true });
 
