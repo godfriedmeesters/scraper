@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-31 19:20:18
+ * @ Modified time: 2021-03-31 19:26:14
  * @ Description:
  */
 
@@ -229,11 +229,13 @@ async function processScraperJob(job, done) {
         var errorMessage = "";
         try {
 
-            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
-            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception}, screenshot after error available at
-            ${exception.screenshotAtError}`;
-
+            var errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception}`;
             logger.error(errorMessage);
+            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
+            errorMessage += ', screenshot available at ' +  exception.screenshotAtError
+            logger.error(" screenshot available at " +  exception.screenshotAtError);
+
+
 
 
             await erroredScrapeQueue.add({
