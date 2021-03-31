@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-30 23:59:50
+ * @ Modified time: 2021-03-31 16:16:09
  * @ Description:
  */
 
@@ -12,6 +12,7 @@ import { WebScraper } from "../../WebScraper";
 import dateFormat from 'dateformat';
 import { IScraper } from "../../IScraper";
 import { FlightOffer } from "../../types";
+import { logger } from "../../logger";
 var path = require('path');
 
 export class AirFranceWebScraper extends WebScraper implements IScraper {
@@ -26,8 +27,11 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
         await this.page.goto(this.translator.translate("url"));
 
         await this.clickOptionalElementByCss('.cookiebar-agree-button-agree');
+        await this.clickOptionalElementByCss('.bw-cookie-banner__button.bw-cookie-banner__button-accent');
 
-       // await this.clickOptionalElementByXpath('//*[contains(text(), '')]');
+
+
+        // await this.clickOptionalElementByXpath('//*[contains(text(), '')]');
 
         await this.page.waitFor(1000);
 
@@ -68,16 +72,16 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitForNavigation();
 
-        //await this.page.waitFor(5000);
+        await this.page.waitFor(5000);
 
         await this.page.evaluate(_ => {
             window.scrollBy(0, 200);
-          });
+        });
 
 
         await this.clickElementByTextContains(this.translator.translate("Stopps")); // Stopps
 
-        await this.clickElementByXpath("//label[@for='mat-radio-13-input']")
+        await this.clickElementByXpath("//label[@for='mat-radio-14-input']")
 
 
         await this.clickElementByXpath(`//button[contains(@aria-label,"${this.translator.translate("anzeigen")}") and @color="primary"]`);
@@ -86,7 +90,11 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
         await this.page.waitForSelector('.bw-itinerary-row__header', { visible: true });
         var offerNodes = await this.page.$$(".bw-itinerary-row__header");
 
+        logger.info("Found " + offerNodes.length + " offers");
         var screenshot = await this.takeScreenShot(this.constructor.name);
+
+
+
 
         const flightOffers = await Promise.all(
             offerNodes.map(async (offerNode: any) => {
