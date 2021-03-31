@@ -7382,3 +7382,79 @@
 {"@timestamp":"2021-03-31T14:17:12.563Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css bw-price","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-31T14:17:12.565Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css bw-price","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-31T14:17:12.579Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:12.051Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:12.073Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:12.074Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:12.075Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:12.932Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:16.610Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cookie-consent--cta-accept","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:18.701Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cv-myew-flyout__close-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:28.762Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .o-compact-search__bar-item--station-select-origin","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:31.410Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Abflughafen\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:41.171Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"Zielflughafen\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:46.883Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Hinflug\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:00:58.793Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename EuroWingsWebScraper-1617202858793.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:00.702Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:22.366Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:22.385Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:22.386Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:22.387Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:23.193Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/fr.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:26.290Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cookie-consent--cta-accept","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:28.382Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cv-myew-flyout__close-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:33.829Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .o-compact-search__bar-item--station-select-origin","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:36.463Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"de d\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:46.230Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"arriv\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:01:51.931Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Vol aller\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:02:03.868Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename EuroWingsWebScraper-1617202923868.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T15:02:05.870Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:49.590Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:49.607Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:49.608Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:49.608Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:50.432Z","log":{"level":"info","logger":"winston"},"message":"Going to url https://www.eurowings.com/fr.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:53.629Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cookie-consent--cta-accept","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:13:55.717Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cv-myew-flyout__close-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:14:01.167Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .o-compact-search__bar-item--station-select-origin","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:14:03.810Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"de d\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:14:13.642Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@aria-label,\"arriv\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:14:19.381Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Vol aller\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:14:31.336Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename EuroWingsWebScraper-1617210871336.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:14:33.568Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:09.630Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:09.647Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:09.648Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:09.649Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:13.821Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .cookiebar-agree-button-agree","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:18.865Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .bw-cookie-banner__button.bw-cookie-banner__button-accent","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:20.023Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Hin- und Rückflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:20.524Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hin- und Rückflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:24.163Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:24.676Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:28.281Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Abflugdatum","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:28.796Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Abflugdatum']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:31.956Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .mat-calendar-next-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:34.046Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .mat-calendar-next-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:36.122Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .mat-calendar-next-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:38.215Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .mat-calendar-next-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:38.786Z","log":{"level":"info","logger":"winston"},"message":"click element by text   1 ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:39.301Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = ' 1 ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:47.782Z","log":{"level":"info","logger":"winston"},"message":"click element by text contains Flüge suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:47.784Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Flüge suchen')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:55.009Z","log":{"level":"info","logger":"winston"},"message":"click element by text contains Stopps","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:55.011Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Stopps')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:56.651Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='mat-radio-14-input']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:58.228Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,\"anzeigen\") and @color=\"primary\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:59.868Z","log":{"level":"info","logger":"winston"},"message":"Found 2 offers","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:19:59.870Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename AirFranceWebScraper-1617211199870.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.009Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css bw-itinerary-times-info","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.011Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css bw-itinerary-times-info","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.301Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .bw-itinerary-locations-info__node--extra-spacing","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.303Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .bw-itinerary-locations-info__node--extra-spacing","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.307Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .bw-itinerary-locations-info__node--extra-spacing+ .bw-itinerary-locations-info__node--dot","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.309Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .bw-itinerary-locations-info__node--extra-spacing+ .bw-itinerary-locations-info__node--dot","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.313Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .bw-itinerary-operator-information__flight-number","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.314Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .bw-itinerary-operator-information__flight-number","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.317Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css bw-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.319Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css bw-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-03-31T17:20:02.332Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
