@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-02 19:49:11
+ * @ Modified time: 2021-04-02 23:53:04
  * @ Description:
  */
 
@@ -171,7 +171,7 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
         while (!stopWaitingForAllReachedSearch) {
-            redisClient.get(parseInt(job.data.comparisonRunId), function (err, reply) {
+            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count", function (err, reply) {
                 if (reply >= job.data.comparisonSize) {
                     logger.info(`${job.data.scraperClass}: Nr of Scraper Runs with scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                     stopWaitingForAllReachedSearch = true;
@@ -257,7 +257,7 @@ async function processScraperJob(job, done) {
         var errorMessage = "";
         try {
             var errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception}`;
-            logger.error(  errorMessage);
+            logger.error(errorMessage);
             exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             //split error message, because taking screenshot can crash
             errorMessage += ', screenshot available at ' + exception.screenshotAtError
