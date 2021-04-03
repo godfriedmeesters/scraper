@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-03 00:06:19
+ * @ Modified time: 2021-04-04 00:02:04
  * @ Description:
  */
 
@@ -158,7 +158,7 @@ async function processScraperJob(job, done) {
         else
             logger.info(`${job.data.scraperClass}: scrapUntilSearch finished on time (< ${timeoutSecondsBeforeSearch} seconds)`);
 
-        logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize} other scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
+        logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize}  scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
 
         redisClient.on("error", function (error) {
             logger.error(error);
