@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-04 00:02:04
+ * @ Modified time: 2021-04-04 10:37:20
  * @ Description:
  */
 
@@ -164,7 +164,7 @@ async function processScraperJob(job, done) {
             logger.error(error);
         });
 
-        logger.info(`${job.data.scraperClass}: Incrementing counter for comparisonRunId  ${job.data.comparisonRunId}`);
+        logger.info(`${job.data.scraperClass}: Incrementing counter for comparisonRunId  ${job.data.comparisonRunId}.`);
         redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count");
 
         var synchronizationOnSearchSeconds = 0;
