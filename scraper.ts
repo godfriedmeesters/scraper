@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-04 15:05:51
+ * @ Modified time: 2021-04-04 15:08:25
  * @ Description:
  */
 
@@ -91,7 +91,6 @@ async function processScraperJob(job, done) {
 
     logger.info(`${job.data.scraperClass}: Scraper reveived new job ${JSON.stringify(job)}`);
 
-    await scraper.startClient(job.data.params);
 
     const redisClient = redis.createClient({
         "host": process.env.DB_HOST,
@@ -101,6 +100,7 @@ async function processScraperJob(job, done) {
 
     try {
 
+        await scraper.startClient(job.data.params);
 
         redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_started_count");
 
