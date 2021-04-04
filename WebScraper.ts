@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-31 22:43:48
+ * @ Modified time: 2021-04-04 11:08:49
  * @ Description:
  */
 
@@ -369,8 +369,10 @@ class WebScraper {
     async clickOptionalElementByCss(css) {
         logger.info(`Click optional element by css ${css}`);
         try {
+            logger.info(`Waiting for css selector ${css}`);
             await this.page.waitForSelector(css, { timeout: 5000, visible: true });
-            await this.page.click(css);
+            logger.info(`Clicking css selector ${css}`);
+            return this.page.click(css);
         } catch (ex) { }
     }
 

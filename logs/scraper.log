@@ -7681,3 +7681,18 @@
 {"@timestamp":"2021-03-31T20:44:23.409Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-31T20:44:25.974Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Rechercher","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-03-31T20:44:26.487Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Rechercher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:34.432Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:34.459Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:34.460Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:34.460Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:44.398Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:44.399Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:44.409Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:44.447Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:44.847Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://www.expedia.de/opt-in-select/cookie/create/OIP?png=true&value=1 resulted in status code 400","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:47.440Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:47.942Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:50.369Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:51.931Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wo starten Sie?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:53.526Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-04T09:10:54.567Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
