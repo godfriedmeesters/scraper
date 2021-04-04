@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-04 11:08:49
+ * @ Modified time: 2021-04-04 18:32:02
  * @ Description:
  */
 
@@ -206,14 +206,15 @@ class WebScraper {
     }
 
     async clickElementByXpath(xpath) {
-        logger.info("Clicking element with xpath " + xpath);
+        logger.info("Waiting for element with xpath " + xpath);
         await this.page.waitFor(1000);
         await this.page.waitForXPath(xpath, { visible: true });
 
         const linkHandlers = await this.page.$x(xpath);
 
         if (linkHandlers.length > 0) {
-            await this.page.waitFor(500);
+            await this.page.waitFor(1000);
+            logger.info("Clicking element with xpath " + xpath);
             return linkHandlers[0].click();
         } else {
             throw new Error("xpath not found");
