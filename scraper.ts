@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-05 19:16:05
+ * @ Modified time: 2021-04-05 23:03:16
  * @ Description:
  */
 
@@ -117,6 +117,14 @@ async function processScraperJob(job, done) {
                 }
                 else {
                     logger.info(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                }
+            });
+
+            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
+                if (reply >= 1) {
+                    logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
+                    throw new Error(`FATAL ERROR: one or more scrapers run in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
+                    stopWaitingForAllReachedSearch = true;
                 }
             });
 
@@ -260,11 +268,12 @@ async function processScraperJob(job, done) {
     }
     catch (exception) {
 
-        redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_errored");
-
         var errorMessage = "";
         try {
-            var errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception}`;
+
+            redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_errored");
+
+            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception}`;
             logger.error(errorMessage);
             exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             //split error message, because taking screenshot can crash
