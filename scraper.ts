@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-04 15:08:25
+ * @ Modified time: 2021-04-05 15:02:28
  * @ Description:
  */
 
@@ -47,7 +47,7 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
         const proxies = inputData.proxies;
 
         var use_proxy = Math.random() < 0.8;
-        //var use_proxy = false;
+
 
         const proxy_index = Math.floor(Math.random() * proxies.length);
 
@@ -135,7 +135,6 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Starting job ${JSON.stringify(job)}`);
 
-
         // after other scraper runs in comparison are ready, start scraping
 
         let offers: any;
@@ -182,6 +181,9 @@ async function processScraperJob(job, done) {
                     logger.info(`Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
+
+            if (stopWaitingForAllReachedSearch)
+                break;
 
             redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
                 if (reply >= 1) {
@@ -244,8 +246,7 @@ async function processScraperJob(job, done) {
 
         const finishedJob = { ...job.data, "items": offers, startTime, stopTime, hostName };
 
-        logger.debug(JSON.stringify(offers));
-        logger.info(`Finished scraper job sucessfully`);
+        logger.info(`Finished scraper job sucessfully, found ${offers.length} offers`);
 
         await finishedScrapeQueue.add(finishedJob);
 
