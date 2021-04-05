@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-04 21:06:35
+ * @ Modified time: 2021-04-05 22:24:32
  * @ Description:
  */
 
@@ -101,7 +101,7 @@ class WebScraper {
 
         logger.info("starting web client with options {" + options + "}");
 
-        if (process.env.IN_DEV) {
+        if (yn( process.env.IN_DEV)) {
             logger.info("using Windows Chrome browser");
             this.browser = await puppeteer.launch({
                 headless: false,
