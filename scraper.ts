@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-06 19:21:15
+ * @ Modified time: 2021-04-06 21:18:56
  * @ Description:
  */
 
@@ -137,7 +137,8 @@ async function processScraperJob(job, done) {
 
             synchronizationOnStartSeconds++;
 
-            logger.debug(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
+            if (synchronizationOnStartSeconds % 5)
+                logger.info(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
 
             if (synchronizationOnStartSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers to start, throw error
             {
@@ -189,7 +190,8 @@ async function processScraperJob(job, done) {
                     stopWaitingForAllReachedSearch = true;
                 }
                 else {
-                    logger.debug(`Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                    if (synchronizationOnStartSeconds % 5)
+                        logger.info(`Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
 
@@ -207,7 +209,6 @@ async function processScraperJob(job, done) {
 
             synchronizationOnSearchSeconds++;
 
-            logger.debug(`${job.data.scraperClass}: Syncronized on search for ${synchronizationOnSearchSeconds} seconds`);
 
             if (synchronizationOnSearchSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers, throw error
             {
@@ -270,11 +271,11 @@ async function processScraperJob(job, done) {
 
             redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_errored");
 
-            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception.message}${exception.stack}`;
+            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception.stack}`;
             logger.error(errorMessage);
-            exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
+            const screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             //split error message, because taking screenshot can crash
-            errorMessage += ', screenshot available at ' + exception.screenshotAtError
+            errorMessage += ', screenshot available at ' + screenshotAtError
             logger.error(errorMessage);
 
             await erroredScrapeQueue.add({
@@ -284,7 +285,7 @@ async function processScraperJob(job, done) {
 
         }
         catch (ex) {
-            errorMessage = `Exception when taking screenshot after error: ${ex.message} ${ex.stack}  `;
+            errorMessage = `Exception when taking screenshot after error:  ${ex.stack}  `;
             logger.error(errorMessage)
             await erroredScrapeQueue.add({
                 ...job.data,
