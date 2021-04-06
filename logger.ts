@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-25 15:21:23
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-01-14 17:59:36
+ * @ Modified time: 2021-04-06 08:08:26
  * @ Description:
  */
 
@@ -23,8 +23,9 @@ const logger = winston.createLogger({
 
 
 logger.add(new winston.transports.Console({
-   // format: winston.format.simple(),
-   format:  ecsFormat()
+    // format: winston.format.simple(),
+    level: 'info',
+    format: ecsFormat()
 }));
 
 
