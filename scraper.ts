@@ -140,7 +140,7 @@ async function processScraperJob(job, done) {
 
             synchronizationOnStartSeconds++;
 
-            logger.info(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
+            logger.debug(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
 
             if (synchronizationOnStartSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers to start, throw error
             {
