@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-06 18:18:30
+ * @ Modified time: 2021-04-06 19:21:15
  * @ Description:
  */
 
@@ -101,10 +101,7 @@ async function processScraperJob(job, done) {
     });
 
 
-
     try {
-
-
 
         redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_started_count");
 
@@ -273,7 +270,7 @@ async function processScraperJob(job, done) {
 
             redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_errored");
 
-            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception}`;
+            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception.message}${exception.stack}`;
             logger.error(errorMessage);
             exception.screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             //split error message, because taking screenshot can crash
@@ -287,7 +284,7 @@ async function processScraperJob(job, done) {
 
         }
         catch (ex) {
-            errorMessage = `Exception when taking screenshot after error: ${ex}`;
+            errorMessage = `Exception when taking screenshot after error: ${ex.message} ${ex.stack}  `;
             logger.error(errorMessage)
             await erroredScrapeQueue.add({
                 ...job.data,
