@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-06 18:21:03
+ * @ Modified time: 2021-04-06 23:06:48
  * @ Description:
  */
 
@@ -49,9 +49,12 @@ class AppScraper {
         logger.info("Taking screenshot " + imageName);
         var imagePath = path.join(__dirname, 'screenshots', imageName);
 
-        await this.appiumClient.saveScreenshot(imagePath);
+        if (this.appiumClient != null) {
+            await this.appiumClient.saveScreenshot(imagePath);
 
-        return "https://scraperbox.be/screenshots/" + imageName;
+            return "https://scraperbox.be/screenshots/" + imageName;
+        }
+        return "no screenshot possible";
     }
 
     async startClient() {
