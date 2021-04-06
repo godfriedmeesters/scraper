@@ -127,7 +127,7 @@ async function processScraperJob(job, done) {
             redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
                 if (reply >= 1) {
                     logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
-                    throw new Error(`FATAL ERROR: one or more scrapers run in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
+                    throw new Error(`FATAL ERROR: one or more scraper runs in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
                 }
             });
 
@@ -140,7 +140,7 @@ async function processScraperJob(job, done) {
 
             synchronizationOnStartSeconds++;
 
-            logger.info(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
+            logger.debug(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
 
             if (synchronizationOnStartSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers to start, throw error
             {
