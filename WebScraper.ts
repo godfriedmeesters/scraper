@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-05 22:39:14
+ * @ Modified time: 2021-04-06 18:20:56
  * @ Description:
  */
 
@@ -70,6 +70,7 @@ class WebScraper {
         Translator.registerLanguage("fr", obj.fr);
         this.translator = Translator;
     }
+
 
     async startClient(params) {
         let locale = '--lang=de-DE,de';
@@ -158,7 +159,7 @@ class WebScraper {
     }
 
     async stopClient(params) {
-        logger.info('Stopping web client');
+
 
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
             const cookies = await this.page.cookies();
@@ -168,7 +169,10 @@ class WebScraper {
             await fs.writeFile(filePath, JSON.stringify(cookies, null, 2), () => { });
         }
 
-        await this.browser.close();
+        if (this.browser != null) {
+            logger.info('Stopping web client');
+            await this.browser.close();
+        }
     }
 
     async takeScreenShot(className) {

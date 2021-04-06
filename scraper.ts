@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-06 08:07:55
+ * @ Modified time: 2021-04-06 18:18:30
  * @ Description:
  */
 
@@ -104,7 +104,7 @@ async function processScraperJob(job, done) {
 
     try {
 
-        await scraper.startClient(job.data.params);
+
 
         redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_started_count");
 
@@ -150,6 +150,7 @@ async function processScraperJob(job, done) {
         }
 
         logger.info(`${job.data.scraperClass}: Starting job ${JSON.stringify(job)}`);
+        await scraper.startClient(job.data.params);
 
         // after other scraper runs in comparison are ready, start scraping
 
@@ -297,7 +298,9 @@ async function processScraperJob(job, done) {
         done(new Error(String(exception)));
     }
     finally {
+
         await scraper.transferScreenshotsToFtp();
+
         await scraper.stopClient(job.data.params);
         redisClient.quit();
 

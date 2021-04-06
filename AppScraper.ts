@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-17 13:12:27
+ * @ Modified time: 2021-04-06 18:21:03
  * @ Description:
  */
 
@@ -19,7 +19,7 @@ class AppScraper {
     scrapeOnlyWeb: boolean;
     logger: any;
     monaten: string[];
-    appiumClient: any;
+    appiumClient: any = null;
     desiredCapabilities: any;
 
     constructor(desiredCapabilities: any) {
@@ -42,6 +42,7 @@ class AppScraper {
     async sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
+
 
     async takeScreenShot(className) {
         const imageName = `${className}-${Date.now()}.png`;
@@ -70,7 +71,7 @@ class AppScraper {
         this.appiumClient = await wdio.remote(appiumOpts);
 
         //Amsterdam
-       // this.appiumClient.setGeoLocation({ latitude: "52.3667", longitude: "4.8945", altitude: "94.23" }); // Must be a driver that implements LocationContext
+        // this.appiumClient.setGeoLocation({ latitude: "52.3667", longitude: "4.8945", altitude: "94.23" }); // Must be a driver that implements LocationContext
 
         try { await this.appiumClient.unlock(); } catch (ex) { }
 
@@ -82,13 +83,17 @@ class AppScraper {
     }
 
     async stopClient() {
-        logger.info('Stopping app client');
-        await this.appiumClient.closeApp();
-        await this.appiumClient.deleteSession();
+
+
+        if (this.appiumClient != null) {
+            logger.info('Stopping app client');
+            await this.appiumClient.closeApp();
+            await this.appiumClient.deleteSession();
+        }
     }
 
     async clickLink(linkText: string) {
-        logger.info(`Clicking link ${linkText}` );
+        logger.info(`Clicking link ${linkText}`);
         let link = await this.appiumClient.$(
             this._('text("' + linkText + '")')
         );
@@ -97,7 +102,7 @@ class AppScraper {
     }
 
     async clickOptionalLink(linkText: string) {
-        logger.info(`Clicking optional link ${linkText}` );
+        logger.info(`Clicking optional link ${linkText}`);
         try {
             this.appiumClient.setImplicitTimeout(1000);
             let link = await this.appiumClient.$(
@@ -112,7 +117,7 @@ class AppScraper {
     }
 
     async clickOptionalLinkByResourceId(resourceId: string) {
-        logger.info(`Clicking link by resource id ${resourceId}` );
+        logger.info(`Clicking link by resource id ${resourceId}`);
         try {
             this.appiumClient.setImplicitTimeout(1000);
             let link = await this.appiumClient.$('android=new UiSelector().resourceId("' + resourceId + '")');
@@ -129,14 +134,14 @@ class AppScraper {
     }
 
     async getElementByResourceId(resourceId) {
-        logger.info(`get element by resource id ${resourceId}` );
+        logger.info(`get element by resource id ${resourceId}`);
         return this.appiumClient.$(
             'android=new UiSelector().resourceId("' + resourceId + '")'
         );
     }
 
     async getElementsByResourceId(resourceId) {
-        logger.info(`get elements by resource id ${resourceId}` );
+        logger.info(`get elements by resource id ${resourceId}`);
         return this.appiumClient.$$(
             'android=new UiSelector().resourceId("' + resourceId + '")'
         );
@@ -145,7 +150,7 @@ class AppScraper {
 
 
     async clickElementByResource(resourceId) {
-        logger.info(`click element by resource id ${resourceId}` );
+        logger.info(`click element by resource id ${resourceId}`);
         const element = await this.appiumClient.$(
             'android=new UiSelector().resourceId("' + resourceId + '")'
         );
@@ -183,7 +188,7 @@ class AppScraper {
     }
 
     async scrollDownUntilDescVisible(desc) {
-        logger.info(`scroll down until @desc visible ${desc}` );
+        logger.info(`scroll down until @desc visible ${desc}`);
 
         var rect = await this.appiumClient.getWindowRect();
 
@@ -224,7 +229,7 @@ class AppScraper {
 
 
     async scrollDownUntilVisible(text) {
-        logger.info(`scroll down until text visible ${text}` );
+        logger.info(`scroll down until text visible ${text}`);
         var rect = await this.appiumClient.getWindowRect();
         var rectX = rect.width / 2;
         var rectY = rect.height / 1.1;
