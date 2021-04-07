@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-20 13:52:32
+ * @ Modified time: 2021-04-07 20:30:58
  * @ Description:
  */
 
@@ -52,7 +52,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     await this.sleep(3000);
     await this.clickOptionalLink(Translator.translate("Akzeptieren"));
     await this.sleep(3000);
-    await this.appiumClient.touchAction({ action: 'tap', x: 100, y: 170 });
+    await this.appiumClient.touchAction({ action: 'tap', x: 83, y: 200 });
 
     await this.sleep(3000);
     // await this.clickElementByXpath("//android.widget.ImageButton[@content-desc=\"Open\"]");
@@ -91,13 +91,17 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     await this.appClickElementByResource("com.booking:id/search_search");
 
     await this.sleep(10000);
-
+    await this.clickLink("Filter");
+    await this.scrollIntoView("Entfernung vom Stadtzentrum");
+    await this.clickLinkContains("5 km");
+    await this.appClickElementByResource("com.booking:id/showresults");
 
     const offersSortedByBest = await this.extractOffers();
 
     await this.clickElementByResource('com.booking:id/sresults_sort');
 
     await this.clickElementByXpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.CheckedTextView[6]');
+
 
     const offersSortedByCheapest = await this.extractOffers();
 
@@ -106,7 +110,6 @@ export class BookingAppScraper extends AppScraper implements IScraper {
   }
 
   async extractOffers() {
-    /*******************************************/
     var rect = await this.appiumClient.getWindowRect();
 
     await this.sleep(1000);
@@ -130,6 +133,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
       hotelOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.booking:id/price_view_price');
       var hotelNames = await this.getElementsByResourceId('com.booking:id/sr_property_card_header_property_name');
+
 
       var screenshot = await this.takeScreenShot(this.constructor.name);
 

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-30 21:04:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-26 08:42:12
+ * @ Modified time: 2021-04-07 20:54:41
  * @ Description:
  */
 
@@ -75,6 +75,10 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         await this.page.waitFor(15000);
 
+        await this.clickElementByXpath("//a[@data-id='distance-5000']");
+
+        await this.page.waitFor(2000);
+
         const offersSortedByBest = await this.extractOffers(inputData);
 
         await this.clickElementByXpath('//a[@data-type="price"]');
@@ -85,7 +89,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
     }
 
-    async extractOffers(inputData){
+    async extractOffers(inputData) {
         let isNextDisabled = false;
         let isNextAvailable = true;
 

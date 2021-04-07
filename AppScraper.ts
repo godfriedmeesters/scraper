@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-06 23:06:48
+ * @ Modified time: 2021-04-07 19:57:05
  * @ Description:
  */
 
@@ -99,6 +99,15 @@ class AppScraper {
         logger.info(`Clicking link ${linkText}`);
         let link = await this.appiumClient.$(
             this._('text("' + linkText + '")')
+        );
+
+        return link.click();
+    }
+
+    async clickLinkContains(linkText: string) {
+        logger.info(`Clicking link ${linkText}`);
+        let link = await this.appiumClient.$(
+            this._('textContains("' + linkText + '")')
         );
 
         return link.click();
