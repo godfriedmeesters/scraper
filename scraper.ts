@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-07 13:30:11
+ * @ Modified time: 2021-04-07 17:52:48
  * @ Description:
  */
 
@@ -133,7 +133,7 @@ async function processScraperJob(job, done) {
                 }
                 else {
                     if (synchronizationOnStartSeconds % 5)
-                        logger.debug(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                        logger.info(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
 
