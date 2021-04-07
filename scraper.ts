@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-07 11:21:03
+ * @ Modified time: 2021-04-07 11:39:54
  * @ Description:
  */
 
@@ -57,7 +57,12 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
         }
 
         (async () => {
-            await processScraperJob(job, done);
+            try {
+                await processScraperJob(job, done);
+            } catch (ex) {
+                logger.error(`FATAL error when processing job ${JSON.stringify(job)}: ${ex.stack}`)
+
+            }
         })();
     });
 }
@@ -68,7 +73,12 @@ if (yn(process.env.PULL_REAL_DEVICE_QUEUE)) {
     ${JSON.stringify(job.data.inputData)} `);
 
         (async () => {
-            await processScraperJob(job, done);
+            try {
+                await processScraperJob(job, done);
+            } catch (ex) {
+                logger.error(`FATAL error when processing job ${JSON.stringify(job)}: ${ex.stack}`)
+
+            }
         })();
     });
 }
@@ -79,7 +89,12 @@ if (yn(process.env.PULL_EMULATOR_QUEUE)) {
     ${JSON.stringify(job.data.inputData)} `);
 
         (async () => {
-            await processScraperJob(job, done);
+            try {
+                await processScraperJob(job, done);
+            } catch (ex) {
+                logger.error(`FATAL error when processing job ${JSON.stringify(job)}: ${ex.stack}`)
+
+            }
         })();
     });
 }
