@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-06 21:18:56
+ * @ Modified time: 2021-04-07 11:21:03
  * @ Description:
  */
 
@@ -117,7 +117,8 @@ async function processScraperJob(job, done) {
                     stopWaitingForAllStarted = true;
                 }
                 else {
-                    logger.debug(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                    if (synchronizationOnStartSeconds % 5)
+                        logger.debug(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
 
@@ -137,8 +138,6 @@ async function processScraperJob(job, done) {
 
             synchronizationOnStartSeconds++;
 
-            if (synchronizationOnStartSeconds % 5)
-                logger.info(`${job.data.scraperClass}: Syncronized on start for ${synchronizationOnStartSeconds} seconds`);
 
             if (synchronizationOnStartSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers to start, throw error
             {
