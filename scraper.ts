@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-07 17:52:48
+ * @ Modified time: 2021-04-09 19:20:22
  * @ Description:
  */
 
@@ -204,7 +204,7 @@ async function processScraperJob(job, done) {
                     stopWaitingForAllReachedSearch = true;
                 }
                 else {
-                    if (synchronizationOnStartSeconds % 5)
+                    if (synchronizationOnSearchSeconds % 5)
                         logger.info(`Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
