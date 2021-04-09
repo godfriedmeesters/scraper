@@ -22,8 +22,6 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
 
         await this.sleep(3000);
 
-
-
         await this.clickOptionalElementByCss('.uitk-gdpr-banner-btn');
         await this.sleep(5000);
 
