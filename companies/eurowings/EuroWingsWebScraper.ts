@@ -96,15 +96,17 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
             await zoeken.click();
         }
 
-        await this.page.waitFor(5000);
+        await this.page.waitFor(8000);
 
         const url = await this.page.url();
 
         var screenshotPath = await this.takeScreenShot("EuroWingsWebScraper");
 
-        for (const flightOffer of flightOffers) {
-            flightOffer.url = url;
-            flightOffer.screenshot = screenshotPath;
+        if (flightOffers != null && flightOffers.length > 0) {
+            for (const flightOffer of flightOffers) {
+                flightOffer.url = url;
+                flightOffer.screenshot = screenshotPath;
+            }
         }
 
         return flightOffers;
