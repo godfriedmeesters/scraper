@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-09 19:20:22
+ * @ Modified time: 2021-04-10 13:57:43
  * @ Description:
  */
 
@@ -104,6 +104,8 @@ async function processScraperJob(job, done) {
 
     const scraper = new scraperClass();
 
+    const hostName = os.hostname();
+
     logger.info(`${job.data.scraperClass}: Scraper reveived new job ${JSON.stringify(job)}`);
 
     const redisClient = redis.createClient({
@@ -128,12 +130,12 @@ async function processScraperJob(job, done) {
 
             redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_started_count", function (err, reply) {
                 if (reply >= job.data.comparisonSize) {
-                    logger.info(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
+                    logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${reply} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
                     stopWaitingForAllStarted = true;
                 }
                 else {
-                    if (synchronizationOnStartSeconds % 5)
-                        logger.info(`${job.data.scraperClass}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                    if (synchronizationOnStartSeconds % 5 == 0)
+                        logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
 
@@ -200,12 +202,12 @@ async function processScraperJob(job, done) {
         while (!stopWaitingForAllReachedSearch) {
             redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count", function (err, reply) {
                 if (reply >= job.data.comparisonSize) {
-                    logger.info(`${job.data.scraperClass}: Nr of Scraper Runs with scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
+                    logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                     stopWaitingForAllReachedSearch = true;
                 }
                 else {
-                    if (synchronizationOnSearchSeconds % 5)
-                        logger.info(`Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
+                    if (synchronizationOnSearchSeconds % 5 == 0)
+                        logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with  scrapeTillSearchFinished ${reply} <> comparisonSize  ${job.data.comparisonSize}`);
                 }
             });
 
@@ -250,7 +252,7 @@ async function processScraperJob(job, done) {
 
         const stopTime = new Date();
 
-        const hostName = os.hostname();
+
 
 
         // add index to every offer
