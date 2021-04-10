@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-10 19:13:36
+ * @ Modified time: 2021-04-10 22:00:40
  * @ Description:
  */
 
@@ -121,7 +121,9 @@ async function processScraperJob(job, done) {
     try {
         const startedCount = "comparison_" + parseInt(job.data.comparisonRunId) + "_started_count";
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCount}` )
-        redisClient.incr(startedCount);
+        await redisClient.incr(startedCount);
+
+        await sleep(500);
 
         var synchronizationOnStartSeconds = 0;
 
