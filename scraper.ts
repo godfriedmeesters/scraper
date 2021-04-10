@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-10 13:57:43
+ * @ Modified time: 2021-04-10 19:13:36
  * @ Description:
  */
 
@@ -119,8 +119,9 @@ async function processScraperJob(job, done) {
 
 
     try {
-
-        redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_started_count");
+        const startedCount = "comparison_" + parseInt(job.data.comparisonRunId) + "_started_count";
+        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCount}` )
+        redisClient.incr(startedCount);
 
         var synchronizationOnStartSeconds = 0;
 
@@ -128,7 +129,7 @@ async function processScraperJob(job, done) {
 
         while (!stopWaitingForAllStarted) {
 
-            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_started_count", function (err, reply) {
+            redisClient.get(startedCount, function (err, reply) {
                 if (reply >= job.data.comparisonSize) {
                     logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${reply} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
                     stopWaitingForAllStarted = true;
@@ -191,16 +192,17 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize}  scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
 
+        const reachedSearchCount = "comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count";
 
-        logger.info(`${job.data.scraperClass}: Incrementing  "_reached_search_count"counter for comparisonRunId  ${job.data.comparisonRunId}.`);
-        redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count");
+        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCount}.`);
+        redisClient.incr(reachedSearchCount);
 
         var synchronizationOnSearchSeconds = 0;
         var stopWaitingForAllReachedSearch = false;
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
         while (!stopWaitingForAllReachedSearch) {
-            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count", function (err, reply) {
+            redisClient.get(reachedSearchCount, function (err, reply) {
                 if (reply >= job.data.comparisonSize) {
                     logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reply} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                     stopWaitingForAllReachedSearch = true;
@@ -287,7 +289,7 @@ async function processScraperJob(job, done) {
 
             redisClient.incr("comparison_" + parseInt(job.data.comparisonRunId) + "_errored");
 
-            errorMessage = `Error when scraping ${job.data.scraperClass}: ${exception.stack}`;
+            errorMessage = `Error when scraping ${job.data.scraperClass} on ${hostName}: ${exception.stack}`;
             logger.error(errorMessage);
             const screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             //split error message, because taking screenshot can crash
@@ -301,7 +303,7 @@ async function processScraperJob(job, done) {
 
         }
         catch (ex) {
-            errorMessage = `Exception when taking screenshot after error:  ${ex.stack}  `;
+            errorMessage = `Exception when taking screenshot after error:  ${ex.stack} on ${hostName}  `;
             logger.error(errorMessage)
             await erroredScrapeQueue.add({
                 ...job.data,
