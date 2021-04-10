@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-10 22:00:40
+ * @ Modified time: 2021-04-10 22:11:59
  * @ Description:
  */
 
@@ -123,7 +123,12 @@ async function processScraperJob(job, done) {
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCount}` )
         await redisClient.incr(startedCount);
 
-        await sleep(500);
+        redisClient.get(startedCount, function(err, reply) {
+            // reply is null when the key is missing
+            logger.info(`${job.data.scraperClass} on ${hostName}: key is now ${reply}`);
+          });
+
+
 
         var synchronizationOnStartSeconds = 0;
 
