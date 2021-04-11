@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 23:07:00
+ * @ Modified time: 2021-04-11 23:30:43
  * @ Description:
  */
 
@@ -134,10 +134,10 @@ async function processScraperJob(job, done) {
 
         const lockOnStart = promisify(require('redis-lock')(redisClient));
 
-        lockOnStart('lockOnStart').then(async unlock => {
-            startedCount = await incAsync(startedCountKey);
-            unlock();
-        });
+        const unlockOnStart = lockOnStart('lockOnStart');
+        startedCount = await incAsync(startedCountKey);
+        await unlockOnStart();
+
 
         logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCount}`)
 
@@ -215,10 +215,12 @@ async function processScraperJob(job, done) {
 
         const lockOnSearch = promisify(require('redis-lock')(redisClient));
 
-        lockOnSearch('lockOnSearch').then(async unlock => {
-            reachedSearchCount = await incAsync(startedCountKey);
-            unlock();
-        });
+        const unlockOnSearch = await lockOnSearch('lockOnSearch');
+
+        reachedSearchCount = await incAsync(startedCountKey);
+
+        await unlockOnSearch();
+
 
         logger.info(`${job.data.scraperClass} on ${hostName}:   ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
 
@@ -341,7 +343,7 @@ async function processScraperJob(job, done) {
         await scraper.transferScreenshotsToFtp();
 
         await scraper.stopClient(job.data.params);
-       // redisClient.quit();
+        // redisClient.quit();
 
     }
 }
