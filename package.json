@@ -30,6 +30,7 @@
     "simple-translator": "^0.2.5",
     "timer-node": "^3.1.0",
     "underscore": "1.11.0",
+    "util": "^0.12.3",
     "webdriverio": "^5.11.2",
     "winston": "^3.2.1",
     "yargs": "^16.2.0",

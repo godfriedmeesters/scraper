@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 19:13:31
+ * @ Modified time: 2021-04-11 21:28:48
  * @ Description:
  */
 
@@ -14,6 +14,7 @@ import { sleep } from './util';
 import scraperClasses from './index';
 const yn = require('yn');
 const redis = require("redis");
+const { promisify } = require("util");
 
 const os = require('os');
 
@@ -113,6 +114,10 @@ async function processScraperJob(job, done) {
         "password": process.env.DB_PASS
     });
 
+    const incAsync = promisify(redisClient.inc).bind(redisClient.inc);
+
+
+
     redisClient.on("error", function (error) {
         logger.error(error);
     });
@@ -123,167 +128,163 @@ async function processScraperJob(job, done) {
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
 
 
-        redisClient.incr(startedCountKey, async function (err, startedCount) {
-            if (err)
-                logger.error(err);
+        const incAsync = promisify(redisClient.incr).bind(redisClient);
 
-            var synchronizationOnStartSeconds = 0;
+        const startedCount = await incAsync(startedCountKey);
 
-            var stopWaitingForAllStarted = false;
+        logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCount}`)
 
-            while (!stopWaitingForAllStarted) {
-                if (startedCount >= job.data.comparisonSize) {
-                    logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
-                    stopWaitingForAllStarted = true;
-                }
-                else {
-                    if (synchronizationOnStartSeconds % 5 == 0)
-                        logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} <> comparisonSize  ${job.data.comparisonSize}`);
-                }
+        var synchronizationOnStartSeconds = 0;
 
+        var stopWaitingForAllStarted = false;
 
-                redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
-                    if (reply >= 1) {
-                        logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
-                        throw new Error(`FATAL ERROR: one or more scraper runs in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
-                    }
-                });
-
-
-                if (stopWaitingForAllStarted)
-                    break;
-
-
-                await sleep(1000);  // wait one second
-
-                synchronizationOnStartSeconds++;
-
-
-                if (synchronizationOnStartSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers to start, throw error
-                {
-                    throw new Error(`${job.data.scraperClass}: FATAL ERROR: synchronizationOnStartSeconds > ${parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS)}`);
-
-                }
+        while (!stopWaitingForAllStarted) {
+            if (startedCount >= job.data.comparisonSize) {
+                logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
+                stopWaitingForAllStarted = true;
+            }
+            else {
+                if (synchronizationOnStartSeconds % 5 == 0)
+                    logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} <> comparisonSize  ${job.data.comparisonSize}`);
             }
 
-            logger.info(`${job.data.scraperClass}: Starting job ${JSON.stringify(job)}`);
-            await scraper.startClient(job.data.params);
 
-            // after other scraper runs in comparison are ready, start scraping
-
-
-            const startTime = new Date();
-            logger.info(`${job.data.scraperClass}:Entering input data...`);
-
-            const timeoutSecondsBeforeSearch = parseInt(process.env.TIMEOUT_SECONDS_BEFORE_SEARCH);
-
-            //wait maximum timeoutSeconds for current scraping job to finish before search
-            const timeoutPromiseBeforeSearch = new Promise((resolve, reject) => {
-                setTimeout(resolve, 1000 * timeoutSecondsBeforeSearch, 'timeout');
+            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
+                if (reply >= 1) {
+                    logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
+                    throw new Error(`FATAL ERROR: one or more scraper runs in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
+                }
             });
 
-            var raceResult = await Promise.race([timeoutPromiseBeforeSearch, scraper.scrapeUntilSearch(job.data.inputData)]);
 
-            if (raceResult == "timeout") {
-                const errorMessage = `${job.data.scraperClass}:  scrapeUntilSearch Timeout`;
-                throw new Error(errorMessage);
+            if (stopWaitingForAllStarted)
+                break;
+
+
+            await sleep(1000);  // wait one second
+
+            synchronizationOnStartSeconds++;
+
+
+            if (synchronizationOnStartSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers to start, throw error
+            {
+                throw new Error(`${job.data.scraperClass}: FATAL ERROR: synchronizationOnStartSeconds > ${parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS)}`);
+
             }
-            else
-                logger.info(`${job.data.scraperClass}: scrapUntilSearch finished on time (< ${timeoutSecondsBeforeSearch} seconds)`);
+        }
 
-            logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize}  scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
+        logger.info(`${job.data.scraperClass}: Starting job ${JSON.stringify(job)}`);
+        await scraper.startClient(job.data.params);
 
-            const reachedSearchCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count";
+        // after other scraper runs in comparison are ready, start scraping
 
-            logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
+        const startTime = new Date();
+        logger.info(`${job.data.scraperClass}:Entering input data...`);
 
+        const timeoutSecondsBeforeSearch = parseInt(process.env.TIMEOUT_SECONDS_BEFORE_SEARCH);
 
-            redisClient.incr(reachedSearchCountKey, async function (err, reachedSearchCount) {
-                if (err)
-                    logger.error(err);
-
-                var synchronizationOnSearchSeconds = 0;
-                var stopWaitingForAllReachedSearch = false;
-
-                logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
-                while (!stopWaitingForAllReachedSearch) {
-
-                    if (reachedSearchCount >= job.data.comparisonSize) {
-                        logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reachedSearchCount} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
-                        stopWaitingForAllReachedSearch = true;
-                    }
-                    else {
-                        if (synchronizationOnSearchSeconds % 5 == 0)
-                            logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with  scrapeTillSearchFinished ${reachedSearchCount} <> comparisonSize  ${job.data.comparisonSize}`);
-                    }
-
-
-                    if (stopWaitingForAllReachedSearch)
-                        break;
-
-                    redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
-                        if (reply >= 1) {
-                            logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
-                            throw new Error(`FATAL ERROR: one or more scrapers run in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
-                        }
-                    });
-
-                    await sleep(1000);  // wait one second
-
-                    synchronizationOnSearchSeconds++;
-
-
-                    if (synchronizationOnSearchSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers, throw error
-                    {
-                        throw new Error(`FATAL ERROR: synchronizationOnSearchSeconds > ${parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS)}`);
-                    }
-                }
-
-                const timeoutSecondsAfterSearch = parseInt(process.env.TIMEOUT_SECONDS_AFTER_SEARCH);
-
-                const timeoutPromiseAfterSearch = new Promise((resolve, reject) => {
-                    setTimeout(resolve, 1000 * timeoutSecondsAfterSearch, 'timeout');
-                });
-
-                logger.info(`${job.data.scraperClass}:Clicking search button...`)
-
-                let offers: any;
-                raceResult = await Promise.race([timeoutPromiseAfterSearch, scraper.scrapeFromSearch(job.data.inputData)]);
-                if (raceResult == "timeout") {
-                    const errorMessage = `${job.data.scraperClass}:  scrapeFromSearch took longer than ${timeoutSecondsAfterSearch} seconds`;
-                    throw new Error(errorMessage);
-                }
-                else {
-                    logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< ${timeoutSecondsAfterSearch} seconds)`);
-                    offers = raceResult;
-                }
-
-                const stopTime = new Date();
-
-                // add index to every offer
-                if (!('sortedByBest' in offers && 'sortedByCheapest' in offers)) {
-                    for (var i = 0; i < offers.length; i++) {
-                        offers[i].index = i;
-                    }
-                }
-                else {
-                    for (var i = 0; i < offers.sortedByBest.length; i++) {
-                        offers.sortedByBest[i].index = i;
-                    }
-
-                    for (var i = 0; i < offers.sortedByCheapest.length; i++) {
-                        offers.sortedByCheapest[i].index = i;
-                    }
-                }
-
-                const finishedJob = { ...job.data, "items": offers, startTime, stopTime, hostName };
-
-                logger.info(`Finished scraper job sucessfully, found ${offers.length} offers`);
-
-                await finishedScrapeQueue.add(finishedJob);
-
-            });
+        //wait maximum timeoutSeconds for current scraping job to finish before search
+        const timeoutPromiseBeforeSearch = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000 * timeoutSecondsBeforeSearch, 'timeout');
         });
+
+        var raceResult = await Promise.race([timeoutPromiseBeforeSearch, scraper.scrapeUntilSearch(job.data.inputData)]);
+
+        if (raceResult == "timeout") {
+            const errorMessage = `${job.data.scraperClass}:  scrapeUntilSearch Timeout`;
+            throw new Error(errorMessage);
+        }
+        else
+            logger.info(`${job.data.scraperClass}: scrapUntilSearch finished on time (< ${timeoutSecondsBeforeSearch} seconds)`);
+
+        logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize}  scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
+
+        const reachedSearchCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count";
+
+        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
+
+        const reachedSearchCount = incAsync(reachedSearchCountKey);
+        logger.info(`${job.data.scraperClass} on ${hostName}:   ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
+
+        var synchronizationOnSearchSeconds = 0;
+        var stopWaitingForAllReachedSearch = false;
+
+        logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
+        while (!stopWaitingForAllReachedSearch) {
+            if (reachedSearchCount >= job.data.comparisonSize) {
+                logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reachedSearchCount} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
+                stopWaitingForAllReachedSearch = true;
+            }
+            else {
+                if (synchronizationOnSearchSeconds % 5 == 0)
+                    logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with  scrapeTillSearchFinished ${reachedSearchCount} <> comparisonSize  ${job.data.comparisonSize}`);
+            }
+
+
+            if (stopWaitingForAllReachedSearch)
+                break;
+
+            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
+                if (reply >= 1) {
+                    logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
+                    throw new Error(`FATAL ERROR: one or more scrapers run in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
+                }
+            });
+
+            await sleep(1000);  // wait one second
+
+            synchronizationOnSearchSeconds++;
+
+
+            if (synchronizationOnSearchSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers, throw error
+            {
+                throw new Error(`FATAL ERROR: synchronizationOnSearchSeconds > ${parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS)}`);
+            }
+        }
+
+        const timeoutSecondsAfterSearch = parseInt(process.env.TIMEOUT_SECONDS_AFTER_SEARCH);
+
+        const timeoutPromiseAfterSearch = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000 * timeoutSecondsAfterSearch, 'timeout');
+        });
+
+        logger.info(`${job.data.scraperClass}:Clicking search button...`)
+
+        let offers: any;
+        raceResult = await Promise.race([timeoutPromiseAfterSearch, scraper.scrapeFromSearch(job.data.inputData)]);
+        if (raceResult == "timeout") {
+            const errorMessage = `${job.data.scraperClass}:  scrapeFromSearch took longer than ${timeoutSecondsAfterSearch} seconds`;
+            throw new Error(errorMessage);
+        }
+        else {
+            logger.info(`${job.data.scraperClass}: ScrapeFromSearch finished on time (< ${timeoutSecondsAfterSearch} seconds)`);
+            offers = raceResult;
+        }
+
+        const stopTime = new Date();
+
+        // add index to every offer
+        if (!('sortedByBest' in offers && 'sortedByCheapest' in offers)) {
+            for (var i = 0; i < offers.length; i++) {
+                offers[i].index = i;
+            }
+        }
+        else {
+            for (var i = 0; i < offers.sortedByBest.length; i++) {
+                offers.sortedByBest[i].index = i;
+            }
+
+            for (var i = 0; i < offers.sortedByCheapest.length; i++) {
+                offers.sortedByCheapest[i].index = i;
+            }
+        }
+
+        const finishedJob = { ...job.data, "items": offers, startTime, stopTime, hostName };
+
+        logger.info(`Finished scraper job sucessfully, found ${offers.length} offers`);
+
+        await finishedScrapeQueue.add(finishedJob);
+
 
         done();
     }
