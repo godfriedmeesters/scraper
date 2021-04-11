@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 23:51:14
+ * @ Modified time: 2021-04-12 00:10:08
  * @ Description:
  */
 
@@ -134,7 +134,7 @@ async function processScraperJob(job, done) {
 
         const lock = promisify(require('redis-lock')(redisClient));
 
-        const unlockOnStart = await lock('lockOnStart');
+        const unlockOnStart = await lock('lockOnStart', 50000);
         startedCount = await incAsync(startedCountKey);
         await unlockOnStart();
 
@@ -218,7 +218,7 @@ async function processScraperJob(job, done) {
         var reachedSearchCount = 0;
 
 
-        const unlockOnSearch = await lock('lockOnSearch');
+        const unlockOnSearch = await lock('lockOnSearch',  50000);
 
         reachedSearchCount = await incAsync(startedCountKey);
 
