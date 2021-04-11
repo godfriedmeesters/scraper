@@ -25,6 +25,7 @@
     "puppeteer-extra-plugin-stealth": "2.6.5",
     "puppeteer-full-page-screenshot": "^1.0.5",
     "redis": "^3.0.2",
+    "redis-lock": "^0.1.4",
     "request-promise-native": "^1.0.9",
     "simple-translator": "^0.2.5",
     "timer-node": "^3.1.0",
