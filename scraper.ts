@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 21:28:48
+ * @ Modified time: 2021-04-11 21:42:40
  * @ Description:
  */
 
@@ -114,7 +114,7 @@ async function processScraperJob(job, done) {
         "password": process.env.DB_PASS
     });
 
-    const incAsync = promisify(redisClient.inc).bind(redisClient.inc);
+    const incAsync = promisify(redisClient.incr).bind(redisClient);
 
 
 
@@ -128,7 +128,6 @@ async function processScraperJob(job, done) {
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
 
 
-        const incAsync = promisify(redisClient.incr).bind(redisClient);
 
         const startedCount = await incAsync(startedCountKey);
 
