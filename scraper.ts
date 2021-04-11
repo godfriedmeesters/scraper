@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 22:27:35
+ * @ Modified time: 2021-04-11 23:01:53
  * @ Description:
  */
 
@@ -129,7 +129,15 @@ async function processScraperJob(job, done) {
         const startedCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_started_count";
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
 
-         var startedCount = await incAsync(startedCountKey);
+
+        var startedCount = 0;
+
+        const lockOnStart = promisify(require('redis-lock')(redisClient));
+
+        lockOnStart('lockString').then(async unlock => {
+            startedCount = await incAsync(startedCountKey);
+            unlock();
+        });
 
         logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCount}`)
 
@@ -202,7 +210,16 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
 
-        var reachedSearchCount = incAsync(reachedSearchCountKey);
+
+        var reachedSearchCount = 0;
+
+        const lockOnSearch = promisify(require('redis-lock')(redisClient));
+
+        lockOnSearch('lockOnSearch').then(async unlock => {
+            reachedSearchCount = await incAsync(startedCountKey);
+            unlock();
+        });
+
         logger.info(`${job.data.scraperClass} on ${hostName}:   ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
 
         var synchronizationOnSearchSeconds = 0;
@@ -210,7 +227,7 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
         while (!stopWaitingForAllReachedSearch) {
-            reachedSearchCount  = await getAsync(reachedSearchCountKey);
+            reachedSearchCount = await getAsync(reachedSearchCountKey);
             if (reachedSearchCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reachedSearchCount} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                 stopWaitingForAllReachedSearch = true;
@@ -220,16 +237,16 @@ async function processScraperJob(job, done) {
                     logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with  scrapeTillSearchFinished ${reachedSearchCount} <> comparisonSize  ${job.data.comparisonSize}`);
             }
 
-
             if (stopWaitingForAllReachedSearch)
                 break;
 
-            redisClient.get("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count", function (err, reply) {
-                if (reply >= 1) {
-                    logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
-                    throw new Error(`FATAL ERROR: one or more scrapers run in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
-                }
-            });
+            const erroredCount = await getAsync("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count");
+
+            if (erroredCount >= 1) {
+                logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
+                throw new Error(`FATAL ERROR: one or more scraper runs in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
+            }
+
 
             await sleep(1000);  // wait one second
 
