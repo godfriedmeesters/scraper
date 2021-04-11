@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 22:16:56
+ * @ Modified time: 2021-04-11 22:27:35
  * @ Description:
  */
 
@@ -129,8 +129,6 @@ async function processScraperJob(job, done) {
         const startedCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_started_count";
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
 
-
-
          var startedCount = await incAsync(startedCountKey);
 
         logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCount}`)
@@ -140,7 +138,7 @@ async function processScraperJob(job, done) {
         var stopWaitingForAllStarted = false;
 
         while (!stopWaitingForAllStarted) {
-            startedCount = getAsync(startedCountKey);
+            startedCount = await getAsync(startedCountKey);
             if (startedCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
                 stopWaitingForAllStarted = true;
@@ -212,7 +210,7 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
         while (!stopWaitingForAllReachedSearch) {
-            reachedSearchCount  = getAsync(reachedSearchCountKey);
+            reachedSearchCount  = await getAsync(reachedSearchCountKey);
             if (reachedSearchCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reachedSearchCount} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                 stopWaitingForAllReachedSearch = true;
