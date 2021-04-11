@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 23:01:53
+ * @ Modified time: 2021-04-11 23:02:18
  * @ Description:
  */
 
@@ -341,7 +341,7 @@ async function processScraperJob(job, done) {
         await scraper.transferScreenshotsToFtp();
 
         await scraper.stopClient(job.data.params);
-        redisClient.quit();
+       // redisClient.quit();
 
     }
 }
