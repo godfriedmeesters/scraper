@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-11 23:39:57
+ * @ Modified time: 2021-04-11 23:51:14
  * @ Description:
  */
 
@@ -146,7 +146,11 @@ async function processScraperJob(job, done) {
         var stopWaitingForAllStarted = false;
 
         while (!stopWaitingForAllStarted) {
-            startedCount = await getAsync(startedCountKey);
+
+            const unlockOnStart = await lock('lockOnStart');
+            startedCount =  await getAsync(startedCountKey);
+            await unlockOnStart();
+
             if (startedCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
                 stopWaitingForAllStarted = true;
@@ -228,7 +232,15 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
         while (!stopWaitingForAllReachedSearch) {
+
+            const unlockOnSearch = await lock('lockOnSearch');
+
             reachedSearchCount = await getAsync(reachedSearchCountKey);
+
+            await unlockOnSearch();
+
+
+
             if (reachedSearchCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reachedSearchCount} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
                 stopWaitingForAllReachedSearch = true;
