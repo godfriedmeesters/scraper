@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 18:22:20
+ * @ Modified time: 2021-04-12 19:57:39
  * @ Description:
  */
 
@@ -47,7 +47,9 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
 
         const proxies = inputData.proxies;
 
-        var use_proxy = Math.random() < 0.8;
+        //        var use_proxy = Math.random() < 0.8;
+        var use_proxy = false;
+
 
 
         const proxy_index = Math.floor(Math.random() * proxies.length);
@@ -202,7 +204,7 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search among ${job.data.comparisonSize} scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
 
-        const reachedSearchCountKey =  parseInt(job.data.comparisonRunId) + "Search";
+        const reachedSearchCountKey = parseInt(job.data.comparisonRunId) + "Search";
 
 
         var reachedSearchCount = 0;
