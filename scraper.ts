@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 10:12:17
+ * @ Modified time: 2021-04-12 10:46:26
  * @ Description:
  */
 
@@ -135,8 +135,7 @@ async function processScraperJob(job, done) {
         const test = await incAsync("test");
         logger.info(`${job.data.scraperClass} on ${hostName} test: ${test}`);
 
-const testGet = await getAsync("test");
-logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
+
 
 
 
@@ -155,7 +154,7 @@ logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
 
         while (!stopWaitingForAllStarted) {
 
-            startedCount =  await getAsync(startedCountKey);
+            startedCount = await getAsync(startedCountKey);
 
             if (startedCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
@@ -163,8 +162,12 @@ logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
             }
             else {
                 if (synchronizationOnStartSeconds % 5 == 0)
+                {
                     logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} <> comparisonSize  ${job.data.comparisonSize}`);
-            }
+                    const testGet = await getAsync("test");
+                    logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
+                }
+                }
 
             const erroredCount = await getAsync("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count");
 
@@ -225,7 +228,7 @@ logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
 
 
         logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${reachedSearchCountKey}.`);
-        const unlockOnSearch = await lock('lockOnSearch',  50000);
+        const unlockOnSearch = await lock('lockOnSearch', 50000);
         logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${reachedSearchCountKey}.`);
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
         reachedSearchCount = await incAsync(startedCountKey);
