@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 00:10:08
+ * @ Modified time: 2021-04-12 08:41:29
  * @ Description:
  */
 
@@ -118,8 +118,6 @@ async function processScraperJob(job, done) {
     const getAsync = promisify(redisClient.get).bind(redisClient);
 
 
-
-
     redisClient.on("error", function (error) {
         logger.error(error);
     });
@@ -129,17 +127,19 @@ async function processScraperJob(job, done) {
         const startedCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_started_count";
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
 
-
         var startedCount = 0;
 
         const lock = promisify(require('redis-lock')(redisClient));
 
-        const unlockOnStart = await lock('lockOnStart', 50000);
+
+        logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${startedCountKey}.`);
+        const unlockOnStart = await lock('lockOnStart', 5000);
+        logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${startedCountKey}.`);
+        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${startedCountKey}.`);
         startedCount = await incAsync(startedCountKey);
         await unlockOnStart();
+        logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCountKey}.`);
 
-
-        logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCount}`)
 
         var synchronizationOnStartSeconds = 0;
 
@@ -147,9 +147,7 @@ async function processScraperJob(job, done) {
 
         while (!stopWaitingForAllStarted) {
 
-            const unlockOnStart = await lock('lockOnStart');
             startedCount =  await getAsync(startedCountKey);
-            await unlockOnStart();
 
             if (startedCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} >= comparisonSize  ${job.data.comparisonSize}, going to scrape until search...`);
@@ -218,28 +216,23 @@ async function processScraperJob(job, done) {
         var reachedSearchCount = 0;
 
 
+        logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${reachedSearchCountKey}.`);
         const unlockOnSearch = await lock('lockOnSearch',  50000);
-
+        logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${reachedSearchCountKey}.`);
+        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
         reachedSearchCount = await incAsync(startedCountKey);
+        logger.info(`${job.data.scraperClass} on ${hostName}:  ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
 
         await unlockOnSearch();
+        logger.info(`${job.data.scraperClass} on ${hostName}: Unlocked  ${reachedSearchCountKey}.`);
 
-
-        logger.info(`${job.data.scraperClass} on ${hostName}:   ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
 
         var synchronizationOnSearchSeconds = 0;
         var stopWaitingForAllReachedSearch = false;
 
         logger.info(`${job.data.scraperClass}: Synchronizing on search with other scraper runs ...`);
         while (!stopWaitingForAllReachedSearch) {
-
-            const unlockOnSearch = await lock('lockOnSearch');
-
             reachedSearchCount = await getAsync(reachedSearchCountKey);
-
-            await unlockOnSearch();
-
-
 
             if (reachedSearchCount >= job.data.comparisonSize) {
                 logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs with scrapeTillSearchFinished ${reachedSearchCount} == comparisonSize  ${job.data.comparisonSize}, going to click on the search button...`);
