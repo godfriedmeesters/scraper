@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 20:41:09
+ * @ Modified time: 2021-04-12 20:45:33
  * @ Description:
  */
 
@@ -201,7 +201,6 @@
          try {
              await this.page.waitFor(1000);
 
-             await this.page.waitForXPath(xpath, { visible: true ,  timeout: 2000});
 
              const linkHandlers = await this.page.$x(xpath);
 
@@ -218,7 +217,6 @@
      async clickElementByXpath(xpath) {
          logger.info("Waiting for element with xpath " + xpath);
          await this.page.waitFor(1000);
-         await this.page.waitForXPath(xpath, { timeout: 2000});
 
          const linkHandlers = await this.page.$x(xpath);
 
@@ -234,8 +232,7 @@
 
      async getElementByXpath(xpath) {
          logger.info("Getting element with xpath " + xpath);
-         await this.page.waitFor(500);
-         await this.page.waitForXPath(xpath, { timeout: 2000});
+         await this.page.waitFor(1000);
 
          const linkHandlers = await this.page.$x(xpath);
 
