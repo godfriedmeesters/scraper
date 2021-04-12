@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 12:36:39
+ * @ Modified time: 2021-04-12 12:57:58
  * @ Description:
  */
 
@@ -130,8 +130,6 @@ async function processScraperJob(job, done) {
 
         const lock = promisify(require('redis-lock')(redisClient));
 
-
-
         logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${startedCountKey}.`);
         const unlockOnStart = await lock('lockOnStart', 5000);
         logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${startedCountKey}.`);
@@ -207,7 +205,7 @@ async function processScraperJob(job, done) {
         else
             logger.info(`${job.data.scraperClass}: scrapUntilSearch finished on time (< ${timeoutSecondsBeforeSearch} seconds)`);
 
-        logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize}  scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
+        logger.info(`${job.data.scraperClass}: Synchronizing on search among ${job.data.comparisonSize} scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
 
         const reachedSearchCountKey =  parseInt(job.data.comparisonRunId) + "Search";
 
@@ -218,7 +216,7 @@ async function processScraperJob(job, done) {
         const unlockOnSearch = await lock('lockOnSearch', 50000);
         logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${reachedSearchCountKey}.`);
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
-        reachedSearchCount = await incAsync(startedCountKey);
+        reachedSearchCount = await incAsync(reachedSearchCountKey);
         logger.info(`${job.data.scraperClass} on ${hostName}:  ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
 
         await unlockOnSearch();
