@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 20:41:32
+ * @ Modified time: 2021-04-12 21:11:09
  * @ Description:
  */
 
@@ -27,7 +27,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         await this.clickOptionalElementByCss('#didomi-notice-agree-button');
 
         await this.page.waitFor(5000);
-        await this.clickElementByXpath(`//*[contains(text(), '${this.translator.translate("Nur Hinflug")}')]`);
+        await this.clickElementByXpath(`//label[@for='tripTypeSwitcher_oneWayTrip']`);
         await this.page.waitFor(2000);
 
         await this.clickElementByXpath("//label[@for='direct-flight-switcher']");
@@ -63,6 +63,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         while (!isStrMonthFound) {
             const strMonths = await this.getElementsTextByCss(".odf-calendar-title");
 
+            logger.info(strMonths);
             for (var strMonth of strMonths) {
                 if (strMonth.includes(strLookForMonth)) {
                     isStrMonthFound = true;
@@ -70,10 +71,12 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
                 }
             }
 
-            logger.info(`looking for ${strLookForMonth}, clicking next month`);
-            await this.clickElementByXpath("//span[@glyph='arrow-right']");
+            if (!isStrMonthFound) {
+                logger.info(`looking for ${strLookForMonth}, clicking next month`);
+                await this.clickElementByXpath("//span[@glyph='arrow-right']");
 
-            await this.page.waitFor(1000);
+                await this.page.waitFor(1000);
+            }
         }
         logger.info("Clicking the day...");
         await this.clickElementByXpath(`//div[@class='odf-calendar']//div[@class = 'odf-calendar-title' and contains(text(), '${strLookForMonth}')]/following-sibling::div//div[contains(@class,'odf-calendar-day') and text() = '${departureDate.getDate()}']`);
