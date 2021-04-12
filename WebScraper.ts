@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 19:57:03
+ * @ Modified time: 2021-04-12 20:41:09
  * @ Description:
  */
 
@@ -201,7 +201,7 @@
          try {
              await this.page.waitFor(1000);
 
-             await this.page.waitForXPath(xpath, { visible: true });
+             await this.page.waitForXPath(xpath, { visible: true ,  timeout: 2000});
 
              const linkHandlers = await this.page.$x(xpath);
 
@@ -217,8 +217,8 @@
 
      async clickElementByXpath(xpath) {
          logger.info("Waiting for element with xpath " + xpath);
-         await this.page.waitFor(500);
-         await this.page.waitForXPath(xpath, { timeout: 500 });
+         await this.page.waitFor(1000);
+         await this.page.waitForXPath(xpath, { timeout: 2000});
 
          const linkHandlers = await this.page.$x(xpath);
 
@@ -235,7 +235,7 @@
      async getElementByXpath(xpath) {
          logger.info("Getting element with xpath " + xpath);
          await this.page.waitFor(500);
-         await this.page.waitForXPath(xpath);
+         await this.page.waitForXPath(xpath, { timeout: 2000});
 
          const linkHandlers = await this.page.$x(xpath);
 
@@ -264,7 +264,7 @@
          logger.info("Checking if xpath in page: " + xpath)
          await this.page.waitFor(1000);
          try {
-             if ((await this.page.waitForXPath(xpath, { timeout: 500 })) !== null) {
+             if ((await this.page.waitForXPath(xpath, { timeout: 2000 })) !== null) {
                  return true;
              }
          }

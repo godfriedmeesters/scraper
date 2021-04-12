@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 19:49:10
+ * @ Modified time: 2021-04-12 20:41:32
  * @ Description:
  */
 
@@ -26,7 +26,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         await this.page.waitFor(5000);
         await this.clickOptionalElementByCss('#didomi-notice-agree-button');
 
-        await this.page.waitFor(1000);
+        await this.page.waitFor(5000);
         await this.clickElementByXpath(`//*[contains(text(), '${this.translator.translate("Nur Hinflug")}')]`);
         await this.page.waitFor(2000);
 

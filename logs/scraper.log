@@ -933,3 +933,63 @@
 {"@timestamp":"2021-04-12T17:47:42.923Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://idsync.rlcdn.com/396846.gif?served_by=evergreen&partner_uid=32391e95-a5df-41e7-a630-86aa78850fd9 resulted in status code 451","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-12T17:48:15.645Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename OpodoWebScraper-1618249695645.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-12T17:48:22.998Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:45.653Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:45.657Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:45.658Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:45.659Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:55.520Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:55.521Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:55.593Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:56.855Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[contains(text(), 'Nur Hinflug')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:58.161Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://idsync.rlcdn.com/396846.gif?served_by=evergreen&partner_uid=e5238f11-d7dd-4963-81df-6e9a847643d3 resulted in status code 451","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:57:58.205Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[contains(text(), 'Nur Hinflug')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:00.842Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //label[@for='direct-flight-switcher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:01.377Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='direct-flight-switcher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:02.915Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Von?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:11.421Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Nach?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:19.379Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@placeholder='Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:22.915Z","log":{"level":"info","logger":"winston"},"message":"Scrolling to the right month Nov ... ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:22.916Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:22.917Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:23.448Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:23.449Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:23.961Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:25.517Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:25.519Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:26.046Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:26.047Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:26.571Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:28.121Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:28.122Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:28.656Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:28.657Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:29.171Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:30.712Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:30.713Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:31.239Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:31.240Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:31.767Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:33.317Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:33.319Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:33.843Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:33.844Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:34.357Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:35.895Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:35.897Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:36.429Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:36.430Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:36.943Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:38.478Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:38.480Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .odf-calendar-title","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:39.004Z","log":{"level":"info","logger":"winston"},"message":"looking for Nov, clicking next month","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:39.006Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:39.519Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@glyph='arrow-right']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:41.056Z","log":{"level":"info","logger":"winston"},"message":"Clicking the day...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:41.057Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //div[@class='odf-calendar']//div[@class = 'odf-calendar-title' and contains(text(), 'Nov')]/following-sibling::div//div[contains(@class,'odf-calendar-day') and text() = '5']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:41.589Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //div[@class='odf-calendar']//div[@class = 'odf-calendar-title' and contains(text(), 'Nov')]/following-sibling::div//div[contains(@class,'odf-calendar-day') and text() = '5']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:42.143Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Flug suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:42.656Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Flug suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:43.176Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Flug suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:58:48.515Z","log":{"level":"info","logger":"winston"},"message":"graphql found","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:59:24.828Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename OpodoWebScraper-1618250364828.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T17:59:32.853Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
