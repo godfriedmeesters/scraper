@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 16:57:18
+ * @ Modified time: 2021-04-12 19:35:31
  * @ Description:
  */
 
@@ -40,7 +40,6 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
 
 
-        //await this.clickElementByXpath("//div[contains(@id, 'switch')]");
 
         await this.clickElementByCss(".col-switch");
 

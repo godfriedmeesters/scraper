@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-09 19:37:37
+ * @ Modified time: 2021-04-12 19:46:08
  * @ Description:
  */
 
@@ -217,7 +217,6 @@ class WebScraper {
     async clickElementByXpath(xpath) {
         logger.info("Waiting for element with xpath " + xpath);
         await this.page.waitFor(500);
-        await this.page.waitForXPath(xpath, { visible: true });
 
         const linkHandlers = await this.page.$x(xpath);
 
