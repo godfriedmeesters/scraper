@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 11:56:26
+ * @ Modified time: 2021-04-12 12:36:39
  * @ Description:
  */
 
@@ -124,18 +124,11 @@ async function processScraperJob(job, done) {
 
 
     try {
-        const startedCountKey =  job.data.comparisonRunId + "Started";
-        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
+        const startedCountKey = job.data.comparisonRunId + "Started";
 
         var startedCount = 0;
 
         const lock = promisify(require('redis-lock')(redisClient));
-
-        //test
-        const test = await incAsync( job.data.comparisonRunId );
-        logger.info(`${job.data.scraperClass} on ${hostName} test: ${test}`);
-
-
 
 
 
@@ -161,15 +154,12 @@ async function processScraperJob(job, done) {
                 stopWaitingForAllStarted = true;
             }
             else {
-                if (synchronizationOnStartSeconds % 5 == 0)
-                {
+                if (synchronizationOnStartSeconds % 5 == 0) {
                     logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} <> comparisonSize  ${job.data.comparisonSize}`);
-                    const testGet = await getAsync( job.data.comparisonRunId );
-                    logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
                 }
-                }
+            }
 
-            const erroredCount = await getAsync("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count");
+            const erroredCount = await getAsync(parseInt(job.data.comparisonRunId) + "Errored");
 
             if (erroredCount >= 1) {
                 logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
@@ -219,13 +209,10 @@ async function processScraperJob(job, done) {
 
         logger.info(`${job.data.scraperClass}: Synchronizing with ${job.data.comparisonSize}  scraper runs of comparisonRunId ${job.data.comparisonRunId}`);
 
-        const reachedSearchCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_reached_search_count";
-
-        logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
+        const reachedSearchCountKey =  parseInt(job.data.comparisonRunId) + "Search";
 
 
         var reachedSearchCount = 0;
-
 
         logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${reachedSearchCountKey}.`);
         const unlockOnSearch = await lock('lockOnSearch', 50000);
@@ -256,18 +243,16 @@ async function processScraperJob(job, done) {
             if (stopWaitingForAllReachedSearch)
                 break;
 
-            const erroredCount = await getAsync("comparison_" + parseInt(job.data.comparisonRunId) + "_errored_count");
+            const erroredCount = await getAsync(parseInt(job.data.comparisonRunId) + "Errored");
 
             if (erroredCount >= 1) {
                 logger.info(`Nr of Scraper Runs in comparison run ${job.data.comparisonRunId} with error >= 1, going to quit scraper run`);
                 throw new Error(`FATAL ERROR: one or more scraper runs in comparison run ${job.data.comparisonRunId} errored, terminated current scraper run.`);
             }
 
-
-            await sleep(1000);  // wait one second
+            await sleep(1000);
 
             synchronizationOnSearchSeconds++;
-
 
             if (synchronizationOnSearchSeconds > parseInt(process.env.MAX_SYNCHRONIZATION_SECONDS))   // after waiting max seconds for other scrapers, throw error
             {
