@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 12:57:58
+ * @ Modified time: 2021-04-12 16:20:02
  * @ Description:
  */
 
@@ -128,14 +128,9 @@ async function processScraperJob(job, done) {
 
         var startedCount = 0;
 
-        const lock = promisify(require('redis-lock')(redisClient));
 
-        logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${startedCountKey}.`);
-        const unlockOnStart = await lock('lockOnStart', 5000);
-        logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${startedCountKey}.`);
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${startedCountKey}.`);
         startedCount = await incAsync(startedCountKey);
-        await unlockOnStart();
         logger.info(`${job.data.scraperClass} on ${hostName}:  ${startedCountKey} is now ${startedCount}.`);
 
 
@@ -212,15 +207,10 @@ async function processScraperJob(job, done) {
 
         var reachedSearchCount = 0;
 
-        logger.info(`${job.data.scraperClass} on ${hostName}: Getting lock on  ${reachedSearchCountKey}.`);
-        const unlockOnSearch = await lock('lockOnSearch', 50000);
-        logger.info(`${job.data.scraperClass} on ${hostName}: Locked on  ${reachedSearchCountKey}.`);
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing  ${reachedSearchCountKey}.`);
         reachedSearchCount = await incAsync(reachedSearchCountKey);
         logger.info(`${job.data.scraperClass} on ${hostName}:  ${reachedSearchCountKey} is now ${reachedSearchCount}.`);
 
-        await unlockOnSearch();
-        logger.info(`${job.data.scraperClass} on ${hostName}: Unlocked  ${reachedSearchCountKey}.`);
 
         var synchronizationOnSearchSeconds = 0;
         var stopWaitingForAllReachedSearch = false;
