@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 22:12:52
+ * @ Modified time: 2021-04-12 22:28:37
  * @ Description:
  */
 
@@ -181,11 +181,11 @@ class WebScraper {
         logger.info("Taking website screenshot with filename " + imageName);
         var imagePath = path.join(__dirname, 'screenshots', imageName);
         if (this.page != null) {
-            await this.sleep(5000);
+            await this.sleep(500);
 
          //   await fullPageScreenshot(this.page, { path: imagePath });
 
-         this.page.screenshot({path: imagePath });
+         this.page.screenshot({path: imagePath, fullPage: true  });
 
             return "https://scraperbox.be/screenshots/" + imageName;
         }
