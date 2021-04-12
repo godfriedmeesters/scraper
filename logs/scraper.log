@@ -635,3 +635,105 @@
 {"@timestamp":"2021-04-12T15:01:26.612Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .price-text","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-12T15:01:26.615Z","log":{"level":"info","logger":"winston"},"message":"Get text from element by css .price-text","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-12T15:01:26.693Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:26.706Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:26.726Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:26.727Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:26.728Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:27.552Z","log":{"level":"info","logger":"winston"},"message":"Navigating to https://www.booking.com/index.de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:32.114Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:32.116Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:32.130Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:32.314Z","log":{"level":"info","logger":"winston"},"message":"Get element by css .sb-destination__input","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:33.342Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .xp__dates.xp__group","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:33.915Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Juli 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:33.916Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:35.467Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:35.469Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .bui-calendar__control--next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:36.028Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:37.543Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:37.544Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .bui-calendar__control--next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:38.089Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:39.103Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:39.625Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:40.173Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@aria-label='2 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:40.702Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:38:46.299Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .sb-searchbox__button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:01.909Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@data-id='distance-5000']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:02.429Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@data-id='distance-5000']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:05.073Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1618241945073.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:10.716Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:10.722Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:11.796Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:11.797Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:13.348Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:13.349Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@data-type=\"price\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:13.877Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@data-type=\"price\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:14.415Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1618241954415.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:18.896Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:18.897Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:20.034Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:20.036Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:21.599Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:39:21.632Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:26.153Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:26.173Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:26.174Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:26.176Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:26.995Z","log":{"level":"info","logger":"winston"},"message":"Navigating to https://www.booking.com/index.fr.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:31.794Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:31.795Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:31.808Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:32.002Z","log":{"level":"info","logger":"winston"},"message":"Get element by css .sb-destination__input","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:33.073Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .xp__dates.xp__group","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:33.662Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 juillet 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:33.663Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:35.195Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:35.196Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .bui-calendar__control--next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:35.760Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:37.273Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:37.274Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .bui-calendar__control--next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:37.857Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:38.869Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@aria-label='1 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:39.394Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:39.961Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@aria-label='2 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:40.477Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 juillet 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:57.783Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:57.803Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:57.804Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:57.805Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:43:58.607Z","log":{"level":"info","logger":"winston"},"message":"Navigating to https://www.booking.com/index.de.html","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:03.113Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:03.115Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:03.129Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #onetrust-accept-btn-handler","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:03.321Z","log":{"level":"info","logger":"winston"},"message":"Get element by css .sb-destination__input","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:04.388Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .xp__dates.xp__group","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:04.972Z","log":{"level":"info","logger":"winston"},"message":"looking for date 1 Juli 2021","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:04.974Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:06.512Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:06.513Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .bui-calendar__control--next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:07.078Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:08.588Z","log":{"level":"info","logger":"winston"},"message":"Navigating to next month in calendar","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:08.588Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .bui-calendar__control--next","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:09.141Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:10.153Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:10.697Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='1 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:11.264Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[@aria-label='2 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:11.782Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[@aria-label='2 Juli 2021']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:17.363Z","log":{"level":"info","logger":"winston"},"message":"Click element by css .sb-searchbox__button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:32.988Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@data-id='distance-5000']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:33.523Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@data-id='distance-5000']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:36.163Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1618242276163.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:41.830Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:41.835Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:42.895Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:42.896Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:44.461Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:44.463Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@data-type=\"price\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:44.991Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@data-type=\"price\"]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:45.542Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename BookingWebScraper-1618242285542.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:50.218Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:50.219Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .sr-hotel__name","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:51.447Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:51.448Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css .bui-price-display__value","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:53.024Z","log":{"level":"info","logger":"winston"},"message":"Next button available","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-12T15:44:53.060Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
