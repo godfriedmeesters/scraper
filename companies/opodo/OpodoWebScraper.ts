@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 21:11:09
+ * @ Modified time: 2021-04-12 22:41:49
  * @ Description:
  */
 
@@ -121,7 +121,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         });
 
         await this.clickElementByText(this.translator.translate("Flug suchen"));
-        await this.page.waitFor(5000);
+        await this.page.waitFor(10000);
 
         await this.clickOptionalElementByText("UNDERSTOOD");
         await this.page.waitFor(5000);
