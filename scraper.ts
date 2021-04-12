@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 10:46:26
+ * @ Modified time: 2021-04-12 11:56:26
  * @ Description:
  */
 
@@ -124,7 +124,7 @@ async function processScraperJob(job, done) {
 
 
     try {
-        const startedCountKey = "comparison_" + parseInt(job.data.comparisonRunId) + "_started_count";
+        const startedCountKey =  job.data.comparisonRunId + "Started";
         logger.info(`${job.data.scraperClass} on ${hostName}: Incrementing ${startedCountKey}`)
 
         var startedCount = 0;
@@ -132,7 +132,7 @@ async function processScraperJob(job, done) {
         const lock = promisify(require('redis-lock')(redisClient));
 
         //test
-        const test = await incAsync("test");
+        const test = await incAsync( job.data.comparisonRunId );
         logger.info(`${job.data.scraperClass} on ${hostName} test: ${test}`);
 
 
@@ -164,7 +164,7 @@ async function processScraperJob(job, done) {
                 if (synchronizationOnStartSeconds % 5 == 0)
                 {
                     logger.info(`${job.data.scraperClass} on ${hostName}: Nr of Scraper Runs started ${startedCount} <> comparisonSize  ${job.data.comparisonSize}`);
-                    const testGet = await getAsync("test");
+                    const testGet = await getAsync( job.data.comparisonRunId );
                     logger.info(`${job.data.scraperClass} on ${hostName} test: ${testGet}`);
                 }
                 }
