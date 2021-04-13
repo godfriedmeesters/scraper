@@ -13,7 +13,8 @@
         "Suchen": "Suchen",
         "Eingabe Abflugdatum":"Eingabe Abflugdatum",
         "Flüge suchen":"Flüge suchen",
-        "Günstigste Option": "Günstigste Option"
+        "Günstigste Option": "Günstigste Option",
+        "Hin- und Rückflug": "Hin- und Rückflug"
     },
     "fr": {
         "url": "https://www.kayak.fr/flights",
@@ -29,6 +30,7 @@
         "Suchen": "Rechercher",
         "Eingabe Abflugdatum":"Sélection de la date aller",
         "Flüge suchen":"Trouver un vol",
-        "Günstigste Option": "Le moins cher"
+        "Günstigste Option": "Le moins cher",
+        "Hin- und Rückflug": "Aller-retour"
     }
 }

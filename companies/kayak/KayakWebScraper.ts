@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 19:35:31
+ * @ Modified time: 2021-04-13 10:24:05
  * @ Description:
  */
 
@@ -17,7 +17,7 @@ var path = require('path');
 
 export class KayakWebScraper extends WebScraper implements IScraper {
 
-//TODO handle different cookie handlers
+    //TODO handle different cookie handlers
     constructor() { super(path.join(__dirname, "lang.json")); }
 
     // scrape web part 1: until "clicking" the search button
@@ -28,6 +28,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
         await this.page.goto(this.translator.translate("url"));
 
+        await this.page.waitFor(2000);
 
         await this.clickOptionalElementByCss(`//*[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
         await this.clickOptionalElementByText(this.translator.translate("Akzeptieren"));
@@ -36,18 +37,16 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         await this.clickOptionalElementByCss('#onetrust-accept-btn-handler');
 
         await this.clickOptionalElementByCss('.awaitBsvt-accept');
-        await this.page.waitFor(5000);
+        await this.page.waitFor(1000);
 
+        //        await this.clickElementByCss(".col-switch");
+        //  await this.clickElementByText(this.translator.translate("Hin- und Rückflug"));
+        await this.clickElementByXpath("//div[@data-value='roundtrip']");
 
+        await this.clickElementByXpath("//li[@data-value='oneway']")
 
+        await this.page.waitFor(1500);
 
-        await this.clickElementByCss(".col-switch");
-
-        await this.clickElementByXpath("//*[contains(@data-value, 'oneway')]");
-
-        await this.clickElementByXpath("//button[contains(@class, 'remove-selection')]");
-
-        await this.page.waitFor(500);
 
         const from1 = await this.page.$x("//input[contains(@id, 'origin-airport')]");
         await from1[0].type(origin, { delay: 50 });
