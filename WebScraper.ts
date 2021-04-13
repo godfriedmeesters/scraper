@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-12 22:47:53
+ * @ Modified time: 2021-04-13 08:02:19
  * @ Description:
  */
 
@@ -262,7 +262,7 @@ class WebScraper {
         logger.info("Checking if xpath in page: " + xpath)
         await this.page.waitFor(1000);
         try {
-            if ((await this.page.waitForXPath(xpath, { timeout: 2000 })) !== null) {
+            if ((await this.page.waitForXPath(xpath, { timeout: 500 })) !== null) {
                 return true;
             }
         }
