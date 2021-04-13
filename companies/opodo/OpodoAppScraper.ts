@@ -32,6 +32,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
     //    await this.clickLink("Fertig");
     await this.clickOptionalLinkByResourceId("com.opodo.reisen:id/menu_item_skip_walkthrough");
+    await this.clickOptionalLink("FERTIG");
     await this.clickLink("Flüge");
     await this.clickElementByXpath("//android.support.v7.app.ActionBar.Tab[@content-desc='Nur Hinflug']/android.widget.TextView");
 
