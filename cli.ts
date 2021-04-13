@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-01-22 10:14:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-28 23:13:40
+ * @ Modified time: 2021-04-13 13:57:53
  * @ Description: CLI for local testing, jobs are not sent to queue but processed locally
  */
 
@@ -72,7 +72,7 @@ async function processScraperJob(job) {
 
     await scraper.startClient(job.params);
 
-    console.log(`${job.scraperClass}:Entering input data...`)
+    console.log(`${job.scraperClass}:Entering input data... ${JSON.stringify(job.inputData)}`)
     await scraper.scrapeUntilSearch(job.inputData);
     console.log(`${job.scraperClass}:Clicking search button...`)
     const offers = await scraper.scrapeFromSearch(job.inputData);

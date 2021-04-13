@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-13 08:13:24
+ * @ Modified time: 2021-04-13 17:30:55
  * @ Description:
  */
 
@@ -206,7 +206,7 @@ class WebScraper {
             const linkHandlers = await this.page.$x(xpath);
 
             if (linkHandlers.length > 0) {
-                await this.page.waitFor(500);
+
                 return linkHandlers[0].click();
             } else {
                 throw new Error("xpath not found");
@@ -224,7 +224,7 @@ class WebScraper {
         if (linkHandlers.length > 0) {
 
             logger.info("Clicking element with xpath " + xpath);
-            await this.page.waitFor(500);
+           // await this.page.waitFor(500);
             return linkHandlers[0].click();
         } else {
             throw new Error("xpath not found");
@@ -248,7 +248,7 @@ class WebScraper {
     //check if text in page
     async isTextInPage(text) {
         try {
-            if ((await this.page.waitForXPath('//*[contains(text(), "' + text + '")]')) !== null) {
+            if ((await this.page.waitForXPath('//*[contains(text(), "' + text + '")]', {timeout: 500})) !== null) {
 
                 return true;
             }
@@ -262,7 +262,7 @@ class WebScraper {
         logger.info("Checking if xpath in page: " + xpath)
         await this.page.waitFor(1000);
         try {
-            if ((await this.page.waitForXPath(xpath)) !== null) {
+            if ((await this.page.waitForXPath(xpath, {timeout: 500})) !== null) {
                 return true;
             }
         }
@@ -293,7 +293,7 @@ class WebScraper {
 
     async getTextArrayFromXpath(xpath) {
         const xpath_expression = xpath;
-        await this.page.waitForXPath(xpath_expression);
+        await this.page.waitForXPath(xpath_expression, {timeout: 500});
         const links = await this.page.$x(xpath_expression);
         const link_urls = await this.page.evaluate((...links) => {
             return links.map(e => e.textContent);
@@ -398,7 +398,7 @@ class WebScraper {
     async getElementsByXpath(xpath) {
         logger.info(`get elements  by xpath ${xpath}`);
         await this.page.waitFor(1000);
-        await this.page.waitForXPath(xpath);
+        await this.page.waitForXPath(xpath, {timeout: 500});
         return this.page.$x(xpath);
     }
 

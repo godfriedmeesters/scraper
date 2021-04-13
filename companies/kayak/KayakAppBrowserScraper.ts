@@ -26,7 +26,7 @@ export class KayakAppBrowserScraper extends AppScraper implements IScraper {
         const origin = inputData.origin;
         const destination = inputData.destination;
 
-        await this.appiumClient.url(`https://www.kayak.de/flights/${origin}-${destination}/${departureDate}?fs=stops=-1&sort=bestflight_a`);
+        await this.appiumClient.url(`https://www.kayak.de/flights/${origin}-${destination}/${departureDate}?fs=stops=0&sort=bestflight_a`);
 
 
         // accept cookies v1
