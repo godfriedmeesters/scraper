@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 11:24:49
+ * @ Modified time: 2021-04-14 11:57:11
  * @ Description:
  */
 
@@ -127,7 +127,7 @@ class WebScraper {
                 this.browser = await puppeteer.launch({
                     headless: false,
                     args: [
-                        '--window-size=1920,1080', '--start-maximized', ...options]
+                        '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
                 });
 
             }
