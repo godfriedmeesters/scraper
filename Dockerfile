@@ -24,8 +24,8 @@ RUN useradd apps \
     && mkdir -p /home/apps/.config \
     && chown -v -R apps:apps /home/apps
 
-COPY bootstrap.sh /
-RUN chmod +x /bootstrap.sh
+# COPY bootstrap.sh /
+# RUN chmod +x /bootstrap.sh
 
 
 RUN mkdir  -p /usr/src/app
