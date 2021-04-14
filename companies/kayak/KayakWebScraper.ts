@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 23:23:26
+ * @ Modified time: 2021-04-14 23:48:44
  * @ Description:
  */
 
@@ -38,14 +38,14 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
         await this.clickOptionalElementByCss('.awaitBsvt-accept');
         await this.page.waitFor(1000);
-const test = await this.isXpathInPage("//div[@data-value='roundtrip']");
-        if(test)
-        {
+
+        const test = await this.isXpathInPage("//div[@data-value='roundtrip']");
+        if (test) {
+            logger.info("DETECTED //div[@data-value='roundtrip']");
             await this.clickElementByXpath("//div[@data-value='roundtrip']");
             await this.clickElementByXpath("//li[@data-value='oneway']");
         }
-        else
-        {
+        else {
             throw new Error("FATAL ERROR: KAYAK WEB BEHAVING UNEXPECTEDLY");
         }
 
