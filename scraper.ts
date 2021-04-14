@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 12:11:48
+ * @ Modified time: 2021-04-14 12:12:21
  * @ Description:
  */
 
@@ -62,6 +62,8 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
                 job.data.params.proxy = proxies[proxy_index];
                 logger.info("Selected proxy " + proxies[proxy_index]);
             }
+            else
+            {logger.info("No proxy selected")}
         }
 
         (async () => {
