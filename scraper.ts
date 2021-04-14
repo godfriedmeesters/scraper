@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 16:22:53
+ * @ Modified time: 2021-04-14 21:29:27
  * @ Description:
  */
 
@@ -56,6 +56,10 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
             logger.info("Selected proxy " + proxies[proxy_index]);
         }
         else { logger.info("No proxy selected") }
+
+        if (job.data.scraperClass == "KayakWebScraper") {
+            job.data.params.headful = true;
+        }
 
 
         (async () => {

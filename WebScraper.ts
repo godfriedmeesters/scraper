@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 16:23:34
+ * @ Modified time: 2021-04-14 21:30:29
  * @ Description:
  */
 
@@ -14,7 +14,7 @@ const yn = require('yn');
 var fs = require('fs');
 const puppeteer = require('puppeteer-extra');
 const pluginStealth = require('puppeteer-extra-plugin-stealth');
-import fullPageScreenshot from "puppeteer-full-page-screenshot";
+const RecaptchaPlugin = require('puppeteer-extra-plugin-recaptcha')
 import Translator from "simple-translator";
 
 import { uploadScreenshotsToFTP } from "./ftp";
@@ -81,6 +81,16 @@ class WebScraper {
 
         puppeteer.use(pluginStealth());
 
+        puppeteer.use(
+            RecaptchaPlugin({
+                provider: {
+                    id: '2captcha',
+                    token: '85e1bcc364f29cc059e51680a2d46c0a', // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                },
+                visualFeedback: true, // colorize reCAPTCHAs (violet = detected, green = solved)
+            })
+        )
+
 
         var options = [];
 
@@ -102,32 +112,32 @@ class WebScraper {
         if (yn(process.env.IN_DEV)) {
             logger.info("using Windows Chrome browser");
             this.browser = await puppeteer.launch({
-                headless: false,
+                headless: true,
                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
                 args: ['--start-maximized', ...options]
             });
         }
         else {
-            // if ("headful" in params) {
-            //     logger.info("using Linux headful browser");
-            //     this.browser = await puppeteer.launch({
-            //         headless: false,
-            //         executablePath: "/usr/bin/google-chrome-stable",
-            //         args: ['--no-xshm',
-            //             '--disable-dev-shm-usage',
-            //             '--no-first-run',
-            //             '--window-size=1920,1080', '--start-maximized', ...options]
-            //     });
-            // }
-            // else {
-            logger.info("using headless browser");
-            this.browser = await puppeteer.launch({
-                headless: true,
-                args: [
-                    '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
-            });
+            if ("headful" in params) {
+                logger.info("using Linux headful browser");
+                this.browser = await puppeteer.launch({
+                    headless: false,
+                    executablePath: "/usr/bin/google-chrome-stable",
+                    args: ['--no-xshm',
+                        '--disable-dev-shm-usage',
+                        '--no-first-run',
+                        '--window-size=1920,1080', '--start-maximized', ...options]
+                });
+            }
+            else {
+                logger.info("using headless browser");
+                this.browser = await puppeteer.launch({
+                    headless: true,
+                    args: [
+                        '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
+                });
 
-            // }
+            }
         }
 
         this.page = await this.browser.newPage();

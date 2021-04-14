@@ -32,8 +32,8 @@ RUN mkdir  -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package.json tsconfig.json ./
-#ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD 1
-#ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD 1
+ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
 RUN npm install
 RUN npm install -g typescript
 RUN npm install -g ts-node
@@ -47,7 +47,7 @@ RUN chown -v -R apps:apps /usr/src/app/recycledCookies
 
 COPY . .
 
-#ENV DISPLAY=:1.0
+ENV DISPLAY=:1.0
 
 CMD '/bootstrap.sh'
 
