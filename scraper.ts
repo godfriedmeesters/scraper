@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-13 22:14:07
+ * @ Modified time: 2021-04-14 11:26:09
  * @ Description:
  */
 
@@ -48,6 +48,9 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
         var use_proxy = false;
 
         if (job.data.scraperClass == "OpodoWebScraper") {
+
+            job.data.params.headful = true;
+
             use_proxy = Math.random() < 0.7;
 
             const proxies = inputData.proxies;

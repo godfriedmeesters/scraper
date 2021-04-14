@@ -4252,3 +4252,129 @@
 {"@timestamp":"2021-04-13T20:07:39.084Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Suchen","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-13T20:07:39.589Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-13T20:07:40.612Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:21.384Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:21.419Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:21.420Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:21.422Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:32.607Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:32.609Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:32.672Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:37.737Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:38.762Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:38.938Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:39.442Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:40.463Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:40.579Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:41.602Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:41.645Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wo starten Sie?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:43.801Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:44.818Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:44.922Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:45.934Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:45.964Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wohin soll es gehen?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:47.082Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:48.091Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:49.253Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Hinflug am","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:49.767Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:50.778Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:50.870Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:52.423Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:52.530Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:54.061Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:54.148Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:55.173Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:56.193Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:56.233Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:57.250Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:58.330Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:58.840Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:16:59.863Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:09.912Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:10.940Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:33.661Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:33.692Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:33.694Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:33.696Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:45.909Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:45.911Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:45.946Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:46.098Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://www.expedia.de/opt-in-select/cookie/create/OIP?png=true&value=1 resulted in status code 400","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:51.042Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:52.062Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:52.249Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:52.757Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:53.768Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:53.835Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:54.846Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:54.883Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wo starten Sie?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:57.034Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:58.059Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:58.146Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:59.154Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:17:59.195Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wohin soll es gehen?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:00.331Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:01.344Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:02.434Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Hinflug am","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:02.940Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:03.960Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:04.017Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:05.630Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:05.687Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:07.214Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:07.264Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:08.291Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:09.302Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:09.354Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:10.365Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:11.425Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:11.931Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:12.945Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:22.984Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:24.002Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:29.161Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename ExpediaWebScraper-1618391909161.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:30.581Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:30.583Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:31.146Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:56.987Z","log":{"level":"info","logger":"winston"},"message":"Using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:57.009Z","log":{"level":"info","logger":"winston"},"message":"Using language de","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:57.010Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:18:57.011Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:07.823Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:07.826Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:07.880Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:12.925Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:13.948Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:14.147Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Nur Hinflug","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:14.659Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:15.680Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Nur Hinflug']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:15.797Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:16.814Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Abflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:16.844Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wo starten Sie?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:18.986Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:20.006Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:20.123Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:21.140Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Zielflughafen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:21.186Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Wohin soll es gehen?\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:22.310Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:23.330Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:24.459Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Hinflug am","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:24.971Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:25.994Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Hinflug am']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:26.097Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:27.664Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:27.755Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:29.280Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:29.348Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:30.429Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:31.452Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,'1. Juli 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:31.509Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:32.522Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:33.610Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Suchen","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:34.116Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:35.136Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Suchen']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:45.207Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:46.218Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:51.443Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename ExpediaWebScraper-1618391991443.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:52.792Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:52.793Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T09:19:53.360Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
