@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 12:56:44
+ * @ Modified time: 2021-04-14 14:33:17
  * @ Description:
  */
 
@@ -126,7 +126,7 @@ class WebScraper {
             // else {
             logger.info("using headless browser");
             this.browser = await puppeteer.launch({
-                headless: false,
+                headless: true,
                 args: [
                     '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
             });
