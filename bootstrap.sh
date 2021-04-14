@@ -7,8 +7,8 @@ main() {
      launch_xvfb
     log_i "Starting window manager..."
      launch_window_manager
-    log_i "Starting VNC server..."
-    run_vnc_server
+    #log_i "Starting VNC server..."
+   # run_vnc_server
     cd /usr/src/app
     ts-node scraper.ts
 }
