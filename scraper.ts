@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 11:26:09
+ * @ Modified time: 2021-04-14 12:11:48
  * @ Description:
  */
 
@@ -51,7 +51,7 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
 
             job.data.params.headful = true;
 
-            use_proxy = Math.random() < 0.7;
+            use_proxy = true; //Math.random() < 0.7;
 
             const proxies = inputData.proxies;
 
