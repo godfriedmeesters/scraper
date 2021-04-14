@@ -49,5 +49,5 @@ COPY . .
 
 #ENV DISPLAY=:1.0
 
-#CMD '/bootstrap.sh'
+CMD '/bootstrap.sh'
 
