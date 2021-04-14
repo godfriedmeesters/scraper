@@ -4378,3 +4378,38 @@
 {"@timestamp":"2021-04-14T09:19:52.792Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-14T09:19:52.793Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-14T09:19:53.360Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:41.105Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:41.110Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:41.111Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:41.113Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:53.699Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:53.701Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:53.721Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:54.139Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Rechercher les vols","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:54.642Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Rechercher les vols']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:55.881Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:52:56.404Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://tags.dynamo.one/105533_tag.js resulted in status code 404","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:25.508Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:25.513Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:25.514Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:25.515Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:33.644Z","log":{"level":"info","logger":"winston"},"message":"graphql found","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:38.172Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:38.173Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:38.183Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:39.852Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://tags.dynamo.one/105533_tag.js resulted in status code 404","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:44.946Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename OpodoWebScraper-1618397684946.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:54:49.823Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:30.931Z","log":{"level":"info","logger":"winston"},"message":"Not using stealth","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:30.938Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:30.939Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:30.941Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:38.305Z","log":{"level":"info","logger":"winston"},"message":"graphql found","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:43.545Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:43.546Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:43.562Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector #didomi-notice-agree-button","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:44.516Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://encrypted-tbn0.gstatic.com/faviconV2?url=http://info.com&client=AFS&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL resulted in status code 404","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:44.957Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://tags.dynamo.one/105533_tag.js resulted in status code 404","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:45.099Z","log":{"level":"error","logger":"winston"},"message":"Getting page https://idsync.rlcdn.com/396846.gif?served_by=evergreen&partner_uid=015a1520-99cd-4864-88e3-b48d695d6e44 resulted in status code 451","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:50.313Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename OpodoWebScraper-1618397750313.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-14T10:55:53.443Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 12:12:21
+ * @ Modified time: 2021-04-14 13:03:14
  * @ Description:
  */
 
@@ -47,24 +47,24 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
 
         var use_proxy = false;
 
-        if (job.data.scraperClass == "OpodoWebScraper") {
+        // if (job.data.scraperClass == "OpodoWebScraper") {
 
-            job.data.params.headful = true;
+        //     job.data.params.headful = true;
 
-            use_proxy = true; //Math.random() < 0.7;
+        //     use_proxy = true; //Math.random() < 0.7;
 
-            const proxies = inputData.proxies;
+        //     const proxies = inputData.proxies;
 
-            const proxy_index = Math.floor(Math.random() * proxies.length);
+        //     const proxy_index = Math.floor(Math.random() * proxies.length);
 
 
-            if (use_proxy) {
-                job.data.params.proxy = proxies[proxy_index];
-                logger.info("Selected proxy " + proxies[proxy_index]);
-            }
-            else
-            {logger.info("No proxy selected")}
-        }
+        //     if (use_proxy) {
+        //         job.data.params.proxy = proxies[proxy_index];
+        //         logger.info("Selected proxy " + proxies[proxy_index]);
+        //     }
+        //     else
+        //     {logger.info("No proxy selected")}
+        // }
 
         (async () => {
             try {
