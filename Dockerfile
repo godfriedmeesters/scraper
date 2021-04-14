@@ -8,16 +8,16 @@ RUN apt-get install -y tzdata
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 RUN apt-get install -y \
-#    gnupg2 \
+    gnupg2 \
     nano \
-   # x11vnc \
-   # xvfb \
-#    fluxbox \
-#    wmctrl \
+    x11vnc \
+    xvfb \
+    fluxbox \
+    wmctrl \
     wget \
     npm
-#    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-#    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+ #   && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+ #   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
  #   && apt-get update && apt-get -y install google-chrome-stable
 
 RUN useradd apps \
