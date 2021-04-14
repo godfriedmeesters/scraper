@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 21:49:29
+ * @ Modified time: 2021-04-14 22:40:01
  * @ Description:
  */
 
@@ -112,7 +112,7 @@ class WebScraper {
         if (yn(process.env.IN_DEV)) {
             logger.info("using Windows Chrome browser");
             this.browser = await puppeteer.launch({
-                headless: true,
+                headless: false,
                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
                 args: ['--start-maximized', ...options]
             });

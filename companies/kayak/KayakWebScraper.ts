@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 21:26:39
+ * @ Modified time: 2021-04-14 23:23:26
  * @ Description:
  */
 
@@ -38,24 +38,40 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
         await this.clickOptionalElementByCss('.awaitBsvt-accept');
         await this.page.waitFor(1000);
+const test = await this.isXpathInPage("//div[@data-value='roundtrip']");
+        if(test)
+        {
+            await this.clickElementByXpath("//div[@data-value='roundtrip']");
+            await this.clickElementByXpath("//li[@data-value='oneway']");
+        }
+        else
+        {
+            throw new Error("FATAL ERROR: KAYAK WEB BEHAVING UNEXPECTEDLY");
+        }
+
 
         //        await this.clickElementByCss(".col-switch");
         //  await this.clickElementByText(this.translator.translate("Hin- und Rückflug"));
 
-        const tst2 = await this.isXpathInPage("//div[div[text()='Hin- und Rückflug']]");
-        if (tst2) {
-            await this.page.waitFor(1000);
-            await this.clickElementByXpath("//div[div[text()='Hin- und Rückflug']]");
-            await this.clickElementByXpath('//li[@data-title="Nur Hinflug"]');
+        // const tst2 = await this.isXpathInPage(`//div[div/span[text()='${this.translator.translate('Hin- und Rückflug')}']]`);
 
-        }
-        else {
-            await this.clickElementByXpath("//div[div/span[text()='Hin- und Rückflug']]");
+        // if (tst2) {
+        //     await this.page.waitFor(3000);
+        //     await this.clickElementByXpath(`//div[div/span[text()='${this.translator.translate('Hin- und Rückflug')}']]`);
+        //     await this.page.waitFor(3000);
+        //     await this.clickElementByXpath(`//*[text()='${this.translator.translate('Nur Hinflug')}']`);
 
-            await this.clickElementByXpath("//div[div/span[text()='Nur Hinflug']]");
+        // }
+        // else {
+        //     await this.page.waitFor(3000);
+        //     await this.clickElementByXpath(`//div[div[text()='${this.translator.translate('Hin- und Rückflug')}']]`);
+        //     await this.page.waitFor(3000);
+        //     await this.clickElementByXpath(`//li[@data-title='${this.translator.translate('Nur Hinflug')}']`);
 
-        }
-        await this.page.waitFor(1000);
+
+
+        // }
+
 
 
         const from1 = await this.page.$x("//input[contains(@id, 'origin-airport')]");
