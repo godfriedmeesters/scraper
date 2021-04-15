@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-25 15:21:23
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 16:36:38
+ * @ Modified time: 2021-04-15 17:02:08
  * @ Description:
  */
 
@@ -14,7 +14,7 @@ require('dotenv').config();
 var path = require('path');
 
 const logger = winston.createLogger({
-    level: process.env.LOG_LEVEL,
+    level: "debug",
     format: ecsFormat(),
     transports: [
         new winston.transports.File({ filename: path.join('.', 'logs', 'scraper.log') }),
