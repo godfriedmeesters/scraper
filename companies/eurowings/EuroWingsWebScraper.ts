@@ -40,7 +40,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
         await originElement.type(origin);
 
-        await this.page.waitFor(3000);
+        await this.page.waitFor(5000);
         await this.tapEnter();
         await this.page.waitFor(5000);
 
@@ -49,7 +49,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
 
         await destinationElement.type(destination);
 
-        await this.page.waitFor(3000);
+        await this.page.waitFor(5000);
         await this.tapEnter();
 
 
