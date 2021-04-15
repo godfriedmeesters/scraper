@@ -6543,3 +6543,45 @@
 {"@timestamp":"2021-04-15T15:54:07.459Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[@aria-label=\"Vol aller\"]","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-15T15:54:29.184Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename EuroWingsWebScraper-1618502069184.png","ecs":{"version":"1.5.0"}}
 {"@timestamp":"2021-04-15T15:54:30.640Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:00:58.339Z","log":{"level":"info","logger":"winston"},"message":"Using language fr","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:00:58.342Z","log":{"level":"info","logger":"winston"},"message":"starting web client with options {--lang=fr-FR,fr}","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:00:58.343Z","log":{"level":"info","logger":"winston"},"message":"using Windows Chrome browser","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:15.200Z","log":{"level":"info","logger":"winston"},"message":"Click optional element by css .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:15.201Z","log":{"level":"info","logger":"winston"},"message":"Waiting for css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:15.259Z","log":{"level":"info","logger":"winston"},"message":"Clicking css selector .uitk-gdpr-banner-btn","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:20.332Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:21.343Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //a[@aria-controls='wizard-flight-pwa']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:22.014Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Aller simple","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:22.517Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Aller simple']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:23.530Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Aller simple']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:24.120Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Origine']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:25.136Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Origine']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:25.681Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"D'où partez-vous\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:27.813Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:28.831Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-origin-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:29.450Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //span[text() = 'Destination']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:30.461Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //span[text() = 'Destination']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:31.018Z","log":{"level":"info","logger":"winston"},"message":"Getting element with xpath //input[contains(@placeholder,\"Où allez-vous\")]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:32.162Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:33.182Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='location-field-leg1-destination-result-item-button']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:34.832Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Date de départ","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:35.335Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Date de départ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:36.377Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Date de départ']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:36.977Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'11 juil. 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:39.544Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:39.616Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'11 juil. 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:42.133Z","log":{"level":"info","logger":"winston"},"message":"Moving to next month...","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:42.221Z","log":{"level":"info","logger":"winston"},"message":"Checking if xpath in page: //button[contains(@aria-label,'11 juil. 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:43.241Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[contains(@aria-label,'11 juil. 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:44.251Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[contains(@aria-label,'11 juil. 2021')]","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:44.789Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:45.793Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //button[@data-stid='apply-date-picker']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:47.386Z","log":{"level":"info","logger":"winston"},"message":"click element by text  Rechercher","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:47.894Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //*[text() = 'Rechercher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:48.907Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //*[text() = 'Rechercher']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:01:59.457Z","log":{"level":"info","logger":"winston"},"message":"Waiting for element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:02:00.481Z","log":{"level":"info","logger":"winston"},"message":"Clicking element with xpath //label[@for='stops-0']","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:02:06.271Z","log":{"level":"info","logger":"winston"},"message":"Taking website screenshot with filename ExpediaWebScraper-1618502526271.png","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:02:07.806Z","log":{"level":"info","logger":"winston"},"message":"Getting elements' text by CSS span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:02:07.806Z","log":{"level":"info","logger":"winston"},"message":"Get elements by css span.uitk-lockup-price","ecs":{"version":"1.5.0"}}
+{"@timestamp":"2021-04-15T16:02:08.381Z","log":{"level":"info","logger":"winston"},"message":"Stopping web client","ecs":{"version":"1.5.0"}}
