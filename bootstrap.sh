@@ -3,10 +3,10 @@
 # Based on: http://www.richud.com/wiki/Ubuntu_Fluxbox_GUI_with_x11vnc_and_Xvfb
 
 main() {
-    #log_i "Starting xvfb virtual display..."
-     #launch_xvfb
-    #log_i "Starting window manager..."
-     #launch_window_manager
+    log_i "Starting xvfb virtual display..."
+     launch_xvfb
+    log_i "Starting window manager..."
+     launch_window_manager
     #log_i "Starting VNC server..."
    # run_vnc_server
     cd /usr/src/app
