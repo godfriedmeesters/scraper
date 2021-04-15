@@ -53,7 +53,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
         await this.tapEnter();
 
 
-        await this.page.waitFor(1000);
+        await this.page.waitFor(5000);
         const dateElement = await this.getElementByXpath(`//input[@aria-label="${this.translator.translate("Hinflug")}"]`);
         await dateElement.type(dateFormat(new Date(departureDate), this.language == "de" ? "dd.mm.yy" : "dd/mm/yy"));
 
@@ -92,11 +92,11 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
         const [zoeken] = await this.page.$x(`//span[contains(., '${this.translator.translate("Suchen")}')]`);
 
         if (zoeken) {
-            await this.page.waitFor(1000);
+            await this.page.waitFor(5000);
             await zoeken.click();
         }
 
-        await this.page.waitFor(8000);
+        await this.page.waitFor(10000);
 
         const url = await this.page.url();
 
