@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 22:40:01
+ * @ Modified time: 2021-04-15 07:54:00
  * @ Description:
  */
 
@@ -118,26 +118,26 @@ class WebScraper {
             });
         }
         else {
-            if ("headful" in params) {
-                logger.info("using Linux headful browser");
-                this.browser = await puppeteer.launch({
-                    headless: false,
-                    executablePath: "/usr/bin/google-chrome-stable",
-                    args: ['--no-xshm',
-                        '--disable-dev-shm-usage',
-                        '--no-first-run',
-                        '--window-size=1920,1080', '--start-maximized', ...options]
-                });
-            }
-            else {
-                logger.info("using headless browser");
-                this.browser = await puppeteer.launch({
-                    headless: true,
-                    args: [
-                        '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
-                });
+            // if ("headful" in params) {
+            //     logger.info("using Linux headful browser");
+            //     this.browser = await puppeteer.launch({
+            //         headless: false,
+            //         executablePath: "/usr/bin/google-chrome-stable",
+            //         args: ['--no-xshm',
+            //             '--disable-dev-shm-usage',
+            //             '--no-first-run',
+            //             '--window-size=1920,1080', '--start-maximized', ...options]
+            //     });
+            // }
+            // else {
+            logger.info("using headless browser");
+            this.browser = await puppeteer.launch({
+                headless: true,
+                args: [
+                    '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
+            });
 
-            }
+            //}
         }
 
         this.page = await this.browser.newPage();
@@ -239,7 +239,6 @@ class WebScraper {
         const linkHandlers = await this.page.$x(xpath);
 
         if (linkHandlers.length > 0) {
-
             logger.info("Clicking element with xpath " + xpath);
             // await this.page.waitFor(500);
             return linkHandlers[0].click();

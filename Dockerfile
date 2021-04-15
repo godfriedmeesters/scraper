@@ -47,7 +47,7 @@ RUN chown -v -R apps:apps /usr/src/app/recycledCookies
 
 COPY . .
 
-ENV DISPLAY=:1.0
+#ENV DISPLAY=:1.0
 
 CMD '/bootstrap.sh'
 
