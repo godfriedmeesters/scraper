@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 22:43:48
+ * @ Modified time: 2021-04-15 22:58:08
  * @ Description:
  */
 
@@ -44,7 +44,7 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
         const inputData = JSON.parse(
             fs.readFileSync("proxies.json")
         );
-
+//
         // var use_proxy = Math.random() < 0.7;
         var use_proxy = false;
         const proxies = inputData.proxies;
