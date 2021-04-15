@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 17:30:49
+ * @ Modified time: 2021-03-27 23:54:32
  * @ Description:
  */
 
@@ -17,7 +17,7 @@ var path = require('path');
 
 export class KayakWebScraper extends WebScraper implements IScraper {
 
-    //TODO handle different cookie handlers
+//TODO handle different cookie handlers
     constructor() { super(path.join(__dirname, "lang.json")); }
 
     // scrape web part 1: until "clicking" the search button
@@ -28,7 +28,6 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
         await this.page.goto(this.translator.translate("url"));
 
-        await this.page.waitFor(2000);
 
         await this.clickOptionalElementByCss(`//*[contains(@title, '${this.translator.translate("Akzeptieren")}')]`);
         await this.clickOptionalElementByText(this.translator.translate("Akzeptieren"));
@@ -37,34 +36,19 @@ export class KayakWebScraper extends WebScraper implements IScraper {
         await this.clickOptionalElementByCss('#onetrust-accept-btn-handler');
 
         await this.clickOptionalElementByCss('.awaitBsvt-accept');
-        await this.page.waitFor(1000);
-
-        //        await this.clickElementByCss(".col-switch");
-        //  await this.clickElementByText(this.translator.translate("Hin- und Rückflug"));
+        await this.page.waitFor(5000);
 
 
-        if (this.isXpathInPage("//div[div[text()='Hin- und Rückflug']]")) {
-            await this.page.waitFor(1000);
-            await this.clickElementByXpath("//div[div[text()='Hin- und Rückflug']]");
-            await this.clickElementByXpath('//li[@data-title="Nur Hinflug"]');
 
-        }
-        else {
+        //await this.clickElementByXpath("//div[contains(@id, 'switch')]");
 
+        await this.clickElementByCss(".Common-Widgets-Select-StyleJamSelect");
 
-            await this.clickElementByXpath("//div[div/span[text()='Hin- und Rückflug']]");
+        await this.clickElementByXpath("//*[contains(@data-value, 'oneway')]");
 
-            await this.clickElementByXpath("//div[div/span[text()='Nur Hinflug']]");
-            //await this.tapEnter();
-        }
-        await this.page.waitFor(1000);
+        await this.clickElementByXpath("//button[contains(@class, 'remove-selection')]");
 
-     //   await this.clickElementByCss(".js-plus-icon");
-
-     //div[contains(@class,'item-close')]
-
-
-        await this.page.waitFor(1000);
+        await this.page.waitFor(500);
 
         const from1 = await this.page.$x("//input[contains(@id, 'origin-airport')]");
         await from1[0].type(origin, { delay: 50 });
@@ -183,3 +167,4 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
     }
 }
+

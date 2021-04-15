@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 17:22:09
+ * @ Modified time: 2021-04-15 17:39:45
  * @ Description:
  */
 
@@ -92,9 +92,9 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
 
         await this.clickElementByXpath("//label[@for='mat-radio-14-input']")
 
-
+        await this.page.waitFor(1000);
         await this.clickElementByXpath(`//button[contains(@aria-label,"${this.translator.translate("anzeigen")}") and @color="primary"]`);
-
+        await this.page.waitFor(1000);
 
         await this.page.waitForSelector('.bw-itinerary-row__header', { visible: true });
         var offerNodes = await this.page.$$(".bw-itinerary-row__header");
