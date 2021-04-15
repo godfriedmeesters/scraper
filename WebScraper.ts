@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 07:54:00
+ * @ Modified time: 2021-04-15 08:49:01
  * @ Description:
  */
 
@@ -112,7 +112,7 @@ class WebScraper {
         if (yn(process.env.IN_DEV)) {
             logger.info("using Windows Chrome browser");
             this.browser = await puppeteer.launch({
-                headless: false,
+                headless: true,
                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
                 args: ['--start-maximized', ...options]
             });
@@ -236,11 +236,11 @@ class WebScraper {
         logger.info("Waiting for element with xpath " + xpath);
         await this.page.waitFor(1000);
 
-        const linkHandlers = await this.page.$x(xpath);
+        const linkHandlers = await this.page.$x(xpath, {timeout:5000});
 
         if (linkHandlers.length > 0) {
             logger.info("Clicking element with xpath " + xpath);
-            // await this.page.waitFor(500);
+             await this.page.waitFor(500);
             return linkHandlers[0].click();
         } else {
             throw new Error("xpath not found");
@@ -278,7 +278,7 @@ class WebScraper {
         logger.info("Checking if xpath in page: " + xpath)
         await this.page.waitFor(1000);
         try {
-            if ((await this.page.waitForXPath(xpath, { timeout: 500 })) !== null) {
+            if ((await this.page.waitForXPath(xpath, { timeout: 1500 })) !== null) {
                 return true;
             }
         }
