@@ -10,7 +10,8 @@
         "Wohin soll es gehen?": "Wohin soll es gehen?",
         "Hinflug am": "Hinflug am",
         "Suchen": "Suchen",
-        "Akzeptieren": "Akzeptieren"
+        "Akzeptieren": "Akzeptieren",
+        "Nein": "Nein"
     },
     "fr": {
         "url": "https://www.expedia.fr",
@@ -23,6 +24,7 @@
         "Wohin soll es gehen?": "Où allez-vous",
         "Hinflug am": "Date de départ",
         "Suchen": "Rechercher",
-        "Akzeptieren": "Accepter"
+        "Akzeptieren": "Accepter",
+        "Nein": "Non"
     }
 }
