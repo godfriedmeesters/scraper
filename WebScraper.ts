@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 22:06:56
+ * @ Modified time: 2021-04-17 23:39:05
  * @ Description:
  */
 
@@ -346,6 +346,18 @@ class WebScraper {
 
         //     return false;
         // }
+    }
+
+    async saveContent(className) {
+        const html = await this.page.content();
+
+        var fileName = `${className}-${Date.now()}.html`;
+        var htmlPath = path.join(__dirname, 'html', fileName);
+        fs.writeFileSync(htmlPath, html);
+
+        return htmlPath;
+
+
     }
 
     async isCssInpage(css) {

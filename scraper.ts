@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 14:16:15
+ * @ Modified time: 2021-04-17 23:38:57
  * @ Description:
  */
 
@@ -44,7 +44,7 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
         const inputData = JSON.parse(
             fs.readFileSync("proxies.json")
         );
-//
+        //
         // var use_proxy = Math.random() < 0.7;
         var use_proxy = false;
         const proxies = inputData.proxies;
@@ -311,6 +311,13 @@ async function processScraperJob(job, done) {
             const screenshotAtError = await scraper.takeScreenShot(job.data.scraperClass);
             //split error message, because taking screenshot can crash
             errorMessage += ', screenshot available at ' + screenshotAtError
+
+            const htmlName = await scraper.saveContent(job.data.scraperClass);
+
+            errorMessage += ", html available at " + htmlName;
+
+
+
             logger.error(errorMessage);
 
             await erroredScrapeQueue.add({

@@ -4,4 +4,5 @@ export interface IScraper {
     startClient: (params: any) => Promise<any>;
     stopClient: (params: any) => Promise<any>;
     takeScreenShot: (className: String) => Promise<any>;
+    saveContent:() => String;
 }

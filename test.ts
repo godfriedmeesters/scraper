@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+var fs = require('fs');
 
 (async () => {
     // var browser = await puppeteer.launch({headless:false})
@@ -20,6 +21,13 @@ var browser = await openBrowser(puppeteer);
 
     var page = await browser.newPage()
     await page.goto('https://www.hln.be/')
+
+    const html = await page.content();
+
+    var fileName = `${Date.now()}.html`;
+  //  var htmlPath = path.join(__dirname, 'html', fileName);
+    fs.writeFileSync(fileName, html);
+
     var title = await page.title()
     console.log(title)
     await page.close();
