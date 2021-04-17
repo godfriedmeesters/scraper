@@ -11,7 +11,7 @@
         "Hinflug am": "Hinflug am",
         "Suchen": "Suchen",
         "Akzeptieren": "Akzeptieren",
-        "Nein": "Nein"
+        "nein": "nein"
     },
     "fr": {
         "url": "https://www.expedia.fr",
@@ -25,6 +25,6 @@
         "Hinflug am": "Date de départ",
         "Suchen": "Rechercher",
         "Akzeptieren": "Accepter",
-        "Nein": "Non"
+        "nein": "non"
     }
 }

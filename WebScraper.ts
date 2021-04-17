@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 20:27:42
+ * @ Modified time: 2021-04-17 22:06:56
  * @ Description:
  */
 
@@ -142,6 +142,26 @@ class WebScraper {
         }
 
         this.page = await this.browser.newPage();
+        ////////**********************THROTTLE */
+
+
+        // // Connect to Chrome DevTools
+        // const client = await this.page.target().createCDPSession()
+
+        // // Set throttling property
+        // await client.send('Network.emulateNetworkConditions', {
+        //     'offline': false,
+        //     'downloadThroughput': 200 * 1024 / 4,
+        //     'uploadThroughput': 200 * 1024 / 8,
+        //     'latency': 10
+        // })
+
+
+
+
+        ///////////////////////////////////
+
+
 
         this.page.on('response', (response) => {
             if (parseInt(response.status()) >= 400) {
@@ -227,7 +247,7 @@ class WebScraper {
 
             if (linkHandlers.length > 0) {
 
-                logger.info("Clking " +  linkHandlers[0]);
+                logger.info("Clicking " + linkHandlers[0]);
                 await linkHandlers[0].click();
             } else {
                 throw new Error("xpath not found");
@@ -278,17 +298,54 @@ class WebScraper {
         }
     }
 
-    async isXpathInPage(xpath) {
-        logger.info("Checking if xpath in page: " + xpath)
-        await this.page.waitFor(5000);
+    async clickOptionalElementByTextIgnoreCase(text) {
+        return this.clickOptionalElementByXpath("//*[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" + text + "')]");
+    }
+
+    async isTextInPageIgnoreCase(text) {
+
         try {
-            if ((await this.page.waitForXPath(xpath, { timeout: 1000 })) !== null) {
+            if ((await this.page.waitForXPath("//*[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" + text + "')]", { timeout: 2000 })) !== null) {
+
                 return true;
             }
         }
         catch (exception) {
             return false;
         }
+
+    }
+
+    async isXpathInPage(elemXpath) {
+        logger.info("Checking if xpath in page: " + elemXpath);
+
+        await this.page.waitFor(1000);
+        try {
+
+            await this.page.waitForFunction(
+                xpath => document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue,
+                { timeout: 3000 },
+                elemXpath
+            );
+
+            return true;
+        }
+        catch (ex) {
+            return false;
+        }
+
+
+
+        // await this.page.waitFor(5000);
+        // try {
+        //     if ((await this.page.waitForXPath(xpath, { timeout: 1000 })) !== null) {
+        //         return true;
+        //     }
+        // }
+        // catch (exception) {
+
+        //     return false;
+        // }
     }
 
     async isCssInpage(css) {
@@ -333,6 +390,8 @@ class WebScraper {
 
         await this.clickOptionalElementByXpath("//*[contains(text(),'" + text + "')]");
     }
+
+
 
     async clickElementByTextContains(text: string) {
         logger.info(`click element by text contains ${text}`);
