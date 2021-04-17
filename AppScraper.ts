@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 23:35:15
+ * @ Modified time: 2021-04-17 23:54:26
  * @ Description:
  */
 
@@ -104,7 +104,7 @@ class AppScraper {
         return link.click();
     }
 
-    saveContent(scraperClass)
+    async saveContent(scraperClass)
     {
         return "not implemented";
     }
