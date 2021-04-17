@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 14:22:38
+ * @ Modified time: 2021-04-17 17:27:52
  * @ Description:
  */
 
@@ -109,36 +109,46 @@ class WebScraper {
 
         logger.info("starting web client with options {" + options + "}");
 
-        if (yn(process.env.IN_DEV)) {
-            logger.info("using Windows Chrome browser");
-            this.browser = await puppeteer.launch({
-                headless: false,
-                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                args: ['--start-maximized', ...options]
-            });
-        }
-        else {
-            // if ("headful" in params) {
-            logger.info("using Linux headful browser");
-            this.browser = await puppeteer.launch({
-                headless: false,
-                executablePath: "/usr/bin/google-chrome-stable",
-                args: ['--no-xshm',
-                    '--disable-dev-shm-usage',
-                    '--no-first-run',
-                    '--window-size=1920,1080', '--start-maximized', ...options]
-            });
-            // }
-            // else {
-            // logger.info("using headless browser");
-            // this.browser = await puppeteer.launch({
-            //     headless: true,
-            //     args: [
-            //         '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
-            // });
 
-            //}
+        try {
+            this.browser = await puppeteer.connect({ "browserWSEndpoint": "http://127.0.0.1:9222" });
+            logger.info("Connected to existing browser instance");
+        } catch (ex) {
+            logger.info("Could not connect to existing browser instance, starting new instance...");
+
+            if (yn(process.env.IN_DEV)) {
+                logger.info("using Windows Chrome browser");
+                this.browser = await puppeteer.launch({
+                    headless: false,
+                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+                    args: ['--start-maximized', "--remote-debugging-port=9222", ...options]
+                });
+            }
+            else {
+                // if ("headful" in params) {
+                logger.info("using Linux headful browser");
+                this.browser = await puppeteer.launch({
+                    headless: false,
+                    executablePath: "/usr/bin/google-chrome-stable",
+                    args: ['--no-xshm',
+                        '--disable-dev-shm-usage',
+                        '--no-first-run',
+                        '--window-size=1920,1080', '--start-maximized', "--remote-debugging-port=9222", ...options]
+                });
+                // }
+                // else {
+                // logger.info("using headless browser");
+                // this.browser = await puppeteer.launch({
+                //     headless: true,
+                //     args: [
+                //         '--window-size=1920,1080', '--start-maximized', '--no-sandbox', ...options]
+                // });
+
+                //}
+            }
         }
+
+
 
         this.page = await this.browser.newPage();
 
@@ -188,9 +198,9 @@ class WebScraper {
         }
 
         if (this.browser != null) {
-            logger.info('Stopping web client');
+            logger.info('Stopping web client - closing page');
             await this.page.close();
-            await this.browser.close();
+           // await this.browser.close();
         }
     }
 
@@ -226,7 +236,7 @@ class WebScraper {
 
             if (linkHandlers.length > 0) {
 
-                logger.info("Clking " +  linkHandlers[0]);
+                logger.info("Clking " + linkHandlers[0]);
                 await linkHandlers[0].click();
             } else {
                 throw new Error("xpath not found");
