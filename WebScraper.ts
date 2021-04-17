@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 12:31:22
+ * @ Modified time: 2021-04-17 14:22:38
  * @ Description:
  */
 
@@ -189,6 +189,7 @@ class WebScraper {
 
         if (this.browser != null) {
             logger.info('Stopping web client');
+            await this.page.close();
             await this.browser.close();
         }
     }
