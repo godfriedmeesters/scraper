@@ -42,6 +42,8 @@ RUN mkdir /usr/src/app/compressedScreenshots
 RUN chown -v -R apps:apps /usr/src/app/compressedScreenshots
 RUN mkdir /usr/src/app/screenshots
 RUN chown -v -R apps:apps /usr/src/app/screenshots
+RUN mkdir /usr/src/app/html
+RUN chown -v -R apps:apps /usr/src/app/html
 RUN mkdir /usr/src/app/recycledCookies
 RUN chown -v -R apps:apps /usr/src/app/recycledCookies
 
