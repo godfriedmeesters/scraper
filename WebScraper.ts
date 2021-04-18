@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 11:02:43
+ * @ Modified time: 2021-04-18 11:19:50
  * @ Description:
  */
 
@@ -90,11 +90,6 @@ class WebScraper {
 
 
     async startClient(params) {
-        let locale = '--lang=de-DE,de';
-
-        this.language = "de";
-
-
         puppeteer.use(pluginStealth());
 
         puppeteer.use(
@@ -107,15 +102,27 @@ class WebScraper {
             })
         )
 
+        let locale = '--lang=de-DE,de';
+
+        this.language = "de";
+
+        await this.page.setExtraHTTPHeaders({
+            'Accept-Language': 'de'
+        });
+
 
         var options = [];
 
         if ("language" in params && params.language == "fr") {
             locale = '--lang=fr-FR,fr';
-            options.push(locale);
             this.language = "fr";
             this.translator.changeLanguage("fr");
+            await this.page.setExtraHTTPHeaders({
+                'Accept-Language': 'fr'
+            });
         }
+
+        options.push(locale);
 
         this.logInfo("Using language " + this.language);
 
@@ -181,7 +188,7 @@ class WebScraper {
 
         this.page.on('response', (response) => {
             if (parseInt(response.status()) >= 400) {
-                logger.error("Getting page " + response.request().url() + " resulted in status code " + response.status());
+                this.logError("Getting page " + response.request().url() + " resulted in status code " + response.status());
             }
         })
 

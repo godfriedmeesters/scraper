@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 23:38:57
+ * @ Modified time: 2021-04-18 11:21:09
  * @ Description:
  */
 
@@ -45,8 +45,8 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
             fs.readFileSync("proxies.json")
         );
         //
-        // var use_proxy = Math.random() < 0.7;
-        var use_proxy = false;
+        var use_proxy = Math.random() < 0.6;
+        //var use_proxy = false;
         const proxies = inputData.proxies;
 
         const proxy_index = Math.floor(Math.random() * proxies.length);
@@ -56,10 +56,6 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
             logger.info("Selected proxy " + proxies[proxy_index]);
         }
         else { logger.info("No proxy selected") }
-
-        if (job.data.scraperClass == "KayakWebScraper") {
-            job.data.params.headful = true;
-        }
 
 
         (async () => {
