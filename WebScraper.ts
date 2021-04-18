@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 20:34:34
+ * @ Modified time: 2021-04-18 20:53:34
  * @ Description:
  */
 
@@ -84,7 +84,9 @@ class WebScraper {
 
     async logError(message) {
         const hostname = os.hostname;
-        const url = await this.page.url();
+        var url = "";
+        if (this.page != null)
+            url = await this.page.url();
         logger.error(`${hostname}: ${url} : ${message}`)
     }
 
