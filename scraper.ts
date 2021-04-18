@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 11:21:09
+ * @ Modified time: 2021-04-18 12:15:16
  * @ Description:
  */
 
@@ -15,6 +15,7 @@ import scraperClasses from './index';
 const yn = require('yn');
 const redis = require("redis");
 const { promisify } = require("util");
+import dateFormat from 'dateformat';
 
 const os = require('os');
 
@@ -56,6 +57,26 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
             logger.info("Selected proxy " + proxies[proxy_index]);
         }
         else { logger.info("No proxy selected") }
+
+
+        if ("randomize" in job.data.params) {
+            //only for flights
+            if ("departureDate" in job.data.inputData) {
+                logger.info("randomizing dep date")
+                const d = new Date(job.data.inputData.departureDate);
+                d.setDate(d.getDate() + ((Math.random() > 0.5) ? 1 : 0));
+
+                const newDate = dateFormat(d, "yyyy-mm-dd");
+
+
+                job.data.inputData.originalDepartureDate = job.data.inputData.departureDate;
+                job.data.inputData.departureDate = newDate;
+
+                logger.info("new dep date = " + job.data.inputData.departureDate);
+                logger.info("orig dep date = " + job.data.inputData.originalDepartureDate);
+
+            }
+        }
 
 
         (async () => {

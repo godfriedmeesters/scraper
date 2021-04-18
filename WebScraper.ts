@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 11:19:50
+ * @ Modified time: 2021-04-18 11:59:31
  * @ Description:
  */
 
@@ -87,8 +87,6 @@ class WebScraper {
     }
 
 
-
-
     async startClient(params) {
         puppeteer.use(pluginStealth());
 
@@ -106,20 +104,12 @@ class WebScraper {
 
         this.language = "de";
 
-        await this.page.setExtraHTTPHeaders({
-            'Accept-Language': 'de'
-        });
-
-
         var options = [];
 
         if ("language" in params && params.language == "fr") {
             locale = '--lang=fr-FR,fr';
             this.language = "fr";
             this.translator.changeLanguage("fr");
-            await this.page.setExtraHTTPHeaders({
-                'Accept-Language': 'fr'
-            });
         }
 
         options.push(locale);
@@ -165,25 +155,10 @@ class WebScraper {
         }
 
         this.page = await this.browser.newPage();
-        ////////**********************THROTTLE */
 
-
-        // // Connect to Chrome DevTools
-        // const client = await this.page.target().createCDPSession()
-
-        // // Set throttling property
-        // await client.send('Network.emulateNetworkConditions', {
-        //     'offline': false,
-        //     'downloadThroughput': 200 * 1024 / 4,
-        //     'uploadThroughput': 200 * 1024 / 8,
-        //     'latency': 10
-        // })
-
-
-
-
-        ///////////////////////////////////
-
+        await this.page.setExtraHTTPHeaders({
+            'Accept-Language': this.language
+        });
 
 
         this.page.on('response', (response) => {

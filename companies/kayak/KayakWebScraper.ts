@@ -2,16 +2,14 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 10:44:52
+ * @ Modified time: 2021-04-18 11:41:10
  * @ Description:
  */
 
 
 import { WebScraper } from "../../WebScraper";
-import dateFormat from 'dateformat';
 import { IScraper } from "../../IScraper";
 import { FlightOffer } from "../../types";
-import { logger } from "../../logger";
 var path = require('path');
 
 
