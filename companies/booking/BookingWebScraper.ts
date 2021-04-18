@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-30 21:04:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 09:06:24
+ * @ Modified time: 2021-04-18 10:42:42
  * @ Description:
  */
 
@@ -27,7 +27,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         const destination = inputData.location;
 
-        logger.info("Navigating to " + this.translator.translate("url"));
+
         await this.page.goto(this.translator.translate("url"));
 
         await this.page.waitFor(2000);
@@ -44,7 +44,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         const strDate = date.format(d, "D MMMM YYYY");
 
-        logger.info("looking for date " + strDate);
+        this.logInfo("looking for date " + strDate);
 
 
 
@@ -53,7 +53,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
         var dateInPage: boolean = await this.isXpathInPage(xp);
 
         while (!dateInPage) {
-            logger.info("Navigating to next month in calendar");
+            this.logInfo("Navigating to next month in calendar");
             await this.clickElementByCss('.bui-calendar__control--next');
 
             dateInPage = await this.isXpathInPage(xp);
@@ -116,13 +116,13 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
             isNextDisabled = await this.isCssInpage(".bui-pagination__item.bui-pagination__next-arrow.bui-pagination__item--disabled");
             if (isNextDisabled) {
-                logger.info("No more next button");
+                this.logInfo("No more next button");
                 break;
             }
             else {
                 const isNextAvailable = await this.isCssInpage(".bui-pagination__item.bui-pagination__next-arrow");
 
-                logger.info("Next button available");
+                this.logInfo("Next button available");
 
                 if (isNextAvailable) {
                     //await this.page.waitForNavigation();
@@ -133,7 +133,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
                     break;
 
             }
-            logger.info("Going to next page");
+            this.logInfo("Going to next page");
 
         }
 

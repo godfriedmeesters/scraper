@@ -2,12 +2,13 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 23:53:41
+ * @ Modified time: 2021-04-18 10:41:02
  * @ Description:
  */
 
 
 require('dotenv').config();
+const os = require('os');
 
 var path = require('path');
 const yn = require('yn');
@@ -73,6 +74,21 @@ class WebScraper {
     }
 
 
+    async logInfo(message) {
+        const hostname = os.hostname;
+        const url = await this.page.url();
+        this.logger.info (`${hostname}: ${url} : ${message}`)
+    }
+
+    async logError(message) {
+        const hostname = os.hostname;
+        const url = await this.page.url();
+        this.logger.error(`${hostname}: ${url} : ${message}`)
+    }
+
+
+
+
     async startClient(params) {
         let locale = '--lang=de-DE,de';
 
@@ -101,17 +117,17 @@ class WebScraper {
             this.translator.changeLanguage("fr");
         }
 
-        logger.info("Using language " + this.language);
+        this.logInfo("Using language " + this.language);
 
         if ("proxy" in params) {
             options.push(`--proxy-server=${params.proxy}`);
         }
 
 
-        logger.info("starting web client with options {" + options + "}");
+        this.logInfo("starting web client with options {" + options + "}");
 
         if (yn(process.env.IN_DEV)) {
-            logger.info("using Windows Chrome browser");
+            this.logInfo("using Windows Chrome browser");
             this.browser = await puppeteer.launch({
                 headless: false,
                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
@@ -120,7 +136,7 @@ class WebScraper {
         }
         else {
             // if ("headful" in params) {
-            logger.info("using Linux headful browser");
+            this.logInfo("using Linux headful browser");
             this.browser = await puppeteer.launch({
                 headless: false,
                 executablePath: "/usr/bin/google-chrome-stable",
@@ -131,7 +147,7 @@ class WebScraper {
             });
             // }
             // else {
-            // logger.info("using headless browser");
+            // logInfo("using headless browser");
             // this.browser = await puppeteer.launch({
             //     headless: true,
             //     args: [
@@ -170,7 +186,7 @@ class WebScraper {
         })
 
         if ("useAuthCookies" in params && yn(params.useAuthCookies)) {
-            logger.info("Using authentication cookies...");
+            this.logInfo("Using authentication cookies...");
             const cookiesString = fs.readFileSync(this.translator.translate("authCookieFile"));
             const cookies = JSON.parse(cookiesString);
             await this.page.setCookie(...cookies);
@@ -179,7 +195,7 @@ class WebScraper {
 
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
             if (fs.existsSync(this.translator.translate("recycledCookieFile"))) {
-                logger.info(`Recycling cookies from ${this.translator.translate("recycledCookieFile")} ...`);
+                this.logInfo(`Recycling cookies from ${this.translator.translate("recycledCookieFile")} ...`);
                 const cookiesString = fs.readFileSync(this.translator.translate("recycledCookieFile"));
                 const cookies = JSON.parse(cookiesString);
                 await this.page.setCookie(...cookies);
@@ -198,18 +214,19 @@ class WebScraper {
     }
 
     async stopClient(params) {
-
+        const url = await this.page.url();
+        this.logInfo("Stopping web client at " + url)
 
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
             const cookies = await this.page.cookies();
             const filePath = this.translator.translate("recycledCookieFile");
 
-            logger.info(`Saving cookies to ${filePath}`);
+            this.logInfo(`Saving cookies to ${filePath}`);
             await fs.writeFile(filePath, JSON.stringify(cookies, null, 2), () => { });
         }
 
         if (this.browser != null) {
-            logger.info('Stopping web client');
+            this.logInfo('Stopping web client');
             await this.page.close();
             await this.browser.close();
         }
@@ -217,7 +234,7 @@ class WebScraper {
 
     async takeScreenShot(className) {
         var imageName = `${className}-${Date.now()}.png`;
-        logger.info("Taking website screenshot with filename " + imageName);
+        this.logInfo("Taking website screenshot with filename " + imageName);
         var imagePath = path.join(__dirname, 'screenshots', imageName);
         if (this.page != null) {
             await this.page.waitFor(500);
@@ -229,7 +246,7 @@ class WebScraper {
 
     async transferScreenshotsToFtp() {
         await this.sleep(1000);
-        logger.info("Sending screenshots to FTP");
+        this.logInfo("Sending screenshots to FTP");
         uploadScreenshotsToFTP();
     }
 
@@ -238,7 +255,7 @@ class WebScraper {
     }
 
     async clickOptionalElementByXpath(xpath) {
-        logger.info("Cliking optional element by xpath " + xpath);
+        this.logInfo("Cliking optional element by xpath " + xpath);
         try {
             await this.page.waitFor(1000);
 
@@ -247,7 +264,7 @@ class WebScraper {
 
             if (linkHandlers.length > 0) {
 
-                logger.info("Clicking " + linkHandlers[0]);
+                this.logInfo("Clicking " + linkHandlers[0]);
                 await linkHandlers[0].click();
             } else {
                 throw new Error("xpath not found");
@@ -257,13 +274,13 @@ class WebScraper {
     }
 
     async clickElementByXpath(xpath) {
-        logger.info("Waiting for element with xpath " + xpath);
+        this.logInfo("Waiting for element with xpath " + xpath);
         await this.page.waitFor(1000);
 
         const linkHandlers = await this.page.$x(xpath, { timeout: 5000 });
 
         if (linkHandlers.length > 0) {
-            logger.info("Clicking element with xpath " + xpath);
+            this.logInfo("Clicking element with xpath " + xpath);
             await this.page.waitFor(500);
             return linkHandlers[0].click();
         } else {
@@ -272,7 +289,7 @@ class WebScraper {
     }
 
     async getElementByXpath(xpath) {
-        logger.info("Getting element with xpath " + xpath);
+        this.logInfo("Getting element with xpath " + xpath);
         await this.page.waitFor(1000);
 
         const linkHandlers = await this.page.$x(xpath);
@@ -316,21 +333,15 @@ class WebScraper {
 
     }
 
-    async isXpathInPage(elemXpath) {
-        logger.info("Checking if xpath in page: " + elemXpath);
-
+    async isXpathInPage(xpath) {
+        this.logInfo("Checking if xpath in page: " + xpath)
         await this.page.waitFor(1000);
         try {
-
-            await this.page.waitForFunction(
-                xpath => document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue,
-                { timeout: 3000 },
-                elemXpath
-            );
-
-            return true;
+            if ((await this.page.waitForXPath(xpath, { timeout: 5000 })) !== null) {
+                return true;
+            }
         }
-        catch (ex) {
+        catch (exception) {
             return false;
         }
 
@@ -378,7 +389,7 @@ class WebScraper {
     }
 
     async clickElementByText(text: string) {
-        logger.info(`click element by text  ${text}`);
+        this.logInfo(`click element by text  ${text}`);
         await this.page.waitFor(500);
         return this.clickElementByXpath("//*[text() = '" + text + "']");
     }
@@ -392,27 +403,27 @@ class WebScraper {
 
 
     async clickElementByTextContains(text: string) {
-        logger.info(`click element by text contains ${text}`);
+        this.logInfo(`click element by text contains ${text}`);
         return this.clickElementByXpath("//*[contains(text(), '" + text + "')]");
     }
 
 
     async getElementByCss(css) {
-        logger.info(`Get element by css ${css}`);
+        this.logInfo(`Get element by css ${css}`);
         await this.page.waitFor(500);
         await this.page.waitForSelector(css, { visible: true });
         return this.page.$(css);
     }
 
     async getElementsByCss(css) {
-        logger.info(`Get elements by css ${css}`);
+        this.logInfo(`Get elements by css ${css}`);
         await this.page.waitFor(500);
         await this.page.waitForSelector(css, { visible: true });
         return this.page.$$(css);
     }
 
     async getElementsTextByCss(css) {
-        logger.info(`Getting elements' text by CSS ${css}`);
+        this.logInfo(`Getting elements' text by CSS ${css}`);
         var elements = await this.getElementsByCss(css);
         var texts = [];
 
@@ -428,13 +439,13 @@ class WebScraper {
     }
 
     async getTextFromElementByCss(css: string, elem: any) {
-        logger.info(`Get text from element by css ${css}`);
+        this.logInfo(`Get text from element by css ${css}`);
         let element = await elem.$(css);
         return this.page.evaluate(el => el.textContent, element)
     }
 
     async getTextsFromElementByCss(css: string, elem: any) {
-        logger.info(`Get texts from elements by css ${css}`);
+        this.logInfo(`Get texts from elements by css ${css}`);
         let elements = await elem.$$(css);
         var txts = [];
         for (var elem of elements) {
@@ -447,7 +458,7 @@ class WebScraper {
     }
 
     async clickElementByCss(css) {
-        logger.info(`Click element by css ${css}`);
+        this.logInfo(`Click element by css ${css}`);
         const elem = await this.page.waitForSelector(css, { visible: true });
 
         await this.page.waitFor(500);
@@ -455,17 +466,17 @@ class WebScraper {
     }
 
     async clickOptionalElementByCss(css) {
-        logger.info(`Click optional element by css ${css}`);
+        this.logInfo(`Click optional element by css ${css}`);
         try {
-            logger.info(`Waiting for css selector ${css}`);
+            this.logInfo(`Waiting for css selector ${css}`);
             await this.page.waitForSelector(css, { timeout: 5000, visible: true });
-            logger.info(`Clicking css selector ${css}`);
+            this.logInfo(`Clicking css selector ${css}`);
             return this.page.click(css);
         } catch (ex) { }
     }
 
     async getElementTextByCss(css) {
-        logger.info(`get element text by css ${css}`);
+        this.logInfo(`get element text by css ${css}`);
         const elem = await this.getElementByCss(css);
         return this.page.evaluate(el => {
             return el.textContent;
@@ -473,14 +484,14 @@ class WebScraper {
     }
 
     async getElementsByXpath(xpath) {
-        logger.info(`get elements  by xpath ${xpath}`);
+        this.logInfo(`get elements  by xpath ${xpath}`);
         await this.page.waitFor(1000);
         await this.page.waitForXPath(xpath, { timeout: 500 });
         return this.page.$x(xpath);
     }
 
     async getElementTextByXpath(xpath: string) {
-        logger.info(`get elements text by xpath ${xpath}`);
+        this.logInfo(`get elements text by xpath ${xpath}`);
         const elements = await this.getElementsByXpath(xpath);
         const text = await this.page.evaluate(el => {
             return el.textContent;

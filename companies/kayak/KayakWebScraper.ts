@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-16 09:53:40
+ * @ Modified time: 2021-04-18 10:44:52
  * @ Description:
  */
 
@@ -148,7 +148,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
             }
             catch (ex) {
 
-                logger.info("reached max page");
+                this.logInfo("reached max page");
                 moreFound = false;
             }
         }

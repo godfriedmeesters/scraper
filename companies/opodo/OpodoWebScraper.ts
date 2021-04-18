@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-14 12:53:48
+ * @ Modified time: 2021-04-18 10:44:24
  * @ Description:
  */
 
@@ -103,7 +103,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
                     const text = await response.text();
                     if (text.includes("itineraries")) {
-                        logger.info("graphql found");
+                        this.logInfo("graphql found");
                         const json = JSON.parse(text);
 
                         flightOffers = this.getFlightsGraphSQL(json);
@@ -114,7 +114,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
                 if (response.status() == 200) {
                     const text = await response.text();
                     if (text.includes("segItems")) {
-                        logger.info("data found");
+                        this.logInfo("data found");
 
                         const json = JSON.parse(text);
 

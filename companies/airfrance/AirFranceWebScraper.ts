@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-16 22:54:16
+ * @ Modified time: 2021-04-18 10:42:56
  * @ Description:
  */
 
@@ -99,7 +99,7 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
         await this.page.waitForSelector('.bw-itinerary-row__header', { visible: true });
         var offerNodes = await this.page.$$(".bw-itinerary-row__header");
 
-        logger.info("Found " + offerNodes.length + " offers");
+        this.logInfo("Found " + offerNodes.length + " offers");
         var screenshot = await this.takeScreenShot(this.constructor.name);
 
 

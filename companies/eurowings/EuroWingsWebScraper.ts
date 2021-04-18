@@ -17,7 +17,7 @@ export class EuroWingsWebScraper extends WebScraper implements IScraper {
         const origin = inputData.origin;
         const destination = inputData.destination;
 
-        logger.info("Going to url " + this.translator.translate("url"));
+        this.logInfo("Going to url " + this.translator.translate("url"));
 
         await this.page.goto(this.translator.translate("url"));
 
