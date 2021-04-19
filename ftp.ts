@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-25 14:52:17
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-02-12 15:45:48
+ * @ Modified time: 2021-04-19 11:08:12
  * @ Description:
  */
 
@@ -15,6 +15,7 @@ require('dotenv').config();
 const imagemin = require('imagemin');
 const imageminPngquant = require('imagemin-pngquant');
 import { logger } from "./logger";
+
 
 export async function uploadScreenshotsToFTP() {
 

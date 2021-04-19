@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-30 21:04:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 10:42:42
+ * @ Modified time: 2021-04-19 11:20:56
  * @ Description:
  */
 
@@ -10,7 +10,6 @@
 import { WebScraper } from "../../WebScraper";
 import { IScraper } from "../../IScraper";
 import { HotelOffer } from "../../types";
-import { logger } from '../../logger';
 var path = require('path');
 const de = require('date-and-time/locale/de');
 const fr = require('date-and-time/locale/fr');

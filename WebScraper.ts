@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 20:53:34
+ * @ Modified time: 2021-04-19 12:38:23
  * @ Description:
  */
 
@@ -107,6 +107,8 @@ class WebScraper {
         let locale = '--lang=de-DE,de';
 
         this.language = "de";
+
+        this.translator.changeLanguage("de");
 
         var options = [];
 
