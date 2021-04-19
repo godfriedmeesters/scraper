@@ -1,10 +1,17 @@
+/**
+ * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Create Time: 2021-03-17 12:42:16
+ * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
+ * @ Modified time: 2021-04-19 13:43:50
+ * @ Description:
+ */
+
 import { IScraper } from "../../IScraper";
 import { FlightOffer } from "../../types";
 import * as _ from 'underscore';
-import { logger } from "../../logger";
 import { AppScraper } from "../../AppScraper";
 
-export class KayakAppBrowserScraper extends AppScraper implements IScraper {
+export class KayakMobileBrowserScraper extends AppScraper implements IScraper {
 
     constructor() {
         super(JSON.stringify({

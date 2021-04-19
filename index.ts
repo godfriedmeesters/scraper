@@ -19,7 +19,7 @@ import { KayakWebScraper } from './companies/kayak/KayakWebScraper';
 import { KayakAppScraper } from './companies/kayak/KayakAppScraper';
 import { OpodoWebScraper } from './companies/opodo/OpodoWebScraper';
 import { OpodoAppScraper } from './companies/opodo/OpodoAppScraper';
-import { KayakAppBrowserScraper } from './companies/kayak/KayakAppBrowserScraper';
+import { KayakMobileBrowserScraper } from './companies/kayak/KayakMobileBrowserScraper';
 
 //index of all scrapers
 export default [
@@ -35,5 +35,5 @@ export default [
   KayakAppScraper,
   OpodoWebScraper,
   OpodoAppScraper,
-  KayakAppBrowserScraper
+  KayakMobileBrowserScraper
 ];

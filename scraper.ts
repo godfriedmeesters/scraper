@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 12:15:16
+ * @ Modified time: 2021-04-19 13:53:39
  * @ Description:
  */
 
@@ -105,6 +105,26 @@ if (yn(process.env.PULL_REAL_DEVICE_QUEUE)) {
         })();
     });
 }
+
+
+
+if (yn(process.env.PULL_MOBILE_BROWSER_QUEUE)) {
+    realDeviceScraperCommands.process((job, done) => {
+        logger.info(`Got new scraper job on mobile browser queue: ${job.data.scraperClass} with params:  ${JSON.stringify(job.data.params)} and input data
+    ${JSON.stringify(job.data.inputData)} `);
+
+        (async () => {
+            try {
+                await processScraperJob(job, done);
+            } catch (ex) {
+                logger.error(`FATAL error when processing job ${JSON.stringify(job)}: ${ex.stack}`)
+
+            }
+        })();
+    });
+}
+
+
 
 if (yn(process.env.PULL_EMULATOR_QUEUE)) {
     emulatedDeviceScraperCommands.process((job, done) => {
