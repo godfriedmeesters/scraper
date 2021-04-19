@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-19 12:38:23
+ * @ Modified time: 2021-04-19 13:00:32
  * @ Description:
  */
 
@@ -202,7 +202,9 @@ class WebScraper {
     }
 
     async stopClient(params) {
-        const url = await this.page.url();
+        var url = "";
+        if (this.page != null)
+            url = await this.page.url();
         this.logInfo("Stopping web client at " + url)
 
         if ("recycleCookies" in params && yn(params.recycleCookies)) {
