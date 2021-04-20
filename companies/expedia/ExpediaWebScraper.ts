@@ -23,7 +23,8 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
         await this.clickOptionalElementByCss('.uitk-gdpr-banner-btn');
         await this.sleep(5000);
 
-      await this.clickOptionalElementByTextIgnoreCase(this.translator.translate("nein"));
+        //optional customer satisfaction form
+        await this.clickOptionalElementByXpath(`//button[contains(text(), '${this.translator.translate("nein")}')]`);
 
         await this.clickElementByXpath("//a[@aria-controls='wizard-flight-pwa']");
 
