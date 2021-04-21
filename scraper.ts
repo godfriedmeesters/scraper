@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-19 13:53:39
+ * @ Modified time: 2021-04-21 14:50:56
  * @ Description:
  */
 
@@ -30,6 +30,7 @@ const options = {
 const emulatedDeviceScraperCommands = new Queue('emulatedDeviceScraperCommands', options);
 const realDeviceScraperCommands = new Queue('realDeviceScraperCommands', options);
 const webScraperCommands = new Queue('webScraperCommands', options);
+const mobileBrowserScraperCommands = new Queue('mobileBrowserScraperCommands', options);
 var fs = require('fs');
 
 const finishedScrapeQueue = new Queue('finishedScrapes', options);
@@ -109,7 +110,7 @@ if (yn(process.env.PULL_REAL_DEVICE_QUEUE)) {
 
 
 if (yn(process.env.PULL_MOBILE_BROWSER_QUEUE)) {
-    realDeviceScraperCommands.process((job, done) => {
+    mobileBrowserScraperCommands.process((job, done) => {
         logger.info(`Got new scraper job on mobile browser queue: ${job.data.scraperClass} with params:  ${JSON.stringify(job.data.params)} and input data
     ${JSON.stringify(job.data.inputData)} `);
 
