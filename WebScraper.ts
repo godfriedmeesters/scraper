@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-19 21:30:03
+ * @ Modified time: 2021-04-21 11:17:54
  * @ Description:
  */
 
@@ -142,7 +142,7 @@ class WebScraper {
             this.logInfo("using Linux headful browser");
             this.browser = await puppeteer.launch({
                 headless: false,
-                timeout:60000,
+                timeout: 60000,
                 executablePath: "/usr/bin/google-chrome-stable",
                 args: ['--no-xshm',
                     '--disable-dev-shm-usage',
@@ -339,13 +339,17 @@ class WebScraper {
     }
 
     async saveContent(className) {
-        const html = await this.page.content();
+        if (this.page != null) {
+            const html = await this.page.content();
 
-        var fileName = `${className}-${Date.now()}.html`;
-        var htmlPath = path.join(__dirname, 'html', fileName);
-        fs.writeFileSync(htmlPath, html);
+            var fileName = `${className}-${Date.now()}.html`;
+            var htmlPath = path.join(__dirname, 'html', fileName);
+            fs.writeFileSync(htmlPath, html);
 
-        return htmlPath;
+            return htmlPath;
+        }
+
+        return "not possible to save html"
     }
 
     async isCssInpage(css) {
