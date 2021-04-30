@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 12:13:02
+ * @ Modified time: 2021-04-30 14:03:35
  * @ Description:
  */
 
@@ -20,68 +20,71 @@ export class AirFranceWebScraper extends WebScraper implements IScraper {
     constructor() { super(path.join(__dirname, "lang.json")); }
 
     async scrapeUntilSearch(inputData: any) {
-        // const depDate = new Date(inputData.departureDate);
-        // const origin = inputData.origin;
-        // const destination = inputData.destination;
-
-        // await this.page.goto(this.translator.translate("url"));
-
-        // await this.clickOptionalElementByCss('.cookiebar-agree-button-agree');
-        // await this.clickOptionalElementByCss('.bw-cookie-banner__button.bw-cookie-banner__button-accent');
-
-
-        // await this.page.waitFor(1000);
-
-        // const day = dateFormat(depDate, 'd');
-        // const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
-
-        // const yearMonth = shortMonthNames[depDate.getMonth()].toUpperCase() + " " + depDate.getFullYear();
-
-        // await this.clickElementByText(this.translator.translate("Hin- und Rückflug"));
-        // await this.page.waitFor(2000);
-        // await this.clickElementByText(this.translator.translate("Nur Hinflug"));
-        // await this.page.waitFor(2000);
-
-        // await this.clickElementByText(this.translator.translate("Abflugdatum"));
-
-        // await this.scrollCalendar(".mat-calendar-next-button", yearMonth)
-
-        // await this.clickElementByText(" " + day + " ");
-
-        // await this.page.waitForSelector('#station-list-0');
-
-        // await this.page.click('#mat-input-0');
-        // await this.page.type('#mat-input-0', origin, { delay: 100 });
-        // await this.page.waitFor(1000);
-        // await this.tapEnter();
-        // await this.page.waitFor(1000);
-
-        // await this.page.click('#mat-input-1');
-
-        // await this.page.type('#mat-input-1', destination, { delay: 100 });
-        // await this.page.waitFor(1000);
-        // await this.tapEnter();
-
-    };
-
-    async scrapeFromSearch(inputData) {
-        const departureDate = inputData.departureDate;
+        const depDate = new Date(inputData.departureDate);
         const origin = inputData.origin;
         const destination = inputData.destination;
-        const formattedDate = dateFormat(new Date(departureDate), "yyyymmdd");
 
-        // https://wwws.airfrance.fr/search/offers?pax=1:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=FRA:A:20210701%3ECDG:A&bookingFlow=LEISURE
-
-        const url = `${this.translator.translate("url")}/search/offers?pax=1:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=${origin}:A:${formattedDate}%3E${destination}:A&bookingFlow=LEISURE`;
-
-        await this.page.goto(url);
-
-        await this.page.waitFor(10000);
+        await this.page.goto(this.translator.translate("url"));
 
         await this.clickOptionalElementByCss('.cookiebar-agree-button-agree');
         await this.clickOptionalElementByCss('.bw-cookie-banner__button.bw-cookie-banner__button-accent');
 
+
         await this.page.waitFor(1000);
+
+        const day = dateFormat(depDate, 'd');
+        const shortMonthNames = this.language == "de" ? this.shortMonthNamesDe : this.shortMonthNamesFr;
+
+        const yearMonth = shortMonthNames[depDate.getMonth()].toUpperCase() + " " + depDate.getFullYear();
+
+        await this.clickElementByText(this.translator.translate("Hin- und Rückflug"));
+        await this.page.waitFor(2000);
+        await this.clickElementByText(this.translator.translate("Nur Hinflug"));
+        await this.page.waitFor(2000);
+
+        await this.clickElementByText(this.translator.translate("Abflugdatum"));
+
+        await this.scrollCalendar(".mat-calendar-next-button", yearMonth)
+
+        await this.clickElementByText(" " + day + " ");
+
+        await this.page.waitForSelector('#station-list-0');
+
+        await this.page.click('#mat-input-0');
+        await this.page.type('#mat-input-0', origin, { delay: 100 });
+        await this.page.waitFor(1000);
+        await this.tapEnter();
+        await this.page.waitFor(1000);
+
+        await this.page.click('#mat-input-1');
+
+        await this.page.type('#mat-input-1', destination, { delay: 100 });
+        await this.page.waitFor(1000);
+        await this.tapEnter();
+
+    };
+
+    async scrapeFromSearch(inputData) {
+        // const departureDate = inputData.departureDate;
+        // const origin = inputData.origin;
+        // const destination = inputData.destination;
+        // const formattedDate = dateFormat(new Date(departureDate), "yyyymmdd");
+
+        // // https://wwws.airfrance.fr/search/offers?pax=1:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=FRA:A:20210701%3ECDG:A&bookingFlow=LEISURE
+
+        // const url = `${this.translator.translate("url")}/search/offers?pax=1:0:0:0:0:0:0:0&cabinClass=ECONOMY&activeConnection=0&connections=${origin}:A:${formattedDate}%3E${destination}:A&bookingFlow=LEISURE`;
+
+        // await this.page.goto(url);
+
+        // await this.page.waitFor(10000);
+        // await this.clickOptionalElementByCss('.cookiebar-agree-button-agree');
+        // await this.clickOptionalElementByCss('.bw-cookie-banner__button.bw-cookie-banner__button-accent');
+
+        await this.clickElementByTextContains(this.translator.translate("Flüge suchen"));
+
+        await this.page.waitForNavigation();
+
+        await this.page.waitFor(5000);
 
         await this.page.evaluate(_ => {
             window.scrollBy(0, 200);

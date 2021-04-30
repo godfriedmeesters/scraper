@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-17 23:54:26
+ * @ Modified time: 2021-04-28 15:49:07
  * @ Description:
  */
 
@@ -177,8 +177,7 @@ class AppScraper {
 
     async clickElementByXpath(xpath) {
         logger.info("Clicking xpath " + xpath);
-        const element = await this.appiumClient.$(xpath
-        );
+        const element = await this.appiumClient.$(xpath);
 
         return element.click();
     }
