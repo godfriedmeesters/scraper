@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-28 15:49:07
+ * @ Modified time: 2021-05-07 17:22:19
  * @ Description:
  */
 
@@ -104,8 +104,7 @@ class AppScraper {
         return link.click();
     }
 
-    async saveContent(scraperClass)
-    {
+    async saveContent(scraperClass) {
         return "not implemented";
     }
 
@@ -397,6 +396,8 @@ class AppScraper {
     }
 
     async scrollDownUntilNotVisible(text, offset = 100) {
+
+        logger.info("Scrolling down until not visible " + text);
         let textVisible = true;
         this.appiumClient.setImplicitTimeout(2000);
         while (textVisible) {
