@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-07 23:12:15
+ * @ Modified time: 2021-05-07 23:35:56
  * @ Description:
  */
 
@@ -415,7 +415,7 @@ class AppScraper {
                 loc = await elem.getLocation();
             }
 
-            logger.info(`Going to go to ${loc.x}, ${loc.y - offset}`);
+            //logger.info(`Going to go to ${loc.x}, ${loc.y - offset}`);
 
             await this.appiumClient.touchAction([
                 { action: 'press', x: loc.x, y: loc.y },
