@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:26
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-03-26 08:41:22
+ * @ Modified time: 2021-05-07 23:32:51
  * @ Description:
  */
 
@@ -82,7 +82,31 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
 
     logger.info("looking for " + mY);
 
+
+    // fix
+
+    var rect = await this.appiumClient.getWindowRect();
+
+
+    var rectX = rect.width / 2;
+    var rectY = rect.height / 1.1;
+
+    await this.appiumClient.touchAction([
+      { action: 'press', x: rectX, y: rectY * 0.60 },
+      { action: 'wait', ms: 500 },
+      { action: 'moveTo', x: rectX, y: rectY * 0.55 },
+      'release',
+  ]);
+
+
+    //////////////////
+
+
     await this.scrollIntoView(mY);
+
+
+    await this.sleep(10000);
+
 
     await this.scrollDownUntilNotVisible(mY);
     await this.clickElementByXpath('//android.widget.TextView[@text="' +
@@ -95,12 +119,12 @@ export class AirFranceAppScraper extends AppScraper implements IScraper {
     const depDate = new Date(departureDate);
     const departureDay = depDate.getDate();
     //let elem = await this.appiumClient.$(
-   //   this._('text("DATUM BESTÄTIGEN")')
+    //   this._('text("DATUM BESTÄTIGEN")')
     //);
 
     //await elem.click();
 
-await this.appClickElementByResource("com.airfrance.android.dinamoprd:id/calendar_footer_confirm_button");
+    await this.appClickElementByResource("com.airfrance.android.dinamoprd:id/calendar_footer_confirm_button");
 
 
     const elem = await this.appiumClient.$(
