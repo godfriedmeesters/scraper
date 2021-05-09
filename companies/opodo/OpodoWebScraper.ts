@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 17:56:19
+ * @ Modified time: 2021-05-09 18:41:05
  * @ Description:
  */
 
@@ -96,17 +96,15 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             request.continue();
         });
 
-        var jsonText = "";
-
         this.page.on('response', async response => {
             if (response.url().includes("graphql")) {
 
                 if (response.status() == 200) {
 
-                    jsonText = await response.text();
-                    if (jsonText.includes("itineraries")) {
+                    const text = await response.text();
+                    if (text.includes("itineraries")) {
                         this.logInfo("graphql found");
-                        const json = JSON.parse(jsonText);
+                        const json = JSON.parse(text);
 
                         flightOffers = this.getFlightsGraphSQL(json);
                     }
@@ -114,11 +112,11 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             }
             else if (response.url().includes("data")) {
                 if (response.status() == 200) {
-                    jsonText = await response.text();
-                    if (jsonText.includes("segItems")) {
+                    const text = await response.text();
+                    if (text.includes("segItems")) {
                         this.logInfo("data found");
 
-                        const json = JSON.parse(jsonText);
+                        const json = JSON.parse(text);
 
                         flightOffers = this.getFlightsData(json);
                     }
@@ -140,7 +138,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         const foundUrl = await this.page.url();
 
-        var screenshotPath = await this.takeJsonScreenShot("OpodoWebScraper", jsonText);
+        var screenshotPath = await this.takeScreenShot("OpodoWebScraper");
 
         for (const flightOffer of flightOffers) {
             flightOffer.url = foundUrl;
@@ -196,9 +194,13 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
                 + ":"
                 + (arrDate.getMinutes() < 10 ? '0' : '') + arrDate.getMinutes()
 
+
+
+            flightOffer.arrivalTime = arrDate.getHours() + ":" + arrDate.getMinutes();;
             flightOffer.origin = section.departure.iata;
             flightOffer.destination = section.destination.iata;
             flightOffer.airline = section.carrier.name;
+
 
             if (itin.legs[0].segments[0].sections.length == 1) {
                 flightOffers.push(flightOffer);
