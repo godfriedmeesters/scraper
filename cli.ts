@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-01-22 10:14:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-15 17:50:39
+ * @ Modified time: 2021-05-09 17:57:47
  * @ Description: CLI for local testing, jobs are not sent to queue but processed locally
  */
 

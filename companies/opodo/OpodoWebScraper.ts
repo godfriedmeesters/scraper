@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 17:26:27
+ * @ Modified time: 2021-05-09 17:56:19
  * @ Description:
  */
 
@@ -96,15 +96,17 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             request.continue();
         });
 
+        var jsonText = "";
+
         this.page.on('response', async response => {
             if (response.url().includes("graphql")) {
 
                 if (response.status() == 200) {
 
-                    const text = await response.text();
-                    if (text.includes("itineraries")) {
+                    jsonText = await response.text();
+                    if (jsonText.includes("itineraries")) {
                         this.logInfo("graphql found");
-                        const json = JSON.parse(text);
+                        const json = JSON.parse(jsonText);
 
                         flightOffers = this.getFlightsGraphSQL(json);
                     }
@@ -112,11 +114,11 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             }
             else if (response.url().includes("data")) {
                 if (response.status() == 200) {
-                    const text = await response.text();
-                    if (text.includes("segItems")) {
+                    jsonText = await response.text();
+                    if (jsonText.includes("segItems")) {
                         this.logInfo("data found");
 
-                        const json = JSON.parse(text);
+                        const json = JSON.parse(jsonText);
 
                         flightOffers = this.getFlightsData(json);
                     }
@@ -138,7 +140,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         const foundUrl = await this.page.url();
 
-        var screenshotPath = await this.takeScreenShot("OpodoWebScraper");
+        var screenshotPath = await this.takeJsonScreenShot("OpodoWebScraper", jsonText);
 
         for (const flightOffer of flightOffers) {
             flightOffer.url = foundUrl;
@@ -197,7 +199,6 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             flightOffer.origin = section.departure.iata;
             flightOffer.destination = section.destination.iata;
             flightOffer.airline = section.carrier.name;
-
 
             if (itin.legs[0].segments[0].sections.length == 1) {
                 flightOffers.push(flightOffer);
