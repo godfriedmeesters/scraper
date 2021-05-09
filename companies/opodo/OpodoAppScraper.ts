@@ -135,9 +135,9 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
           }
         }
         else if (prices.length > 1) {
-          if (departureY > lastPriceOffScreenY) {
+        //  if (departureY > lastPriceOffScreenY) {
             flightOffer.price = lastPriceOffScreenText;
-          }
+          //ss}
 
           for (var j = 0; j < prices.length; j++) {
             bounds = await prices[j].getAttribute("bounds");
