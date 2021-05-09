@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-18 10:44:24
+ * @ Modified time: 2021-05-09 17:26:27
  * @ Description:
  */
 
@@ -185,10 +185,15 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             const section = itin.legs[0].segments[0].sections[0];
             const depDate = new Date(section.departureDate);
 
-            flightOffer.departureTime = depDate.getHours() + ":" + depDate.getMinutes();
-            const arrDate = new Date(section.arrivalDate);
+            flightOffer.departureTime = (depDate.getHours() < 10 ? '0' : '') + depDate.getHours()
+                + ":"
+                + (depDate.getMinutes() < 10 ? '0' : '') + depDate.getMinutes()
 
-            flightOffer.arrivalTime = arrDate.getHours() + ":" + arrDate.getMinutes();;
+            const arrDate = new Date(section.arrivalDate);
+            flightOffer.arrivalTime = (arrDate.getHours() < 10 ? '0' : '') + arrDate.getHours()
+                + ":"
+                + (arrDate.getMinutes() < 10 ? '0' : '') + arrDate.getMinutes()
+
             flightOffer.origin = section.departure.iata;
             flightOffer.destination = section.destination.iata;
             flightOffer.airline = section.carrier.name;
