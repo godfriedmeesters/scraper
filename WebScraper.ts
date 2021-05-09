@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 18:29:35
+ * @ Modified time: 2021-05-09 18:41:52
  * @ Description:
  */
 
@@ -234,17 +234,6 @@ class WebScraper {
         }
         return "no screenshot possible";
     }
-
-    async takeJsonScreenShot(className, json) {
-        var fileName = `${className}-${Date.now()}.json`;
-        this.logInfo("Taking website JSON screenshot with filename " + fileName);
-        var filePath = path.join(__dirname, 'compressedScreenshots', fileName);
-
-        fs.writeFileSync(filePath, json);
-        return "https://scraperbox.be/screenshots/" + fileName;
-
-    }
-
 
 
     async transferScreenshotsToFtp() {
