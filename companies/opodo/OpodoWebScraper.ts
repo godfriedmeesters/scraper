@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 18:41:05
+ * @ Modified time: 2021-05-09 21:06:59
  * @ Description:
  */
 
@@ -96,15 +96,16 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             request.continue();
         });
 
+        var jsonText = "";
         this.page.on('response', async response => {
             if (response.url().includes("graphql")) {
 
                 if (response.status() == 200) {
 
-                    const text = await response.text();
-                    if (text.includes("itineraries")) {
+                    jsonText = await response.text();
+                    if (jsonText.includes("itineraries")) {
                         this.logInfo("graphql found");
-                        const json = JSON.parse(text);
+                        const json = JSON.parse(jsonText);
 
                         flightOffers = this.getFlightsGraphSQL(json);
                     }
@@ -112,11 +113,11 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             }
             else if (response.url().includes("data")) {
                 if (response.status() == 200) {
-                    const text = await response.text();
-                    if (text.includes("segItems")) {
+                    jsonText = await response.text();
+                    if (jsonText.includes("segItems")) {
                         this.logInfo("data found");
 
-                        const json = JSON.parse(text);
+                        const json = JSON.parse(jsonText);
 
                         flightOffers = this.getFlightsData(json);
                     }
@@ -132,13 +133,12 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
         await this.page.waitFor(10000);
         await this.clickOptionalElementByCss('#didomi-notice-agree-button');
 
-
         await this.clickOptionalElementByText("UNDERSTOOD");
         await this.page.waitFor(5000);
 
         const foundUrl = await this.page.url();
 
-        var screenshotPath = await this.takeScreenShot("OpodoWebScraper");
+        var screenshotPath = await this.takeJsonScreenShot ("OpodoWebScraper", jsonText);
 
         for (const flightOffer of flightOffers) {
             flightOffer.url = foundUrl;
@@ -150,11 +150,9 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
 
     getFlightsData(json) {
-
         const flightOffers = [];
 
         for (const item of json.items) {
-
             for (const segItem of item.itineraryGroupsList[0].segItems) {
                 const flightOffer = new FlightOffer();
 

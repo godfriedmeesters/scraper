@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 18:41:52
+ * @ Modified time: 2021-05-09 21:05:01
  * @ Description:
  */
 
@@ -18,7 +18,7 @@ const pluginStealth = require('puppeteer-extra-plugin-stealth');
 const RecaptchaPlugin = require('puppeteer-extra-plugin-recaptcha')
 import Translator from "simple-translator";
 
-import { uploadScreenshotsToFTP } from "./ftp";
+import { uploadJsonToFTP, uploadScreenshotsToFTP } from "./ftp";
 import { logger } from './logger';
 
 class WebScraper {
@@ -236,10 +236,22 @@ class WebScraper {
     }
 
 
+
+    async takeJsonScreenShot(className, json) {
+        var fileName = `${className}-${Date.now()}.json`;
+        this.logInfo("Taking website JSON screenshot with filename " + fileName);
+        var filePath = path.join(__dirname, 'compressedScreenshots', fileName);
+
+        fs.writeFileSync(filePath, json);
+        return "https://scraperbox.be/screenshots/" + fileName;
+
+    }
+
     async transferScreenshotsToFtp() {
         await this.sleep(1000);
         this.logInfo("Sending screenshots to FTP");
         uploadScreenshotsToFTP();
+        uploadJsonToFTP();
     }
 
     async sleep(ms) {
