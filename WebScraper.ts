@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 21:05:01
+ * @ Modified time: 2021-05-09 21:54:09
  * @ Description:
  */
 
@@ -240,7 +240,7 @@ class WebScraper {
     async takeJsonScreenShot(className, json) {
         var fileName = `${className}-${Date.now()}.json`;
         this.logInfo("Taking website JSON screenshot with filename " + fileName);
-        var filePath = path.join(__dirname, 'compressedScreenshots', fileName);
+        var filePath = path.join(__dirname, 'json', fileName);
 
         fs.writeFileSync(filePath, json);
         return "https://scraperbox.be/screenshots/" + fileName;

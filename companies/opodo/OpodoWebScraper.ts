@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 21:06:59
+ * @ Modified time: 2021-05-09 21:53:49
  * @ Description:
  */
 
@@ -138,7 +138,7 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
 
         const foundUrl = await this.page.url();
 
-        var screenshotPath = await this.takeJsonScreenShot ("OpodoWebScraper", jsonText);
+        var screenshotPath = await this.takeJsonScreenShot ("OpodoWebScraper", JSON.stringify( jsonText));
 
         for (const flightOffer of flightOffers) {
             flightOffer.url = foundUrl;
