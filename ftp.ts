@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-25 14:52:17
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-09 21:06:00
+ * @ Modified time: 2021-05-09 22:53:26
  * @ Description:
  */
 
@@ -34,7 +34,7 @@ export async function uploadJsonToFTP(){
                 c.put(f.path, f.fileName, function (err) {
                     if (err) throw err;
                     logger.info("File uploaded: " + f.fileName);
-                    fs.unlinkSync(f.path);
+                   fs.unlinkSync(f.path);
                     c.end();
                 });
             }
