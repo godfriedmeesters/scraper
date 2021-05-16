@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-16 22:21:43
+ * @ Modified time: 2021-05-16 22:26:09
  * @ Description:
  */
 
@@ -168,9 +168,9 @@ class WebScraper {
             'Accept-Language': this.language
         });
 
-        if ("proxy" in params && params.proxy.includes("godfried")) {
+        if ("proxy" in params && "proxyauth" in params) {
             await this.page.setExtraHTTPHeaders({
-                'Proxy-Authorization': 'Basic ' + Buffer.from('godfriedscloud:pas-PAS-222-').toString('base64'),
+                'Proxy-Authorization': 'Basic ' + Buffer.from(params.proxyauth).toString('base64'),
             });
         }
 
