@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-17 15:18:28
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-28 15:22:12
+ * @ Modified time: 2021-05-16 21:39:39
  * @ Description:
  */
 
@@ -43,22 +43,27 @@ if (yn(process.env.PULL_WEB_BROWSER_QUEUE)) {
         logger.info(`Got new scraper job on web browser queue: ${job.data.scraperClass} with params:  ${JSON.stringify(job.data.params)} and input data
     ${JSON.stringify(job.data.inputData)} `);
 
-        const inputData = JSON.parse(
-            fs.readFileSync("proxies.json")
-        );
-        //
-        var use_proxy = Math.random() < 0.6;
-        //var use_proxy = false;
-        const proxies = inputData.proxies;
-
-        const proxy_index = Math.floor(Math.random() * proxies.length);
-
-        if (use_proxy) {
-            job.data.params.proxy = proxies[proxy_index];
-            logger.info("Selected proxy " + proxies[proxy_index]);
+        if ("proxy" in job.data.params) {
+            logger.info("Using provided proxy " + job.data.params.proxy);
         }
-        else { logger.info("No proxy selected") }
+        else {
 
+            const inputData = JSON.parse(
+                fs.readFileSync("proxies.json")
+            );
+            //
+            var use_proxy = Math.random() < 0.6;
+            //var use_proxy = false;
+            const proxies = inputData.proxies;
+
+            const proxy_index = Math.floor(Math.random() * proxies.length);
+
+            if (use_proxy) {
+                job.data.params.proxy = proxies[proxy_index];
+                logger.info("Selected proxy " + proxies[proxy_index]);
+            }
+            else { logger.info("No proxy selected") }
+        }
 
         if ("randomize" in job.data.params) {
             //only for flights

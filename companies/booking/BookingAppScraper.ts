@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-04-07 20:30:58
+ * @ Modified time: 2021-05-16 22:07:18
  * @ Description:
  */
 
@@ -157,9 +157,9 @@ export class BookingAppScraper extends AppScraper implements IScraper {
           }
         }
         else if (prices.length > 1) {
-          if (hotelnameY > lastPriceOffScreenY) {
+         // if (hotelnameY > lastPriceOffScreenY) {
             hotelOffer.price = lastPriceOffScreenText;
-          }
+          //}
 
           for (var j = 0; j < prices.length; j++) {
             bounds = await prices[j].getAttribute("bounds");
@@ -177,15 +177,11 @@ export class BookingAppScraper extends AppScraper implements IScraper {
 
         hotelOffersOnScreen.push(hotelOffer);
 
-        const screenShotFlightOffer = { ...hotelOffer };
-        screenShotFlightOffer.screenshot = screenshot;
+        const screenShotHotelOffer = { ...hotelOffer };
+        screenShotHotelOffer.screenshot = screenshot;
 
-        if (_.findWhere(hotelOffers, screenShotFlightOffer) == null) {
-
-
-          hotelOffers.push(screenShotFlightOffer);
-
-
+        if (_.findWhere(hotelOffers, hotelOffer) == null) {
+          hotelOffers.push(screenShotHotelOffer);
           logger.info("adding new hotel offer");
         }
         else {

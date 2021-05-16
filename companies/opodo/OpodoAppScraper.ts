@@ -198,7 +198,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         const screenShotFlightOffer = { ...flightOffer };
         screenShotFlightOffer.screenshot = screenshot;
 
-        if (_.findWhere(flightOffers, screenShotFlightOffer) == null) {
+        if (_.findWhere(flightOffers, flightOffer) == null) {
 
           flightOffers.push(screenShotFlightOffer);
 
