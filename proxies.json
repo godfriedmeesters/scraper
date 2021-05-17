@@ -1,5 +1,7 @@
 {
     "proxies": [
-       "godfriedscloud.ddns.net:80"
+        "68.183.75.223:3128",
+        "146.185.155.56:3128",
+        "godfriedscloud.ddns.net:80"
     ]
 }
