@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-30 21:04:13
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-18 23:31:37
+ * @ Modified time: 2021-05-18 22:23:13
  * @ Description:
  */
 
@@ -21,60 +21,64 @@ export class BookingWebScraper extends WebScraper implements IScraper {
     constructor() { super(path.join(__dirname, "lang.json")); }
 
     async scrapeUntilSearch(inputData: any) {
-        date.locale(this.language);
-        const departureDate = inputData.checkinDate;
+        // date.locale(this.language);
+        // const departureDate = inputData.checkinDate;
 
-        const destination = inputData.location;
-
-
-        await this.page.goto(this.translator.translate("url"));
-
-        await this.page.waitFor(2000);
-
-        await this.clickOptionalElementByCss("#onetrust-accept-btn-handler");
-
-        const txtOrigin = await this.getElementByCss(".sb-destination__input");
-
-        await txtOrigin.type(destination, { delay: 50 });
-
-        await this.clickElementByCss(".xp__dates.xp__group");
-
-        const d = new Date(departureDate);
-
-        const strDate = date.format(d, "D MMMM YYYY");
-
-        this.logInfo("looking for date " + strDate);
+        // const destination = inputData.location;
 
 
+        // await this.page.goto(this.translator.translate("url"));
 
-        const xp = "//span[@aria-label='" + (this.language == "fr" ? strDate.toLowerCase() : strDate) + "']";
+        // await this.page.waitFor(2000);
 
-        var dateInPage: boolean = await this.isXpathInPage(xp);
+        // await this.clickOptionalElementByCss("#onetrust-accept-btn-handler");
 
-        while (!dateInPage) {
-            this.logInfo("Navigating to next month in calendar");
-            await this.clickElementByCss('.bui-calendar__control--next');
+        // const txtOrigin = await this.getElementByCss(".sb-destination__input");
 
-            dateInPage = await this.isXpathInPage(xp);
-        }
+        // await txtOrigin.type(destination, { delay: 50 });
 
-        await this.clickElementByXpath("//span[@aria-label='" + strDate + "']");
-        d.setDate(d.getDate() + 1);
-        const strNextDate = date.format(d, "D MMMM YYYY");
+        // await this.clickElementByCss(".xp__dates.xp__group");
 
-        await this.clickElementByXpath("//span[@aria-label='" + strNextDate + "']");
+        // const d = new Date(departureDate);
+
+        // const strDate = date.format(d, "D MMMM YYYY");
+
+        // this.logInfo("looking for date " + strDate);
+
+
+
+        // const xp = "//span[@aria-label='" + (this.language == "fr" ? strDate.toLowerCase() : strDate) + "']";
+
+        // var dateInPage: boolean = await this.isXpathInPage(xp);
+
+        // while (!dateInPage) {
+        //     this.logInfo("Navigating to next month in calendar");
+        //     await this.clickElementByCss('.bui-calendar__control--next');
+
+        //     dateInPage = await this.isXpathInPage(xp);
+        // }
+
+        // await this.clickElementByXpath("//span[@aria-label='" + strDate + "']");
+        // d.setDate(d.getDate() + 1);
+        // const strNextDate = date.format(d, "D MMMM YYYY");
+
+        // await this.clickElementByXpath("//span[@aria-label='" + strNextDate + "']");
 
     }
 
     // scrape web part 2: from "clicking" on search button
     async scrapeFromSearch(inputData) {
 
-        await this.page.waitFor(5000);
-        await this.clickElementByCss(".sb-searchbox__button");
+        const departureDate = inputData.departureDate;
+        const origin = inputData.origin;
+        const destination = inputData.destination;
 
-        await this.page.waitFor(15000);
-        await this.takeScreenShot("Booking");
-        await this.clickElementByXpath("//a[@data-id='distance-5000']");
+const url =`https://flights.booking.com/flights/BRU-AMS/?adults=1&aid=202008&cabinClass=ECONOMY&children=&depart=${departureDate}&from=${origin}sort=BEST&stops=0&to=${destination}&type=ONEWAY`;
+       // const url = `${this.translator.translate("url")}/${origin}-${destination}/${departureDate}?fs=stops=0&sort=bestflight_a`;
+        await this.page.goto(url);
+
+        await this.page.waitFor(10000);
+
 
 
 
@@ -82,7 +86,7 @@ export class BookingWebScraper extends WebScraper implements IScraper {
 
         const offersSortedByBest = await this.extractOffers(inputData);
 
-        await this.clickElementByXpath('//a[@data-type="price"]');
+        await this.clickElementByText('Am günstigsten');
 
         const offersSortedByCheapest = await this.extractOffers(inputData);
 

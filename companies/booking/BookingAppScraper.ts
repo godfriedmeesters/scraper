@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-16 22:07:18
+ * @ Modified time: 2021-05-18 23:29:45
  * @ Description:
  */
 
@@ -92,8 +92,30 @@ export class BookingAppScraper extends AppScraper implements IScraper {
 
     await this.sleep(10000);
     await this.clickLink("Filter");
+
+
+
     await this.scrollIntoView("Entfernung vom Stadtzentrum");
+
+    var rect = await this.appiumClient.getWindowRect();
+
+
+    var rectX = rect.width / 2;
+    var rectY = rect.height / 1.1;
+
+    await this.appiumClient.touchAction([
+      { action: 'press', x: rectX, y: rectY * 0.60 },
+      { action: 'wait', ms: 500 },
+      { action: 'moveTo', x: rectX, y: rectY * 0.50 },
+      'release',
+  ]);
+
+
+
+
     await this.clickLinkContains("5 km");
+
+
     await this.appClickElementByResource("com.booking:id/showresults");
 
     const offersSortedByBest = await this.extractOffers();
