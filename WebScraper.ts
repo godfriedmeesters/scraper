@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:05
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-16 22:57:00
+ * @ Modified time: 2021-05-19 00:09:15
  * @ Description:
  */
 
@@ -452,6 +452,39 @@ class WebScraper {
         let element = await elem.$(css);
         return this.page.evaluate(el => el.textContent, element)
     }
+
+    async getTextFromElementByXpath(xpath: string, elem: any) {
+        this.logInfo(`Get text from element by xpath ${xpath}`);
+        let element = await elem.$x(xpath);
+        return this.page.evaluate(el => el.textContent, element)
+    }
+
+    async getTextsFromElementByXpath(xpath: string, elem: any) {
+        this.logInfo(`Get texts from elements by xpath ${xpath}`);
+        let elements = await elem.$x(xpath);
+        var txts = [];
+        for (var elem of elements) {
+            await this.page.waitFor(100);
+            const txt = await this.page.evaluate(el => el.textContent, elem);
+            txts.push(txt.trim());
+        }
+
+        return txts;
+    }
+
+    async getTextsByXpath(xpath: string) {
+        this.logInfo(`Get texts  by xpath ${xpath}`);
+        let elements = await this.page.$x(xpath);
+        var txts = [];
+        for (var elem of elements) {
+            await this.page.waitFor(100);
+            const txt = await this.page.evaluate(el => el.textContent, elem);
+            txts.push(txt.trim());
+        }
+
+        return txts;
+    }
+
 
     async getTextsFromElementByCss(css: string, elem: any) {
         this.logInfo(`Get texts from elements by css ${css}`);
