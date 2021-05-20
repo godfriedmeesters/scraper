@@ -99,9 +99,10 @@ export class ExpediaWebScraper extends WebScraper implements IScraper {
                 flightOffer.arrivalTime = depTimes[i].split(/[–-]+/)[1].replace("Uhr", "").trim();
             }
             else if (this.language == "fr") {
-                flightOffer.departureTime = depTimes[i].split(/[–-]+/)[0].replace("h", ":").replace(" ", "").trim();
-                flightOffer.arrivalTime = depTimes[i].split(/[–-]+/)[1].replace("h", ":").replace(" ", "").trim();
+                flightOffer.departureTime = depTimes[i].split(/[–-]+/)[0].replace("h", ":").replace(' ', "").trim();
+                flightOffer.arrivalTime = depTimes[i].split(/[–-]+/)[1].replace("h", ":").replace(' ', "").trim();
             }
+
 
             flightOffer.origin = inputData.origin;
             flightOffer.destination = inputData.destination;
