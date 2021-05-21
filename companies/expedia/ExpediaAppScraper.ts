@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-16 22:00:59
+ * @ Modified time: 2021-05-21 21:30:17
  * @ Description:
  */
 
@@ -81,6 +81,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
 
     await this.appiumClient.setImplicitTimeout(500);
     const strDateMonth = date.format(depDate, "MMMM YYYY");
+    const strMonth  =  date.format(depDate, "MMMM");
     logger.info("Looking for " + strDateMonth);
     let elem = await this.getElement(strDateMonth);
 
@@ -91,7 +92,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
 
     this.appiumClient.setImplicitTimeout(parseInt(process.env.DEFAULT_APPIUM_TIMEOUT));
 
-    await this.clickElementByXpath(`(//android.view.View[contains(@content-desc,'${departureDay}.' )])[1]`);
+    await this.clickElementByXpath(`(//android.view.View[contains(@content-desc,'${departureDay}. ${strMonth}')])[1]`);
     await this.clickLink("FERTIG");
   }
 
