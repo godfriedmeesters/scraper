@@ -135,8 +135,8 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
           }
         }
         else if (prices.length > 1) {
-        //  if (departureY > lastPriceOffScreenY) {
-            flightOffer.price = lastPriceOffScreenText;
+          //  if (departureY > lastPriceOffScreenY) {
+          flightOffer.price = lastPriceOffScreenText;
           //ss}
 
           for (var j = 0; j < prices.length; j++) {
@@ -168,9 +168,9 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
           }
         }
         else if (airLines.length > 1) {
-         // if (departureY > lastAirLineOffScreenY) {
-            flightOffer.airline = lastAirLineOffScreenText;
-         // }
+          // if (departureY > lastAirLineOffScreenY) {
+          flightOffer.airline = lastAirLineOffScreenText;
+          // }
 
           for (var j = 0; j < airLines.length; j++) {
             bounds = await airLines[j].getAttribute("bounds");
@@ -198,7 +198,10 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         const screenShotFlightOffer = { ...flightOffer };
         screenShotFlightOffer.screenshot = screenshot;
 
-        if (_.findWhere(flightOffers, flightOffer) == null) {
+        const offerWithoutPrice = { ...flightOffer };
+        delete offerWithoutPrice.price;
+
+        if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
 
           flightOffers.push(screenShotFlightOffer);
 
