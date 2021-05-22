@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-18 23:29:45
+ * @ Modified time: 2021-05-23 00:33:39
  * @ Description:
  */
 
@@ -202,7 +202,10 @@ export class BookingAppScraper extends AppScraper implements IScraper {
         const screenShotHotelOffer = { ...hotelOffer };
         screenShotHotelOffer.screenshot = screenshot;
 
-        if (_.findWhere(hotelOffers, hotelOffer) == null) {
+        const offerWithoutPrice = { ...hotelOffer };
+        delete offerWithoutPrice.price;
+
+        if (_.findWhere(hotelOffers, offerWithoutPrice) == null) {
           hotelOffers.push(screenShotHotelOffer);
           logger.info("adding new hotel offer");
         }
