@@ -146,7 +146,11 @@ export class KayakAppScraper extends AppScraper implements IScraper {
         const screenShotFlightOffer = { ...flightOffer };
         screenShotFlightOffer.screenshot = screenshotPath;
 
-        if (_.findWhere(flightOffers, flightOffer) == null) {
+        const offerWithoutPrice = { ...flightOffer};
+        delete offerWithoutPrice.price;
+        delete offerWithoutPrice.airline;
+
+        if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
           flightOffers.push(screenShotFlightOffer);
           logger.info("adding new flight offer");
         }

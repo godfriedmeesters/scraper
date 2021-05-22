@@ -200,6 +200,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
         const offerWithoutPrice = { ...flightOffer };
         delete offerWithoutPrice.price;
+        delete offerWithoutPrice.airline;
 
         if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
 

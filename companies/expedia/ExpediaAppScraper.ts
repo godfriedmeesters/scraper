@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-21 21:30:17
+ * @ Modified time: 2021-05-23 00:20:41
  * @ Description:
  */
 
@@ -150,7 +150,13 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
         const screenShotFlightOffer = { ...flightOffer };
         screenShotFlightOffer.screenshot = screenshot;
 
-        if (_.findWhere(flightOffers, flightOffer) == null) {
+
+        const offerWithoutPrice = { ...flightOffer };
+        delete offerWithoutPrice.price;
+        delete offerWithoutPrice.airline;
+
+        if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
+
           flightOffers.push(screenShotFlightOffer);
           logger.info("adding new flight offer");
         }
