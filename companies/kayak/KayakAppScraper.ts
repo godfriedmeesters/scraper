@@ -113,7 +113,7 @@ export class KayakAppScraper extends AppScraper implements IScraper {
     var flightOffers = [];
 
     while (true) {
-      var screenshotPath = await this.takeScreenShot(this.constructor.name);
+
       var oldFlightOffersOnScreen = flightOffersOnScreen.slice();
       flightOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.kayak.android:id/price');
@@ -143,14 +143,13 @@ export class KayakAppScraper extends AppScraper implements IScraper {
         flightOffersOnScreen.push(flightOffer);
 
         /////////////////////////////////////////////////:
-        const screenShotFlightOffer = { ...flightOffer };
-        screenShotFlightOffer.screenshot = screenshotPath;
 
-        const offerWithoutPrice = { ...flightOffer};
-        delete offerWithoutPrice.price;
-        delete offerWithoutPrice.airline;
 
-        if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
+
+        if (_.findWhere(flightOffers, flightOffer) == null) {
+          const screenShotFlightOffer = { ...flightOffer };
+          var screenshotPath = await this.takeScreenShot(this.constructor.name);
+          screenShotFlightOffer.screenshot = screenshotPath;
           flightOffers.push(screenShotFlightOffer);
           logger.info("adding new flight offer");
         }

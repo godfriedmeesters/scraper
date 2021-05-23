@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-27 16:00:25
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-23 00:20:41
+ * @ Modified time: 2021-05-24 00:23:37
  * @ Description:
  */
 
@@ -117,7 +117,7 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
     var flightOffers = [];
 
     while (true) {
-      var screenshot = await this.takeScreenShot(this.constructor.name);
+
       var oldFlightOffersOnScreen = flightOffersOnScreen.slice();
       flightOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.expedia.bookings:id/price');
@@ -147,16 +147,11 @@ export class ExpediaAppScraper extends AppScraper implements IScraper {
 
         flightOffersOnScreen.push(flightOffer);
 
-        const screenShotFlightOffer = { ...flightOffer };
-        screenShotFlightOffer.screenshot = screenshot;
 
-
-        const offerWithoutPrice = { ...flightOffer };
-        delete offerWithoutPrice.price;
-        delete offerWithoutPrice.airline;
-
-        if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
-
+        if (_.findWhere(flightOffers, flightOffer) == null) {
+          const screenShotFlightOffer = { ...flightOffer };
+          var screenshot = await this.takeScreenShot(this.constructor.name);
+          screenShotFlightOffer.screenshot = screenshot;
           flightOffers.push(screenShotFlightOffer);
           logger.info("adding new flight offer");
         }
