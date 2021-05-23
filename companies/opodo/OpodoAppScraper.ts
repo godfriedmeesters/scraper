@@ -203,11 +203,11 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         delete offerWithoutPrice.airline;
 
         if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
+         // await this.sleep(5000);
+          logger.info(`adding new flight offer ${JSON.stringify(screenShotFlightOffer)}`);
 
           flightOffers.push(screenShotFlightOffer);
 
-          console.log(screenShotFlightOffer);
-          logger.info("adding new flight offer");
         }
         else {
           logger.info("skipping flight offer");

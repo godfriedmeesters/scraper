@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-23 00:33:39
+ * @ Modified time: 2021-05-23 10:25:44
  * @ Description:
  */
 
@@ -108,7 +108,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
       { action: 'wait', ms: 500 },
       { action: 'moveTo', x: rectX, y: rectY * 0.50 },
       'release',
-  ]);
+    ]);
 
 
 
@@ -179,8 +179,8 @@ export class BookingAppScraper extends AppScraper implements IScraper {
           }
         }
         else if (prices.length > 1) {
-         // if (hotelnameY > lastPriceOffScreenY) {
-            hotelOffer.price = lastPriceOffScreenText;
+          // if (hotelnameY > lastPriceOffScreenY) {
+          hotelOffer.price = lastPriceOffScreenText;
           //}
 
           for (var j = 0; j < prices.length; j++) {
@@ -195,8 +195,6 @@ export class BookingAppScraper extends AppScraper implements IScraper {
 
         hotelOffer.hotelName = await hotelNames[i].getText();
 
-
-
         hotelOffersOnScreen.push(hotelOffer);
 
         const screenShotHotelOffer = { ...hotelOffer };
@@ -206,8 +204,10 @@ export class BookingAppScraper extends AppScraper implements IScraper {
         delete offerWithoutPrice.price;
 
         if (_.findWhere(hotelOffers, offerWithoutPrice) == null) {
+
+          logger.info(`adding new hotel offer ${JSON.stringify(screenShotHotelOffer)}`);
           hotelOffers.push(screenShotHotelOffer);
-          logger.info("adding new hotel offer");
+
         }
         else {
           logger.info("skipping hotel offer");
