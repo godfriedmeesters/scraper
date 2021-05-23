@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-23 17:07:40
+ * @ Modified time: 2021-05-24 00:16:24
  * @ Description:
  */
 
@@ -172,6 +172,7 @@ class AppScraper {
 
     async getElementsByResourceId(resourceId) {
         logger.info(`get elements by resource id ${resourceId}`);
+        this.appiumClient.setImplicitTimeout(2000);
         return this.appiumClient.$$(
             'android=new UiSelector().resourceId("' + resourceId + '")'
         );

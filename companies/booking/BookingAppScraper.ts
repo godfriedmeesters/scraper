@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-23 16:38:21
+ * @ Modified time: 2021-05-24 00:09:50
  * @ Description:
  */
 
@@ -86,7 +86,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
       { action: 'wait', ms: 500 },
       { action: 'moveTo', x: rectX, y: rectY * 0.55 },
       'release',
-  ]);
+    ]);
 
     await this.clickElementByXpath('//android.view.View[@content-desc="' + strCheckinDate + '"]');
 
@@ -148,7 +148,6 @@ export class BookingAppScraper extends AppScraper implements IScraper {
   async extractOffers() {
     var rect = await this.appiumClient.getWindowRect();
 
-    await this.sleep(1000);
 
     var rectX = rect.width / 3;
     var rectY = rect.height / 1.1;
@@ -156,70 +155,36 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     var hotelOffersOnScreen = []; //flight offers currently on the screen
     var hotelOffers = [];
 
-    var initPrices = await this.getElementsByResourceId('com.booking:id/price_view_price');
-
-    var lastPriceOffScreenText = await initPrices[0].getText();
-
-    var bounds = await initPrices[0].getAttribute("bounds");
-    var lastPriceOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
+    var equalCount = 0;
 
     while (true) {
-      console.log("last price offscreen = " + lastPriceOffScreenText)
       var oldHotelOffersOnScreen = hotelOffersOnScreen.slice();
       hotelOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.booking:id/price_view_price');
       var hotelNames = await this.getElementsByResourceId('com.booking:id/sr_property_card_header_property_name');
 
-      logger.info(`Found ${hotelNames.length} hotels `);
-      logger.info(`Found ${prices.length} prices `);
 
-
-      var screenshot = await this.takeScreenShot(this.constructor.name);
 
       for (var i = 0; i < prices.length && i < hotelNames.length; i++) {
-
-
-        const hotelName = await hotelNames[i].getText();
-
 
         var hotelOffer = new HotelOffer();
 
         var bounds = await hotelNames[i].getAttribute("bounds");
         const hotelnameY = parseInt(bounds.match(/\d+/g)[1]);
 
-        logger.info(`Checking hotel ${hotelName} with y pos ${hotelnameY} `);
 
-
-
-        if (prices.length == 0) {
-          logger.info("case 0");
-          hotelOffer.price = lastPriceOffScreenText;
-        }
-        else if (prices.length == 1) {
-          logger.info("case 1");
+        if (prices.length == 1) {
           bounds = await prices[0].getAttribute("bounds");
           const priceY = parseInt(bounds.match(/\d+/g)[1]);
-          logger.info(`price Y = ${priceY}`);
           if (hotelnameY < priceY) {
             hotelOffer.price = await prices[0].getText();
           }
-          else {
-            hotelOffer.price = lastPriceOffScreenText;
-          }
+
         }
         else if (prices.length > 1) {
-          logger.info(`case > 1, last price off screen = ${lastPriceOffScreenText} with y pos = ${lastPriceOffScreenY}`);
-       //   if (hotelnameY < lastPriceOffScreenY) {
-         //   hotelOffer.price = lastPriceOffScreenText;
-         // }
-
           for (var j = 0; j < prices.length; j++) {
             bounds = await prices[j].getAttribute("bounds");
             const priceY = parseInt(bounds.match(/\d+/g)[1]);
-
-            logger.info(`hotel y = ${hotelnameY}`);
-            logger.info(`price y = ${priceY}`);
-
             if (hotelnameY < priceY) {
               hotelOffer.price = await prices[j].getText();
               break;
@@ -231,16 +196,14 @@ export class BookingAppScraper extends AppScraper implements IScraper {
 
         hotelOffersOnScreen.push(hotelOffer);
 
-        const screenShotHotelOffer = { ...hotelOffer };
-        screenShotHotelOffer.screenshot = screenshot;
 
         logger.info(`trying to add offer ${JSON.stringify(hotelOffer)}`);
 
-        const strippedOffer = { ...hotelOffer };
-        delete strippedOffer.price;
-
-        if ("price" in screenShotHotelOffer) {
-          if (_.findWhere(hotelOffers, strippedOffer) == null) {
+        if ("price" in hotelOffer) {
+          if (_.findWhere(hotelOffers, hotelOffer) == null) {
+            var screenshot = await this.takeScreenShot(this.constructor.name);
+            const screenShotHotelOffer = { ...hotelOffer };
+            screenShotHotelOffer.screenshot = screenshot;
             hotelOffers.push(screenShotHotelOffer);
             logger.info("adding new hotel offer");
           }
@@ -248,38 +211,25 @@ export class BookingAppScraper extends AppScraper implements IScraper {
         else {
           logger.info("skipping hotel offer");
         }
-
-        //        await this.sleep(10000);
-      }
-
-      if (prices.length > 0) {
-        var bounds = await prices[prices.length - 1].getAttribute("bounds");
-        const newLastPriceOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
-        lastPriceOffScreenY = newLastPriceOffScreenY;
-        lastPriceOffScreenText = await prices[prices.length - 1].getText();
-
-        logger.info(`${lastPriceOffScreenY}: ${lastPriceOffScreenText}`);
       }
 
       if (_.isEqual(oldHotelOffersOnScreen, hotelOffersOnScreen)) {
-        break;
+       equalCount++;
+        if (equalCount > 2)
+          break;
       }
 
       await this.appiumClient.touchAction([
         { action: 'press', x: rectX, y: rectY },
         { action: 'wait', ms: 500 },
-        { action: 'moveTo', x: rectX, y: rectY * 0.6 },
+        { action: 'moveTo', x: rectX, y: rectY * 0.7 },
         'release',
       ]);
 
       rect = await this.appiumClient.getWindowRect();
-
     }
 
     return hotelOffers;
-
-
   }
-
 
 }

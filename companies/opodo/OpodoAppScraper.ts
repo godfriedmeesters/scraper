@@ -98,7 +98,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
       var originsDestinations = await this.getElementsByResourceId('com.opodo.reisen:id/departure_and_arrival');
       var airLines = await this.getElementsByResourceId('com.opodo.reisen:id/airline_name');
 
-      var screenshot = await this.takeScreenShot("OpodoAppScraper");
+
 
 
       for (var i = 0; i < departureTimes.length && i < arrivalTimes.length && i < originsDestinations.length; i++) {
@@ -159,10 +159,10 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
         flightOffersOnScreen.push(flightOffer);
 
-        const screenShotFlightOffer = { ...flightOffer };
-        screenShotFlightOffer.screenshot = screenshot;
-
         if (_.findWhere(flightOffers, flightOffer) == null) {
+          var screenshot = await this.takeScreenShot("OpodoAppScraper");
+          const screenShotFlightOffer = { ...flightOffer };
+          screenShotFlightOffer.screenshot = screenshot;
 
           flightOffers.push(screenShotFlightOffer);
 
