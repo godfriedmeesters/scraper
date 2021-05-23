@@ -27,7 +27,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
     const depDate = new Date(departureDate);
 
     const departureDay = depDate.getDate();
-    const departureMonth = this.monaten[depDate.getMonth()];
+    const departureMonth = this.monaten2[depDate.getMonth()];
     const departureYear = depDate.getFullYear();
 
     await this.clickOptionalLink("Fertig");
@@ -78,7 +78,7 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
     var rect = await this.appiumClient.getWindowRect();
 
-    await this.sleep(1000);
+
 
     var rectX = rect.width / 3;
     var rectY = rect.height / 1.1;
@@ -86,23 +86,10 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
     var flightOffersOnScreen = []; //flight offers currently on the screen
     var flightOffers = [];
 
-    var initPrices = await this.getElementsByResourceId('com.opodo.reisen:id/flights_price');
-    var initAirLines = await this.getElementsByResourceId('com.opodo.reisen:id/airline_name');
-
-
-    var lastPriceOffScreenText = await initPrices[0].getText();
-    var lastAirLineOffScreenText = await initPrices[0].getText();
-
-    var bounds = await initPrices[0].getAttribute("bounds");
-    var lastPriceOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
-
-
-    bounds = await initAirLines[0].getAttribute("bounds");
-    var lastAirLineOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
-
+    var equalCount = 0;
 
     while (true) {
-      logger.info("last price offscreen = " + lastPriceOffScreenText)
+
       var oldFlightOffersOnScreen = flightOffersOnScreen.slice();
       flightOffersOnScreen = [];
       var prices = await this.getElementsByResourceId('com.opodo.reisen:id/flights_price');
@@ -121,24 +108,15 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         const departureY = parseInt(bounds.match(/\d+/g)[1]);
 
         ////////////////////SELECT CORRECT PRICE////////////////////////////
-        if (prices.length == 0) {
-          flightOffer.price = lastPriceOffScreenText;
-        }
-        else if (prices.length == 1) {
+        if (prices.length == 1) {
           bounds = await prices[0].getAttribute("bounds");
           const priceY = parseInt(bounds.match(/\d+/g)[1]);
-          if (departureY < priceY) {
-            flightOffer.price = lastPriceOffScreenText;
-          }
-          else {
+          if (departureY > priceY) {
             flightOffer.price = await prices[0].getText();
           }
+
         }
         else if (prices.length > 1) {
-          //  if (departureY > lastPriceOffScreenY) {
-          flightOffer.price = lastPriceOffScreenText;
-          //ss}
-
           for (var j = 0; j < prices.length; j++) {
             bounds = await prices[j].getAttribute("bounds");
             const priceY = parseInt(bounds.match(/\d+/g)[1]);
@@ -150,28 +128,15 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
         }
         /////////////////////////////////////////////////
 
-
-
-
         ////////////////////SELECT CORRECT AIRLINE////////////////////////////
-        if (airLines.length == 0) {
-          flightOffer.airline = lastAirLineOffScreenText;
-        }
-        else if (airLines.length == 1) {
+        if (airLines.length == 1) {
           bounds = await airLines[0].getAttribute("bounds");
           const airLineY = parseInt(bounds.match(/\d+/g)[1]);
-          if (departureY < airLineY) {
-            flightOffer.airline = lastAirLineOffScreenText;
-          }
-          else {
+          if (departureY > airLineY) {
             flightOffer.airline = await airLines[0].getText();
           }
         }
         else if (airLines.length > 1) {
-          // if (departureY > lastAirLineOffScreenY) {
-          flightOffer.airline = lastAirLineOffScreenText;
-          // }
-
           for (var j = 0; j < airLines.length; j++) {
             bounds = await airLines[j].getAttribute("bounds");
             const airlineY = parseInt(bounds.match(/\d+/g)[1]);
@@ -194,48 +159,33 @@ export class OpodoAppScraper extends AppScraper implements IScraper {
 
         flightOffersOnScreen.push(flightOffer);
 
-
         const screenShotFlightOffer = { ...flightOffer };
         screenShotFlightOffer.screenshot = screenshot;
 
-        const offerWithoutPrice = { ...flightOffer };
-        delete offerWithoutPrice.price;
-        delete offerWithoutPrice.airline;
-
-        if (_.findWhere(flightOffers, offerWithoutPrice) == null) {
-         // await this.sleep(5000);
-          logger.info(`adding new flight offer ${JSON.stringify(screenShotFlightOffer)}`);
+        if (_.findWhere(flightOffers, flightOffer) == null) {
 
           flightOffers.push(screenShotFlightOffer);
 
+          console.log(screenShotFlightOffer);
+
+          logger.info("adding new flight offer");
         }
         else {
           logger.info("skipping flight offer");
         }
       }
 
-      if (prices.length > 0) {
-        var bounds = await prices[prices.length - 1].getAttribute("bounds");
-        const newLastPriceOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
-        lastPriceOffScreenY = newLastPriceOffScreenY;
-        lastPriceOffScreenText = await prices[prices.length - 1].getText();
-      }
-
-      if (airLines.length > 0) {
-        var bounds = await airLines[airLines.length - 1].getAttribute("bounds");
-        const newLastAirLineOffScreenY = parseInt(bounds.match(/\d+/g)[1]);
-        lastAirLineOffScreenY = newLastAirLineOffScreenY;
-        lastAirLineOffScreenText = await airLines[airLines.length - 1].getText();
-      }
 
       if (_.isEqual(oldFlightOffersOnScreen, flightOffersOnScreen)) {
-        break;
+        equalCount++;
+        if (equalCount > 3)
+          break;
       }
 
       await this.appiumClient.touchAction([
         { action: 'press', x: rectX, y: rectY },
         { action: 'wait', ms: 500 },
-        { action: 'moveTo', x: rectX, y: rectY * 0.4 },
+        { action: 'moveTo', x: rectX, y: rectY * 0.9 },
         'release',
       ]);
 

@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-07 23:35:56
+ * @ Modified time: 2021-05-23 17:07:40
  * @ Description:
  */
 
@@ -19,6 +19,7 @@ class AppScraper {
     scrapeOnlyWeb: boolean;
     logger: any;
     monaten: string[];
+    monaten2: string[];
     appiumClient: any = null;
     desiredCapabilities: any;
 
@@ -37,6 +38,19 @@ class AppScraper {
             "Okt.",
             "Nov.",
             "Dez."];
+
+            this.monaten2 = [
+                "Jan.",
+                "Feb.",
+                "März",
+                "Apr.",
+                "Mai",
+                "Juni", "Juli",
+                "August",
+                "Sep.",
+                "Okt.",
+                "Nov.",
+                "Dez."];
     }
 
     async sleep(ms) {
