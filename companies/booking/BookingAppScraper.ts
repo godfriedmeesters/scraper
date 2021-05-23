@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-12-03 15:04:24
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-23 10:25:44
+ * @ Modified time: 2021-05-23 12:44:49
  * @ Description:
  */
 
@@ -179,7 +179,7 @@ export class BookingAppScraper extends AppScraper implements IScraper {
           }
         }
         else if (prices.length > 1) {
-          // if (hotelnameY > lastPriceOffScreenY) {
+          // if (hotelnameY < lastPriceOffScreenY) {
           hotelOffer.price = lastPriceOffScreenText;
           //}
 
@@ -187,8 +187,9 @@ export class BookingAppScraper extends AppScraper implements IScraper {
             bounds = await prices[j].getAttribute("bounds");
             const priceY = parseInt(bounds.match(/\d+/g)[1]);
 
-            if (hotelnameY > priceY) {
+            if (hotelnameY < priceY) {
               hotelOffer.price = await prices[j].getText();
+              break;
             }
           }
         }
