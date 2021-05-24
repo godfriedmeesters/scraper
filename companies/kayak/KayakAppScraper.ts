@@ -130,9 +130,9 @@ export class KayakAppScraper extends AppScraper implements IScraper {
         flightOffer.price = price.trim();
 
         const deptT = await departureTimes[i].getText();
-        flightOffer.departureTime = convertTime(deptT.replace('p', 'pm').replace('a', 'am'));
+        flightOffer.departureTime = deptT.trim();
         const arrT = await arrivalTimes[i].getText();
-        flightOffer.arrivalTime = convertTime(arrT.replace('a', 'am').replace('p', 'pm'));
+        flightOffer.arrivalTime = arrT.trim();
         flightOffer.origin = await origins[i].getText();
         flightOffer.destination = await destinations[i].getText();
         //flightOffer.screenshot = screenshotPath;
