@@ -2,7 +2,7 @@
  * @ Author: Godfried Meesters <godfriedmeesters@gmail.com>
  * @ Create Time: 2020-11-22 22:33:06
  * @ Modified by: Godfried Meesters <godfriedmeesters@gmail.com>
- * @ Modified time: 2021-05-23 18:01:21
+ * @ Modified time: 2021-06-05 12:14:33
  * @ Description:
  */
 
@@ -183,30 +183,28 @@ export class OpodoWebScraper extends WebScraper implements IScraper {
             flightOffer.price = itin.fees[0].price.amount;
 
             const section = itin.legs[0].segments[0].sections[0];
-            const depDate = new Date(section.departureDate);
+        //console.log(JSON.stringify(section));
+            const depDate = new Date(section.departureDate.split('+')[0]);
 
             flightOffer.departureTime = (depDate.getHours() < 10 ? '0' : '') + depDate.getHours()
                 + ":"
                 + (depDate.getMinutes() < 10 ? '0' : '') + depDate.getMinutes()
 
-            const arrDate = new Date(section.arrivalDate);
+            const arrDate = new Date(section.arrivalDate.split('+')[0]);
             flightOffer.arrivalTime = (arrDate.getHours() < 10 ? '0' : '') + arrDate.getHours()
                 + ":"
                 + (arrDate.getMinutes() < 10 ? '0' : '') + arrDate.getMinutes()
 
-
-
-            flightOffer.arrivalTime = arrDate.getHours() + ":" + arrDate.getMinutes();;
+        //    flightOffer.arrivalTime = arrDate.getHours() + ":" + arrDate.getMinutes();;
             flightOffer.origin = section.departure.iata;
             flightOffer.destination = section.destination.iata;
             flightOffer.airline = section.carrier.name;
 
 
             if (itin.legs[0].segments[0].sections.length == 1) {
+                console.log(JSON.stringify(flightOffer));
                 flightOffers.push(flightOffer);
             }
-
-
         }
 
         return flightOffers;
