@@ -172,7 +172,7 @@ export class KayakWebScraper extends WebScraper implements IScraper {
 
                 flightOffer.airline = al.trim();
 
-                const price = await this.getTextFromElementByCss('.price-text', offerNode);
+                const price = await this.getTextFromElementByCss('.above-button>div>a>span>span.price-text', offerNode);
                 flightOffer.price = price.trim();
                 flightOffer.screenshot = screenshot;
 
