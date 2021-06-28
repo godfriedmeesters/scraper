@@ -135,11 +135,13 @@ export class BookingAppScraper extends AppScraper implements IScraper {
     const offersSortedByBest = await this.extractOffers();
 
     await this.clickElementByResource('com.booking:id/sresults_sort');
-
+     await this.sleep(2000);
     await this.clickElementByXpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.CheckedTextView[6]');
-
+    await this.sleep(2000);
 
     const offersSortedByCheapest = await this.extractOffers();
+    
+    
 
     return { 'sortedByBest': offersSortedByBest, 'sortedByCheapest': offersSortedByCheapest };
 
