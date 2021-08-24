@@ -1,6 +1,6 @@
 # DiffScraper Bot
 
-As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are provided that can extract offers from mobile applications, mobile websites and desktop websites. 
+As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are[ provided ](https://github.com/godfriedmeesters/scraper/tree/main/companies " provided ")that can extract offers from mobile applications, mobile websites and desktop websites. 
 
 ## System Requirements
 
@@ -32,4 +32,4 @@ To help in tracking scraping errors, logs of every bot can be centralized in Ela
 
 Deploying a mobile application web bot on a on-premise machine can be done with the provided `docker-compose` files. For example, to start a mobile application bot that connects to a real device smartphone, use `docker-compose up -f  docker-compose.scraper.realdevice.yml` (see [docker-compose.scraper.realdevice.yml](https://github.com/godfriedmeesters/scraper/blob/main/config/docker-compose.scraper.realdevice.yml")). It is assumed that an Appium server is started and listing for connections on the IP address specified by the APPIUM_HOST in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file").  
 
-All logs will be sent to the ElasticSearch server specified in [filebeat.yml](https://github.com/godfriedmeesters/configfiles/blob/main/filebeat.yml "filebeat.yml").    
+All logs will be sent to the ElasticSearch server specified in [filebeat.yml](https://github.com/godfriedmeesters/configfiles/blob/main/filebeat.yml "filebeat.yml"). 
