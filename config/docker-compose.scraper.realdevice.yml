@@ -1,1 +1,30 @@
 
+version: "3.9"
+services:
+  scraper:
+     container_name: scraper
+     image: godfriedmeesters/scraper:latest
+     volumes:
+       - ./logs:/usr/src/app/logs
+     environment:
+       - PULL_WEB_BROWSER_QUEUE=false
+       - PULL_REAL_DEVICE_QUEUE=true
+       - PULL_EMULATOR_QUEUE=false
+       - APPIUM_HOST=172.29.224.1
+       - DEVICE_NAME=df984599
+  
+  filebeat:
+    container_name: filebeat
+    image: docker.elastic.co/beats/filebeat:7.10.1
+    command:
+      - "--strict.perms=false"
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./logs:/usr/share/filebeat/logs
+    
+  watchtower:
+    container_name: watchtower
+    image: index.docker.io/containrrr/watchtower:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $PWD/watchtower-config.json:/config.json
