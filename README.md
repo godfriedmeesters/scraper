@@ -33,3 +33,17 @@ To help in tracking scraping errors, logs of every bot can be centralized in Ela
 Deploying a mobile application web bot on a on-premise machine can be done with the provided `docker-compose` files. For example, to start a mobile application bot that connects to a real device smartphone, use `docker-compose up -f  docker-compose.scraper.realdevice.yml` (see [docker-compose.scraper.realdevice.yml](https://github.com/godfriedmeesters/scraper/blob/main/config/docker-compose.scraper.realdevice.yml")). It is assumed that an Appium server is started and listing for connections on the IP address specified by the APPIUM_HOST in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file").  
 
 All logs will be sent to the ElasticSearch server specified in [filebeat.yml](https://github.com/godfriedmeesters/configfiles/blob/main/filebeat.yml "filebeat.yml"). 
+
+## DiffScraper CLI
+
+In a production system, a bot receives scraping jobs via a central Redis queue from the [controller](https://github.com/godfriedmeesters/controller "controller").  
+
+To test a (new) bot, it is possible to bypass the job queue and test the bot locally from within its Docker container.
+
+For example, to start scraping offers from the French website of Opodo:
+
+Enter  into an Opodo bot:
+`kubectl --kubeconfig="my-kubeconfig.yaml" exec --stdin --tty  webscraper-deployment--1   -- /bin/bash`
+
+This command will extract all offers from opodo.fr:
+`ts-node scrape OpodoWebScraper inputData.json --lang=fr`
