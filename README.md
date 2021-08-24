@@ -34,7 +34,7 @@ Deploying a mobile application web bot on a on-premise machine can be done with 
 
 All logs will be sent to the ElasticSearch server specified in [filebeat.yml](https://github.com/godfriedmeesters/configfiles/blob/main/filebeat.yml "filebeat.yml"). 
 
-## DiffScraper CLI
+## DiffScraper Bot CLI
 
 In a production system, a bot receives scraping jobs via a central Redis queue from the [controller](https://github.com/godfriedmeesters/controller "controller").  
 
