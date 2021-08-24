@@ -1,1 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webscraper-deployment
+  labels:
+    app: scraper
+  annotations:
+    keel.sh/policy: force
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 1m"
 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: scraper
+  template:
+    metadata:
+      labels:
+        app: scraper
+    spec:
+      containers:
+      - name: scraper
+        image: godfriedmeesters/scraper:latest
+        imagePullPolicy: Always
+        env:
+          - name: PULL_EMULATOR_QUEUE
+            value: "false"
+          - name: PULL_REAL_DEVICE_QUEUE
+            value: "false"
+          - name: PULL_WEB_BROWSER_QUEUE
+            value: "true"
+        securityContext:
+          privileged: true
+          runAsUser: 1000
+      imagePullSecrets:
+        - name: regcred
