@@ -4,7 +4,7 @@ As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffS
 
 ## System Requirements
 
-DiffScraper bots need a connection to a central Redis database (to receive jobs from the controller and synchronize with other bots). 
+DiffScraper bots need a connection to a central Redis database (to receive jobs from the controller and synchronize with other bots).  In addition, all bots need a connection to a central FTP server (to upload screenshots).  
 
 On every machine where bots will be deployed, the following requirements:
 -  Docker runtime (Docker-Compose and Kubernetes deployment files are provided)
@@ -16,5 +16,13 @@ On every machine where bots will be deployed, the following requirements:
 
 DiffScraper Bot can be installed on any enviroment where Docker containers can be deployed.  In this guide, I describe how to deploy bots, specialized in desktop web scraping, on a Kubernetes cluster. I also describe how to deploy one bot specialized in mobile phone scraping on a dedicated Windows machine. 
 
-Deploying a desktop website bot is the easiest, since no extra depencies are needed (e.g. a headful Chrome browser is included in the Dockerfile).   To deploy two desktop website bots on Kubernetes cluster,  run the following command:
+### Desktop website bot deployment
+
+Deploying a desktop website bot is the easiest, since no extra depencies are needed (e.g. a headful Chrome browser is included in the Dockerfile).   To deploy desktop website bots on a Kubernetes cluster,  run the following command (see [webscraper-kubernetes-deployment.yaml](https://github.com/godfriedmeesters/scraper/blob/main/config/webscraper-kubernetes-deployment.yaml "webscraper-kubernetes-deployment.yaml")):
 `kubectl --kubeconfig="my-kubeconfig.yaml" apply -f webscraper-kubernetes-deployment.yaml`
+
+This command will launch a ReplicaSet with two bots, and automatically connect to Redis to start processing scraping jobs (The Redis Database connection can be set in DB_HOST, DB_PORT, DB_PASS in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file"); FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST).
+
+### Mobile application bot deployment
+
+Deploying a mobile application web bot on a on-premise machine can be done with the provided `docker-compose` files. For example, to start a mobile application bot that connects to a real device smartphone, use `docker-compose up -f  docker-compose.scraper.realdevice.yml` (see [docker-compose.scraper.realdevice.yml](https://github.com/godfriedmeesters/configfiles/blob/main/docker-compose.scraper.realdevice.yml "docker-compose.scraper.realdevice.yml")). It is assumed that an Appium server is started and listing for connections on the IP address specified by the APPIUM_HOST in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file").   
