@@ -23,6 +23,13 @@ Deploying a desktop website bot is the easiest, since no extra depencies are nee
 
 This command will launch a ReplicaSet with two bots, and automatically connect to Redis to start processing scraping jobs (The Redis Database connection can be set in DB_HOST, DB_PORT, DB_PASS in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file"); FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST).
 
+To help in tracking scraping errors, logs of every bot can be centralized in ElasticSearch. A Kubernetes script is provided to send all bot logs to an ElasticSearch server:
+`kubectl --kubeconfig="my-kubeconfig.yaml" create -f filebeat-kubernetes.yaml`
+
+
+
 ### Mobile application bot deployment
 
-Deploying a mobile application web bot on a on-premise machine can be done with the provided `docker-compose` files. For example, to start a mobile application bot that connects to a real device smartphone, use `docker-compose up -f  docker-compose.scraper.realdevice.yml` (see [docker-compose.scraper.realdevice.yml](https://github.com/godfriedmeesters/configfiles/blob/main/docker-compose.scraper.realdevice.yml "docker-compose.scraper.realdevice.yml")). It is assumed that an Appium server is started and listing for connections on the IP address specified by the APPIUM_HOST in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file").   
+Deploying a mobile application web bot on a on-premise machine can be done with the provided `docker-compose` files. For example, to start a mobile application bot that connects to a real device smartphone, use `docker-compose up -f  docker-compose.scraper.realdevice.yml` (see [docker-compose.scraper.realdevice.yml](https://github.com/godfriedmeesters/configfiles/blob/main/docker-compose.scraper.realdevice.yml "docker-compose.scraper.realdevice.yml")). It is assumed that an Appium server is started and listing for connections on the IP address specified by the APPIUM_HOST in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file").  
+
+All logs will be sent to the ElasticSearch server specified in the [filebeat.yml file](https://github.com/godfriedmeesters/configfiles/blob/main/filebeat.yml "filebeat.yml file").    
