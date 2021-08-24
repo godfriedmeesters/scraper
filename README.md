@@ -1,4 +1,4 @@
-#DiffScraper Bot
+# DiffScraper Bot
 
 As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are provided that can extract offers from mobile applications, mobile websites and desktop websites. 
 
