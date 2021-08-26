@@ -4,7 +4,7 @@ As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffS
 
 ## System Requirements
 
-DiffScraper bots need a connection to a central Redis database (to receive jobs from the controller and synchronize with other bots).  In addition, all bots need a connection to a central FTP server (to upload screenshots).  The Redis Database connection can be set in the environmental variables DB_HOST, DB_PORT, DB_PASS; FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST.   
+DiffScraper bots need a connection to a central Redis database (to receive jobs from the controller and synchronize with other bots).  In addition, all bots need a connection to a central FTP server (to upload screenshots).  Redis and FTP connection details can be set in environmental variables as defined in [.env](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env").
 
 On every machine where bots will be deployed, the following requirements:
 -  Docker runtime (Docker-Compose and Kubernetes deployment files are provided)
