@@ -46,4 +46,4 @@ Enter  into a running bot container:
 `kubectl --kubeconfig="my-kubeconfig.yaml" exec --stdin --tty  webscraper-deployment--1   -- /bin/bash`
 
 This command will extract all offers from opodo.fr:
-`ts-node scrape OpodoWebScraper inputData.json --lang=fr`
+`ts-node cli.ts scrape OpodoWebScraper inputData.json --lang=fr`
