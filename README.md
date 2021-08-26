@@ -42,7 +42,7 @@ To test a (new) bot, it is possible to bypass the job queue and test the bot loc
 
 For example, to start scraping offers from the French website of Opodo:
 
-Enter  into an Opodo bot:
+Enter  into a running bot container:
 `kubectl --kubeconfig="my-kubeconfig.yaml" exec --stdin --tty  webscraper-deployment--1   -- /bin/bash`
 
 This command will extract all offers from opodo.fr:
