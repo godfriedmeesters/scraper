@@ -1,10 +1,10 @@
 # DiffScraper Bot
 
-As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are[ provided ](https://github.com/godfriedmeesters/scraper/tree/main/companies " provided ")that can extract offers from mobile applications, mobile websites and desktop websites.  The Redis Database connection can be set in DB_HOST, DB_PORT, DB_PASS in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file"); FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST. 
+As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are[ provided ](https://github.com/godfriedmeesters/scraper/tree/main/companies " provided ")that can extract offers from mobile applications, mobile websites and desktop websites. 
 
 ## System Requirements
 
-DiffScraper bots need a connection to a central Redis database (to receive jobs from the controller and synchronize with other bots).  In addition, all bots need a connection to a central FTP server (to upload screenshots).  
+DiffScraper bots need a connection to a central Redis database (to receive jobs from the controller and synchronize with other bots).  In addition, all bots need a connection to a central FTP server (to upload screenshots).  The Redis Database connection can be set in DB_HOST, DB_PORT, DB_PASS in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file"); FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST.   
 
 On every machine where bots will be deployed, the following requirements:
 -  Docker runtime (Docker-Compose and Kubernetes deployment files are provided)
