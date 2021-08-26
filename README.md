@@ -1,6 +1,6 @@
 # DiffScraper Bot
 
-As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are[ provided ](https://github.com/godfriedmeesters/scraper/tree/main/companies " provided ")that can extract offers from mobile applications, mobile websites and desktop websites. 
+As part of  [DiffScraper](https://github.com/godfriedmeesters/diffscraper "DiffScraper"), one or more bots can be deployed. Ready-to-use bots are[ provided ](https://github.com/godfriedmeesters/scraper/tree/main/companies " provided ")that can extract offers from mobile applications, mobile websites and desktop websites.  The Redis Database connection can be set in DB_HOST, DB_PORT, DB_PASS in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file"); FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST. 
 
 ## System Requirements
 
@@ -21,7 +21,7 @@ DiffScraper Bot can be installed on any enviroment where Docker containers can b
 Deploying a desktop website bot is the easiest, since no extra depencies are needed (e.g. a headful Chrome browser is included in the Dockerfile).   To deploy desktop website bots on a Kubernetes cluster,  run the following command (see [webscraper-kubernetes-deployment.yaml](https://github.com/godfriedmeesters/scraper/blob/main/config/webscraper-kubernetes-deployment.yaml "webscraper-kubernetes-deployment.yaml")):
 `kubectl --kubeconfig="my-kubeconfig.yaml" apply -f webscraper-kubernetes-deployment.yaml`
 
-This command will launch a ReplicaSet with two bots, and automatically connect to Redis to start processing scraping jobs (The Redis Database connection can be set in DB_HOST, DB_PORT, DB_PASS in the [.env file](https://github.com/godfriedmeesters/scraper/blob/main/.env ".env file"); FTP connection details can be set in FTP_USER, FTP_PASS, FTP_HOST).
+This command will launch a ReplicaSet with two bots, and automatically connect to Redis to start processing scraping jobs.
 
 To help in tracking scraping errors, logs of every bot can be centralized in ElasticSearch. A Kubernetes script is provided to send all bot logs to an ElasticSearch server:
 `kubectl --kubeconfig="my-kubeconfig.yaml" create -f filebeat-kubernetes.yaml`
